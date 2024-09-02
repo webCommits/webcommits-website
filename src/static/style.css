@@ -1,21 +1,33 @@
+:root{
+    --main-bg: #183642;
+    --main-bg-dark: #11262e;
+    --main-bg-secondary: #1f4757;
+    --main-sec: #313D5A;
+    --secondary: #73628A;
+    --primary: #CBC5EA;
+    --font: #EAEAEA;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
+    background: rgb(24,54,66);
+    background: radial-gradient(circle, rgba(24,54,66,1) 0%, rgba(20,47,58,1) 51%, rgba(31,71,87,1) 100%); 
 }
 
 h1 {
     font-size: 3em;
     font-weight: bold;
-    color: #f9faf8;
+    color: var(--font);
 }
 
 h2 {
     font-size: 2em;
     font-weight: bold;
-    color: #1f2937;
+    color: var(--secondary);
 }
 
 h3 {
@@ -35,12 +47,17 @@ button {
 
 a {
     text-decoration: none;
-    color: #e5e7eb;
+    color: var(--font);
     font-size: 18px;
 }
 
 .header {
-    background-color: #BFACC8;
+    background-color: var(--main-bg-dark);
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    z-index: 999;
+    margin: 8px;
+    border: solid 0px #000000;
+    border-radius: 12px;
 }
 
 nav ul {
@@ -49,6 +66,7 @@ nav ul {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 42px;
 }
 
 nav li {
@@ -61,13 +79,13 @@ nav a {
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--font);
 }
 
 nav a:hover {
-    background-color: #aa99b3;
-    border: #aa99b3;
-    border-radius: 32px;
+    background-color: var(--main-bg-secondary);
+    border: var(--main-bg-secondary);
+    border-radius: 8px;
 }
 
 nav li:first-child {
@@ -87,7 +105,7 @@ nav li:first-child {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: #BFACC8;
+    background-color: var(--main-bg);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px #1f2937;
     display: flex;
@@ -95,6 +113,7 @@ nav li:first-child {
     align-items: flex-start;
     justify-content: flex-start;
     margin-top: 0;
+    margin-right: 0;
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.3s ease;
@@ -115,7 +134,7 @@ nav li:first-child {
 }
 
 .sidebar a:hover {
-    color: #dadada;
+    color: var(--font);
 }
 
 nav img {
@@ -129,28 +148,32 @@ nav img {
 }
 
 .secone {
-    background-color: #BFACC8;
+    background-color: none;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex: 1;
     align-items: center;
-    gap: 4em;
-    padding: 7em;
-}
-
-.seconeleft {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 50em;
-    color: #e5e7eb;
+    gap: 0em;
+    color: var(--font);
     font-size: 1.1em;
     text-align: justify;
-    padding: 20px;
+}
+
+.secone h3,
+.secone h1 {
+    margin: 0;
+}
+
+.secone img{
+    max-width: 284px;
+    margin-top: 2em;
+    flex: 1;
 }
 
 .seconebutton {
-    background-color: #4A4063;
-    color: white;
+    background-color: var(--secondary);
+    color: var(--font);
     border-radius: 8px;
     font-size: large;
     padding: 0.5em 2em;
@@ -160,20 +183,9 @@ nav img {
 }
 
 .seconebutton:hover {
-    background-color: #3f3655;
+    background-color: var(--main-bg-secondary);
 }
 
-.seconeright {
-    max-width: 100em;
-}
-
-.seconeright img{
-    filter: drop-shadow(2px 2px 10px #000000);
-}
-
-.biglogo {
-    width: 20em;
-}
 
 .sectwo {
     display: flex;
@@ -201,7 +213,7 @@ nav img {
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
-    border-color: #4A4063;
+    border-color: var(--main-bg-secondary);
     margin: 3em;
     margin-bottom: 1em;
 }
@@ -216,7 +228,7 @@ nav img {
 .configbutton {
     margin-bottom: 8px;
     margin-top: 20px;
-    background-color: #BFACC8;
+    background-color: var(--secondary);
     color: white;
     border-style: solid;
     border-radius: 10px;
@@ -232,7 +244,7 @@ nav img {
 }
 
 .configbutton:hover {
-    background-color: #ae9db6;
+    background-color: var(--main-bg-secondary);
 }
 
 .configurator{
@@ -256,7 +268,7 @@ nav img {
     gap: 20px;
 }
 #answers button{
-    background-color: #4A4063;
+    background-color: var(--main-sec);
     color: white;
     border-radius: 8px;
     font-size: large;
@@ -267,7 +279,7 @@ nav img {
 }
 
 #answers button:hover {
-    background-color: #3f3655;
+    background-color: var(--secondary);
 }
 
 #images {
@@ -346,7 +358,7 @@ nav img {
 }
 
 .secthreebutton {
-    background-color: #BFACC8;
+    background-color: var(--primary);
     color: white;
     border-style: solid;
     border-radius: 10px;
@@ -370,7 +382,7 @@ nav img {
 }
 
 .secfourinner {
-    background-color: #4A4063;
+    background-color: var(--main-sec);
     color: white;
     border-radius: 18px;
     display: flex;
@@ -446,7 +458,7 @@ nav img {
 }
 
 .impressum {
-    background-color: rgb(197, 182, 204);
+    background-color: var(--main-bg);
     color: #e5e7eb;
     display: flex;
     flex-direction: column;
@@ -473,7 +485,7 @@ nav img {
 }
 
 .footer {
-    background-color: #BFACC8;
+    background-color: var(--main-bg);
     color: #e5e7eb;
     display: flex;
     align-items: center;
@@ -496,13 +508,13 @@ nav img {
 }
 
 .totop {
-    background: #aa99b3;
+    background: var(--primary);
     position: fixed;
     bottom: 64px;
     right: 64px;
     width: 32px;
     height: 32px;
-    border: #aa99b3;
+    border: var(--secondary);
     border-radius: 100%;
     display: flex;
     align-items: center;
