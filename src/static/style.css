@@ -86,6 +86,7 @@ nav a:hover {
     background-color: var(--main-bg-secondary);
     border: var(--main-bg-secondary);
     border-radius: 8px;
+    transition: all 1s;
 }
 
 nav li:first-child {
@@ -160,15 +161,23 @@ nav img {
     text-align: justify;
 }
 
+.secone h1{
+    font-size: 4em;
+}
+
 .secone h3,
 .secone h1 {
     margin: 0;
 }
 
 .secone img{
-    max-width: 284px;
-    margin-top: 2em;
-    flex: 1;
+    max-width: 200px;
+    margin-top: 11em;
+    margin-bottom: 1em;
+}
+
+.secone a{
+    margin-bottom: 6em;
 }
 
 .seconebutton {
@@ -179,11 +188,12 @@ nav img {
     padding: 0.5em 2em;
     border: 0;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 64px;
 }
 
 .seconebutton:hover {
     background-color: var(--main-bg-secondary);
+    transition: ease-in-out 0.5s;
 }
 
 
