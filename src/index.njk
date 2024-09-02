@@ -1,0 +1,167 @@
+---
+title: Lashes By Dim
+---
+{% extends "base.njk" %}
+{% block content %}
+  <div class="secone" id="about">
+    <div class="seconeleft">
+      <h1>Herzlich willkommen</h1>
+      <p>
+        mein Name ist Dim, und ich bin leidenschaftliche Wimpernstylistin mit einem Auge für Schönheit und Präzision.
+        Mit meiner Liebe zum Detail und meiner Fachkenntnis in verschiedenen Techniken der Wimpernverlängerung und
+        -verdichtung helfe ich meinen Kunden, ihren Blick zu verschönern.
+      </p>
+      <p>Jede Kundin erhält bei mir eine individuelle
+        Beratung und maßgeschneiderte Behandlung, um ihre Wimpern-Träume wahr werden zu lassen. Ich freue mich darauf,
+        dich in meinem Studio begrüßen zu dürfen und gemeinsam deine Wimpern zu verwandeln!</p>
+      <a href="/contact/">
+        <button class="seconebutton">Kontaktieren</button>
+      </a>
+    </div>
+    <div class="seconeright">
+      <img src="/static/images/portrait.png" alt="Logo: Lashes by Dim" class="biglogo"/>
+    </div>
+  </div>
+
+  <div class="sectwo" id="bilder">
+    <h2>Meine bisherigen Werke:</h2>
+    <div class="productcontainer animate hidden">
+      <div class="product">
+        <div class="prodimg"><img src="/static/images/newimage3.JPG" alt=""></div>
+        <div class="prodtext">1:1 Technik</div>
+      </div>
+      <div class="product">
+        <div class="prodimg"><img src="/static/images/newimage2.JPG" alt=""></div>
+        <div class="prodtext">1:1 Technik</div>
+      </div>
+      <div class="product">
+        <div class="prodimg"><img src="/static/images/2024-02-18 20 01 33.jpg" alt=""></div>
+        <div class="prodtext">Dezenter Mascara Look</div>
+      </div>
+      <div class="product">
+        <div class="prodimg"><img src="/static/images/newimage1.JPG" alt=""></div>
+        <div class="prodtext">Mascara Look</div>
+      </div>
+      <div class="product">
+        <div class="prodimg"><img src="/static/images/2023-07-03 17 37 45.jpg" alt=""></div>
+        <div class="prodtext">Light Volume/Mascara Look</div>
+      </div>
+      <div class="product">
+        <div class="prodimg"><img src="/static/images/newimage5.JPG" alt=""></div>
+        <div class="prodtext">Volumentechnik (farbige Highlights)</div>
+      </div>
+      <div class="product">
+        <div class="prodimg"><img src="/static/images/newimage7.JPG" alt=""></div>
+        <div class="prodtext">Volumentechnik (Megavolumen)</div>
+      </div>
+    </div>
+    <button class="configbutton animate hidden" onclick="toggleconf()">Welcher Look passt zu mir? <img src="/static/images/confarrow.png"></button>
+    <div class="configurator animate hidden" style="display: flex;">
+      <div class="questions">
+        <h3 id="question"></h3>
+        <div id="images"></div>
+        <div id="answers"></div>
+      </div>
+      <div class="result" style="display: none;"></div>
+    </div>
+  </div>
+  <div class="sectwo" id="bewertungen">
+    <h2>Eure Bewertungen:</h2>
+    <div class="productcontainer animate hidden">
+      <div class="product">
+        <div class="reviewimg"><img src="/static/images/review1.png" alt=""></div>
+      </div>
+      <div class="product">
+        <div class="reviewimg"><img src="/static/images/review3.png" alt=""></div>
+      </div>
+      <div class="product">
+        <div class="reviewimg"><img src="/static/images/review4.png" alt=""></div>
+      </div>
+      <div class="product">
+        <div class="reviewimg"><img src="/static/images/review5.png" alt=""></div>
+      </div>
+      <div class="product">
+        <div class="reviewimg"><img src="/static/images/review6.png" alt=""></div>
+      </div>
+      <div class="product">
+        <div class="reviewimg"><img src="/static/images/review7.png" alt=""></div>
+      </div>
+      <div class="product">
+        <div class="reviewimg"><img src="/static/images/review8.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="secthree animate hidden" id="preise">
+    <div class="preisliste">
+      Anfahrt
+    </div>
+    <div class="secthreecontent">
+      <!-- <img src="./static/images/preisliste.png" alt="Preisliste as pdf">
+      <a href="./static/images/preisliste-transformed.png" target="_blank"><button class="secthreebutton">Hier klicken
+          zum Download</button></a> -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.056723545271!2d6.094238776158919!3d50.84863385861471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c099da2e3c1c8f%3A0x2eb04426e1aeb928!2sLashes%20by%20Dim!5e0!3m2!1sde!2sde!4v1724860556922!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="secfour animate hidden" id="kontakt">
+    <div class="secfourinner">
+      <div class="secfourleft">
+        <h3>Kontakt</h3>
+        <p class="contacttxt1">
+          Für freie Termine und allgemeine Kontaktanfragen, melde dich gerne per Mail oder Instagram (siehe rechts).
+        </p>
+        <p class="contacttxt1">Online sind Termine über Beautinda buchbar. Klicke hierzu bitte auf den folgenden Link:
+        </p>
+        <p class="contacttxt2">Für freie Termine und allgemeine Kontaktanfragen, melde dich gerne per Mail oder
+          Instagram. Online-Termine sind über Beautina buchbar. Klicke dafür auf einen der folgenden Links:</p>
+        <a href="https://beautinda.de/artist/bm0mcbZRcza3iH9hJkz9Y92gbRh1" target="_blank">
+          <button
+            class="beautinda"><img
+              src="https://assets-global.website-files.com/61a39eee768b84546352096c/62d16690aa762f2423ff8667_Logo_Beautinda.png"
+              alt="Beautinda icon"></button>
+        </a>
+        <div class="buttonrow">
+          <a href="https://beautinda.de/artist/bm0mcbZRcza3iH9hJkz9Y92gbRh1" target="_blank">
+            <button class="btn"><img
+                src="https://assets-global.website-files.com/61a39eee768b84546352096c/62d16690aa762f2423ff8667_Logo_Beautinda.png"
+                alt="Beautinda icon"></button>
+          </a>
+          <a href="mailto:dimanhussein@gmx.de">
+            <button class="secfourbutton"><img src="/static/images/mail-ico.png"
+                alt="Mail icon"></button>
+          </a>
+          <a href="https://www.instagram.com/lashes.by.dim" target="_blank">
+            <button class="secfourbutton"><img
+                src="/static/images/instagram.png" alt="Instagram icon"></button>
+          </a>
+        </div>
+      </div>
+      <div class="secfourright">
+        <a href="mailto:dimanhussein@gmx.de">
+          <button class="secfourbutton"><img src="/static/images/mail-ico.png"
+              alt="Mail icon"></button>
+        </a>
+        <a href="https://www.instagram.com/lashes.by.dim" target="_blank">
+          <button class="secfourbutton"><img
+              src="/static/images/instagram.png" alt="Instagram icon"></button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="impressum animate hidden"  id="impressum">
+    <h3>Impressum</h3>
+    <div class="imprcontainer">
+      <div class="address">
+        <strong>Diman Hussein</strong>
+        <p>Neue Furth 31</p>
+        <p>52146 Würselen</p>
+        <p>lashesbydim@gmail.com</p>
+        <p>+49176 81392144</p>
+      </div>
+      <div class="ihk">
+        <p>Steuer-Nr.: 202/5172/1776</p>
+        <p>Handwerkskammer Aachen</p>
+        <p>Betriebs-Nr.: 3123162</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
