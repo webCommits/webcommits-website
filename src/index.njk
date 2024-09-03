@@ -4,47 +4,75 @@ title: webCommits web Designs
 {% extends "base.njk" %}
 {% block content %}
   <div class="secone" id="about">
-      <img src="/static/images/name.png" alt="" srcset="">
-      <h1>Handcoded Websites</h1>
-      <h3>ohne hohe Kosten</h3>
-      <a href="/contact/">
-        <button class="seconebutton">Kontaktieren</button>
-      </a>
+    <img src="/static/images/name.png" alt="" srcset="">
+    <h1>Handcoded Websites</h1>
+    <h3>ohne hohe Kosten</h3>
+    <a href="/contact/">
+      <button class="seconebutton">Kontaktieren</button>
+    </a>
   </div>
 
-  <div class="sectwo" id="bilder">
-    <h2>Hilfe für Alle</h2>
-  </div>
-  <div class="sectwo" id="bewertungen">
-    <h2>Eure Bewertungen:</h2>
-    <div class="productcontainer animate hidden">
-      <div class="product">
-        <div class="reviewimg"><img src="/static/images/review1.png" alt=""></div>
-      </div>
-      <div class="product">
-        <div class="reviewimg"><img src="/static/images/review3.png" alt=""></div>
-      </div>
-      <div class="product">
-        <div class="reviewimg"><img src="/static/images/review4.png" alt=""></div>
-      </div>
-      <div class="product">
-        <div class="reviewimg"><img src="/static/images/review5.png" alt=""></div>
-      </div>
-      <div class="product">
-        <div class="reviewimg"><img src="/static/images/review6.png" alt=""></div>
-      </div>
-      <div class="product">
-        <div class="reviewimg"><img src="/static/images/review7.png" alt=""></div>
-      </div>
-      <div class="product">
-        <div class="reviewimg"><img src="/static/images/review8.png" alt=""></div>
-      </div>
+  <div class="sectwo animate hidden" id="aboutus">
+    <div class="left">
+      <h2>Hilfe für Alle</h2>
+      <h3>ohne Page-Builder!</h3>
+      <p>Wir vertrauen auf die Schnelligkeit, Präzision und Sicherheit von handgeschriebenem Code. 
+        Dabei hilft uns unsere jahrelange Erfahrung. Wir sind ein kleines Team, was Wert auf ordentlichen, 
+        nützlichen und wiederverwendbaren Code legt. Wir arbeiten ohne unnötige Page-Builder, was Ihre Kunden schneller zu dem von Ihnen gewünschten Inhalt bringt.
+         Mehr zu unserer Firmenphilosophie finden Sie hier:</p>
+      <a href="/aboutus/">
+        <button class="sectwobutton">Über Uns</button>
+      </a>
+    </div>
+    <div class="right">
+      <img src="/static/images/markusspiske-code.jpg" alt="Code Picture by Markus Spiske">
     </div>
   </div>
-  <div class="secthree animate hidden" id="preise">
+  <div class="portfolio animate hidden" id="portfolio">
+    <h1>Portfolio</h1>
+    <p>Die folgenden Websites repräsentieren eine Auswahl unserer vorherigen Projekte. Überzeugen Sie sich über einen Klick auf die Vorschau!</p>
+    <div class="website-container">
+      <div class="left">
+        <h3>Lashes by Dim</h3>
+        <p>Eine interaktive Website für die Wimpernstylistin unseres Vertrauens.</p>
+      </div>
+      <div class="images">
+        <a href="https://lashesbydim.de/">
+          <img src="/static/images/lashesbydim.png" alt="Lashes by Dim Screenshot">
+        </a>
+      </div>
+    </div>
+    <div class="website-container">
+      <div class="images">
+        <a href="https://ben-bachmair.de/">
+          <img src="/static/images/benbachmair.png" alt="Ben Bachmair Screenshot">
+        </a>
+      </div>
+      <div class="right">
+        <h3>Ben-Bachmair</h3>
+        <p>Eine Übersichtswebsite für einen Weltweit bekannten Professor, Author und Mentor.</p>
+      </div>
+    </div>
+    <div class="website-container">
+      <div class="left">
+        <h3>webCommits</h3>
+        <p>Die besten Web-Entwickler präsentieren Ihre eigene Website. Untersuchen Sie die Seite per Rechtsklick und überzeugen Sie sich von unserer Arbeit.</p>
+      </div>
+      <div class="images">
+        <a href="/">
+          <img src="/static/images/webcommits.png" alt="webCommits Screenshot">
+        </a>
+      </div>
+    </div>
+    <a href="/portfolio/">
+      <button class="portfoliobutton">Mehr lesen</button>
+    </a>
+  </div>
+  <div class="secthree animate hidden" id="anfahrt">
     <div class="preisliste">
-      Anfahrt
+      <h1>Anfahrt</h1>
     </div>
+    <p>Sie finden uns an der Grenze von Aachen. Klicken Sie auf die Karte für genauere Infos.</p>
     <div class="secthreecontent">
       <!-- <img src="./static/images/preisliste.png" alt="Preisliste as pdf">
       <a href="./static/images/preisliste-transformed.png" target="_blank"><button class="secthreebutton">Hier klicken
