@@ -237,6 +237,10 @@ nav img {
     font-size: xx-large;
 }
 
+.sectwo .left p{
+    max-width: 69em;
+}
+
 .sectwobutton {
     background-color: var(--secondary);
     color: var(--font);
@@ -319,6 +323,12 @@ nav img {
 
 .website-container img {
     max-width: 24em;
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+}
+
+.website-container img:hover {
+    max-width: 26em;
+    transition: all linear 1s;
 }
 
 .website-container p {
@@ -409,88 +419,59 @@ nav img {
     background-color: #ae9db6;
 }
 
-.secfour {
-    margin: 140px;
+.contact-sec {
+    background-color: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
     align-items: center;
-}
-
-.secfourinner {
-    background-color: var(--main-sec);
-    color: white;
-    border-radius: 18px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 4em;
-    gap: 7em;
-}
-
-.secfourleft {
+    gap: 0em;
+    color: var(--font);
+    font-size: 1.1em;
     text-align: justify;
-    flex-basis: 40em;
+    margin-top: 10em;
+    margin-bottom: 12em;
 }
 
-.secfourright {
+.contact-sec h1{
+    font-size: 3em;
+}
+
+.contact-sec h3,
+.contact-sec h1 {
+    margin: 0;
+}
+
+.contact-container{
     display: flex;
-    flex-direction: column;
-    gap: 1em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4em;
+    gap: 6em;
 }
 
-.secfourbutton {
-    background-color: #4A4063;
-    color: white;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 2px;
-    border-color: white;
-    font-size: large;
-    padding: 8px 10px;
-    font-weight: bold;
+.contact-container a {
+    border: solid var(--main-sec) 2px;
+    border-radius: 12px;
+    padding: 3em;
 }
 
-.secfourbutton img {
-    max-width: 1em;
+.contact-container a:hover {
+    background-color: var(--main-bg-secondary);
+    padding: 4em;
+    transition: all linear 1s;
+}
+
+.contact-container img{
+    max-width: 7em;
+    width: 120px;
     filter: invert();
 }
 
-.beautinda {
-    background-color: #4A4063;
-    color: white;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 2px;
-    border-color: white;
-    font-size: large;
-    padding: 8px 10px;
-    font-weight: bold;
-}
-
-.beautinda img {
-    max-width: 6em;
-}
-
-.secfourbutton:hover,
-.beautinda:hover {
-    background-color: #39314d;
-}
-
-.btn {
-    background-color: #4A4063;
-    color: white;
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 2px;
-    border-color: white;
-    font-size: large;
-    padding: 8px 10px;
-    font-weight: bold;
-}
-
-.btn img {
-    max-width: 6em;
+.contact-container .form-img {
+    filter: none;
 }
 
 .impressum {
@@ -501,6 +482,17 @@ nav img {
     justify-content: start;
     padding: 2em 4em;
     gap: 1em;
+}
+
+.impressum img{
+    max-height: 80px;
+    margin-top: 2em;
+}
+
+.impressum a:hover{
+    background-color: var(--main-bg-secondary);
+    padding: 2px;
+    transition: all linear 0.5s;
 }
 
 .impressum h3 {
@@ -569,12 +561,12 @@ nav img {
 
 
 @media all and (max-width: 664px) {
-    .sidebar {
-        width: 100%;
+    .logo {
+        height: 42px;
     }
 
-    .biglogo {
-        display: none;
+    .sidebar {
+        width: 100%;
     }
 
     .seconeleft {
@@ -642,16 +634,13 @@ nav img {
         font-size: medium;
     }
 
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menubtn {
-        display: block;
-    }
-
     .secone {
         width: auto;
+    }
+
+    .secone h1 {
+        font-size: 3em;
+        text-align: center;
     }
 
     .secone p {
@@ -702,6 +691,10 @@ nav img {
         font-size: small;
     }
 
+    nav ul {
+        margin-right: 0;
+    }
+
     .secone {
         gap: 0;
         padding: 20px 30px;
@@ -722,6 +715,16 @@ nav img {
         color: #f9faf8;
     }
 
+}
+
+@media all and (max-width: 1250px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menubtn {
+        display: block;
+    }
 }
 
 /* Observer animation */
