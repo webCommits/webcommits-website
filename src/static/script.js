@@ -24,8 +24,23 @@ function showTopButton() {
     })
 }
 
+function animateHeader() {
+    console.log("Loaded");
+
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 8) {
+            header.classList.add('full')
+        } else {
+            header.classList.remove('full')
+        }
+    })
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     showTopButton();
+    animateHeader();
 })
 
 const observer = new IntersectionObserver((entries => {
