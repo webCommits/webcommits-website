@@ -279,7 +279,7 @@ nav img {
     gap: 0em;
     color: var(--font);
     font-size: 1.1em;
-    text-align: justify;
+    text-align: center;
 }
 
 .portfolio h1{
@@ -297,7 +297,7 @@ nav img {
     justify-content: space-between;
     align-items: center;
     gap: 5em;
-    text-align: justify;
+    text-align:initial;
     margin: 3em;
 }
 
@@ -429,7 +429,7 @@ nav img {
     gap: 0em;
     color: var(--font);
     font-size: 1.1em;
-    text-align: justify;
+    text-align: center;
     margin-top: 10em;
     margin-bottom: 12em;
 }
@@ -527,14 +527,6 @@ nav img {
     gap: 0.5em;
 }
 
-.contacttxt2 {
-    display: none;
-}
-
-.buttonrow {
-    display: none;
-}
-
 .totop {
     background: var(--main-bg-secondary);
     position: fixed;
@@ -560,74 +552,60 @@ nav img {
 }
 
 
-@media all and (max-width: 664px) {
-    .logo {
-        height: 42px;
-    }
 
-    .sidebar {
-        width: 100%;
-    }
-
-    .seconeleft {
-        display: flex;
-        justify-content: center;
-    }
-
-    .sectwo h2 {
-        font-size: larger;
-    }
-
-    .configurator {
-        margin: 4px;
-        padding: 24px;
-    }
-
-    #images img {
-        max-width: 30%;
-        height: 40px;
-    }
-
-    .secthreecontent {
-        flex-direction: column;
-        gap: 2em;
-    }
-
-    .secfour {
-        margin: 2em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .secfourright {
+@media all and (max-width: 1250px) {
+    .hideOnMobile {
         display: none;
     }
 
-    .contacttxt1 {
-        display: none;
-    }
-
-    .contacttxt2 {
-        display: inline;
-    }
-
-    .imprcontainer {
+    .menubtn {
         display: block;
     }
 
-    .ihk {
-        margin-top: 20px;
+    .sectwo .left h3{
+        text-align: left;
+        font-size: x-large;
     }
 
-    .totop.active {
-        bottom: 24px;
-        right: 24px;
-        opacity: 60%;
-
+    .sectwo .right img{
+        max-width: 20em;
     }
 }
+
+@media all and (max-width: 1000px) {
+    h1 {
+        font-size: 2em;
+        font-weight: bold;
+        color: #f9faf8;
+    }
+
+    .header a {
+        font-size: small;
+    }
+
+    nav ul {
+        margin-right: 0;
+    }
+
+    .secone {
+        gap: 0;
+        padding: 20px 30px;
+    }
+
+    .sectwo {
+        margin-left: 8px;
+    }
+
+    .contact-container a {
+        padding: 2em;
+    }
+
+    .contact-container a:hover {
+        padding: 2.4em;
+    }
+
+}
+
 
 @media all and (max-width: 890px) {
     .header a {
@@ -651,30 +629,26 @@ nav img {
         max-width: 20em;
     }
 
-    .biglogo {
-        width: 12em;
+    .sectwo {
+        margin-left: 8px;
+        margin-right: 0;
     }
 
-    .secfourright {
-        display: none;
+    .sectwo .right img{
+        max-width: 18em;
+        margin-top: 4em;
     }
 
-    .beautinda {
-        display: none;
+    .website-container {
+        text-align: center;
     }
 
-    .buttonrow {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 4px;
+    .contact-container a {
+        padding: 1em;
     }
 
-    .contacttxt1 {
-        display: none;
-    }
-
-    .contacttxt2 {
-        display: block;
+    .contact-container a:hover {
+        padding: 1.4em;
     }
 
     .imprcontainer {
@@ -686,44 +660,123 @@ nav img {
     }
 }
 
-@media all and (max-width: 1000px) {
-    .header a {
-        font-size: small;
+@media all and (max-width: 690px) {
+    .logo {
+        height: 36px;
     }
 
-    nav ul {
-        margin-right: 0;
+    .sidebar {
+        width: 100%;
     }
 
-    .secone {
-        gap: 0;
-        padding: 20px 30px;
+    .secone img {
+        width: 10em;
     }
 
     .seconeleft {
-        width: 50em;
-        font-size: 1em;
+        display: flex;
+        justify-content: center;
     }
 
-    .seconeleft p {
-        margin-bottom: 20px;
+    .sectwo{
+        padding: 2em;
+        position: relative;
+        z-index: 1;
     }
 
-    h1 {
-        font-size: 2em;
-        font-weight: bold;
-        color: #f9faf8;
+    .sectwo::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background-image: url("/static/images/markusspiske-code.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(8px);
+        opacity: 0.5;
+        z-index: -1;
     }
 
-}
+    .sectwo h2 {
+        font-size: larger;
+    }
 
-@media all and (max-width: 1250px) {
-    .hideOnMobile {
+    .sectwo .right{
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .portfolio{
+        margin-top: 4em;
+    }
+
+    .website-container {
+        position: relative;
+        z-index: 1;
+        --background-image: none;
+        padding-bottom: 4em;
+    }
+
+    .website-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: var(--background-image);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(2px);
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+    .website-container .images{
         display: none;
     }
 
-    .menubtn {
+    .website-container .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .website-container .right h3 {
+        color: var(--primary);
+        text-align: center;
+    }
+
+    .secthreecontent {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .contact-container{
+        gap: 2em;
+    }
+
+    .contact-container img{
+        max-width: 7em;
+        width: 42px;
+        filter: invert();
+    }
+
+    .imprcontainer {
         display: block;
+    }
+
+    .totop.active {
+        bottom: 24px;
+        right: 24px;
+        opacity: 60%;
+
     }
 }
 

@@ -57,4 +57,33 @@ const observer = new IntersectionObserver((entries => {
 document.addEventListener('DOMContentLoaded', function() {
     const hiddenElements = document.querySelectorAll(".animate");
     hiddenElements.forEach((el) => observer.observe(el));
+
+    const containers = document.querySelectorAll(".website-container");
+
+    containers.forEach(container => {
+        const img = container.querySelector("img");
+        const anchor = container.querySelector("a");
+
+        if (img && anchor) {
+            const imgSrc = img.getAttribute("src");
+            const anchorHref = anchor.getAttribute("href");
+
+            // Setze das Hintergrundbild
+            container.style.setProperty("--background-image", `url(${imgSrc})`);
+
+            // Erstelle einen neuen Anker, der das gesamte Container überlagert
+            const newAnchor = document.createElement('a');
+            newAnchor.href = anchorHref;
+            newAnchor.style.position = 'absolute';
+            newAnchor.style.top = '0';
+            newAnchor.style.left = '0';
+            newAnchor.style.width = '100%';
+            newAnchor.style.height = '100%';
+            newAnchor.style.zIndex = '0';  // Damit es unter dem Text, aber über dem Hintergrund ist
+
+            // Füge den neuen Anker zum Container hinzu
+            container.appendChild(newAnchor);
+        }
+    });
 });
+
