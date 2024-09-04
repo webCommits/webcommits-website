@@ -622,6 +622,44 @@ nav img {
     margin: 0;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form button {
+    background-color: var(--secondary);
+    color: var(--font);
+    border-radius: 8px;
+    font-size: large;
+    padding: 0.5em;
+    border: 0;
+    font-weight: 400;
+    margin-top: 8px;
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
+    margin-bottom: 3em;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: var(--main-bg-secondary);
+    transition: ease-in-out 0.5s;
+}
+
 
 @media all and (max-width: 1250px) {
     .hideOnMobile {
@@ -871,6 +909,14 @@ nav img {
         gap: 2em;
     }
 
+    .contactformular{
+        width: 100%;
+    }
+
+    .contactformular h1{
+        font-size: xx-large;
+    }
+
     .contact-container{
         gap: 2em;
     }
@@ -880,6 +926,7 @@ nav img {
         width: 42px;
         filter: invert();
     }
+
 
     .imprcontainer {
         display: block;

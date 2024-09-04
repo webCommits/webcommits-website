@@ -5,7 +5,28 @@ title: Kontakt
 {% block content %}
 <div class="spacer"></div>
 <div class="secone">
-    <h1>This is the Contact page</h1>
+    <div class="contactformular">
+        <h1>Kontaktformular</h1>
+        <p>Wir haben Sie überzeugt? Schreiben Sie uns gerne eine Nachricht mit einem </p>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="number">Telefonnummer: (optional)</label>
+            <input type="text" id="name" name="name">
+
+            <label for="mail">E-Mail:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="subject">Betreff:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Absenden</button>
+        </form>
+    </div>
 </div>
 <div class="spacer"></div>
 {% endblock %}
