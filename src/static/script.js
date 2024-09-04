@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     containersportfolio.forEach(container => {
         const img = container.querySelector("img");
         const anchor = container.querySelector("a");
+        const isMobileView = window.matchMedia("(max-width: 690px)").matches;
 
         if (img && anchor) {
             const imgSrc = img.getAttribute("src");
@@ -83,18 +84,20 @@ document.addEventListener('DOMContentLoaded', function() {
             // Setze das Hintergrundbild
             container.style.setProperty("--background-image", `url(${imgSrc})`);
 
-            // Erstelle einen neuen Anker, der das gesamte Container überlagert
-            const newAnchor = document.createElement('a');
-            newAnchor.href = anchorHref;
-            newAnchor.style.position = 'absolute';
-            newAnchor.style.top = '0';
-            newAnchor.style.left = '0';
-            newAnchor.style.width = '100%';
-            newAnchor.style.height = '80%';
-            newAnchor.style.zIndex = '0';  // Damit es unter dem Text, aber über dem Hintergrund ist
+            if (isMobileView){
+                // Erstelle einen neuen Anker, der das gesamte Container überlagert
+                const newAnchor = document.createElement('a');
+                newAnchor.href = anchorHref;
+                newAnchor.style.position = 'absolute';
+                newAnchor.style.top = '0';
+                newAnchor.style.left = '0';
+                newAnchor.style.width = '100%';
+                newAnchor.style.height = '80%';
+                newAnchor.style.zIndex = '0';  // Damit es unter dem Text, aber über dem Hintergrund ist
 
-            // Füge den neuen Anker zum Container hinzu
-            container.appendChild(newAnchor);
+                // Füge den neuen Anker zum Container hinzu
+                container.appendChild(newAnchor);
+            }
         }
     });
 });

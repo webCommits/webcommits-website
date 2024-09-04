@@ -282,6 +282,11 @@ nav img {
     text-align: center;
 }
 
+.portfolio p{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 .portfolio h1{
     font-size: 3em;
 }
