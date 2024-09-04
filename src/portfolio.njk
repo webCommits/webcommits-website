@@ -1,0 +1,49 @@
+---
+title: webCommits web Designs
+---
+{% extends "base.njk" %}
+{% block content %}
+<div class="spacer"></div>
+<div class="portfolio animate hidden" id="portfolio">
+    <h1>Portfolio</h1>
+    <p></p>
+    <p>Die folgenden Websites repräsentieren eine Auswahl unserer vorherigen Projekte. Überzeugen Sie sich über einen Klick auf die Vorschau!</p>
+    <div class="website-containerpo">
+      <div class="left">
+        <h3>Lashes by Dim</h3>
+        <p>Eine interaktive Website für die Wimpernstylistin unseres Vertrauens.</p>
+      </div>
+      <div class="images">
+        <a href="https://lashesbydim.de/">
+          <img src="/static/images/lashesbydim.png" alt="Lashes by Dim Screenshot">
+        </a>
+      </div>
+    </div>
+    <div class="website-containerpo">
+      <div class="images">
+        <a href="http://ben-bachmair.de/">
+          <img src="/static/images/benbachmair.png" alt="Ben Bachmair Screenshot">
+        </a>
+      </div>
+      <div class="right">
+        <h3>Ben-Bachmair</h3>
+        <p>Eine Übersichtswebsite für einen Weltweit bekannten Professor, Author und Mentor.</p>
+      </div>
+    </div>
+    <div class="website-containerpo">
+      <div class="left">
+        <h3>webCommits</h3>
+        <p>Die besten Web-Entwickler präsentieren Ihre eigene Website. Untersuchen Sie die Seite per Rechtsklick und überzeugen Sie sich von unserer Arbeit.</p>
+      </div>
+      <div class="images">
+        <a href="/">
+          <img src="/static/images/webcommits.png" alt="webCommits Screenshot">
+        </a>
+      </div>
+    </div>
+    <a href="https://github.com/webCommits/">
+      <button class="portfoliobutton">Zum Github</button>
+    </a>
+  </div>
+  <div class="spacer"></div>
+{% endblock %}

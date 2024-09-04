@@ -59,8 +59,20 @@ document.addEventListener('DOMContentLoaded', function() {
     hiddenElements.forEach((el) => observer.observe(el));
 
     const containers = document.querySelectorAll(".website-container");
+    const containersportfolio = document.querySelectorAll(".website-containerpo");
 
     containers.forEach(container => {
+        const img = container.querySelector("img");
+
+        if (img) {
+            const imgSrc = img.getAttribute("src");
+
+            // Setze das Hintergrundbild
+            container.style.setProperty("--background-image", `url(${imgSrc})`);
+        }
+    });
+
+    containersportfolio.forEach(container => {
         const img = container.querySelector("img");
         const anchor = container.querySelector("a");
 
@@ -78,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             newAnchor.style.top = '0';
             newAnchor.style.left = '0';
             newAnchor.style.width = '100%';
-            newAnchor.style.height = '100%';
+            newAnchor.style.height = '80%';
             newAnchor.style.zIndex = '0';  // Damit es unter dem Text, aber über dem Hintergrund ist
 
             // Füge den neuen Anker zum Container hinzu
