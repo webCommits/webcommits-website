@@ -606,6 +606,22 @@ nav img {
     margin-bottom: 8em;
 }
 
+.impressum-page{
+    margin: 0em 2em 0em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    text-align: justify;
+    overflow: auto;
+}
+
+.impressum-page p{
+    color: var(--font);
+    margin: 0;
+}
+
 
 @media all and (max-width: 1250px) {
     .hideOnMobile {
