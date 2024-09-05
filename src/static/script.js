@@ -41,6 +41,7 @@ function animateHeader() {
 document.addEventListener('DOMContentLoaded', function() {
     showTopButton();
     animateHeader();
+    document.documentElement.style.setProperty('--baseurl', '/webcommits-website');
 })
 
 const observer = new IntersectionObserver((entries => {
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Erstelle einen neuen Anker, der das gesamte Container überlagert
                 const newAnchor = document.createElement('a');
                 newAnchor.href = anchorHref;
+                newAnchor.target = "_blank"
                 newAnchor.style.position = 'absolute';
                 newAnchor.style.top = '0';
                 newAnchor.style.left = '0';
