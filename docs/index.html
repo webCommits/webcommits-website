@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>webCommits web Designs</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+  <link rel="manifest" href="/static/images/site.webmanifest">
+  <script src="/static/script.js"></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <nav>
+      <ul class="sidebar">
+        <li onclick=closeSidebar()><a href="javascript:void(0);"><img src="/static/images/close_menu.png" alt=""></a></li>
+        <li><a href="/aboutus/" onclick=closeSidebar()>Über Uns</a></li>
+        <li><a href="/portfolio/" onclick=closeSidebar()>Portfolio</a></li>
+        <li><a href="/anfahrt/" onclick=closeSidebar()>Anfahrt</a></li>
+        <li><a href="/contact/" onclick=closeSidebar()>Kontakt</a></li>
+        <li><a href="/impressum/" onclick=closeSidebar()>Impressum</a></li>
+      </ul>
+      <ul>
+        <li><a href="/"><img class="logo" src="/static/images/logoname2.png" alt="Logo for the company" /></a></li>
+        <li class="hideOnMobile"><a href="/aboutus/">Über Uns</a></li>
+        <li class="hideOnMobile"><a href="/portfolio/">Portfolio</a></li>
+        <li class="hideOnMobile"><a href="/anfahrt/">Anfahrt</a></li>
+        <li class="hideOnMobile"><a href="/contact/">Kontakt</a></li>
+        <li class="hideOnMobile"><a href="/impressum/">Impressum</a></li>
+        <li class="menubtn" onclick=showSidebar()><a href="javascript:void(0);"><img src="/static/images/open_menu.png" alt=""></a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  
+  <div class="secone" id="about">
+    <img src="/static/images/name.png" alt="" srcset="">
+    <h1>Handcoded Websites</h1>
+    <h3>ohne hohe Kosten</h3>
+    <a href="/contact/">
+      <button class="seconebutton">Kontaktieren</button>
+    </a>
+  </div>
+
+  <div class="sectwo animate hidden">
+    <div class="left">
+      <h2>Hilfe für Alle</h2>
+      <h3>ohne Page-Builder!</h3>
+      <p>Wir vertrauen auf die Schnelligkeit, Präzision und Sicherheit von handgeschriebenem Code. 
+        Dabei hilft uns unsere jahrelange Erfahrung. Wir sind ein kleines Team, was Wert auf ordentlichen, 
+        nützlichen und wiederverwendbaren Code legt. Wir arbeiten ohne unnötige Page-Builder, was Ihre Kunden schneller zu dem von Ihnen gewünschten Inhalt bringt.
+         Mehr zu unserer Firmenphilosophie finden Sie hier:</p>
+      <a href="/aboutus/">
+        <button class="sectwobutton">Über Uns</button>
+      </a>
+    </div>
+    <div class="right">
+      <img src="/static/images/markusspiske-code.jpg" alt="Code Picture by Markus Spiske">
+    </div>
+  </div>
+  <div class="portfolio animate hidden">
+    <h1>Portfolio</h1>
+    <p>Die folgenden Websites repräsentieren eine Auswahl unserer vorherigen Projekte. Überzeugen Sie sich über einen Klick auf die Vorschau!</p>
+    <div class="website-container">
+      <div class="left">
+        <h3>Lashes by Dim</h3>
+        <p>Eine interaktive Website für die Wimpernstylistin unseres Vertrauens.</p>
+      </div>
+      <div class="images">
+        <a href="https://lashesbydim.de/">
+          <img src="/static/images/lashesbydim.png" alt="Lashes by Dim Screenshot">
+        </a>
+      </div>
+    </div>
+    <div class="website-container">
+      <div class="images">
+        <a href="http://ben-bachmair.de/">
+          <img src="/static/images/benbachmair.png" alt="Ben Bachmair Screenshot">
+        </a>
+      </div>
+      <div class="right">
+        <h3>Ben-Bachmair</h3>
+        <p>Eine Übersichtswebsite für einen Weltweit bekannten Professor, Author und Mentor.</p>
+      </div>
+    </div>
+    <div class="website-container">
+      <div class="left">
+        <h3>webCommits</h3>
+        <p>Die besten Web-Entwickler präsentieren Ihre eigene Website. Untersuchen Sie die Seite per Rechtsklick und überzeugen Sie sich von unserer Arbeit.</p>
+      </div>
+      <div class="images">
+        <a href="/">
+          <img src="/static/images/webcommits.png" alt="webCommits Screenshot">
+        </a>
+      </div>
+    </div>
+    <a href="/portfolio/">
+      <button class="portfoliobutton">Mehr lesen</button>
+    </a>
+  </div>
+  <div class="secthree animate hidden" id="anfahrt">
+    <div class="preisliste">
+      <h1>Anfahrt</h1>
+    </div>
+    <p>Sie finden uns an der Grenze von Aachen. Klicken Sie auf die Karte für genauere Infos.</p>
+    <div class="secthreecontent">
+      <!-- <img src="./static/images/preisliste.png" alt="Preisliste as pdf">
+      <a href="./static/images/preisliste-transformed.png" target="_blank"><button class="secthreebutton">Hier klicken
+          zum Download</button></a> -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.057797459156!2d6.094210577730567!3d50.848613971671035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c098838f97fd31%3A0xcc1e0e30423795f0!2sNeue%20Furth%2031%2C%2052146%20W%C3%BCrselen!5e0!3m2!1sde!2sde!4v1725382026386!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="contact-sec" id="contact-sec">
+    <h1>Kontakt</h1>
+    <p>Wir haben Sie überzeugt? Dann melden Sie sich über die untenstehenden Möglichkeiten oder über unser Kontaktformular.</p>
+    <div class="contact-container">
+      <a href="mailto:test@test.de"><img src="/static/images/mail-ico.png" alt="Mail Icon"></a>
+      <a href="tel:+12345678"><img src="/static/images/call-ico.png" alt="Call Icon"></a>
+      <a href="/contact/"><img src="/static/images/form-ico.png" alt="Form Icon" class="form-img"></a>
+    </div>
+    <a href="/contact/">
+      <button class="seconebutton">Zum Formular</button>
+    </a>
+  </div>
+
+
+
+    <div class="impressum animate hidden"  id="impressum">
+    <div class="imprcontainer">
+    <a href="/"><img class="logo" src="/static/images/logoname2.png" alt="Logo for the company" /></a>
+      <div class="address">
+        <h3><a href="/impressum/">Impressum</a></h3>
+        <p><a href="/">Homepage</a></p>
+        <p><a href="https://github.com/webCommits/">GitHub</a></p>
+        <p><a href="https://github.com/webCommits/webcommits-website">This Site's Repo</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <ul>
+      <li>Copyright © webCommits web Designs 2024</li>
+    </ul>
+  </div>
+  <a href="#top" class="totop"><img src="/static/images/top-arrow.png" alt=""></a>
+</body>
+
+</html>
