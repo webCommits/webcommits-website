@@ -269,6 +269,137 @@ nav img {
     box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.75);
 }
 
+#aboutus .right img{
+    max-width: 24em;
+}
+
+#philosophy .right {
+    margin: 3.6em 4em 0em 0em;
+}
+
+#philosophy .right img{
+    border-radius: 12px;
+    max-width: 24em;
+}
+
+#principles{
+    padding: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+#principles .left ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+#principles .left ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+    text-align: left;
+}
+
+#principles .left ul li img {
+    height: 20px;
+    width: auto;
+}
+
+#principles .left ul li .text {
+    display: flex;
+    flex-direction: column;
+}
+
+#principles .left ul li strong {
+    color: var(--primary);
+}
+
+#principles::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url("/static/images/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.prices-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.price-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid var(--main-sec) 8px;
+    border-radius: 24px;
+    color: var(--font);
+    margin: 3em 0em 3em 0em;
+    padding: 20px;
+    max-width: 320px;
+    background-color: var(--main-bg-secondary);
+}
+
+.price-box ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0px 8px 0px 8px;
+    padding: 12px;
+}
+
+.price-box ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: -18px;
+}
+
+.price-box span{
+    font-size: x-large;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.price-box ul li img {
+    height: 20px;
+    width: auto;
+    filter: invert(67%) sepia(71%) saturate(3162%) hue-rotate(84deg) brightness(113%) contrast(109%);
+}
+
+.price-box h2{
+    color: var(--primary);
+    margin-bottom: 0;
+}
+
+.price-box h3{
+    font-size: medium;
+    color: var(--primary);
+    margin-bottom: 0;
+}
+
+.price-box button {
+    margin-top: 20px;
+    margin-bottom: 1em;
+}
+
 .portfolio {
     background-color: none;
     display: flex;
@@ -747,6 +878,19 @@ form button:hover {
         margin-top: 4em;
     }
 
+    #aboutus .right img{
+        max-width: 10em;
+    }
+
+    #philosophy .right {
+        margin: 3.6em 4em 0em 0em;
+    }
+    
+    #philosophy .right img{
+        border-radius: 12px;
+        max-width: 16em;
+    }
+
     .website-container {
         text-align: center;
     }
@@ -805,6 +949,43 @@ form button:hover {
         bottom: 0;
         width: 100%;
         background-image: url("/static/images/markusspiske-code.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(8px);
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    #about h1 {
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    #aboutus::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background-image: url("/static/images/portrait.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(8px);
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    #philosophy::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background-image: url("/static/images/code.png");
         background-repeat: no-repeat;
         background-size: cover;
         filter: blur(8px);
