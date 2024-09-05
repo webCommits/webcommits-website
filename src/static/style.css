@@ -601,6 +601,7 @@ nav img {
     background-color: #ae9db6;
 }
 
+
 .contact-sec {
     background-color: none;
     display: flex;
@@ -623,6 +624,10 @@ nav img {
 .contact-sec h3,
 .contact-sec h1 {
     margin: 0;
+}
+
+.contactformular {
+    max-width: 30em;
 }
 
 .contact-container{
