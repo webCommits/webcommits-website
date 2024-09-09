@@ -41,6 +41,7 @@ function animateHeader() {
 document.addEventListener('DOMContentLoaded', function() {
     showTopButton();
     animateHeader();
+    smoothScrollWithOffset('#scroll-arrow');
 })
 
 const observer = new IntersectionObserver((entries => {
@@ -101,4 +102,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function smoothScrollWithOffset(selector, offset = 200) {
+    const link = document.querySelector(selector);
+    link.onclick = function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      window.scrollTo({
+        top: target.offsetTop - offset,
+        behavior: 'smooth'
+      });
+    };
+  }
 
