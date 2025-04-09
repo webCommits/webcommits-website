@@ -24,6 +24,23 @@ function showTopButton() {
     })
 }
 
+function showContactButtons() {
+    console.log("Loaded");
+
+    const telbutton = document.querySelector('.telbutton');
+    const mailbutton = document.querySelector('.mailbutton');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 100) {
+            telbutton.classList.add('active')
+            mailbutton.classList.add('active')
+        } else {
+            telbutton.classList.remove('active')
+            mailbutton.classList.remove('active')
+        }
+    })
+}
+
 function animateHeader() {
     console.log("Loaded");
 
@@ -42,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showTopButton();
     animateHeader();
     smoothScrollWithOffset('#scroll-arrow');
+    showContactButtons();
 })
 
 const observer = new IntersectionObserver((entries => {
@@ -115,3 +133,22 @@ function smoothScrollWithOffset(selector, offset = 200) {
     };
   }
 
+
+function sendMail(event) {
+    event.preventDefault(); // Verhindert das normale Absenden des Formulars
+
+    // Werte aus dem Formular auslesen
+    const name = document.getElementById("name").value;
+    const number = document.getElementById("number").value;
+    const email = document.getElementById("mail").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    // `mailto`-Link erstellen
+    const mailtoLink = `mailto:webcommitswebdesigns@gmail.com?subject=${encodeURIComponent("Anfrage: " + subject)}&body=${encodeURIComponent(
+        `Name: ${name}\nTelefonnummer: ${number}\nE-Mail: ${email}\n\nNachricht:\n${message}`
+    )}`;
+
+    // E-Mail-Programm öffnen
+    window.location.href = mailtoLink;
+}

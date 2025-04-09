@@ -7,25 +7,28 @@ title: Kontakt
 <div class="secone">
     <div class="contactformular">
         <h1>Kontaktformular</h1>
-        <p>Wir haben Sie überzeugt? Schreiben Sie uns gerne eine Nachricht Ihrer Wunsch-Idee und Ihren Kontaktdaten.</p>
-        <form id="contactForm">
-            <label for="name">Name:</label>
+        <p>Der einfachste Weg mit uns in Kontakt zu treten. Hier können Sie Ihre Anfrage an uns formulieren und über
+            Ihren E-Mail-Client absenden. Dies garantiert einheitliche Anfragen und eine schnellere Bearbeitung Ihrer
+            Mail. Wir freuen uns über Ihre Nachricht.</p>
+        <form id="contactForm" onsubmit="sendMail(event)">
+            <label for="name">Name*</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="number">Telefonnummer: (optional)</label>
-            <input type="text" id="name" name="name">
+            <label for="number">Telefonnummer*</label>
+            <input type="text" id="number" name="number">
 
-            <label for="mail">E-Mail:</label>
-            <input type="text" id="name" name="name">
+            <label for="mail">E-Mail*</label>
+            <input type="email" id="mail" name="email" required>
 
-            <label for="subject">Betreff:</label>
+            <label for="subject">Betreff</label>
             <input type="text" id="subject" name="subject" required>
 
-            <label for="message">Nachricht:</label>
+            <label for="message">Nachricht</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
             <button type="submit">Absenden</button>
         </form>
+        <p>* Pflichtfelder</p>
     </div>
 </div>
 <div class="spacer"></div>
