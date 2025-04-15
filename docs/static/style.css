@@ -6,16 +6,44 @@
     --secondary: #73628A;
     --primary: #CBC5EA;
     --font: #EAEAEA;
+
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface0: #313244;
+    --lavender: #b4befe;
+    --blue: #89b4fa;
+    --sapphire: #74c7ec;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --rosewater: #f5e0dc;
+    --gradient: linear-gradient(135deg, var(--mauve), var(--blue));
+    --shadow: 0 10px 30px rgba(17, 17, 27, 0.3);
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
-    background: rgb(24, 54, 66);
-    background: radial-gradient(circle, rgba(24, 54, 66, 1) 0%, rgba(20, 47, 58, 1) 51%, rgba(31, 71, 87, 1) 100%);
+    background: #1E1E2E;
+    background: radial-gradient(circle, rgba(30, 30, 46, 1) 0%, rgba(49, 50, 68, 1) 50%, rgba(30, 30, 46, 1) 100%);
 }
 
 h1 {
@@ -52,7 +80,7 @@ a {
 }
 
 .header {
-    background-color: var(--main-bg-dark);
+    background-color: var(--mantle);
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
     z-index: 999;
     margin: 8px;
@@ -68,6 +96,7 @@ a {
     top: 0;
     left: 0;
     transition: all 0.3s linear;
+    background-color: rgb(24, 24, 37, 90%);
 }
 
 nav ul {
@@ -90,13 +119,15 @@ nav a {
     display: flex;
     align-items: center;
     color: var(--font);
+    background-color: none;
 }
 
 nav a:hover {
-    background-color: var(--main-bg-secondary);
-    border: var(--main-bg-secondary);
+    background-color: none;
+    border: solid #fff 0px;
     border-radius: 8px;
-    transition: all 1s;
+    transition: all 0.2s;
+    color: var(--mauve);
 }
 
 nav li:first-child {
@@ -116,7 +147,7 @@ nav li:first-child {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: var(--main-bg);
+    background-color: var(--mantle);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px #1f2937;
     display: flex;
@@ -193,7 +224,7 @@ nav img {
 }
 
 .seconebutton {
-    background-color: var(--secondary);
+    background-color: var(--surface1);
     color: var(--font);
     border-radius: 8px;
     font-size: large;
@@ -205,8 +236,10 @@ nav img {
 }
 
 .seconebutton:hover {
-    background-color: var(--main-bg-secondary);
-    transition: ease-in-out 0.5s;
+    background-color: var(--blue);
+    color: var(--base);
+    transform: translateY(-10%);
+    transition: ease-in-out 0.2s;
 }
 
 .secone a img {
@@ -251,7 +284,7 @@ nav img {
 }
 
 .sectwobutton {
-    background-color: var(--secondary);
+    background-color: var(--surface1);
     color: var(--font);
     border-radius: 8px;
     font-size: large;
@@ -263,8 +296,10 @@ nav img {
 }
 
 .sectwobutton:hover {
-    background-color: var(--main-bg-secondary);
-    transition: ease-in-out 0.5s;
+    background-color: var(--blue);
+    color: var(--base);
+    transform: translateY(-10%);
+    transition: ease-in-out 0.2s;
 }
 
 .sectwo .right {
@@ -369,13 +404,13 @@ nav img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid var(--main-sec) 8px;
+    border: solid var(--lavender) 8px;
     border-radius: 24px;
     color: var(--font);
     margin: 3em 0em 3em 0em;
     padding: 20px;
     max-width: 320px;
-    background-color: var(--main-bg-secondary);
+    background-color: var(--surface1);
 }
 
 .price-box ul {
@@ -488,8 +523,8 @@ nav img {
 }
 
 .website-container img:hover {
-    max-width: 26em;
-    transition: all linear 1s;
+    transform: translateY(-4%);
+    transition: all linear 0.2s;
 }
 
 .website-container p {
@@ -534,8 +569,9 @@ nav img {
 }
 
 .website-containerpo img:hover {
-    max-width: 26em;
-    transition: all linear 1s;
+    color: var(--base);
+    transform: translateY(-4%);
+    transition: all linear 0.2s;
 }
 
 .website-containerpo p {
@@ -543,7 +579,7 @@ nav img {
 }
 
 .portfoliobutton {
-    background-color: var(--secondary);
+    background-color: var(--surface1);
     color: var(--font);
     border-radius: 8px;
     font-size: large;
@@ -556,8 +592,10 @@ nav img {
 }
 
 .portfoliobutton:hover {
-    background-color: var(--main-bg-secondary);
-    transition: ease-in-out 0.5s;
+    background-color: var(--blue);
+    color: var(--base);
+    transform: translateY(-10%);
+    transition: ease-in-out 0.2s;
 }
 
 .secthree {
@@ -612,7 +650,7 @@ nav img {
 }
 
 .secthreebutton {
-    background-color: var(--primary);
+    background-color: var(--surface0);
     color: white;
     border-style: solid;
     border-radius: 10px;
@@ -624,7 +662,7 @@ nav img {
 }
 
 .secthreebutton:hover {
-    background-color: #ae9db6;
+    background-color: var(--lavender);
 }
 
 
@@ -672,9 +710,9 @@ nav img {
 }
 
 .contact-container a:hover {
-    background-color: var(--main-bg-secondary);
-    padding: 4em;
-    transition: all linear 1s;
+    background-color: var(--base, 80%);
+    transform: translateY(8%);
+    transition: all linear 0.2s;
 }
 
 .contact-container img {
@@ -688,7 +726,7 @@ nav img {
 }
 
 .impressum {
-    background-color: var(--main-bg);
+    background-color: var(--crust);
     color: #e5e7eb;
     display: flex;
     flex-direction: column;
@@ -703,9 +741,15 @@ nav img {
 }
 
 .impressum a:hover {
-    background-color: var(--main-bg-secondary);
-    padding: 2px;
-    transition: all linear 0.5s;
+    transform: translateX(2%);
+    transition: all linear 0.2s;
+    color: var(--lavender);
+}
+
+.imprcontainer .address a:hover {
+    transform: translateX(8%);
+    transition: all linear 0.2s;
+    color: var(--lavender);
 }
 
 .impressum h3 {
@@ -722,11 +766,10 @@ nav img {
     flex-direction: row;
     justify-content: flex-start;
     gap: 14em;
-
 }
 
 .footer {
-    background-color: var(--main-bg);
+    background-color: var(--crust);
     color: #e5e7eb;
     display: flex;
     align-items: center;
@@ -820,6 +863,13 @@ nav img {
 .mailbutton img {
     width: 18px;
     filter: invert();
+}
+
+.totop:hover,
+.telbutton:hover,
+.mailbutton:hover{
+    background-color: var(--lavender);
+    transition: all ease 0.4s;
 }
 
 .spacer {
