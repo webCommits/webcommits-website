@@ -4,14 +4,14 @@ title: webCommits web Designs | Web-Entwicklung, Design und IT
 {% extends "base.njk" %}
 {% block content %}
 <div class="secone" id="about">
-  <img src="/static/images/name.png" alt="" srcset="">
+  <img src="{{ global.baseurl }}/static/images/name.png" alt="" srcset="">
   <h1>Handcoded Websites</h1>
   <h3>ohne hohe Kosten</h3>
-  <a href="/contact/">
+  <a href="{{ global.baseurl }}/contact/">
     <button class="seconebutton">Kontaktieren</button>
   </a>
   <a href="#sectwo" id="scroll-arrow">
-    <img src="/static/images/arrow-down.png" alt="Down Arrow">
+    <img src="{{ global.baseurl }}/static/images/arrow-down.png" alt="Down Arrow">
   </a>
 </div>
 
@@ -24,12 +24,12 @@ title: webCommits web Designs | Web-Entwicklung, Design und IT
       nützlichen und wiederverwendbaren Code legt. Wir arbeiten ohne unnötige Page-Builder, was Ihre Kunden schneller zu
       dem von Ihnen gewünschten Inhalt bringt.
       Mehr zu unserer Firmenphilosophie finden Sie hier:</p>
-    <a href="/aboutus/">
+    <a href="{{ global.baseurl }}/aboutus/">
       <button class="sectwobutton">Über Uns</button>
     </a>
   </div>
   <div class="right">
-    <img src="/static/images/markusspiske-code.jpg" alt="Code Picture by Markus Spiske">
+    <img src="{{ global.baseurl }}/static/images/markusspiske-code.jpg" alt="Code Picture by Markus Spiske">
   </div>
 </div>
 <div class="portfolio animate hidden">
@@ -44,14 +44,14 @@ title: webCommits web Designs | Web-Entwicklung, Design und IT
     </div>
     <div class="images">
       <a href="https://sprechstunde.anglistik.rwth-aachen.de/">
-        <img src="/static/images/anglistikweb.png" alt="Anglistik Web Screenshot">
+        <img src="{{ global.baseurl }}/static/images/anglistikweb.png" alt="Anglistik Web Screenshot">
       </a>
     </div>
   </div>
   <div class="website-container">
     <div class="images">
       <a href="http://ben-bachmair.de/">
-        <img src="/static/images/benbachmair.png" alt="Ben Bachmair Screenshot">
+        <img src="{{ global.baseurl }}/static/images/benbachmair.png" alt="Ben Bachmair Screenshot">
       </a>
     </div>
     <div class="right">
@@ -66,11 +66,11 @@ title: webCommits web Designs | Web-Entwicklung, Design und IT
     </div>
     <div class="images">
       <a href="https://kernbohrungen-guenther.de/">
-        <img src="/static/images/kernbohrungen-guenther.png" alt="Kernbohrungen-Guenther Screenshot">
+        <img src="{{ global.baseurl }}/static/images/kernbohrungen-guenther.png" alt="Kernbohrungen-Guenther Screenshot">
       </a>
     </div>
   </div>
-  <a href="/portfolio/">
+  <a href="{{ global.baseurl }}/portfolio/">
     <button class="portfoliobutton">Mehr lesen</button>
   </a>
 </div>
@@ -94,11 +94,11 @@ title: webCommits web Designs | Web-Entwicklung, Design und IT
   <p>Wir haben Sie überzeugt? Dann melden Sie sich über die untenstehenden Möglichkeiten oder über unser
     Kontaktformular.</p>
   <div class="contact-container">
-    <a href="mailto:test@test.de"><img src="/static/images/mail-ico.png" alt="Mail Icon"></a>
-    <a href="tel:+12345678"><img src="/static/images/call-ico.png" alt="Call Icon"></a>
-    <a href="/contact/"><img src="/static/images/form-ico.png" alt="Form Icon" class="form-img"></a>
+    <a href="mailto:test@test.de"><img src="{{ global.baseurl }}/static/images/mail-ico.png" alt="Mail Icon"></a>
+    <a href="tel:+12345678"><img src="{{ global.baseurl }}/static/images/call-ico.png" alt="Call Icon"></a>
+    <a href="{{ global.baseurl }}/contact/"><img src="{{ global.baseurl }}/static/images/form-ico.png" alt="Form Icon" class="form-img"></a>
   </div>
-  <a href="/contact/">
+  <a href="{{ global.baseurl }}/contact/">
     <button class="seconebutton">Zum Formular</button>
   </a>
 </div>

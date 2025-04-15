@@ -383,7 +383,7 @@ nav img {
     right: 0;
     bottom: 0;
     width: 100%;
-    background-image: url("/static/images/logo.png");
+    background-image: url("./static/images/logo.png");
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(8px);
@@ -1088,7 +1088,7 @@ form button:hover {
         right: 0;
         bottom: 0;
         width: 100%;
-        background-image: url("/static/images/markusspiske-code.jpg");
+        background-image: url("./static/images/markusspiske-code.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         filter: blur(8px);
@@ -1109,7 +1109,7 @@ form button:hover {
         right: 0;
         bottom: 0;
         width: 100%;
-        background-image: url("/static/images/portrait.jpg");
+        background-image: url("./static/images/portrait.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         filter: blur(8px);
@@ -1125,7 +1125,7 @@ form button:hover {
         right: 0;
         bottom: 0;
         width: 100%;
-        background-image: url("/static/images/code.png");
+        background-image: url("./static/images/code.png");
         background-repeat: no-repeat;
         background-size: cover;
         filter: blur(8px);
