@@ -49,10 +49,23 @@ function animateHeader() {
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 8) {
             header.classList.add('full')
+            addActive();
         } else {
             header.classList.remove('full')
         }
     })
+
+    function addActive() {
+        const fullHeader = document.querySelector('.full');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 10) {
+            fullHeader.classList.add('active')
+        } else {
+            fullHeader.classList.remove('active')
+        }
+    })
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -79,6 +79,9 @@ a {
     font-size: 18px;
 }
 
+
+
+/* Für den normalen Zustand */
 .header {
     background-color: var(--mantle);
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
@@ -88,6 +91,7 @@ a {
     border-radius: 12px;
 }
 
+/* Für den festen Header, wenn er oben fixiert wird */
 .full {
     border-radius: 0;
     width: 100%;
@@ -95,9 +99,23 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    transition: all 0.3s linear;
     background-color: rgb(24, 24, 37, 90%);
+    opacity: 0;
+    /* Startet unsichtbar */
+    transform: translateY(-10%);
+    /* Startet oben außerhalb des Bildschirms */
 }
+
+/* Wenn der Header sichtbar wird */
+.active {
+    opacity: 1;
+    /* Macht ihn sichtbar */
+    transform: translateY(0);
+    /* Bringt ihn ar seine endgültige Position */
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease;
+}
+
+
 
 nav ul {
     list-style: none;
