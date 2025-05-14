@@ -178,7 +178,8 @@ nav li:first-child {
 }
 
 .sidebar a:hover {
-    color: var(--font);
+    color: var(--mauve);
+    transform: translateX(2%)
 }
 
 nav img {
@@ -246,6 +247,11 @@ nav img {
     margin: 0;
     padding: 8px;
     width: 3em;
+}
+
+.secone a img:hover {
+    transform: translateY(8%);
+    transition: all ease 0.4s;
 }
 
 
@@ -867,7 +873,7 @@ nav img {
 
 .totop:hover,
 .telbutton:hover,
-.mailbutton:hover{
+.mailbutton:hover {
     background-color: var(--lavender);
     transition: all ease 0.4s;
 }
