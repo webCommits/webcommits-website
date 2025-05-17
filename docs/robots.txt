@@ -1,9 +1,4 @@
-User-agent: Googlebot
-Disallow: 
-User-agent: googlebot-image
-Disallow: 
-User-agent: googlebot-mobile
-Disallow: 
 User-agent: *
-Disallow: 
+Allow: /
+
 Sitemap: https://www.webcommits.info/sitemap.xml
