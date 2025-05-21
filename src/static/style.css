@@ -1120,6 +1120,10 @@ form button:hover {
         z-index: -1;
     }
 
+    #about {
+        margin-top: 0;
+    }
+
     #about h1 {
         font-size: xx-large;
         text-align: center;
