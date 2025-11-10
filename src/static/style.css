@@ -6,7 +6,6 @@
     --secondary: #73628A;
     --primary: #CBC5EA;
     --font: #EAEAEA;
-
     --base: #1e1e2e;
     --mantle: #181825;
     --crust: #11111b;
@@ -37,13 +36,22 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1;
     background: #1E1E2E;
     background: radial-gradient(circle, rgba(30, 30, 46, 1) 0%, rgba(49, 50, 68, 1) 50%, rgba(30, 30, 46, 1) 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Clash Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 h1 {
@@ -77,9 +85,15 @@ a {
     text-decoration: none;
     color: var(--font);
     font-size: 18px;
+    font-family: inherit;
 }
 
-
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
 
 /* Für den normalen Zustand */
 .header {
@@ -132,7 +146,7 @@ nav li {
 
 nav a {
     height: 100%;
-    padding: 0 30px;
+    padding: 0 16px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -230,6 +244,7 @@ nav img {
 .secone h3,
 .secone h1 {
     margin: 0;
+    text-align: center;
 }
 
 .secone img {
@@ -1082,7 +1097,7 @@ form button:hover {
 
 @media all and (max-width: 690px) {
     .logo {
-        height: 36px;
+        height: 29px;
     }
 
     .sidebar {
