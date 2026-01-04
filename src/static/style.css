@@ -879,6 +879,10 @@ form button:hover {
     border-top: 1px solid var(--surface1);
 }
 
+.impressum-page {
+    padding: 1rem;
+}
+
 .impressum-page h3,
 .impressum-page h4{
     color: var(--lavender);
