@@ -165,3 +165,44 @@ function sendMail(event) {
     // E-Mail-Programm öffnen
     window.location.href = mailtoLink;
 }
+
+// Leaflet Map Initialisierung
+function initMap() {
+  // Prüfen ob map-Element existiert
+  const mapElement = document.getElementById('map');
+  if (!mapElement) return;
+
+  // Koordinaten für Baesweiler
+  const lat = 50.90988867168349;
+  const lng = 6.177249476621881;
+
+  // Karte initialisieren
+  const map = L.map('map').setView([lat, lng], 15);
+
+  // OpenStreetMap Tiles hinzufügen
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  }).addTo(map);
+
+  // Custom Icon erstellen
+  const customIcon = L.divIcon({
+    className: 'custom-marker',
+    html: '<div style="background: var(--mauve); width: 30px; height: 30px; border-radius: 50%; border: 3px solid var(--crust); box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></div>',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
+  });
+
+  // Marker hinzufügen
+  L.marker([lat, lng], { icon: customIcon })
+    .addTo(map)
+    .bindPopup('<strong>webCommits web Designs</strong><br>Hofgracht 7<br>52499 Baesweiler')
+    .openPopup();
+}
+
+// Map nach DOM-Load initialisieren
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initMap);
+} else {
+  initMap();
+}

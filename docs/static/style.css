@@ -107,6 +107,7 @@ textarea {
     margin: 8px;
     border: solid 0px #000000;
     border-radius: 12px;
+    padding: 1rem;
 }
 
 /* Für den festen Header, wenn er oben fixiert wird */
@@ -119,21 +120,19 @@ textarea {
     left: 0;
     background-color: rgb(24, 24, 37, 90%);
     opacity: 0;
-    /* Startet unsichtbar */
     transform: translateY(-10%);
-    /* Startet oben außerhalb des Bildschirms */
 }
 
 /* Wenn der Header sichtbar wird */
 .active {
     opacity: 1;
-    /* Macht ihn sichtbar */
     transform: translateY(0);
-    /* Bringt ihn ar seine endgültige Position */
     transition: opacity 0.5s ease-in-out, transform 0.3s ease;
 }
 
-
+nav {
+    width: 100%;
+}
 
 nav ul {
     list-style: none;
@@ -141,6 +140,8 @@ nav ul {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    margin: 0;
+    padding: 0;
     margin-right: 42px;
 }
 
@@ -155,12 +156,12 @@ nav a {
     display: flex;
     align-items: center;
     color: var(--font);
-    background-color: none;
+    background-color: transparent;
 }
 
 nav a:hover {
-    background-color: none;
-    border: solid #fff 0px;
+    background-color: transparent;
+    border: none;
     border-radius: 8px;
     transition: all 0.2s;
     color: var(--mauve);
@@ -168,6 +169,7 @@ nav a:hover {
 
 nav li:first-child {
     margin-right: auto;
+    margin-left: 0;
 }
 
 .logo {
@@ -182,16 +184,16 @@ nav li:first-child {
     right: 0;
     height: 100vh;
     width: 250px;
-    z-index: 999;
+    z-index: 1000;
     background-color: var(--mantle);
     backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px #1f2937;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-top: 0;
-    margin-right: 0;
+    margin: 0;
+    padding: 0;
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.3s ease;
@@ -199,9 +201,7 @@ nav li:first-child {
 
 .open {
     transform: translateX(0);
-    /* Added */
     opacity: 1;
-    /* Added */
 }
 
 .sidebar li {
@@ -215,7 +215,7 @@ nav li:first-child {
 
 .sidebar a:hover {
     color: var(--mauve);
-    transform: translateX(2%)
+    transform: translateX(2%);
 }
 
 nav img {
@@ -360,6 +360,8 @@ nav img {
 
 .sectwo .right img {
     max-width: 30em;
+    width: 100%;
+    height: auto;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(180, 190, 254, 0.2);
     border: 1px solid var(--surface1);
@@ -377,6 +379,8 @@ nav img {
 
 #aboutus .right img {
     max-width: 24em;
+    width: 100%;
+    height: auto;
 }
 
 #philosophy {
@@ -391,6 +395,8 @@ nav img {
 #philosophy .right img {
     border-radius: 16px;
     max-width: 24em;
+    width: 100%;
+    height: auto;
 }
 
 #principles {
@@ -559,6 +565,7 @@ nav img {
     font-size: 1.1em;
     text-align: center;
     padding: 6rem 2rem;
+    overflow: hidden; /* Verhindert horizontalen Overflow */
 }
 
 .portfolio h1 {
@@ -570,7 +577,7 @@ nav img {
     color: var(--subtext0);
     max-width: 800px;
     line-height: 1.6;
-    margin: 0 2rem;
+    margin: 0 1rem;
 }
 
 .website-container,
@@ -579,15 +586,17 @@ nav img {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
     text-align: initial;
-    margin: 3rem 2rem;
-    padding: 3rem;
+    margin: 2rem auto;
+    padding: 2rem;
     background: var(--surface0);
     border-radius: 20px;
     border: 1px solid var(--surface1);
     max-width: 1200px;
+    width: calc(100% - 4rem);
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .website-container:hover,
@@ -601,7 +610,8 @@ nav img {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    max-width: 500px;
+    flex: 1;
+    min-width: 0;
 }
 
 .website-container .left h3,
@@ -610,12 +620,19 @@ nav img {
     font-size: 1.5rem;
 }
 
+.website-container .left p,
+.website-containerpo .left p {
+    color: var(--subtext0);
+    line-height: 1.6;
+}
+
 .website-container .right,
 .website-containerpo .right {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    max-width: 500px;
+    flex: 1;
+    min-width: 0;
 }
 
 .website-container .right h3,
@@ -625,24 +642,37 @@ nav img {
     font-size: 1.5rem;
 }
 
+.website-container .right p,
+.website-containerpo .right p {
+    color: var(--subtext0);
+    line-height: 1.6;
+    text-align: right;
+}
+
+.website-container .images,
+.website-containerpo .images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
 .website-container img,
 .website-containerpo img {
-    max-width: 400px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    display: block;
 }
 
 .website-container img:hover,
 .website-containerpo img:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(180, 190, 254, 0.2);
-}
-
-.website-container p,
-.website-containerpo p {
-    color: var(--subtext0);
-    line-height: 1.6;
 }
 
 .portfoliobutton {
@@ -849,379 +879,10 @@ form button:hover {
     border-top: 1px solid var(--surface1);
 }
 
-.imprcontainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 4rem;
-    flex-wrap: wrap;
-}
-
-.imprcontainer .logo {
-    max-width: 200px;
-    height: auto;
-}
-
-.address {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.address h3 {
+.impressum-page h3,
+.impressum-page h4{
     color: var(--lavender);
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-}
-
-.address h3 a {
-    color: var(--lavender);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.address h3 a:hover {
-    color: var(--mauve);
-}
-
-.address p {
-    margin: 0;
-    padding: 0.5rem 0;
-}
-
-.address p a {
-    color: var(--subtext0);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.address p a:hover {
-    color: var(--text);
-    transform: translateX(5px);
-}
-
-.footer {
-    background: var(--crust);
-    padding: 2rem;
-    border-top: 1px solid var(--surface1);
-}
-
-.footer ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.footer ul li {
-    color: var(--subtext0);
-    font-size: 0.9rem;
-}
-
-.button-row {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 999;
-}
-
-.totop,
-.telbutton,
-.mailbutton {
-    width: 50px;
-    height: 50px;
-    background: var(--surface0);
-    border: 1px solid var(--surface1);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.totop:hover,
-.telbutton:hover,
-.mailbutton:hover {
-    transform: translateY(-5px);
-    background: var(--surface1);
-    border-color: var(--mauve);
-    box-shadow: 0 6px 20px rgba(180, 190, 254, 0.3);
-}
-
-.totop img,
-.telbutton img,
-.mailbutton img {
-    width: 24px;
-    height: 24px;
-    filter: invert(90%);
-}
-
-/* Spacer für bessere Abstände */
-.spacer {
-    height: 4rem;
-    background: transparent;
-}
-
-/* Danke-Seite Styling */
-#thankyou {
-    min-height: 70vh;
-    padding: 4rem 2rem;
-}
-
-#thankyou h1 {
-    font-size: 2.5rem;
     margin-bottom: 2rem;
-}
-
-#thankyou p {
-    color: var(--subtext0);
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#thankyou .seconebutton {
-    margin: 1rem;
-}
-
-/* Responsive Footer & Buttons */
-@media (max-width: 768px) {
-    .impressum {
-        padding: 3rem 1.5rem 1.5rem;
-    }
-    
-    .imprcontainer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2rem;
-    }
-    
-    .imprcontainer .logo {
-        max-width: 150px;
-    }
-    
-    .address {
-        align-items: center;
-    }
-    
-    .button-row {
-        bottom: 1rem;
-        right: 1rem;
-        gap: 0.8rem;
-    }
-    
-    .totop,
-    .telbutton,
-    .mailbutton {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .totop img,
-    .telbutton img,
-    .mailbutton img {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .footer ul li {
-        font-size: 0.8rem;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .button-row {
-        flex-direction: row;
-        bottom: 1rem;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        gap: 0.5rem;
-    }
-    
-    .totop,
-    .telbutton,
-    .mailbutton {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .spacer {
-        height: 2rem;
-    }
-}
-
-/* ========================================
-   Bestehende Responsive Breakpoints für Hauptseiten
-   ======================================== */
-
-@media all and (max-width: 1250px) {
-    nav ul {
-        gap: 2em;
-    }
-}
-
-@media all and (max-width: 1000px) {
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menubtn {
-        display: block;
-    }
-
-    .sectwo {
-        flex-direction: column;
-        padding: 4rem 2rem;
-    }
-
-    .sectwo .right {
-        margin: 2rem 0 0 0;
-    }
-
-    .sectwo .right img {
-        max-width: 100%;
-    }
-
-    #philosophy .right {
-        margin: 2rem 0 0 0;
-    }
-
-    #philosophy .right img {
-        max-width: 100%;
-    }
-
-    .website-container,
-    .website-containerpo {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem;
-        margin: 2rem 1rem;
-    }
-
-    .website-container img,
-    .website-containerpo img {
-        max-width: 100%;
-    }
-
-    .website-container .left,
-    .website-containerpo .left,
-    .website-container .right,
-    .website-containerpo .right {
-        max-width: 100%;
-    }
-
-    .prices-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .price-box {
-        max-width: 500px;
-        width: 100%;
-    }
-}
-
-@media all and (max-width: 890px) {
-    .secone h1 {
-        font-size: 2.5rem;
-    }
-
-    .secone h3 {
-        font-size: 1.2rem;
-    }
-
-    .sectwo .left h3,
-    #principles .left h3,
-    .portfolio h1,
-    .preisliste h1,
-    .contact-sec h1 {
-        font-size: 2rem;
-    }
-
-    #principles .left ul li {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-}
-
-@media all and (max-width: 690px) {
-    .secone {
-        padding: 2rem 1rem;
-    }
-
-    .secone h1 {
-        font-size: 2rem;
-    }
-
-    .secone h3 {
-        font-size: 1rem;
-    }
-
-    .secone img {
-        max-width: 100px;
-        margin-top: 6em;
-    }
-
-    .seconebutton {
-        font-size: 1rem;
-        padding: 0.8rem 2rem;
-    }
-
-    .sectwo {
-        padding: 3rem 1.5rem;
-    }
-
-    .sectwo .left h3,
-    #principles .left h3 {
-        font-size: 1.75rem;
-    }
-
-    .portfolio,
-    .secthree,
-    .contact-sec {
-        padding: 4rem 1.5rem;
-    }
-
-    .contactformular {
-        padding: 2rem;
-    }
-
-    .website-container,
-    .website-containerpo {
-        padding: 1.5rem;
-        margin: 1.5rem 0.5rem;
-    }
-
-    form button,
-    .sectwobutton,
-    .portfoliobutton {
-        width: 100%;
-    }
-}
-
-/* ========================================
-   Footer & Impressum Styling (modernisiert)
-   ======================================== */
-
-.impressum {
-    background: var(--crust);
-    padding: 4rem 2rem 2rem;
-    border-top: 1px solid var(--surface1);
 }
 
 .imprcontainer {
@@ -1401,7 +1062,7 @@ form button:hover {
 
 .teaser-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -1412,6 +1073,10 @@ form button:hover {
     border-radius: 16px;
     border: 1px solid var(--surface1);
     transition: all 0.3s ease;
+}
+
+.teaser-feature:nth-child(4) {
+    grid-column: 2 / 3;
 }
 
 .teaser-feature:hover {
@@ -1461,6 +1126,29 @@ form button:hover {
 }
 
 /* Responsive für Teaser Section */
+@media (max-width: 1024px) {
+    .teaser-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .teaser-feature:nth-child(3),
+    .teaser-feature:nth-child(4) {
+        grid-column: auto;
+    }
+    
+    .teaser-feature:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .teaser-feature:nth-child(4) {
+        grid-column: 1 / -1;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 768px) {
     .seminar-teaser {
         padding: 4rem 1.5rem;
@@ -1479,6 +1167,12 @@ form button:hover {
         gap: 1.5rem;
     }
     
+    .teaser-feature:nth-child(3),
+    .teaser-feature:nth-child(4) {
+        grid-column: auto;
+        max-width: 100%;
+    }
+    
     .seminar-teaser-button {
         font-size: 1rem;
         padding: 0.9rem 2rem;
@@ -1492,12 +1186,26 @@ form button:hover {
         font-size: 2.5rem;
     }
     
+    .teaser-feature {
+        padding: 1.5rem;
+    }
+    
     .teaser-feature h4 {
         font-size: 1.1rem;
     }
     
     .teaser-feature p {
         font-size: 0.95rem;
+    }
+    
+    .seminar-teaser-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .seminar-teaser-button {
+        font-size: 0.95rem;
+        padding: 0.8rem 1.5rem;
+        max-width: 280px;
     }
 }
 
@@ -2074,6 +1782,10 @@ form button:hover {
         min-height: 80vh;
         padding: 3rem 1.5rem;
     }
+
+    .logo {
+        height: 32px;
+    }
     
     .hero-content {
         width: 100%;
@@ -2251,6 +1963,10 @@ form button:hover {
     .seminar-hero h1 {
         font-size: 1.8rem;
     }
+
+    .logo {
+        height: 24px;
+    }
     
     .hero-subtitle {
         font-size: 0.95rem;
@@ -2408,3 +2124,416 @@ form button:hover {
         max-width: 1200px;
     }
 }
+
+/* Responsive Footer & Buttons */
+@media (max-width: 768px) {
+    .impressum {
+        padding: 3rem 1.5rem 1.5rem;
+    }
+    
+    .imprcontainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .imprcontainer .logo {
+        max-width: 150px;
+    }
+    
+    .address {
+        align-items: center;
+    }
+    
+    .button-row {
+        bottom: 1rem;
+        right: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .totop,
+    .telbutton,
+    .mailbutton {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .totop img,
+    .telbutton img,
+    .mailbutton img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .footer ul li {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-row {
+        flex-direction: row;
+        bottom: 1rem;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 0.5rem;
+    }
+    
+    .totop,
+    .telbutton,
+    .mailbutton {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .spacer {
+        height: 2rem;
+    }
+}
+
+/* ========================================
+   Bestehende Responsive Breakpoints für Hauptseiten
+   ======================================== */
+
+@media all and (max-width: 1250px) {
+    nav ul {
+        gap: 1.5em;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menubtn {
+        display: block;
+    }
+
+    nav ul {
+        margin-right: 20px;
+    }
+
+    .sectwo {
+        flex-direction: column;
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    .sectwo .left {
+        max-width: 100%;
+    }
+
+    .sectwo .right {
+        margin: 2rem 0 0 0;
+        width: 100%;
+    }
+
+    .sectwo .right img {
+        max-width: 100%;
+    }
+
+    #philosophy {
+        flex-direction: column-reverse;
+    }
+
+    #philosophy .right {
+        margin: 0 0 2rem 0;
+        width: 100%;
+    }
+
+    #philosophy .right img {
+        max-width: 100%;
+    }
+
+    #aboutus .right {
+        width: 100%;
+    }
+
+    #aboutus .right img {
+        max-width: 100%;
+    }
+
+    .website-container,
+    .website-containerpo {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        margin: 1.5rem auto;
+        width: calc(100% - 3rem);
+    }
+
+    .website-container .left,
+    .website-containerpo .left,
+    .website-container .right,
+    .website-containerpo .right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .website-container .right h3,
+    .website-containerpo .right h3 {
+        text-align: center;
+    }
+
+    .website-container .right p,
+    .website-containerpo .right p {
+        text-align: center;
+    }
+
+    .website-container .images,
+    .website-containerpo .images {
+        width: 100%;
+    }
+
+    .website-container img,
+    .website-containerpo img {
+        max-width: 100%;
+    }
+
+    .prices-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 1rem;
+    }
+
+    .price-box {
+        max-width: 500px;
+        width: calc(100% - 2rem);
+    }
+
+    .contact-container {
+        gap: 2rem;
+    }
+}
+
+@media all and (max-width: 890px) {
+    .secone h1 {
+        font-size: 2.5rem;
+    }
+
+    .secone h3 {
+        font-size: 1.2rem;
+    }
+
+    .sectwo .left h3,
+    #principles .left h3,
+    .portfolio h1,
+    .preisliste h1,
+    .contact-sec h1 {
+        font-size: 2rem;
+    }
+
+    #principles .left ul li {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .website-container,
+    .website-containerpo {
+        margin: 1.5rem auto;
+        width: calc(100% - 3rem);
+    }
+}
+
+@media all and (max-width: 690px) {
+    .header {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    nav ul {
+        margin-right: 16px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .secone {
+        padding: 2rem 1rem;
+    }
+
+    .secone h1 {
+        font-size: 2rem;
+    }
+
+    .secone h3 {
+        font-size: 1rem;
+    }
+
+    .secone img {
+        max-width: 100px;
+        margin-top: 4em;
+    }
+
+    .seconebutton {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .sectwo {
+        padding: 3rem 1.5rem;
+    }
+
+    .sectwo .left h3,
+    #principles .left h3 {
+        font-size: 1.75rem;
+    }
+
+    .sectwo .left p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .portfolio,
+    .secthree,
+    .contact-sec {
+        padding: 4rem 1.5rem;
+    }
+
+    .portfolio h1 {
+        font-size: 2rem;
+    }
+
+    .portfolio p {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .contactformular {
+        padding: 2rem;
+        margin: 2rem 1rem;
+        width: calc(100% - 4rem);
+    }
+
+    .website-container,
+    .website-containerpo {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        width: calc(100% - 3rem);
+    }
+
+    .website-container .left h3,
+    .website-containerpo .left h3,
+    .website-container .right h3,
+    .website-containerpo .right h3 {
+        font-size: 1.3rem;
+    }
+
+    .website-container p,
+    .website-containerpo p {
+        font-size: 0.95rem;
+    }
+
+    form button,
+    .sectwobutton,
+    .portfoliobutton {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .contact-container {
+        gap: 1.5rem;
+    }
+
+    .contact-container img {
+        width: 50px;
+    }
+
+    .price-box {
+        padding: 1.5rem;
+        width: calc(100% - 4rem);
+    }
+
+    .price-box ul li p {
+        font-size: 0.9rem;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .logo {
+        height: 24px;
+    }
+
+    .open {
+        width: 100%;;
+    }
+
+    nav ul {
+        margin-right: 12px;
+    }
+
+    .secone h1 {
+        font-size: 1.8rem;
+    }
+
+    .secone h3 {
+        font-size: 0.9rem;
+    }
+
+    .secone img {
+        max-width: 80px;
+        margin-top: 3em;
+    }
+
+    .sectwo .left h2 {
+        font-size: 0.8rem;
+    }
+
+    .sectwo .left h3 {
+        font-size: 1.5rem;
+    }
+
+    .sectwo .left p {
+        font-size: 0.95rem;
+    }
+
+    .website-container,
+    .website-containerpo {
+        padding: 1.25rem;
+        margin: 1rem auto;
+        gap: 1.5rem;
+        width: calc(100% - 2rem);
+    }
+
+    .website-container .left h3,
+    .website-containerpo .left h3,
+    .website-container .right h3,
+    .website-containerpo .right h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .portfolio h1,
+    .preisliste h1,
+    .contact-sec h1 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio p {
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    #principles .left h3 {
+        font-size: 1.5rem;
+    }
+
+    .contact-container img {
+        width: 45px;
+    }
+
+    .secthreecontent iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Seminar sections bleiben unverändert */
