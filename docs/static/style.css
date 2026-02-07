@@ -594,10 +594,12 @@ nav img {
     box-sizing: border-box;
 }
 
-.website-container:hover,
-.website-containerpo:hover {
-    border-color: var(--mauve);
-    transform: translateY(-5px);
+@media (hover: hover) and (pointer: fine) {
+    .website-container:hover,
+    .website-containerpo:hover {
+        border-color: var(--mauve);
+        transform: translateY(-5px);
+    }
 }
 
 .website-container .left,
