@@ -658,6 +658,11 @@ nav img {
     display: block;
     width: 100%;
     height: 100%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    position: relative;
+    z-index: 1;
 }
 
 .website-container img,
@@ -669,12 +674,15 @@ nav img {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     display: block;
+    pointer-events: none;
 }
 
-.website-container img:hover,
-.website-containerpo img:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(180, 190, 254, 0.2);
+@media (hover: hover) and (pointer: fine) {
+    .website-container img:hover,
+    .website-containerpo img:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(180, 190, 254, 0.2);
+    }
 }
 
 .portfoliobutton {
