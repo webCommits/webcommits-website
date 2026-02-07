@@ -1769,6 +1769,20 @@ form button:hover {
         order: -1;
     }
     
+    #principles {
+        padding: 4rem 1rem;
+    }
+    
+    #principles .left ul li {
+        gap: 1em;
+        padding: 1rem;
+    }
+    
+    .contactformular {
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
+    }
+    
     .teaser-features {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -1827,6 +1841,22 @@ form button:hover {
     .targets-container h2,
     .contact-content h2 {
         font-size: 2rem;
+    }
+    
+    #principles {
+        padding: 3rem 0.5rem;
+    }
+    
+    #principles .left ul li {
+        gap: 0.8em;
+        padding: 0.8rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contactformular {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0.5rem;
     }
     
     .price-box,
