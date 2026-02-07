@@ -14,6 +14,7 @@ function showTopButton() {
     console.log("Loaded");
 
     const toTop = document.querySelector('.totop');
+    if (!toTop) return;
 
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 100) {
@@ -29,6 +30,7 @@ function showContactButtons() {
 
     const telbutton = document.querySelector('.telbutton');
     const mailbutton = document.querySelector('.mailbutton');
+    if (!telbutton || !mailbutton) return;
 
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 100) {
@@ -45,6 +47,7 @@ function animateHeader() {
     console.log("Loaded");
 
     const header = document.querySelector('.header');
+    if (!header) return;
 
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 8) {
@@ -136,9 +139,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function smoothScrollWithOffset(selector, offset = 200) {
     const link = document.querySelector(selector);
+    if (!link) return;
+    
     link.onclick = function(e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
+      
       window.scrollTo({
         top: target.offsetTop - offset,
         behavior: 'smooth'
