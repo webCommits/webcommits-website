@@ -674,14 +674,21 @@ nav img {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     display: block;
-    pointer-events: none;
 }
 
-@media (hover: hover) and (pointer: fine) {
-    .website-container img:hover,
-    .website-containerpo img:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 40px rgba(180, 190, 254, 0.2);
+.website-container img:hover,
+.website-containerpo img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(180, 190, 254, 0.2);
+}
+
+.mobile-portfolio-btn {
+    display: none !important;
+}
+
+@media (min-width: 891px) {
+    .mobile-portfolio-btn {
+        display: none !important;
     }
 }
 
@@ -1733,6 +1740,22 @@ form button:hover {
     
     .hideOnMobile {
         display: none !important;
+    }
+    
+    .website-container .images,
+    .website-containerpo .images {
+        flex-direction: column;
+    }
+    
+    .mobile-portfolio-btn {
+        display: block !important;
+        width: 100%;
+        margin-top: 1rem;
+        text-decoration: none;
+    }
+    
+    .mobile-portfolio-btn .portfoliobutton {
+        width: 100%;
     }
     
     .website-container,
