@@ -21,7 +21,9 @@
       'nav.imprint':    'Impressum',
 
       /* ── Footer ──────────────────────────────────── */
-      'footer.copy': 'Copyright © webCommits web Designs 2026',
+      'footer.copy':    'Copyright © webCommits web Designs 2026',
+      'footer.imprint': 'Impressum',
+      'footer.privacy': 'Datenschutz',
 
       /* ── Index – Hero ────────────────────────────── */
       'index.hero.h1':  'Handcoded Websites',
@@ -252,7 +254,9 @@
       'nav.imprint':    'Imprint',
 
       /* ── Footer ──────────────────────────────────── */
-      'footer.copy': 'Copyright © webCommits web Designs 2026',
+      'footer.copy':    'Copyright © webCommits web Designs 2026',
+      'footer.imprint': 'Imprint',
+      'footer.privacy': 'Privacy Policy',
 
       /* ── Index – Hero ────────────────────────────── */
       'index.hero.h1':  'Handcoded Websites',
