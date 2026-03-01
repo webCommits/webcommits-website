@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    # Optional: uncomment to pass a custom domain label for Coolify's Traefik proxy
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.webcommits.rule=Host(`www.webcommits.info`)"
+    #   - "traefik.http.routers.webcommits.entrypoints=websecure"
+    #   - "traefik.http.routers.webcommits.tls.certresolver=letsencrypt"

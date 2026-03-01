@@ -53,6 +53,7 @@
         crossorigin=""/>
 
   <script src="/static/script.js" defer></script>
+  <script src="/static/i18n.js" defer></script>
     <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -140,21 +141,27 @@
   <nav>
     <ul class="sidebar">
       <li onclick=closeSidebar()><a href="javascript:void(0);"><img src="/static/images/close_menu.png" alt=""></a></li>
-      <li><a href="/aboutus/" onclick=closeSidebar()>Über uns</a></li>
-      <li><a href="/seminare/" onclick=closeSidebar()>KI-Seminare</a></li>
-      <li><a href="/portfolio/" onclick=closeSidebar()>Portfolio</a></li>
-      <li><a href="/anfahrt/" onclick=closeSidebar()>Anfahrt</a></li>
-      <li><a href="/contact/" onclick=closeSidebar()>Kontakt</a></li>
-      <li><a href="/impressum/" onclick=closeSidebar()>Impressum</a></li>
+      <li><a href="/aboutus/" onclick=closeSidebar() data-i18n="nav.about">Über uns</a></li>
+      <li><a href="/seminare/" onclick=closeSidebar() data-i18n="nav.seminars">KI-Seminare</a></li>
+      <li><a href="/portfolio/" onclick=closeSidebar() data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="/anfahrt/" onclick=closeSidebar() data-i18n="nav.directions">Anfahrt</a></li>
+      <li><a href="/contact/" onclick=closeSidebar() data-i18n="nav.contact">Kontakt</a></li>
+      <li><a href="/impressum/" onclick=closeSidebar() data-i18n="nav.imprint">Impressum</a></li>
+      <li>
+        <button class="lang-toggle lang-toggle--sidebar" data-lang-toggle onclick="wcToggleLang()" aria-label="Switch to English">EN</button>
+      </li>
     </ul>
     <ul class="nav-main">
       <li><a href="/"><img class="logo" src="/static/images/Lockup-White.png" alt="Logo for the company" /></a></li>
-      <li class="hideOnMobile"><a href="/aboutus/">Über uns</a></li>
-      <li class="hideOnMobile"><a href="/seminare/">KI-Seminare</a></li>
-      <li class="hideOnMobile"><a href="/portfolio/">Portfolio</a></li>
-      <li class="hideOnMobile"><a href="/anfahrt/">Anfahrt</a></li>
-      <li class="hideOnMobile"><a href="/contact/">Kontakt</a></li>
-      <li class="hideOnMobile"><a href="/impressum/">Impressum</a></li>
+      <li class="hideOnMobile"><a href="/aboutus/" data-i18n="nav.about">Über uns</a></li>
+      <li class="hideOnMobile"><a href="/seminare/" data-i18n="nav.seminars">KI-Seminare</a></li>
+      <li class="hideOnMobile"><a href="/portfolio/" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li class="hideOnMobile"><a href="/anfahrt/" data-i18n="nav.directions">Anfahrt</a></li>
+      <li class="hideOnMobile"><a href="/contact/" data-i18n="nav.contact">Kontakt</a></li>
+      <li class="hideOnMobile"><a href="/impressum/" data-i18n="nav.imprint">Impressum</a></li>
+      <li class="hideOnMobile">
+        <button class="lang-toggle" data-lang-toggle onclick="wcToggleLang()" aria-label="Switch to English">EN</button>
+      </li>
       <li class="menubtn" onclick=showSidebar()><a href="javascript:void(0);"><img src="/static/images/open_menu.png"
             alt=""></a></li>
     </ul>
@@ -169,14 +176,14 @@
 <div class="seminar-hero" id="hero">
   <div class="hero-content">
     <img src="/static/images/Icon-White.png" alt="webCommits Logo" class="hero-logo">
-    <h1>KI-Seminare für die Lehre</h1>
-    <p class="hero-subtitle">Forschung trifft Praxis</p>
+    <h1 data-i18n="sem.hero.h1">KI-Seminare für die Lehre</h1>
+    <p class="hero-subtitle" data-i18n="sem.hero.sub">Forschung trifft Praxis</p>
     <div class="hero-badges">
-      <span class="badge">Online & Präsenz</span>
-      <span class="badge">Einsteiger & Fortgeschrittene</span>
+      <span class="badge" data-i18n="sem.hero.b1">Online &amp; Präsenz</span>
+      <span class="badge" data-i18n="sem.hero.b2">Einsteiger &amp; Fortgeschrittene</span>
     </div>
     <a href="/contact/">
-      <button class="hero-cta">Unverbindlich anfragen</button>
+      <button class="hero-cta" data-i18n="sem.hero.btn">Unverbindlich anfragen</button>
     </a>
   </div>
   <a href="#expertise" class="scroll-indicator">
@@ -188,16 +195,16 @@
 <div class="seminar-expertise animate hidden" id="expertise">
   <div class="expertise-container">
     <div class="expertise-header">
-      <span class="section-label">Meine Expertise</span>
-      <h2>Forschung trifft Praxis</h2>
-      <p class="section-intro">Als Webentwickler und ehemaliger Lehramtsstudent studiere ich aktuell im Master "Cognitive, Digital and Empirical English Studies" an der RWTH Aachen. Dabei verbinde ich technische Kompetenz mit aktueller KI-Forschung und praktischer Erfahrung aus Schule und Hochschule.</p>
+      <span class="section-label" data-i18n="sem.exp.label">Meine Expertise</span>
+      <h2 data-i18n="sem.exp.h2">Forschung trifft Praxis</h2>
+      <p class="section-intro" data-i18n="sem.exp.intro">Als Webentwickler und ehemaliger Lehramtsstudent studiere ich aktuell im Master "Cognitive, Digital and Empirical English Studies" an der RWTH Aachen. Dabei verbinde ich technische Kompetenz mit aktueller KI-Forschung und praktischer Erfahrung aus Schule und Hochschule.</p>
     </div>
     
     <div class="expertise-grid">
       <div class="expertise-card">
         <div class="card-icon">🎓</div>
-        <h3>Akademischer Hintergrund</h3>
-        <p>Aktuell im Master "Cognitive, Digital and Empirical English Studies" mit Schwerpunkt KI in der Bildung. Davor Lehramtsstudium Englisch/Technik für Gymnasien und Gesamtschulen.</p>
+        <h3 data-i18n="sem.exp.c1.h3">Akademischer Hintergrund</h3>
+        <p data-i18n="sem.exp.c1.p">Aktuell im Master "Cognitive, Digital and Empirical English Studies" mit Schwerpunkt KI in der Bildung. Davor Lehramtsstudium Englisch/Technik für Gymnasien und Gesamtschulen.</p>
       </div>
       
       <div class="expertise-card">
@@ -208,14 +215,14 @@
       
       <div class="expertise-card">
         <div class="card-icon">💻</div>
-        <h3>Technische Kompetenz</h3>
-        <p>Fullstack-Webentwicklung, IT-Administration und Support. Seit 2022 am Institut für Anglistik der RWTH Aachen tätig.</p>
+        <h3 data-i18n="sem.exp.c3.h3">Technische Kompetenz</h3>
+        <p data-i18n="sem.exp.c3.p">Fullstack-Webentwicklung, IT-Administration und Support. Seit 2022 am Institut für Anglistik der RWTH Aachen tätig.</p>
       </div>
       
       <div class="expertise-card">
         <div class="card-icon">🏫</div>
-        <h3>Praxiserfahrung</h3>
-        <p>Über 5 Jahre Erfahrung im Schulalltag und Kleingruppen-Unterricht. Ich sehe täglich, wie Schüler*innen und Studierende KI tatsächlich nutzen.</p>
+        <h3 data-i18n="sem.exp.c4.h3">Praxiserfahrung</h3>
+        <p data-i18n="sem.exp.c4.p">Über 5 Jahre Erfahrung im Schulalltag und Kleingruppen-Unterricht. Ich sehe täglich, wie Schüler*innen und Studierende KI tatsächlich nutzen.</p>
       </div>
     </div>
   </div>
@@ -224,39 +231,39 @@
 <!-- Seminar Angebot -->
 <div class="seminar-offerings animate hidden" id="angebot">
   <div class="offerings-header">
-    <span class="section-label">Das Angebot</span>
-    <h2>Seminare nach Ihren Bedürfnissen</h2>
-    <p class="section-intro">Ich biete zwei Stufen an, je nachdem, wo Sie stehen.</p>
+    <span class="section-label" data-i18n="sem.off.label">Das Angebot</span>
+    <h2 data-i18n="sem.off.h2">Seminare nach Ihren Bedürfnissen</h2>
+    <p class="section-intro" data-i18n="sem.off.intro">Ich biete zwei Stufen an, je nachdem, wo Sie stehen.</p>
   </div>
   
   <div class="offerings-grid">
     <!-- Einsteiger Seminar -->
     <div class="offering-card starter">
       <div class="card-header">
-        <span class="level-badge">Level 1</span>
-        <h3>KI-Grundlagen für Lehrende</h3>
+        <span class="level-badge" data-i18n="sem.l1.badge">Level 1</span>
+        <h3 data-i18n="sem.l1.h3">KI-Grundlagen für Lehrende</h3>
       </div>
-      <p class="card-description">Für den Einstieg ohne technische Vorkenntnisse. Sie lernen die Grundlagen und bekommen praktische Beispiele für Ihren Unterricht.</p>
+      <p class="card-description" data-i18n="sem.l1.desc">Für den Einstieg ohne technische Vorkenntnisse. Sie lernen die Grundlagen und bekommen praktische Beispiele für Ihren Unterricht.</p>
       
       <div class="card-content">
-        <h4>Inhalte</h4>
+        <h4 data-i18n="sem.l1.content">Inhalte</h4>
         <ul class="content-list">
-          <li>Einführung in generative KI (ChatGPT, Gemini & Co.)</li>
-          <li>Chancen und Grenzen von KI in der Bildung</li>
-          <li>Praktische Übungen für den Unterricht</li>
-          <li>Plagiatserkennung und akademische Integrität</li>
-          <li>Datenschutz und rechtliche Grundlagen</li>
+          <li data-i18n="sem.l1.li1">Einführung in generative KI (ChatGPT, Gemini &amp; Co.)</li>
+          <li data-i18n="sem.l1.li2">Chancen und Grenzen von KI in der Bildung</li>
+          <li data-i18n="sem.l1.li3">Praktische Übungen für den Unterricht</li>
+          <li data-i18n="sem.l1.li4">Plagiatserkennung und akademische Integrität</li>
+          <li data-i18n="sem.l1.li5">Datenschutz und rechtliche Grundlagen</li>
         </ul>
         
         <div class="card-meta">
           <div class="meta-item">
-            <strong>Dauer:</strong> 2-4 Stunden (individuell anpassbar)
+            <strong data-i18n="meta.duration">Dauer:</strong> 2-4 Stunden (individuell anpassbar)
           </div>
           <div class="meta-item">
-            <strong>Format:</strong> Online oder Präsenz
+            <strong data-i18n="meta.format">Format:</strong> Online oder Präsenz
           </div>
           <div class="meta-item">
-            <strong>Gruppengröße:</strong> 5-25 Teilnehmer*innen
+            <strong data-i18n="meta.groupsize">Gruppengröße:</strong> 5-25 Teilnehmer*innen
           </div>
         </div>
       </div>
@@ -265,30 +272,30 @@
     <!-- Fortgeschrittene Seminar -->
     <div class="offering-card advanced">
       <div class="card-header">
-        <span class="level-badge">Level 2</span>
-        <h3>KI für Fortgeschrittene</h3>
+        <span class="level-badge" data-i18n="sem.l2.badge">Level 2</span>
+        <h3 data-i18n="sem.l2.h3">KI für Fortgeschrittene</h3>
       </div>
-      <p class="card-description">Für alle, die schon ein bisschen was können und tiefer einsteigen wollen. Hier geht's um fortgeschrittene Techniken und Automatisierung.</p>
+      <p class="card-description" data-i18n="sem.l2.desc">Für alle, die schon ein bisschen was können und tiefer einsteigen wollen. Hier geht's um fortgeschrittene Techniken und Automatisierung.</p>
       
       <div class="card-content">
-        <h4>Inhalte</h4>
+        <h4 data-i18n="sem.l2.content">Inhalte</h4>
         <ul class="content-list">
-          <li>Fortgeschrittenes Prompt Engineering</li>
-          <li>Datenanalyse mit KI-Tools</li>
-          <li>Custom GPTs und Assistants erstellen</li>
-          <li>Kritische Bewertung von KI-Outputs</li>
-          <li>Zukunftstrends und neue Entwicklungen</li>
+          <li data-i18n="sem.l2.li1">Fortgeschrittenes Prompt Engineering</li>
+          <li data-i18n="sem.l2.li2">Datenanalyse mit KI-Tools</li>
+          <li data-i18n="sem.l2.li3">Custom GPTs und Assistants erstellen</li>
+          <li data-i18n="sem.l2.li4">Kritische Bewertung von KI-Outputs</li>
+          <li data-i18n="sem.l2.li5">Zukunftstrends und neue Entwicklungen</li>
         </ul>
         
         <div class="card-meta">
           <div class="meta-item">
-            <strong>Dauer:</strong> 3-6 Stunden (individuell anpassbar)
+            <strong data-i18n="meta.duration">Dauer:</strong> 3-6 Stunden (individuell anpassbar)
           </div>
           <div class="meta-item">
-            <strong>Format:</strong> Online oder Präsenz
+            <strong data-i18n="meta.format">Format:</strong> Online oder Präsenz
           </div>
           <div class="meta-item">
-            <strong>Gruppengröße:</strong> 5-20 Teilnehmer*innen
+            <strong data-i18n="meta.groupsize">Gruppengröße:</strong> 5-20 Teilnehmer*innen
           </div>
         </div>
       </div>
@@ -308,32 +315,32 @@
         <div class="feature-item">
           <div class="feature-icon">💻</div>
           <div>
-            <h4>Online-Seminare</h4>
-            <p>Via Zoom oder MS Teams mit Live-Demos und praktischen Übungen</p>
+            <h4 data-i18n="sem.fmt.f1.h4">Online-Seminare</h4>
+            <p data-i18n="sem.fmt.f1.p">Via Zoom oder MS Teams mit Live-Demos und praktischen Übungen</p>
           </div>
         </div>
         
         <div class="feature-item">
           <div class="feature-icon">🏢</div>
           <div>
-            <h4>Präsenz-Workshops</h4>
-            <p>Bei Ihnen vor Ort mit Hands-on-Übungen und direktem Feedback</p>
+            <h4 data-i18n="sem.fmt.f2.h4">Präsenz-Workshops</h4>
+            <p data-i18n="sem.fmt.f2.p">Bei Ihnen vor Ort mit Hands-on-Übungen und direktem Feedback</p>
           </div>
         </div>
         
         <div class="feature-item">
           <div class="feature-icon">🔄</div>
           <div>
-            <h4>Hybrid-Format</h4>
-            <p>Mix aus Online- und Präsenzphasen. So, wie es am besten passt</p>
+            <h4 data-i18n="sem.fmt.f3.h4">Hybrid-Format</h4>
+            <p data-i18n="sem.fmt.f3.p">Mix aus Online- und Präsenzphasen. So, wie es am besten passt</p>
           </div>
         </div>
         
         <div class="feature-item">
           <div class="feature-icon">🎯</div>
           <div>
-            <h4>Inhouse-Schulungen</h4>
-            <p>Speziell für Ihre Einrichtung mit individuellen Schwerpunkten</p>
+            <h4 data-i18n="sem.fmt.f4.h4">Inhouse-Schulungen</h4>
+            <p data-i18n="sem.fmt.f4.p">Speziell für Ihre Einrichtung mit individuellen Schwerpunkten</p>
           </div>
         </div>
       </div>
@@ -341,17 +348,17 @@
     
     <div class="formats-right">
       <div class="info-box">
-        <h3>Preise & Buchung</h3>
-        <p>Ich kalkuliere individuell nach:</p>
+        <h3 data-i18n="sem.price.h3">Preise &amp; Buchung</h3>
+        <p data-i18n="sem.price.p1">Ich kalkuliere individuell nach:</p>
         <ul>
-          <li>Dauer des Seminars</li>
-          <li>Anzahl der Teilnehmer*innen</li>
-          <li>Format (Online/Präsenz)</li>
-          <li>Vorbereitungsaufwand</li>
+          <li data-i18n="sem.price.li1">Dauer des Seminars</li>
+          <li data-i18n="sem.price.li2">Anzahl der Teilnehmer*innen</li>
+          <li data-i18n="sem.price.li3">Format (Online/Präsenz)</li>
+          <li data-i18n="sem.price.li4">Vorbereitungsaufwand</li>
         </ul>
         <p><strong>Fragen Sie einfach unverbindlich an!</strong></p>
         <a href="/contact/">
-          <button class="info-cta">Angebot anfordern</button>
+          <button class="info-cta" data-i18n="sem.price.cta">Angebot anfordern</button>
         </a>
       </div>
       
@@ -368,24 +375,24 @@
 <!-- Zielgruppen -->
 <div class="seminar-targets animate hidden">
   <div class="targets-container">
-    <span class="section-label">Für wen?</span>
-    <h2>Zielgruppen</h2>
+    <span class="section-label" data-i18n="sem.tgt.label">Für wen?</span>
+    <h2 data-i18n="sem.tgt.h2">Zielgruppen</h2>
     <div class="targets-grid">
       <div class="target-card">
-        <h3>🎓 Lehrkräfte</h3>
-        <p>An Grundschulen, weiterführenden Schulen und Berufskollegs – unabhängig vom Fach</p>
+        <h3 data-i18n="sem.tgt.c1.h3">🎓 Lehrkräfte</h3>
+        <p data-i18n="sem.tgt.c1.p">An Grundschulen, weiterführenden Schulen und Berufskollegs – unabhängig vom Fach</p>
       </div>
       <div class="target-card">
-        <h3>👨‍🏫 Hochschullehrende</h3>
-        <p>Professor*innen, Dozent*innen und wissenschaftliche Mitarbeiter*innen</p>
+        <h3 data-i18n="sem.tgt.c2.h3">👨‍🏫 Hochschullehrende</h3>
+        <p data-i18n="sem.tgt.c2.p">Professor*innen, Dozent*innen und wissenschaftliche Mitarbeiter*innen</p>
       </div>
       <div class="target-card">
-        <h3>🏫 Bildungseinrichtungen</h3>
-        <p>Schulen, Universitäten, Volkshochschulen und Weiterbildungsinstitute</p>
+        <h3 data-i18n="sem.tgt.c3.h3">🏫 Bildungseinrichtungen</h3>
+        <p data-i18n="sem.tgt.c3.p">Schulen, Universitäten, Volkshochschulen und Weiterbildungsinstitute</p>
       </div>
       <div class="target-card">
-        <h3>💼 Bildungsträger</h3>
-        <p>Organisationen, die ihre Mitarbeitenden im Bereich KI schulen möchten</p>
+        <h3 data-i18n="sem.tgt.c4.h3">💼 Bildungsträger</h3>
+        <p data-i18n="sem.tgt.c4.p">Organisationen, die ihre Mitarbeitenden im Bereich KI schulen möchten</p>
       </div>
     </div>
   </div>
@@ -394,8 +401,8 @@
 <!-- Kontakt CTA -->
 <div class="seminar-contact animate hidden" id="kontakt">
   <div class="contact-content">
-    <h2>Interesse?</h2>
-    <p>Vereinbaren Sie ein kostenloses Beratungsgespräch und lassen Sie uns gemeinsam das passende Seminarformat für Ihre Bedürfnisse entwickeln.</p>
+    <h2 data-i18n="sem.cta.h2">Interesse?</h2>
+    <p data-i18n="sem.cta.p">Vereinbaren Sie ein kostenloses Beratungsgespräch und lassen Sie uns gemeinsam das passende Seminarformat für Ihre Bedürfnisse entwickeln.</p>
     
     <div class="contact-methods">
       <a href="mailto:info@webcommits.info" class="contact-method">
@@ -408,7 +415,7 @@
       </a>
       <a href="/contact/" class="contact-method">
         <img src="/static/images/form-ico.png" alt="Kontaktformular" class="form-img">
-        <span>Kontaktformular</span>
+        <span data-i18n="sem.cta.form">Kontaktformular</span>
       </a>
     </div>
   </div>
@@ -432,7 +439,7 @@
 
   <div class="footer">
   <ul>
-    <li>Copyright © webCommits web Designs 2025</li>
+    <li data-i18n="footer.copy">Copyright © webCommits web Designs 2025</li>
   </ul>
 </div>
 <div class="button-row">
