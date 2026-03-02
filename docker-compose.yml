@@ -2,8 +2,7 @@ services:
   web:
     build: .
     restart: unless-stopped
-    ports:
-      - "8080:80"
+    # Coolify's Traefik proxy routes traffic internally — no host port binding needed.
     # Optional: uncomment to pass a custom domain label for Coolify's Traefik proxy
     # labels:
     #   - "traefik.enable=true"
