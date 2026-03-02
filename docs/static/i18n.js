@@ -55,6 +55,8 @@
       'index.port.p1.p':     'Eine Übersichtsseite mit Linktree-Ersatz für unsere Lieblings-YouTuber! Inklusive Login, Admin-Panel, interaktiver UI und Animationen!',
       'index.port.p2.h3':    'Chefs Portfolio',
       'index.port.p2.p':     'Eine moderne, einzigartige und intuitive Portfolio website, die den Inhaber von webCommits darstellt.',
+      'index.port.trackable.h3': 'trackable.',
+      'index.port.trackable.p':  'Self-hosted Zeiterfassung als installierbare PWA – mit Multi-Profilen, PDF/CSV-Export und automatischen Monatsberichten.',
       'index.port.p3.h3':    'Ben-Bachmair',
       'index.port.p3.p':     'Eine Übersichtswebsite für einen Weltweit bekannten Professor, Author und Mentor.',
       'index.port.btn':      'Mehr lesen',
@@ -162,6 +164,8 @@
       'port.p8.p':  'Der kompetente Meisterbetrieb im Mauerwerks- und Betonbau. Für alle handwerklichen Angelegenheiten.',
       'port.p9.h3': 'webCommits',
       'port.p9.p':  'Die besten Web-Entwickler präsentieren Ihre eigene Website. Untersuchen Sie die Seite per Rechtsklick und überzeugen Sie sich von unserer Arbeit.',
+      'port.trackable.h3': 'trackable.',
+      'port.trackable.p':  'Eine selbst-gehostete Zeiterfassungs-PWA auf Basis von Django. Arbeitszeiten, Profile, Urlaub und Exporte – alles in einer schlanken App mit Catppuccin-Design, vollständig installierbar.',
 
       /* ── Seminars page ───────────────────────────── */
       'sem.hero.h1':     'KI-Seminare für die Lehre',
@@ -286,6 +290,8 @@
       'index.port.p1.p':  'An overview page with a Linktree replacement for our favourite YouTubers — includes login, admin panel, interactive UI and animations.',
       'index.port.p2.h3': "Chef's Portfolio",
       'index.port.p2.p':  'A modern, unique and intuitive portfolio website representing the owner of webCommits.',
+      'index.port.trackable.h3': 'trackable.',
+      'index.port.trackable.p':  'Self-hosted time tracking as an installable PWA — with multi-profile support, PDF/CSV export and automated monthly reports.',
       'index.port.p3.h3': 'Ben-Bachmair',
       'index.port.p3.p':  'An overview website for a globally recognised professor, author and mentor.',
       'index.port.btn':   'Read more',
@@ -393,6 +399,8 @@
       'port.p8.p':  'The expert master trade for masonry and concrete work — for all professional construction needs.',
       'port.p9.h3': 'webCommits',
       'port.p9.p':  'The best web developers present their own website. Inspect the page with right-click and judge our work for yourself.',
+      'port.trackable.h3': 'trackable.',
+      'port.trackable.p':  'A self-hosted time tracking PWA built with Django. Manage working hours, multiple profiles, vacation and exports — clean, dark Catppuccin interface, fully installable on any device.',
 
       /* ── Seminars page ───────────────────────────── */
       'sem.hero.h1':     'AI Seminars for educators',
