@@ -207,6 +207,13 @@ nav a:hover {
     margin: 0 16px;
 }
 
+/* Desktop nav: vertically centre the lang-toggle inside its li */
+.lang-toggle-item {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
 /* Sidebar (Mobile Menu) */
 .sidebar {
     position: fixed;
@@ -234,7 +241,7 @@ nav a:hover {
 
 .sidebar li {
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .sidebar a {
@@ -1605,6 +1612,7 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1613,6 +1621,16 @@ form button:hover {
 .footer ul li {
     color: var(--subtext0);
     font-size: 0.9rem;
+}
+
+.footer ul li a {
+    color: var(--subtext0);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer ul li a:hover {
+    color: var(--lavender);
 }
 
 .button-row {
