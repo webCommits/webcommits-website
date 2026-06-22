@@ -58,21 +58,30 @@ function initHeaderAndFloatingButtons() {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-function initSmoothScrollWithOffset(selector, offset = 120) {
-  const link = document.querySelector(selector);
-  if (!link) return;
+function initSmoothScrollWithOffset(selector = 'a[href*="#"]', offset = 96) {
+  document.querySelectorAll(selector).forEach((link) => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (!href || href === '#') return;
 
-  link.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (!href || !href.startsWith('#')) return;
+      let url;
+      try {
+        url = new URL(href, window.location.href);
+      } catch (error) {
+        return;
+      }
 
-    const target = document.querySelector(href);
-    if (!target) return;
+      const samePage = url.origin === window.location.origin && url.pathname === window.location.pathname;
+      if (!samePage || !url.hash) return;
 
-    e.preventDefault();
-    window.scrollTo({
-      top: target.offsetTop - offset,
-      behavior: 'smooth'
+      const target = document.querySelector(url.hash);
+      if (!target) return;
+
+      e.preventDefault();
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.pageYOffset - offset,
+        behavior: 'smooth'
+      });
     });
   });
 }
@@ -154,7 +163,7 @@ function initContactTopicFromQuery() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderAndFloatingButtons();
-  initSmoothScrollWithOffset('#scroll-arrow');
+  initSmoothScrollWithOffset();
   initAnimations();
   initLegacyPortfolioBackgrounds();
   initKeyboardNavigation();

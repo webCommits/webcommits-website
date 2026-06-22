@@ -2015,6 +2015,51 @@ html {
     scroll-behavior: smooth;
 }
 
+section[id],
+div[id] {
+    scroll-margin-top: 96px;
+}
+
+.header {
+    padding: 0.7rem 0.9rem;
+}
+
+.header.full {
+    background-color: rgba(24, 24, 37, 0.86);
+    backdrop-filter: blur(16px);
+}
+
+nav li {
+    height: 44px;
+}
+
+nav a {
+    padding: 0 12px;
+    line-height: 1.08;
+    white-space: nowrap;
+}
+
+.logo {
+    height: 40px;
+}
+
+.lang-toggle {
+    min-width: 44px;
+    min-height: 36px;
+    padding: 0.45rem 0.7rem;
+}
+
+@media (max-width: 890px) {
+    .header {
+        margin: 6px;
+        padding: 0.65rem 0.75rem;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
