@@ -168,6 +168,22 @@ function initContactTopicFromQuery() {
   if (topicMap[topic]) serviceSelect.value = topicMap[topic];
 }
 
+function initPortfolioReveal() {
+  const grid = document.querySelector('.portfolio-page .portfolio-grid');
+  const button = document.querySelector('.portfolio-more');
+  if (!grid || !button) return;
+
+  const cards = grid.querySelectorAll('.portfolio-card');
+  const mobile = window.matchMedia('(max-width: 640px)').matches;
+  if (!mobile || cards.length <= 6) return;
+
+  grid.classList.add('is-collapsed');
+  button.addEventListener('click', () => {
+    grid.classList.remove('is-collapsed');
+    button.parentElement?.remove();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderAndFloatingButtons();
   initSmoothScrollWithOffset();
@@ -175,5 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initLegacyPortfolioBackgrounds();
   initKeyboardNavigation();
   initContactTopicFromQuery();
+  initPortfolioReveal();
   initMap();
 });

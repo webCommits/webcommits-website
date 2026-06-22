@@ -2582,6 +2582,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: auto;
 }
 
+.portfolio-more-wrap {
+    display: none;
+    justify-content: center;
+    margin: 2rem auto 0;
+}
+
+.js-enabled .portfolio-grid.is-collapsed + .portfolio-more-wrap {
+    display: flex;
+}
+
 .badge-row,
 .tag-row {
     display: flex;
@@ -2811,6 +2821,10 @@ h1, h2, h3, h4, h5, h6 {
     .orbit-card--one { left: 8%; }
     .orbit-card--two { right: 8%; }
     .orbit-card--three { left: 28%; }
+
+    .js-enabled .portfolio-grid.is-collapsed .portfolio-card:nth-child(n+7) {
+        display: none;
+    }
 
     .telbutton,
     .mailbutton {
