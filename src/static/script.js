@@ -5,28 +5,33 @@ let lastFocusedElement = null;
 function getSidebarElements() {
   return {
     sidebar: document.querySelector('.sidebar'),
+    backdrop: document.querySelector('.sidebar-backdrop'),
     openButton: document.querySelector('.menu-open'),
     closeButton: document.querySelector('.menu-close')
   };
 }
 
 function showSidebar() {
-  const { sidebar, openButton, closeButton } = getSidebarElements();
+  const { sidebar, backdrop, openButton, closeButton } = getSidebarElements();
   if (!sidebar) return;
 
   lastFocusedElement = document.activeElement;
+  document.body.classList.add('sidebar-lock');
   sidebar.classList.add('open');
   sidebar.setAttribute('aria-hidden', 'false');
+  if (backdrop) backdrop.classList.add('open');
   if (openButton) openButton.setAttribute('aria-expanded', 'true');
   if (closeButton) closeButton.focus();
 }
 
 function closeSidebar() {
-  const { sidebar, openButton } = getSidebarElements();
+  const { sidebar, backdrop, openButton } = getSidebarElements();
   if (!sidebar) return;
 
+  document.body.classList.remove('sidebar-lock');
   sidebar.classList.remove('open');
   sidebar.setAttribute('aria-hidden', 'true');
+  if (backdrop) backdrop.classList.remove('open');
   if (openButton) openButton.setAttribute('aria-expanded', 'false');
 
   if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {

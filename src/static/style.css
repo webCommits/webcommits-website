@@ -215,28 +215,57 @@ nav a:hover {
 }
 
 /* Sidebar (Mobile Menu) */
+body.sidebar-lock {
+    overflow: hidden;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 250px;
-    z-index: 1000;
-    background-color: var(--mantle);
-    backdrop-filter: blur(10px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+    width: min(82vw, 340px);
+    z-index: 1001;
+    background-color: rgba(24, 24, 37, 0.96);
+    backdrop-filter: blur(16px);
+    box-shadow: -18px 0 40px rgba(0, 0, 0, 0.45);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     transform: translateX(100%);
     opacity: 0;
-    transition: transform 0.6s ease, opacity 0.3s ease;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.25s ease, visibility 0s linear 0.35s;
 }
 
 .sidebar.open {
     transform: translateX(0);
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+.sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    border: 0;
+    background: rgba(17, 17, 27, 0.62);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+}
+
+.sidebar-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.25s ease;
 }
 
 .sidebar li {
