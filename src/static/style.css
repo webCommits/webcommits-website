@@ -1176,6 +1176,11 @@ form button:hover {
 .scroll-indicator {
     position: absolute;
     bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
     animation: bounce 2s infinite;
 }
 
@@ -1684,10 +1689,16 @@ form button:hover {
     align-items: start;
 }
 
+.site-footer__brand > a:first-child {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-bottom: 1rem;
+}
+
 .site-footer__brand img {
     width: min(100%, 220px);
     height: auto;
-    margin-bottom: 1rem;
 }
 
 .site-footer__brand p {
@@ -1728,7 +1739,7 @@ form button:hover {
 .site-footer__nav a {
     display: inline-flex;
     align-items: center;
-    min-height: 36px;
+    min-height: 44px;
     color: var(--subtext1);
     transition: color 0.2s, transform 0.2s;
 }
