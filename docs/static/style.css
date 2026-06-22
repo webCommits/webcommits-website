@@ -2615,8 +2615,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-methods a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--surface1);
+    border-radius: 12px;
+    background: var(--surface0);
     color: var(--lavender);
     word-break: break-word;
+    transition: all 0.3s ease;
+}
+
+.contact-methods a:hover {
+    border-color: var(--mauve);
+    background: var(--surface1);
 }
 
 .contactformular {
@@ -2695,6 +2708,14 @@ h1, h2, h3, h4, h5, h6 {
     .split-layout,
     .contact-layout {
         grid-template-columns: 1fr;
+    }
+
+    .contactformular {
+        order: 1;
+    }
+
+    .contact-card {
+        order: 2;
     }
 
     .hero-actions,
