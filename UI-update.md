@@ -335,3 +335,127 @@ Die geschlossene Sidebar liegt rechts außerhalb des Viewports und wird von Play
 - Screenshots und maschineller Report lagen temporär unter `/tmp/webcommits-audit/`.
 - Keine Console Errors gefunden.
 - Keine kaputten Asset-Dateien im Repo bestätigt; einzelne „broken image“-Meldungen kamen durch Lazy Loading während automatisierter Fullpage-Screenshots zustande.
+
+---
+
+# Audit Runde 2 – Desktop Deep Audit (Bilder & Buttons)
+
+Stand: 2026-06-22
+Audit-Basis: lokaler Build aus `docs/`, Desktop `1440 × 1100`, Playwright/Chromium plus visueller Screenshot-Review.
+Geprüft wurden alle 6 Seiten (`/`, `/ki-beratung/`, `/portfolio/`, `/contact/`, `/seminare/`, `/aboutus/`) mit segmentierten Desktop-Screenshots sowie ausgelesenem Bild- und Button-Inventar.
+
+Ergebnis über alle 18 Route/Viewport-Kombinationen: 0 Console Errors, 0 Page Errors, 0 horizontaler Overflow, 0 bad tap targets. Die folgenden Punkte sind reine Bild-/Button-/Layout-Qualitätsfragen.
+
+## P0 – Vor Veröffentlichung beheben
+
+### 20. Kontext-CTAs übergeben kein Thema an das Kontaktformular
+
+**Beobachtung:**
+`src/static/script.js` enthält die Logik, um den Leistungsbereich im Kontaktformular vorzuselektieren (Query-Params `web`, `ai`, `seminar`, `it`). Kein einziger Button auf der Seite nutzt das aber: Alle CTAs (`index.services.web.cta`, `index.services.seminars.cta`, `index.services.ai.cta`, `index.services.it.cta`, `index.ai.cta_primary`, `sem.hero.btn`, `sem.price.cta`, `about.hero.cta.primary`, `about.cta.button`, `ai.hero.cta_primary`, `ai.cta.button`, `port.btn.request`) linken auf `/contact/` ohne `?topic=`.
+
+Damit funktioniert die vom Nutzer gewünschte kontextabhängige Vorsortierung der Anfragen gar nicht.
+
+**Fix:**
+- Website-CTAs → `/contact/?topic=web`
+- KI-Beratung-CTAs → `/contact/?topic=ai`
+- Seminar-CTAs → `/contact/?topic=seminar`
+- IT-CTAs → `/contact/?topic=it`
+- Portfolio-/Allgemeine CTAs → `/contact/` (kein Thema)
+- Prüfen, dass `script.js` die Params auch nach i18n-Sprachwechsel noch korrekt anwendet.
+
+### 21. Portfolio-Thumbnails werden stark beschnitten (16:9 wird zu ~1:1)
+
+**Beobachtung:**
+`.portfolio-card img` ist per CSS auf `aspect-ratio: 16/9; object-fit: cover` gesetzt, aber die ausgelesene Anzeige der Screenshots liegt bei ~398×361 px (Verhältnis ~1,1) statt der erwarteten ~1,78. Die natürlichen Screenshots sind 900×493 bzw. 800×438 (echtes 16:9). Der Box-Sizing-/Höhen-Kaskadierung wird das `aspect-ratio` offenbar überschrieben, sodass Landschafts-Screenshots in ein fast quadratisches Box gedrückt und massiv beschnitten werden (UI-update-Punkt 10 wurde damit nicht behoben).
+
+**Fix:**
+- Sicherstellen, dass `aspect-ratio: 16/9` auf den Portfolio-Img auch tatsächlich greift (kein `height`-Attribut, das `box` streckt; ggf. `width:100%; height:auto` entfernen bzw. nur `aspect-ratio` plus `object-fit:cover`).
+- Einheitlichen Rahmen/Schatten für alle Screenshots ergänzen, damit die ohnehin unterschiedlichen Projekte optisch zusammenpassen.
+
+### 22. Portrait auf Startseite falsch beschnitten (nur untere Gesichtshälfte)
+
+**Beobachtung:**
+Auf der Startseite (`about-teaser`) zeigt `.portrait-card` das Bild `portrait.webp` in einer 420×520-Box (Verhältnis ~0,81), das Naturmaß ist aber 600×616 (~0,97). Dadurch wird das Porträt vertikal gestaucht bzw. so beschnitten, dass nur der untere Gesichtsbereich sichtbar ist. Auf `/aboutus/` wird dasselbe Bild korrekt bei ~0,97 angezeigt.
+Ursache: `width="420" height="520"`-Attribute plus `width: min(100%, 420px)` erzwingen ein Hochformat-Box auf einem fast quadratischen Bild.
+
+**Fix:**
+- `portrait-card` auf der Startseite auf das native Verhältnis (~1:1 bzw. `aspect-ratio: 1`) bringen oder Bild-Box an `/aboutus/`-Darstellung angleichen.
+- `width`/`height`-Attribute auf native Proportion korrigieren (z. B. `width="420" height="432"`).
+
+## P1 – Nächste Designrunde
+
+### 23. Seminare-Seite nutzt Emoji-Icons statt schlichter Line-Icons
+
+**Beobachtung:**
+`src/seminare.njk` verwendet 🎓🔬💻🎯🚀 als `card-icon`/`feature-icon` und direkt in Überschriften (`🚀 In Planung`). Das bricht mit der verbindlich gewählten Line-Icon/SVG-Richtung (Catppuccin-Theme) und wirkt weniger professionell als die Start-/KI-Seite, die schlichte SVG-Line-Icons nutzt.
+
+**Fix:**
+- Emojis durch einheitliche `svg.line-icon` (wie auf der Startseite) ersetzen.
+- `🚀` aus der Überschrift entfernen und als Icon auslagern.
+
+### 24. Seminare-Hero wirkt leer / Logo als großes Hero-Visual unpassend
+
+**Beobachtung:**
+Der Seminare-Hero zeigt groß das `Icon-White.png` (Brand-Icon) als `hero-logo` plus viel leerer Raum zwischen CTA und Folge-Sektion. Im Vergleich zur Startseite (Icon + Orbit-Cards Web/KI/IT) wirkt das unfertig und generisch, zudem entsteht eine unangenehme Leerfläche.
+
+**Fix:**
+- Entweder Hero-Visual wie Startseite (`home-hero__visual` mit Orbit-Cards) übernehmen oder auf ein seminartypisches Visual/Diagramm umstellen.
+- Vertikalen Abstand zwischen Hero-CTA und `#expertise` reduzieren.
+
+### 25. KI-Beratung-Hero ist rein textlich ohne Stützvisual
+
+**Beobachtung:**
+`/ki-beratung/` Hero besteht nur aus Überschrift/Text/CTA auf dunklem Grund, ohne jedes Stützvisual. Da die Folgesektionen sehr textlastig sind, fehlt ein visueller Anker.
+
+**Fix:**
+- Schlichtes Line-Icon-Set oder ein minimales Diagramm (z. B. Prozess-/Beratungsvisual) als Hero-Visual ergänzen, stilistisch passend zur Startseite.
+
+### 26. XR-Nexus-Screenshot extrem dunkel / schlecht ablesbar
+
+**Beobachtung:**
+Das `xrnexus.webp`-Screenshot ist gegenüber allen anderen Portfolio-Screenshots deutlich dunkler und kaum ablesbar; da es auf Startseite und Portfolio direkt neben helleren Projektkarten steht, fällt die Inkonsistenz auf.
+
+**Fix:**
+- Entweder hellere Variante des XR-Nexus-Screenshots verwenden oder einheitliche Bildbehandlung (z. B. leichter Hover-Lift/Helligkeits-FX), sodass dunkle und helle Screenshots nebeneinander funktionieren.
+
+### 27. Konkurrenz der CTAs im Leistungs-Grid auf der Startseite
+
+**Beobachtung:**
+Die vier Leistungs-Karten zeigen jeweils gleich gewichtige Ghost-CTAs („Website-Projekt anfragen“, „Seminar anfragen“, „KI-Beratung anfragen“, „IT-Anfrage stellen“). Vier gleich starke CTAs nebeneinander schwächen die Hierarchie.
+
+**Fix:**
+- Pro Karte nur ein CTA behalten (in Ordnung), aber Gewichtung prüfen: z. B. „KI-Beratung anfragen“ als `btn--secondary` hervorheben oder die Karten-CTAs dezenter gestalten und den Haupt-CTA im Hero behalten.
+- In Kombination mit Punkt 20 erhalten die Karten-CTAs dann wenigstens das richtige `?topic=`.
+
+## P2 – Feinschliff
+
+### 28. Kontaktformular-Inputs sehr dunkel / Kontrast prüfen
+
+**Beobachtung:**
+Die Formular-Felder auf `/contact/` haben nahezu schwarzer Hintergrund; im dunklen Theme kann das die Lesbarkeit eingegebener Werte erschweren.
+
+**Fix:**
+- Hintergrund der Inputs minimal aufhellen (z. B. `--surface0`/`--surface1`) und Kontrast von Platzhalter- vs. Eingabetext prüfen.
+
+### 29. Über mich-/Code-Grafik wirkt wie Platzhalter
+
+**Beobachtung:**
+Die `code.webp`-Grafik auf `/aboutus/` zeigt sehr simples Template-Markup und wirkt eher wie ein Platzhalter denn wie repräsentativer Code.
+
+**Fix:**
+- Aussagekräftigeres Code-/Editor-Bild oder echtes Projekt-Snippet verwenden.
+
+### 30. Portfolio-Outro: GitHub-Button konkurriert mit Haupt-CTA
+
+**Beobachtung:**
+Im Portfolio-Outro stehen „Ähnliches Projekt anfragen“ (primary) und „Zu Github“ (secondary) nebeneinander; der GitHub-Link lenkt vom primären Konversionsziel ab.
+
+**Fix:**
+- GitHub-Link dezenter platzieren (z. B. nur als Textlink unter dem CTA, nicht als gleichwertiger Secondary-Button).
+
+## Technische Prüfnotizen Runde 2
+
+- Desktop-Deep-Audit mit segmentierten Screenshots unter `/tmp/webcommits-audit/deep/`, Bild-/Button-Inventar in `/tmp/webcommits-audit/deep-report.json`.
+- Visueller Screenshot-Review via image-analyst-Subagent; maschinell gemessene Bildverhältnisse zur Verifizierung der Bootstrap-/Object-Fit-Probleme herangezogen.
+- Keine der gemeldeten „broken image“-Meldungen ist ein echtes fehlendes Asset; alle Dateien existieren in `src/static/images/`.
+- Falschpositiv ausgeschlossen: Die „Zu GitHub“-Buttons im Portfolio linken tatsächlich projektbezogen (`/trackable`, `/webcommits-website`), nur die Anzeige war auf 30 Zeichen abgeschnitten.
