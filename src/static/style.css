@@ -2102,6 +2102,11 @@ form button:hover {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 section[id],
