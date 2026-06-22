@@ -1101,7 +1101,7 @@ form button:hover {
 
 /* Hero Section */
 .seminar-hero {
-    min-height: 90vh;
+    min-height: min(82vh, 720px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1117,10 +1117,23 @@ form button:hover {
     z-index: 1;
 }
 
-.hero-logo {
-    width: 120px;
-    margin-bottom: 2rem;
-    animation: float 3s ease-in-out infinite;
+.seminar-hero__visual {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 2rem;
+    display: grid;
+    place-items: center;
+}
+.seminar-hero__visual img {
+    width: 96px;
+    height: auto;
+    filter: drop-shadow(0 0 35px rgba(203, 166, 247, 0.35));
+    animation: float 4s ease-in-out infinite;
+}
+.seminar-hero__visual .orbit-card {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.7rem;
 }
 
 .seminar-hero h1 {
@@ -2316,6 +2329,33 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
+.hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 2.2rem;
+}
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.95rem;
+    border: 1px solid rgba(180, 190, 254, 0.22);
+    border-radius: 999px;
+    background: rgba(24, 24, 37, 0.6);
+    color: var(--text);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.hero-pill .line-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--lavender);
+}
+
 .hero-proof {
     display: flex;
     flex-wrap: wrap;
@@ -2485,6 +2525,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-card .btn {
     margin-top: auto;
+}
+
+.card-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    width: fit-content;
+    min-height: 44px;
+    color: var(--lavender);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.card-link::after {
+    content: "\2192";
+    margin-left: 0.15rem;
+    transition: transform 0.18s ease;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+    color: var(--mauve);
+    border-bottom-color: currentColor;
+    outline: none;
+}
+
+.card-link:hover::after,
+.card-link:focus-visible::after {
+    transform: translateX(3px);
 }
 
 .feature-card h3,
