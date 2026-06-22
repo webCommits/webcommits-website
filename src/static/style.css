@@ -2453,8 +2453,16 @@ h1, h2, h3, h4, h5, h6 {
 .feature-card {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1.35rem;
+    gap: 1.05rem;
+    padding: clamp(1.35rem, 2.2vw, 1.75rem);
+}
+
+.feature-card p {
+    line-height: 1.58;
+}
+
+.feature-card .btn {
+    margin-top: auto;
 }
 
 .feature-card h3,
