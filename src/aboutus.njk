@@ -1,224 +1,117 @@
 ---
-title: webCommits web Designs | Über mich
-meta: "Lernen Sie Lukas Schaffrath kennen – freiberuflicher Webentwickler aus Baesweiler mit technischer Ausbildung an
-der RWTH Aachen. Spezialisiert auf handgeschriebenen Code, schnelle Ladezeiten und transparente Preise."
+title: Über mich | webCommits web Designs
+meta: "Lernen Sie Lukas Schaffrath kennen – freiberuflicher Webentwickler aus Aachen mit Erfahrung in Webentwicklung, IT-Administration an der RWTH Aachen, KI-Beratung und Schulungen."
 ---
 {% extends "base.njk" %}
 {% block content %}
 
-<div class="secone" id="about">
-    <img loading="lazy" src="/static/images/Icon-White.png" alt="" srcset="">
-    <h1 data-i18n="about.hero.h1">Ihr Ansprechpartner</h1>
-    <h3 data-i18n="about.hero.h3">für hochwertige Websites</h3>
-    <a href="#aboutus" id="scroll-arrow">
-        <img loading="lazy" src="/static/images/arrow-down.webp" alt="Down Arrow">
-    </a>
+<div class="about-page">
+    <section class="home-hero about-hero" id="about">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="home-hero__content">
+            <span class="section-label" data-i18n="about.hero.label">Über mich</span>
+            <h1 data-i18n="about.hero.h1">Technik verständlich machen – von Website bis KI</h1>
+            <p class="hero-subtitle" data-i18n="about.hero.p">Ich bin Lukas Schaffrath, freiberuflicher Webentwickler aus dem Raum Aachen. Ich verbinde Webentwicklung, IT-Administration und KI-Beratung mit einer Arbeitsweise, die persönlich, klar und praxisnah bleibt.</p>
+            <div class="hero-actions">
+                <a class="btn btn--primary" href="/contact/" data-i18n="about.hero.cta.primary">Projekt anfragen</a>
+                <a class="btn btn--secondary" href="/#leistungen" data-i18n="about.hero.cta.secondary">Leistungen ansehen</a>
+            </div>
+            <div class="hero-proof" aria-label="Kompetenzschwerpunkte">
+                <span data-i18n="about.hero.proof1">Webentwicklung</span>
+                <span data-i18n="about.hero.proof2">IT-Administration / RWTH Aachen</span>
+                <span data-i18n="about.hero.proof3">KI-Beratung & Schulungen</span>
+            </div>
+        </div>
+        <div class="home-hero__visual">
+            <img class="portrait-card" loading="lazy" src="/static/images/portrait.webp" alt="Lukas Schaffrath, freiberuflicher Webentwickler aus Aachen">
+        </div>
+    </section>
+
+    <section class="wc-section wc-section--muted" id="profil">
+        <div class="split-layout split-layout--center">
+            <div>
+                <span class="section-label" data-i18n="about.profile.label">Profil</span>
+                <h2 data-i18n="about.profile.h2">Freelancer statt Agenturapparat</h2>
+                <p data-i18n="about.profile.p1">Ich arbeite direkt mit kleinen Unternehmen, Selbstständigen und Bildungseinrichtungen zusammen. Sie sprechen nicht mit wechselnden Projektteams, sondern direkt mit der Person, die Konzept, Umsetzung und technische Entscheidungen verantwortet.</p>
+                <p data-i18n="about.profile.p2">Mein Hintergrund liegt in Webentwicklung, Technik-Lehramt und IT-Administration an der RWTH Aachen. Dadurch kann ich technische Themen nicht nur umsetzen, sondern auch so erklären, dass Entscheidungen nachvollziehbar werden.</p>
+            </div>
+            <div class="mini-feature-grid">
+                <article class="mini-feature">
+                    <span data-i18n="about.profile.card1.h">Persönlich</span>
+                    <p data-i18n="about.profile.card1.p">Direkter Kontakt, kurze Wege und ehrliche Einschätzungen.</p>
+                </article>
+                <article class="mini-feature">
+                    <span data-i18n="about.profile.card2.h">Technisch fundiert</span>
+                    <p data-i18n="about.profile.card2.p">Websites, Webapps, Server, IT-Betrieb und KI-Workflows aus einer Hand.</p>
+                </article>
+                <article class="mini-feature">
+                    <span data-i18n="about.profile.card3.h">Aachen & deutschlandweit</span>
+                    <p data-i18n="about.profile.card3.p">Vor Ort im Raum Aachen verwurzelt, Projekte aber deutschlandweit möglich.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="wc-section" id="arbeitsweise">
+        <div class="section-heading section-heading--wide">
+            <span class="section-label" data-i18n="about.work.label">Arbeitsweise</span>
+            <h2 data-i18n="about.work.h2">Klar, pragmatisch und langfristig nutzbar</h2>
+            <p data-i18n="about.work.p">Ich entwickle Lösungen, die zu Ihrem Alltag passen – nicht zu einem Trend oder zu einem unnötig komplexen Tool-Stack.</p>
+        </div>
+        <div class="card-grid">
+            <article class="feature-card feature-card--accent-blue">
+                <svg class="line-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 14h32M12 24h24M16 34h16"/></svg>
+                <h3 data-i18n="about.work.card1.h">Verständliche Beratung</h3>
+                <p data-i18n="about.work.card1.p">Ich erkläre Optionen, Grenzen und Aufwand so, dass Sie gute Entscheidungen treffen können.</p>
+            </article>
+            <article class="feature-card feature-card--accent-mauve">
+                <svg class="line-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 16 6 24l8 8M34 16l8 8-8 8M28 10l-8 28"/></svg>
+                <h3 data-i18n="about.work.card2.h">Saubere Umsetzung</h3>
+                <p data-i18n="about.work.card2.p">Stabile Websites, wartbare Webapps und technische Grundlagen, die nicht nach kurzer Zeit neu gebaut werden müssen.</p>
+            </article>
+            <article class="feature-card feature-card--accent-teal">
+                <svg class="line-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 34h28M14 30V14h20v16M18 20h12M18 25h8"/></svg>
+                <h3 data-i18n="about.work.card3.h">IT-Praxis</h3>
+                <p data-i18n="about.work.card3.p">PCs, Server, Hosting, Domains und E-Mail werden bei Bedarf direkt mitgedacht.</p>
+            </article>
+            <article class="feature-card feature-card--accent-peach">
+                <svg class="line-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v8M24 34v8M6 24h8M34 24h8M14 14l6 6M28 28l6 6M34 14l-6 6M20 28l-6 6"/></svg>
+                <h3 data-i18n="about.work.card4.h">KI mit Augenmaß</h3>
+                <p data-i18n="about.work.card4.p">KI-Workflows, Schulungen und technische Integration werden realistisch geplant – passend zu Datenschutz, Team und Nutzen.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="wc-section wc-section--muted" id="vertrauen">
+        <div class="split-layout">
+            <div>
+                <span class="section-label" data-i18n="about.trust.label">Warum webCommits?</span>
+                <h2 data-i18n="about.trust.h2">Digitale Lösungen aus einer Hand</h2>
+                <p data-i18n="about.trust.p">Viele Projekte scheitern nicht an einzelnen Tools, sondern an fehlender Verbindung zwischen Website, Technik, Betrieb und verständlicher Kommunikation. Genau dort setze ich an.</p>
+                <ul class="check-list">
+                    <li data-i18n="about.trust.item1">Persönlicher Ansprechpartner vom ersten Gespräch bis zur Umsetzung</li>
+                    <li data-i18n="about.trust.item2">Preisbewusste Webentwicklung ohne unnötigen Ballast</li>
+                    <li data-i18n="about.trust.item3">Technische Umsetzung inklusive Hosting-, Server- und IT-Fragen</li>
+                    <li data-i18n="about.trust.item4">KI-Beratung und Schulung einfach erklärt und provider-neutral gedacht</li>
+                </ul>
+            </div>
+            <div>
+                <img class="portrait-card" loading="lazy" src="/static/images/code.webp" alt="Code und Webentwicklungsumgebung von webCommits">
+            </div>
+        </div>
+    </section>
+
+    <section class="wc-section" id="kontakt-cta">
+        <div class="cta-band">
+            <span class="section-label" data-i18n="about.cta.label">Kontakt</span>
+            <h2 data-i18n="about.cta.h2">Lassen Sie uns über Ihr Projekt sprechen</h2>
+            <p data-i18n="about.cta.p">Ob Website, KI-Beratung, Schulung oder IT-Anfrage: Beschreiben Sie kurz Ihr Anliegen und ich melde mich mit einer passenden Einschätzung zurück.</p>
+            <div class="section-actions">
+                <a class="btn btn--primary" href="/contact/" data-i18n="about.cta.button">Erstgespräch anfragen</a>
+                <a class="btn btn--secondary" href="mailto:info@webcommits.info">info@webcommits.info</a>
+            </div>
+        </div>
+    </section>
 </div>
 
-<div class="sectwo" id="aboutus">
-    <div class="left">
-        <h2 data-i18n="about.bio.h2">webCommits web Designs</h2>
-        <h3 data-i18n="about.bio.h3">Über mich</h3>
-        <p data-i18n="about.bio.p">Was als studentischer Nebenjob begann, wurde mit der Zeit zu meiner Leidenschaft. Aus einer Idee entwickelte
-            sich eine klare Vision. Nach meinem erfolgreich abgeschlossenen Technik-Lehramtsstudium an der RWTH Aachen
-            University – einer der renommiertesten technischen Hochschulen Europas – und mehreren Jahren Erfahrung als
-            Webentwickler an derselben Universität, habe ich mich entschieden, meine Expertise selbstständig
-            einzusetzen. Als freiberuflicher Webentwickler biete ich individuelle, erreichbare und kosteneffiziente
-            Alternativen zu großen Agenturen – persönlich, direkt und auf Augenhöhe.</p>
-    </div>
-    <div class="right">
-        <img loading="lazy" src="/static/images/portrait.webp" alt="Lukas Schaffrath Portrait">
-    </div>
-</div>
-<div class="sectwo" id="philosophy">
-
-    <div class="right">
-        <img loading="lazy" src="/static/images/code.webp" alt="Code Screenshot">
-    </div>
-    <div class="left">
-        <h3 data-i18n="about.phil.h3">Meine Arbeitsweise</h3>
-        <p data-i18n="about.phil.p">Bei mir steht die Qualität meiner Arbeit an erster Stelle. Ich setze auf individuell entwickelte,
-            code-basierte Websites, die stabil, leistungsstark und exakt auf die Anforderungen meiner Kundinnen und
-            Kunden abgestimmt sind. Besonders kleine Unternehmen und Selbstständige liegen mir am Herzen – sie sind das
-            Rückgrat unserer Wirtschaft. Mein Ziel: professionelle Weblösungen zugänglich machen, ohne dass Sie dafür
-            ein Vermögen investieren müssen.</p>
-    </div>
-</div>
-
-<div class="sectwo" id="principles">
-    <div class="left">
-        <h3 data-i18n="about.prin.h3">Prinzipien</h3>
-        <p data-i18n="about.prin.intro">Meine Philosophie basiert auf folgenden Prinzipien:</p>
-        <ul>
-            <li>
-                <img loading="lazy" src="/static/images/check.webp" alt="Checkmark">
-                <div class="text" data-i18n-html="about.prin.1">
-                    <strong>Handgeschriebener Code:</strong>
-                    kein unnötiger Blockcode für schnelle Ladezeiten und Performance
-                </div>
-
-            </li>
-            <li>
-                <img loading="lazy" src="/static/images/check.webp" alt="Checkmark">
-                <div class="text" data-i18n-html="about.prin.2">
-                    <strong>Transparenz und Fairness:</strong>
-                    Preismodelle sind fair und klar nachvollziehbar, ohne versteckte Kosten
-                </div>
-            </li>
-            <li>
-                <img loading="lazy" src="/static/images/check.webp" alt="Checkmark">
-                <div class="text" data-i18n-html="about.prin.3">
-                    <strong>Optimierung:</strong>
-                    optimierte Texte und Bilder für Benutzerfreundlichkeit und Suchmaschinenfreundlichkeit
-                </div>
-            </li>
-            <li>
-                <img loading="lazy" src="/static/images/check.webp" alt="Checkmark">
-                <div class="text" data-i18n-html="about.prin.4">
-                    <strong>Zuverlässigkeit:</strong>
-                    Ich bin nicht nur technischer Dienstleister, sondern denke als Projektpartner mit und arbeite mit Ihnen am gemeinsamen Erfolg
-                </div>
-            </li>
-            <li>
-                <img loading="lazy" src="/static/images/check.webp" alt="Checkmark">
-                <div class="text" data-i18n-html="about.prin.5">
-                    <strong>Innovation:</strong>
-                    ich nutze die neuesten Technologien und Trends, um Ihnen zukunftssichere Lösungen anzubieten
-                </div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="prices-container">
-    <div class="price-box">
-        <span data-i18n="about.p1.span">Static Page</span>
-        <ul>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p1.f1">Landingpage für Ihr Business</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p1.f2">Ihr Gewerbe auf einen Blick</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p1.f3">Optimiert für Schnelligkeit und Suchmaschinen
-                </p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p1.f4">Unbegrenzte Änderungen*</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p1.f5">Hosting Inklusive*</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p1.f6">24/7 Kundenservice</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p1.f7">Domainregistrierung möglich*
-                </p>
-            </li>
-        </ul>
-        <h2 data-i18n="about.price.h2">Monatlich</h2>
-        <h3 data-i18n="about.price.h3">oder Einmalig</h3>
-        <a class="btn btn--primary" href="/contact/" data-i18n="about.price.btn">Anfragen</a>
-    </div>
-    <div class="price-box">
-        <span data-i18n="about.p2.span">Static Site</span>
-        <ul>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p2.f1">Bis zu 5 Pages für Ihr Gewerbe</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p2.f2">Detaillierte Darstellung Ihres Angebots
-                </p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p2.f3">Optimiert für Schnelligkeit und Suchmaschinen
-                </p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p2.f4">Unbegrenzte Änderungen*</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p2.f5">Hosting Inklusive*</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p2.f6">24/7 Kundenservice</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p2.f7">Domainregistrierung möglich*
-                </p>
-            </li>
-        </ul>
-        <h2 data-i18n="about.price.h2">Monatlich</h2>
-        <h3 data-i18n="about.price.h3">oder Einmalig</h3>
-        <a class="btn btn--primary" href="/contact/" data-i18n="about.price.btn">Anfragen</a>
-    </div>
-    <div class="price-box">
-        <span data-i18n="about.p3.span">Weitere Services</span>
-        <ul>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f1">Hosting</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f2">Domainregistrierung
-                </p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f3">Google Maps Integration
-                </p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f4">Google Creator Profil</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f5">Business E-Mail</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f6">E-Commerce Shop</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f7">E-Learning Systeme</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f8">Medien-Design, inkl. Logo, Flyer, Visitenkarten</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f9">PC-Bau und individuelle Workstations</p>
-            </li>
-            <li>
-                <img src="/static/images/check.webp" alt="Checkmark">
-                <p data-i18n="about.p3.f10">Serverumgebungen einrichten und warten – online oder vor Ort</p>
-            </li>
-        </ul>
-        <h3 data-i18n="about.p3.h3">Auf Anfrage</h3>
-        <a class="btn btn--primary" href="/contact/" data-i18n="about.price.btn">Anfragen</a>
-    </div>
-
-</div>
-
-<div class="spacer"></div>
-<p data-i18n="about.disclaimer">*Laufzeit zwischen 6 und 12 Monaten, wie vertraglich festgehalten.</p>
 {% endblock %}
