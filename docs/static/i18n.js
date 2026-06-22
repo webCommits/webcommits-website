@@ -3,6 +3,7 @@
  * Supports: de (default) | en
  * Usage: add data-i18n="key" to any element whose textContent should be swapped.
  *        add data-i18n-html="key" to elements that need innerHTML replacement.
+ *        add data-i18n-value="key" to inputs whose value should be swapped.
  */
 (function () {
   'use strict';
@@ -22,6 +23,10 @@
 
       /* ── Footer ──────────────────────────────────── */
       'footer.copy': 'Copyright © webCommits web Designs 2026',
+      'footer.imprint': 'Impressum',
+      'footer.privacy': 'Datenschutz',
+      'footer.home': 'Homepage',
+      'footer.repo': 'Repo dieser Website',
 
       /* ── Index – Hero ────────────────────────────── */
       'index.hero.h1':  'Handcoded Websites',
@@ -113,6 +118,8 @@
       'about.p3.f6':   'E-Commerce Shop',
       'about.p3.f7':   'E-Learning Systeme',
       'about.p3.f8':   'Medien-Design, inkl. Logo, Flyer, Visitenkarten',
+      'about.p3.f9':   'PC-Bau und individuelle Workstations',
+      'about.p3.f10':  'Serverumgebungen einrichten und warten – online oder vor Ort',
       'about.p3.h3':   'Auf Anfrage',
       'about.price.h2':      'Monatlich',
       'about.price.h3':      'oder Einmalig',
@@ -130,6 +137,14 @@
       'contact.msg':   'Nachricht*',
       'contact.btn':   'Absenden',
       'contact.req':   '* Pflichtfelder',
+      'contact.honeypot': 'Bitte dieses Feld nicht ausfüllen',
+      'contact.autoresponse': 'Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich zurück.',
+
+      /* ── Thank you page ──────────────────────────── */
+      'thanks.h1': 'Vielen Dank für Ihre Nachricht!',
+      'thanks.p': 'Ihre Anfrage ist erfolgreich bei mir eingegangen. Ich melde mich schnellstmöglich bei Ihnen zurück.',
+      'thanks.contact': 'Zurück zum Kontaktformular',
+      'thanks.home': 'Zur Startseite',
 
       /* ── Directions page ─────────────────────────── */
       'dir.h1':  'Anfahrt',
@@ -144,6 +159,8 @@
       'port.p3':  'Überzeugen Sie sich selbst – ein Klick auf die Vorschau genügt!',
       'port.btn': 'Zur Website',
       'port.btn.github': 'Zu GitHub',
+      'port.status.maintenance': 'Derzeit wegen Wartung offline',
+      'port.status.internal': 'Nur für interne Mitarbeitende',
       'port.outro': 'Alle anderen öffentlichen Projekte sind auf GitHub auffindbar oder können auf Anfrage vorgestellt werden.',
       'port.github.btn': 'Zu Github',
       'port.p1.h3': 'Rückenwind Reise',
@@ -166,6 +183,10 @@
       'port.p9.p':  'Die besten Web-Entwickler präsentieren Ihre eigene Website. Untersuchen Sie die Seite per Rechtsklick und überzeugen Sie sich von unserer Arbeit.',
       'port.trackable.h3': 'trackable.',
       'port.trackable.p':  'Eine selbst-gehostete Zeiterfassungs-PWA auf Basis von Django. Arbeitszeiten, Profile, Urlaub und Exporte – alles in einer schlanken App mit Catppuccin-Design, vollständig installierbar.',
+      'port.xrnexus.h3': 'XR Nexus',
+      'port.xrnexus.p':  'Ein reaktives, professionelles 3D- und 2D-Planungstool mit KI-Integration für XR-Essential. Basierend auf SparkJS, ThreeJS und Vite. Gehostet mit Traefik, Docker-Compose und Supabase.',
+      'port.clseminare.h3': 'CL Seminare',
+      'port.clseminare.p':  'Eine Plattform für Online-Seminare in der Verkehrstechnik. Teilnehmende können RSA 21- und MVAS-Inhalte flexibel und ortsunabhängig absolvieren – inklusive Anfrageprozess, Login und übersichtlicher Kursdarstellung.',
 
       /* ── Seminars page ───────────────────────────── */
       'sem.hero.h1':     'KI-Seminare für die Lehre',
@@ -179,7 +200,7 @@
       'sem.exp.c1.h3':   'Akademischer Hintergrund',
       'sem.exp.c1.p':    'Aktuell im Master "Cognitive, Digital and Empirical English Studies" mit Schwerpunkt KI in der Bildung. Davor Lehramtsstudium Englisch/Technik für Gymnasien und Gesamtschulen.',
       'sem.exp.c2.h3':   'Forschung & Entwicklung',
-      'sem.exp.c2.p':    'Ich forsche zu KI-gestützter Lehre und entwicklte einen Online-Kurs für Bachelorstudierende mit digitalen Lehrkonzepten.',
+      'sem.exp.c2.p':    'Ich forsche zu KI-gestützter Lehre und entwickelte einen Online-Kurs für Bachelorstudierende mit digitalen Lehrkonzepten.',
       'sem.exp.c3.h3':   'Technische Kompetenz',
       'sem.exp.c3.p':    'Fullstack-Webentwicklung, IT-Administration und Support. Seit 2022 am Institut für Anglistik der RWTH Aachen tätig.',
       'sem.exp.c4.h3':   'Praxiserfahrung',
@@ -196,6 +217,9 @@
       'sem.l1.li3':      'Praktische Übungen für den Unterricht',
       'sem.l1.li4':      'Plagiatserkennung und akademische Integrität',
       'sem.l1.li5':      'Datenschutz und rechtliche Grundlagen',
+      'sem.l1.meta.duration': '<strong>Dauer:</strong> 2-4 Stunden (individuell anpassbar)',
+      'sem.l1.meta.format': '<strong>Format:</strong> Online oder Präsenz',
+      'sem.l1.meta.groupsize': '<strong>Gruppengröße:</strong> 5-25 Teilnehmer*innen',
       'sem.l2.badge':    'Level 2',
       'sem.l2.h3':       'KI für Fortgeschrittene',
       'sem.l2.desc':     'Für alle, die schon ein bisschen was können und tiefer einsteigen wollen. Hier geht\'s um fortgeschrittene Techniken und Automatisierung.',
@@ -205,6 +229,9 @@
       'sem.l2.li3':      'Custom GPTs und Assistants erstellen',
       'sem.l2.li4':      'Kritische Bewertung von KI-Outputs',
       'sem.l2.li5':      'Zukunftstrends und neue Entwicklungen',
+      'sem.l2.meta.duration': '<strong>Dauer:</strong> 3-6 Stunden (individuell anpassbar)',
+      'sem.l2.meta.format': '<strong>Format:</strong> Online oder Präsenz',
+      'sem.l2.meta.groupsize': '<strong>Gruppengröße:</strong> 5-20 Teilnehmer*innen',
       'sem.fmt.label':   'Flexibilität',
       'sem.fmt.h2':      'Format & Konditionen',
       'sem.fmt.p':       'Ich passe die Seminare an Ihre Bedürfnisse an – ob online via Zoom, bei Ihnen vor Ort oder als Mix aus beidem.',
@@ -222,7 +249,12 @@
       'sem.price.li2':   'Anzahl der Teilnehmer*innen',
       'sem.price.li3':   'Format (Online/Präsenz)',
       'sem.price.li4':   'Vorbereitungsaufwand',
+      'sem.price.ask':   'Fragen Sie einfach unverbindlich an!',
       'sem.price.cta':   'Angebot anfordern',
+      'sem.plan.h3':     '🚀 In Planung',
+      'sem.plan.title':  'Interaktives Online-Webinar-Tool',
+      'sem.plan.p':      'Ich arbeite gerade an einer Plattform, auf der Sie in Ihrem eigenen Tempo lernen können (mit On-Demand-Modulen, Übungen und Zertifikaten).',
+      'sem.plan.note':   'Interesse? Sagen Sie Bescheid!',
       'sem.tgt.label':   'Für wen?',
       'sem.tgt.h2':      'Zielgruppen',
       'sem.tgt.c1.h3':   '🎓 Lehrkräfte',
@@ -257,6 +289,10 @@
 
       /* ── Footer ──────────────────────────────────── */
       'footer.copy': 'Copyright © webCommits web Designs 2026',
+      'footer.imprint': 'Imprint',
+      'footer.privacy': 'Privacy policy',
+      'footer.home': 'Homepage',
+      'footer.repo': 'This site\'s repository',
 
       /* ── Index – Hero ────────────────────────────── */
       'index.hero.h1':  'Handcoded Websites',
@@ -348,6 +384,8 @@
       'about.p3.f6':   'E-commerce shop',
       'about.p3.f7':   'E-learning systems',
       'about.p3.f8':   'Media design incl. logo, flyers, business cards',
+      'about.p3.f9':   'PC builds and custom workstations',
+      'about.p3.f10':  'Server environments setup and maintenance – remote or on site',
       'about.p3.h3':   'On request',
       'about.price.h2':   'Monthly',
       'about.price.h3':   'or one-time',
@@ -365,6 +403,14 @@
       'contact.msg':   'Message*',
       'contact.btn':   'Submit',
       'contact.req':   '* Required fields',
+      'contact.honeypot': 'Please leave this field empty',
+      'contact.autoresponse': 'Thank you for your message! I will get back to you as soon as possible.',
+
+      /* ── Thank you page ──────────────────────────── */
+      'thanks.h1': 'Thank you for your message!',
+      'thanks.p': 'Your enquiry has been received successfully. I will get back to you as soon as possible.',
+      'thanks.contact': 'Back to the contact form',
+      'thanks.home': 'Back to homepage',
 
       /* ── Directions page ─────────────────────────── */
       'dir.h1':  'Directions',
@@ -379,6 +425,8 @@
       'port.p3':  'See for yourself — one click on a preview is all it takes.',
       'port.btn': 'Visit website',
       'port.btn.github': 'View on GitHub',
+      'port.status.maintenance': 'Currently offline for maintenance',
+      'port.status.internal': 'For internal staff only',
       'port.outro': 'All other public projects can be found on GitHub or presented on request.',
       'port.github.btn': 'To Github',
       'port.p1.h3': 'Rückenwind Reise',
@@ -401,6 +449,10 @@
       'port.p9.p':  'The best web developers present their own website. Inspect the page with right-click and judge our work for yourself.',
       'port.trackable.h3': 'trackable.',
       'port.trackable.p':  'A self-hosted time tracking PWA built with Django. Manage working hours, multiple profiles, vacation and exports — clean, dark Catppuccin interface, fully installable on any device.',
+      'port.xrnexus.h3': 'XR Nexus',
+      'port.xrnexus.p':  'A responsive, professional 3D and 2D planning tool with AI integration for XR-Essential. Built with SparkJS, ThreeJS and Vite; hosted with Traefik, Docker Compose and Supabase.',
+      'port.clseminare.h3': 'CL Seminars',
+      'port.clseminare.p':  'A platform for online traffic engineering seminars. Participants can complete RSA 21 and MVAS content flexibly and independently of location — including enquiry flow, login and clear course presentation.',
 
       /* ── Seminars page ───────────────────────────── */
       'sem.hero.h1':     'AI Seminars for educators',
@@ -431,6 +483,9 @@
       'sem.l1.li3':      'Practical exercises for the classroom',
       'sem.l1.li4':      'Plagiarism detection and academic integrity',
       'sem.l1.li5':      'Data protection and legal basics',
+      'sem.l1.meta.duration': '<strong>Duration:</strong> 2–4 hours (individually adjustable)',
+      'sem.l1.meta.format': '<strong>Format:</strong> online or in person',
+      'sem.l1.meta.groupsize': '<strong>Group size:</strong> 5–25 participants',
       'sem.l2.badge':    'Level 2',
       'sem.l2.h3':       'AI for advanced users',
       'sem.l2.desc':     'For those who already have the basics and want to go deeper — advanced techniques and automation.',
@@ -440,6 +495,9 @@
       'sem.l2.li3':      'Creating custom GPTs and assistants',
       'sem.l2.li4':      'Critical evaluation of AI outputs',
       'sem.l2.li5':      'Future trends and new developments',
+      'sem.l2.meta.duration': '<strong>Duration:</strong> 3–6 hours (individually adjustable)',
+      'sem.l2.meta.format': '<strong>Format:</strong> online or in person',
+      'sem.l2.meta.groupsize': '<strong>Group size:</strong> 5–20 participants',
       'sem.fmt.label':   'Flexibility',
       'sem.fmt.h2':      'Format & conditions',
       'sem.fmt.p':       'I adapt each seminar to your needs — whether online via Zoom, at your premises, or a mix of both.',
@@ -457,7 +515,12 @@
       'sem.price.li2':   'Number of participants',
       'sem.price.li3':   'Format (online/in-person)',
       'sem.price.li4':   'Preparation effort',
+      'sem.price.ask':   'Just send a non-binding enquiry!',
       'sem.price.cta':   'Request a quote',
+      'sem.plan.h3':     '🚀 In planning',
+      'sem.plan.title':  'Interactive online webinar platform',
+      'sem.plan.p':      'I am currently working on a platform where you can learn at your own pace with on-demand modules, exercises and certificates.',
+      'sem.plan.note':   'Interested? Let me know!',
       'sem.tgt.label':   'Who is it for?',
       'sem.tgt.h2':      'Target groups',
       'sem.tgt.c1.h3':   '🎓 Teachers',
@@ -503,6 +566,12 @@
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
       var key = el.getAttribute('data-i18n-html');
       if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+
+    /* input values, e.g. hidden FormSubmit fields */
+    document.querySelectorAll('[data-i18n-value]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-value');
+      if (t[key] !== undefined) el.value = t[key];
     });
 
     /* update <html lang="…"> */

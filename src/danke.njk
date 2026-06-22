@@ -4,14 +4,14 @@ title: webCommits web Designs | Vielen Dank für Ihre Nachricht
 {% extends "base.njk" %}
 {% block content %}
 <div class="secone" id="thankyou">
-  <h1>Vielen Dank für Ihre Nachricht!</h1>
-  <p>Ihre Anfrage ist erfolgreich bei uns eingegangen. Wir melden uns schnellstmöglich bei Ihnen zurück.</p>
+  <h1 data-i18n="thanks.h1">Vielen Dank für Ihre Nachricht!</h1>
+  <p data-i18n="thanks.p">Ihre Anfrage ist erfolgreich bei mir eingegangen. Ich melde mich schnellstmöglich bei Ihnen zurück.</p>
 
   <a href="/contact/">
-    <button class="seconebutton">Zurück zum Kontaktformular</button>
+    <button class="seconebutton" data-i18n="thanks.contact">Zurück zum Kontaktformular</button>
   </a>
   <a href="/">
-    <button class="seconebutton">Zur Startseite</button>
+    <button class="seconebutton" data-i18n="thanks.home">Zur Startseite</button>
   </a>
 </div>
 {% endblock %}

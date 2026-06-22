@@ -200,7 +200,7 @@
 
             <!-- Honeypot-Feld (unsichtbar für Nutzer, aber von Bots oft ausgefüllt) -->
             <div style="display: none;">
-                <label for="website">Bitte dieses Feld nicht ausfüllen</label>
+                <label for="website" data-i18n="contact.honeypot">Bitte dieses Feld nicht ausfüllen</label>
                 <input type="text" name="website">
             </div>
 
@@ -210,7 +210,8 @@
             <input type="hidden" name="_template" value="table"> <!-- Schöne HTML-Tabelle -->
             <input type="hidden" name="_captcha" value="true"> <!-- Standardmäßig aktiviert -->
             <input type="hidden" name="_autoresponse"
-                value="Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich zurück.">
+                value="Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich zurück."
+                data-i18n-value="contact.autoresponse">
             <input type="hidden" name="_next" value="https://www.webcommits.info/danke/"> <!-- Erfolgsseite -->
 
             <!-- Absenden -->
@@ -228,11 +229,11 @@
   <div class="imprcontainer">
     <a href="/"><img class="logo" src="/static/images/Lockup-White.png" alt="Logo for the company" /></a>
     <div class="address">
-      <h3><a href="/impressum/">Impressum</a></h3>
-      <p><a href="/datenschutz/">Datenschutz</a></p>
-      <p><a href="/">Homepage</a></p>
+      <h3><a href="/impressum/" data-i18n="footer.imprint">Impressum</a></h3>
+      <p><a href="/datenschutz/" data-i18n="footer.privacy">Datenschutz</a></p>
+      <p><a href="/" data-i18n="footer.home">Homepage</a></p>
       <p><a href="https://github.com/webCommits/">GitHub</a></p>
-      <p><a href="https://github.com/webCommits/webcommits-website">This Site's Repo</a></p>
+      <p><a href="https://github.com/webCommits/webcommits-website" data-i18n="footer.repo">Repo dieser Website</a></p>
     </div>
   </div>
 </div>

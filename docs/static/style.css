@@ -680,6 +680,41 @@ nav img {
     text-align: right;
 }
 
+.portfolio-status {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0.25rem 0 1rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--surface2);
+}
+
+.website-container .right .portfolio-status,
+.website-containerpo .right .portfolio-status {
+    align-self: flex-end;
+}
+
+.website-container .left .portfolio-status,
+.website-containerpo .left .portfolio-status {
+    align-self: flex-start;
+}
+
+.portfolio-status--maintenance {
+    color: var(--peach);
+    background: rgba(250, 179, 135, 0.12);
+    border-color: rgba(250, 179, 135, 0.35);
+}
+
+.portfolio-status--internal {
+    color: var(--teal);
+    background: rgba(148, 226, 213, 0.12);
+    border-color: rgba(148, 226, 213, 0.35);
+}
+
 .website-container .images,
 .website-containerpo .images {
     flex: 1;
@@ -1820,6 +1855,11 @@ form button:hover {
     .website-containerpo .right h3,
     .website-containerpo .right p {
         text-align: left;
+    }
+
+    .website-container .right .portfolio-status,
+    .website-containerpo .right .portfolio-status {
+        align-self: flex-start;
     }
 }
 
