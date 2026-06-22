@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js-enabled');
+
 let lastFocusedElement = null;
 
 function getSidebarElements() {
