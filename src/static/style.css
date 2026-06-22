@@ -2840,6 +2840,133 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Seminar page alignment with 2026 design system */
+.seminar-hero {
+    background:
+        radial-gradient(circle at 50% 18%, rgba(203, 166, 247, 0.16), transparent 28rem),
+        linear-gradient(135deg, var(--base), var(--mantle) 55%, var(--crust));
+}
+
+.seminar-hero .hero-content {
+    max-width: 980px;
+}
+
+.seminar-expertise,
+.seminar-offerings,
+.seminar-formats,
+.seminar-targets,
+.seminar-contact {
+    padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 6vw, 6rem);
+    background: var(--base);
+}
+
+.seminar-offerings,
+.seminar-targets {
+    background:
+        linear-gradient(180deg, rgba(24, 24, 37, 0.98), rgba(30, 30, 46, 0.98)),
+        radial-gradient(circle at 15% 20%, rgba(137, 180, 250, 0.12), transparent 28rem);
+}
+
+.expertise-container,
+.offerings-header,
+.formats-container,
+.targets-container,
+.contact-content {
+    max-width: 1180px;
+    margin-inline: auto;
+}
+
+.expertise-header,
+.offerings-header,
+.targets-container {
+    text-align: center;
+}
+
+.expertise-grid,
+.targets-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.offerings-grid,
+.formats-container {
+    gap: 1.5rem;
+}
+
+.expertise-card,
+.target-card,
+.offering-card,
+.info-box,
+.feature-item {
+    border: 1px solid rgba(69, 71, 90, 0.82);
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(49, 50, 68, 0.82), rgba(24, 24, 37, 0.86));
+    box-shadow: 0 18px 45px rgba(17, 17, 27, 0.22);
+}
+
+.expertise-card,
+.target-card,
+.info-box,
+.feature-item {
+    padding: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.offering-card {
+    padding: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+.offering-card.starter {
+    border-top: 4px solid var(--green);
+}
+
+.offering-card.advanced {
+    border-top: 4px solid var(--blue);
+}
+
+.content-list,
+.info-box ul {
+    display: grid;
+    gap: 0.55rem;
+    margin: 1rem 0;
+    padding-left: 1.1rem;
+}
+
+.seminar-contact .contact-content {
+    max-width: 1100px;
+    padding: clamp(2rem, 5vw, 4rem);
+    text-align: center;
+    border: 1px solid rgba(180, 190, 254, 0.22);
+    border-radius: 32px;
+    background:
+        radial-gradient(circle at 50% -20%, rgba(203, 166, 247, 0.22), transparent 30rem),
+        linear-gradient(135deg, rgba(49, 50, 68, 0.9), rgba(24, 24, 37, 0.96));
+    box-shadow: var(--shadow);
+}
+
+.seminar-contact .contact-methods {
+    justify-content: center;
+}
+
+@media (max-width: 1120px) {
+    .expertise-grid,
+    .targets-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .expertise-grid,
+    .targets-grid,
+    .offerings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seminar-hero .hero-logo {
+        max-width: 96px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
