@@ -341,24 +341,6 @@ nav img {
     animation: bounce 2s infinite;
 }
 
-.seconebutton {
-    background: var(--gradient);
-    color: var(--crust);
-    border-radius: 50px;
-    font-size: 1.2rem;
-    padding: 1rem 3rem;
-    border: none;
-    font-weight: 600;
-    margin-top: 64px;
-    box-shadow: 0 4px 15px rgba(180, 190, 254, 0.3);
-    transition: all 0.3s ease;
-}
-
-.seconebutton:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(180, 190, 254, 0.4);
-}
-
 /* ========================================
    CONTENT SECTIONS
    ======================================== */
@@ -398,25 +380,6 @@ nav img {
     color: var(--subtext0);
     line-height: 1.6;
     font-size: 1.1rem;
-}
-
-.sectwobutton {
-    background: var(--blue);
-    color: var(--crust);
-    border-radius: 8px;
-    font-size: 1rem;
-    padding: 0.8rem 2rem;
-    border: none;
-    font-weight: 600;
-    margin-top: 2rem;
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
-    transition: all 0.3s ease;
-    width: fit-content;
-}
-
-.sectwobutton:hover {
-    background: var(--sapphire);
-    transform: translateY(-2px);
 }
 
 .sectwo .right {
@@ -793,24 +756,6 @@ nav img {
     }
 }
 
-.portfoliobutton {
-    background: var(--blue);
-    color: var(--crust);
-    border-radius: 8px;
-    font-size: 1rem;
-    padding: 0.8rem 2rem;
-    border: none;
-    font-weight: 600;
-    margin-top: 2rem;
-    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.75);
-    transition: all 0.3s ease;
-}
-
-.portfoliobutton:hover {
-    background: var(--sapphire);
-    transform: translateY(-2px);
-}
-
 /* ========================================
    MAP SECTION (Anfahrt)
    ======================================== */
@@ -881,16 +826,6 @@ nav img {
     color: var(--subtext0);
     max-width: 700px;
     line-height: 1.6;
-}
-
-.contactformular {
-    max-width: 600px;
-    width: 100%;
-    padding: 3rem;
-    background: var(--surface0);
-    border-radius: 20px;
-    border: 1px solid var(--surface1);
-    margin: 2rem auto;
 }
 
 .contactformular h1 {
@@ -1075,24 +1010,6 @@ form button:hover {
 .teaser-cta {
     display: flex;
     justify-content: center;
-}
-
-.seminar-teaser-button {
-    background: var(--gradient);
-    color: var(--crust);
-    font-size: 1.1rem;
-    padding: 1rem 2.5rem;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(180, 190, 254, 0.3);
-}
-
-.seminar-teaser-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(180, 190, 254, 0.4);
 }
 
 /* ========================================
@@ -1686,9 +1603,7 @@ form button:hover {
 }
 
 .site-footer {
-    background:
-        radial-gradient(circle at 18% 0%, rgba(203, 166, 247, 0.12), transparent 28rem),
-        var(--crust);
+    background: var(--crust);
     padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 6vw, 6rem) 1.5rem;
     border-top: 1px solid var(--surface1);
 }
@@ -1697,7 +1612,7 @@ form button:hover {
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(260px, 1.4fr) minmax(180px, 0.8fr) minmax(160px, 0.6fr);
+    grid-template-columns: minmax(240px, 1.1fr) minmax(200px, 1fr) minmax(160px, 0.8fr);
     gap: clamp(2rem, 5vw, 4rem);
     align-items: start;
 }
@@ -1743,15 +1658,21 @@ form button:hover {
 }
 
 .site-footer__nav ul {
-    display: grid;
+    display: flex;
+    list-style: none;
     gap: 0.55rem;
     margin: 0;
     padding: 0;
+    justify-items: start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .site-footer__nav a {
     display: inline-flex;
     align-items: center;
+    justify-content: flex-start;
     min-height: 44px;
     color: var(--subtext1);
     transition: color 0.2s, transform 0.2s;
@@ -1766,7 +1687,7 @@ form button:hover {
 .site-footer__copy {
     max-width: 1180px;
     margin: 2.5rem auto 0;
-    padding-top: 1.25rem;
+    padding: 1.25rem clamp(1.25rem, 6vw, 6rem) 0;
     border-top: 1px solid rgba(69, 71, 90, 0.65);
     color: var(--subtext0);
     font-size: 0.9rem;
@@ -1929,6 +1850,32 @@ form button:hover {
         min-height: 44px;
     }
 
+    .site-footer__brand,
+    .site-footer__nav,
+    .site-footer__nav h2 {
+        text-align: center;
+    }
+
+    .site-footer__nav ul {
+        align-items: center;
+    }
+
+    .site-footer__nav a {
+        justify-content: center;
+    }
+
+    .site-footer__brand > a:first-child {
+        justify-content: center;
+    }
+
+    .site-footer__brand p {
+        margin-inline: auto;
+    }
+
+    .site-footer__contact {
+        justify-content: center;
+    }
+
     .menubtn {
         display: block;
     }
@@ -1947,10 +1894,6 @@ form button:hover {
         width: 100%;
         margin-top: 1rem;
         text-decoration: none;
-    }
-    
-    .mobile-portfolio-btn .portfoliobutton {
-        width: 100%;
     }
     
     .website-container,
@@ -2058,12 +2001,6 @@ form button:hover {
     .secone h1,
     .seminar-hero h1 {
         font-size: 2rem;
-    }
-    
-    .seconebutton,
-    .hero-cta {
-        font-size: 1rem;
-        padding: 0.8rem 2rem;
     }
     
     .sectwo .left h3,
@@ -2181,10 +2118,6 @@ nav a {
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Epilogue', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-
 .btn {
     box-sizing: border-box;
     max-width: 100%;
@@ -2215,15 +2148,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn--secondary {
-    color: var(--text);
-    background: rgba(49, 50, 68, 0.8);
-    border-color: var(--surface1);
+    color: var(--crust);
+    background: var(--blue);
+    border-color: transparent;
+}
+
+.btn--secondary:hover {
+    background: var(--sapphire);
 }
 
 .btn--ghost {
     color: var(--lavender);
     background: rgba(180, 190, 254, 0.08);
     border-color: rgba(180, 190, 254, 0.24);
+}
+
+.btn--ghost:hover {
+    color: var(--mauve);
+    background: rgba(203, 166, 247, 0.15);
+    border-color: rgba(203, 166, 247, 0.4);
 }
 
 .btn--full {
@@ -2251,16 +2194,15 @@ h1, h2, h3, h4, h5, h6 {
 .service-hero {
     position: relative;
     overflow: hidden;
-    min-height: min(820px, 88vh);
+    min-height: min(720px, 80vh);
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+    grid-template-columns: 1fr;
     align-items: center;
+    justify-items: center;
     gap: clamp(2rem, 5vw, 5rem);
     padding: clamp(5rem, 10vw, 8rem) clamp(1.25rem, 6vw, 6rem);
-    background:
-        radial-gradient(circle at 20% 20%, rgba(203, 166, 247, 0.18), transparent 28rem),
-        radial-gradient(circle at 78% 35%, rgba(137, 180, 250, 0.14), transparent 24rem),
-        linear-gradient(135deg, var(--base), var(--mantle) 52%, var(--crust));
+    background: linear-gradient(135deg, var(--base), var(--mantle) 52%, var(--crust));
+    text-align: center;
 }
 
 .service-hero {
@@ -2270,11 +2212,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-glow {
-    position: absolute;
-    inset: auto -10% -30% 35%;
-    height: 380px;
-    background: radial-gradient(circle, rgba(180, 190, 254, 0.24), transparent 62%);
-    filter: blur(20px);
+    display: none;
 }
 
 .home-hero__content,
@@ -2284,15 +2222,21 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
+.home-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .home-hero h1,
 .service-hero h1,
 .portfolio-page h1,
 .contact-page h1 {
-    max-width: 980px;
+    max-width: 820px;
     margin: 0.5rem 0 1rem;
     font-size: clamp(2.6rem, 7vw, 5.8rem);
     line-height: 0.98;
-    letter-spacing: -0.06em;
+    letter-spacing: -0.02em;
     color: var(--font);
 }
 
@@ -2320,12 +2264,17 @@ h1, h2, h3, h4, h5, h6 {
 .section-actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.9rem;
     margin-top: 1.7rem;
 }
 
 .hero-actions--center,
 .section-actions {
+    justify-content: center;
+}
+
+.service-hero .hero-actions {
     justify-content: center;
 }
 
@@ -2359,6 +2308,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-proof {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem;
     margin-top: 2rem;
 }
@@ -2385,9 +2335,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-hero__visual img {
-    width: min(42vw, 210px);
+    width: min(48vw, 320px);
     height: auto;
-    filter: drop-shadow(0 0 45px rgba(203, 166, 247, 0.38));
+    filter: drop-shadow(0 0 30px rgba(203, 166, 247, 0.25));
     animation: float 4s ease-in-out infinite;
 }
 
@@ -2413,9 +2363,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .wc-section--muted {
-    background:
-        linear-gradient(180deg, rgba(24, 24, 37, 0.98), rgba(30, 30, 46, 0.98)),
-        radial-gradient(circle at 15% 20%, rgba(137, 180, 250, 0.12), transparent 28rem);
+    background: var(--mantle);
 }
 
 .section-heading,
@@ -2453,7 +2401,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0.35rem 0 1rem;
     font-size: clamp(2rem, 4vw, 3.35rem);
     line-height: 1.05;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.01em;
     color: var(--font);
 }
 
@@ -2508,7 +2456,7 @@ h1, h2, h3, h4, h5, h6 {
 .contactformular {
     border: 1px solid rgba(69, 71, 90, 0.82);
     border-radius: 24px;
-    background: linear-gradient(180deg, rgba(24, 24, 37, 0.94), rgba(17, 17, 27, 0.96));
+    background: var(--surface0);
     box-shadow: 0 18px 45px rgba(17, 17, 27, 0.22);
 }
 
@@ -2784,16 +2732,20 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--subtext0);
 }
 
+.wc-section .note {
+    text-align: center;
+    max-width: 780px;
+    margin-inline: auto;
+}
+
 .cta-band {
     max-width: 1100px;
     margin: clamp(3rem, 6vw, 5rem) auto;
     padding: clamp(2rem, 5vw, 4rem);
     text-align: center;
-    border: 1px solid rgba(180, 190, 254, 0.22);
+    border: 1px solid var(--surface1);
     border-radius: 32px;
-    background:
-        radial-gradient(circle at 50% -20%, rgba(203, 166, 247, 0.22), transparent 30rem),
-        linear-gradient(135deg, rgba(49, 50, 68, 0.9), rgba(24, 24, 37, 0.96));
+    background: var(--mantle);
     box-shadow: var(--shadow);
 }
 
@@ -2813,12 +2765,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-methods {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 0.75rem;
     margin: 1.25rem 0;
 }
 
 .contact-methods a {
-    display: inline-flex;
+    display: flex;
     min-height: 44px;
     align-items: center;
     padding: 0.6rem 1.2rem;
@@ -2837,6 +2790,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contactformular {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 0.8rem;
     width: auto;
     max-width: none;
@@ -2900,14 +2854,30 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .card-grid--balanced-five {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .card-grid--balanced-five > *,
     .card-grid--balanced-five > :nth-last-child(2),
     .card-grid--balanced-five > :last-child {
         grid-column: auto;
     }
 
+    .card-grid--balanced-five > :last-child {
+        grid-column: 1 / -1;
+        max-width: 540px;
+        margin-inline: auto;
+    }
+
     .trust-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trust-grid > :last-child {
+        grid-column: 1 / -1;
+        max-width: 540px;
+        margin-inline: auto;
     }
 }
 
@@ -2984,9 +2954,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Seminar page alignment with 2026 design system */
 .seminar-hero {
-    background:
-        radial-gradient(circle at 50% 18%, rgba(203, 166, 247, 0.16), transparent 28rem),
-        linear-gradient(135deg, var(--base), var(--mantle) 55%, var(--crust));
+    background: linear-gradient(135deg, var(--base), var(--mantle) 55%, var(--crust));
 }
 
 .seminar-hero .hero-content {
@@ -3004,9 +2972,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .seminar-offerings,
 .seminar-targets {
-    background:
-        linear-gradient(180deg, rgba(24, 24, 37, 0.98), rgba(30, 30, 46, 0.98)),
-        radial-gradient(circle at 15% 20%, rgba(137, 180, 250, 0.12), transparent 28rem);
+    background: var(--mantle);
 }
 
 .expertise-container,
@@ -3043,7 +3009,7 @@ h1, h2, h3, h4, h5, h6 {
 .feature-item {
     border: 1px solid rgba(69, 71, 90, 0.82);
     border-radius: 24px;
-    background: linear-gradient(180deg, rgba(49, 50, 68, 0.82), rgba(24, 24, 37, 0.86));
+    background: var(--surface0);
     box-shadow: 0 18px 45px rgba(17, 17, 27, 0.22);
 }
 
@@ -3078,11 +3044,9 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1100px;
     padding: clamp(2rem, 5vw, 4rem);
     text-align: center;
-    border: 1px solid rgba(180, 190, 254, 0.22);
+    border: 1px solid var(--surface1);
     border-radius: 32px;
-    background:
-        radial-gradient(circle at 50% -20%, rgba(203, 166, 247, 0.22), transparent 30rem),
-        linear-gradient(135deg, rgba(49, 50, 68, 0.9), rgba(24, 24, 37, 0.96));
+    background: var(--mantle);
     box-shadow: var(--shadow);
 }
 

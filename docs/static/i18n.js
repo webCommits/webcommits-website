@@ -14,7 +14,7 @@
       'lang.toggle': 'EN',
 
       /* ── Navigation ──────────────────────────────── */
-      'nav.about':      'Über uns',
+      'nav.about':      'Über mich',
       'nav.seminars':   'KI-Seminare',
       'nav.portfolio':  'Portfolio',
       'nav.directions': 'Anfahrt',
@@ -33,46 +33,19 @@
 
       /* ── Index – Hero ────────────────────────────── */
       'index.hero.h1':  'Handcoded Websites',
-      'index.hero.h3':  'ohne hohe Kosten',
-      'index.hero.btn': 'Kontaktieren',
 
-      /* ── Index – Section two ─────────────────────── */
-      'index.s2.h2':  'Hilfe für Alle',
-      'index.s2.h3':  'ohne Page-Builder!',
-      'index.s2.p':   'Ich setze auf Schnelligkeit, Präzision und Sicherheit durch handgeschriebenen Code. Dabei profitiere ich von meiner langjährigen Erfahrung als Webentwickler. Statt auf aufgeblähte Page-Builder zu setzen, entwickle ich schlanken, wartungsfreundlichen und wiederverwendbaren Code – individuell auf Ihre Anforderungen zugeschnitten. Das sorgt für schnellere Ladezeiten und eine zielgerichtete Nutzerführung. Mehr über meine Arbeitsweise und Philosophie erfahren Sie hier:',
-      'index.s2.btn': 'Über uns',
 
-      /* ── Index – Seminar teaser ──────────────────── */
-      'index.sem.label':   'Neu im Angebot',
-      'index.sem.h2':      'KI-Seminare für Lehrende',
-      'index.sem.intro':   'Entdecken Sie die Möglichkeiten von KI in der Bildung. Praxisnah, wissenschaftlich fundiert und individuell angepasst – vom Einsteiger bis zum Fortgeschrittenen.',
-      'index.sem.f1.h4':   'Einsteiger-Seminare',
-      'index.sem.f1.p':    'Grundlagen verstehen und praktische Anwendungen kennenlernen',
-      'index.sem.f2.h4':   'Fortgeschrittene Workshops',
-      'index.sem.f2.p':    'Tiefere Einblicke und fortgeschrittene Techniken',
-      'index.sem.f3.h4':   'Flexibles Format',
-      'index.sem.f3.p':    'Online, Präsenz oder Hybrid. Ganz nach Ihren Bedürfnissen',
-      'index.sem.f4.h4':   'Online-Webinar-Tool',
-      'index.sem.f4.p':    'Coming Soon: Weiterbildungen flexibel in unserem Online-Tool',
-      'index.sem.btn':     'Mehr über KI-Seminare erfahren',
+
+
+
 
       /* ── Index – Portfolio teaser ────────────────── */
       'index.port.h1':       'Portfolio',
       'index.port.p':        'Die folgenden Websites repräsentieren eine Auswahl meiner vorherigen Projekte. Überzeugen Sie sich über einen Klick auf die Vorschau!',
-      'index.port.p1.h3':    'Rückenwind Reise',
-      'index.port.p1.p':     'Eine Übersichtsseite mit Linktree-Ersatz für unsere Lieblings-YouTuber! Inklusive Login, Admin-Panel, interaktiver UI und Animationen!',
-      'index.port.p2.h3':    'Chefs Portfolio',
-      'index.port.p2.p':     'Eine moderne, einzigartige und intuitive Portfolio website, die den Inhaber von webCommits darstellt.',
-      'index.port.trackable.h3': 'trackable.',
-      'index.port.trackable.p':  'Self-hosted Zeiterfassung als installierbare PWA – mit Multi-Profilen, PDF/CSV-Export und automatischen Monatsberichten.',
-      'index.port.p3.h3':    'Ben-Bachmair',
-      'index.port.p3.p':     'Eine Übersichtswebsite für einen Weltweit bekannten Professor, Author und Mentor.',
+
       'index.port.btn':      'Mehr lesen',
 
-      /* ── Index – Directions ──────────────────────── */
-      'index.dir.h1':  'Anfahrt',
-      'index.dir.p':   'Sie finden mich an der Grenze von Aachen. Klicken Sie auf die Karte für genauere Infos.',
-      'index.dir.osm': 'Größere Karte in OpenStreetMap anzeigen',
+
 
       /* ── Index – Contact ─────────────────────────── */
       'index.con.h1':  'Kontakt',
@@ -82,59 +55,18 @@
       /* ── About page ──────────────────────────────── */
       'about.hero.h1': 'Ihr Ansprechpartner',
       'about.hero.h3': 'für hochwertige Websites',
-      'about.bio.h2':  'webCommits web Designs',
-      'about.bio.h3':  'Über mich',
-      'about.bio.p':   'Was als studentischer Nebenjob begann, wurde mit der Zeit zu meiner Leidenschaft. Aus einer Idee entwickelte sich eine klare Vision. Nach meinem erfolgreich abgeschlossenen Technik-Lehramtsstudium an der RWTH Aachen University – einer der renommiertesten technischen Hochschulen Europas – und mehreren Jahren Erfahrung als Webentwickler an derselben Universität, habe ich mich entschieden, meine Expertise selbstständig einzusetzen. Als freiberuflicher Webentwickler biete ich individuelle, erreichbare und kosteneffiziente Alternativen zu großen Agenturen – persönlich, direkt und auf Augenhöhe.',
-      'about.phil.h3': 'Unsere Philosophie',
-      'about.phil.p':  'Bei mir steht die Qualität meiner Arbeit an erster Stelle. Ich setze auf individuell entwickelte, code-basierte Websites, die stabil, leistungsstark und exakt auf die Anforderungen meiner Kundinnen und Kunden abgestimmt sind. Besonders kleine Unternehmen und Selbstständige liegen mir am Herzen – sie sind das Rückgrat unserer Wirtschaft. Mein Ziel: professionelle Weblösungen zugänglich machen, ohne dass Sie dafür ein Vermögen investieren müssen.',
-      'about.prin.h3':    'Prinzipien',
-      'about.prin.intro': 'Meine Philosophie basiert auf folgenden Prinzipien:',
-      'about.prin.1':  '<strong>Handgeschriebener Code:</strong> kein unnötiger Blockcode für schnelle Ladezeiten und Performance',
-      'about.prin.2':  '<strong>Transparenz und Fairness:</strong> Preismodelle sind fair und klar nachvollziehbar, ohne versteckte Kosten',
-      'about.prin.3':  '<strong>Optimierung:</strong> optimierte Texte und Bilder für Benutzerfreundlichkeit und Suchmaschinenfreundlichkeit',
-      'about.prin.4':  '<strong>Zuverlässigkeit:</strong> Ich bin nicht nur Ihr Programmier-Team, sondern ihr Unternehmenspartner. Wir engagieren uns und arbeiten zusammen am gemeinsamen Erfolg',
-      'about.prin.5':  '<strong>Innovation:</strong> ich nutze die neuesten Technologien und Trends, um Ihnen zukunftssichere Lösungen anzubieten',
 
-      /* ── About – Pricing ─────────────────────────── */
-      'about.p1.span': 'Static Page',
-      'about.p1.f1':   'Landingpage für Ihr Business',
-      'about.p1.f2':   'Ihr Gewerbe auf einen Blick',
-      'about.p1.f3':   'Optimiert für Schnelligkeit und Suchmaschinen',
-      'about.p1.f4':   'Unbegrenzte Änderungen*',
-      'about.p1.f5':   'Hosting Inklusive*',
-      'about.p1.f6':   '24/7 Kundenservice',
-      'about.p1.f7':   'Domainregistrierung möglich*',
-      'about.p2.span': 'Static Site',
-      'about.p2.f1':   'Bis zu 5 Pages für Ihr Gewerbe',
-      'about.p2.f2':   'Detaillierte Darstellung Ihres Angebots',
-      'about.p2.f3':   'Optimiert für Schnelligkeit und Suchmaschinen',
-      'about.p2.f4':   'Unbegrenzte Änderungen*',
-      'about.p2.f5':   'Hosting Inklusive*',
-      'about.p2.f6':   '24/7 Kundenservice',
-      'about.p2.f7':   'Domainregistrierung möglich*',
-      'about.p3.span': 'Weitere Services',
-      'about.p3.f1':   'Hosting',
-      'about.p3.f2':   'Domainregistrierung',
-      'about.p3.f3':   'Google Maps Integration',
-      'about.p3.f4':   'Google Creator Profil',
-      'about.p3.f5':   'Business E-Mail',
-      'about.p3.f6':   'E-Commerce Shop',
-      'about.p3.f7':   'E-Learning Systeme',
-      'about.p3.f8':   'Medien-Design, inkl. Logo, Flyer, Visitenkarten',
-      'about.p3.f9':   'PC-Bau und individuelle Workstations',
-      'about.p3.f10':  'Serverumgebungen einrichten und warten – online oder vor Ort',
-      'about.p3.h3':   'Auf Anfrage',
-      'about.price.h2':      'Monatlich',
-      'about.price.h3':      'oder Einmalig',
-      'about.price.btn':     'Anfragen',
-      'about.disclaimer':    '*Laufzeit zwischen 6 und 12 Monaten, wie vertraglich festgehalten.',
+
+
+
+
 
       /* ── Contact page ────────────────────────────── */
       'contact.h1':    'Kontaktformular',
       'contact.p1':    'Der einfachste Weg, mit mir in Kontakt zu treten:',
       'contact.p2':    'Formulieren Sie hier Ihre Anfrage und senden Sie sie direkt über dieses Kontaktformular ab. Ihre Nachricht wird sicher und zuverlässig per E-Mail an mich gesendet. Ich melde mich so schnell wie möglich bei Ihnen zurück.',
       'contact.name':  'Name*',
-      'contact.phone': 'Telefonnummer*',
+      'contact.phone': 'Telefonnummer',
       'contact.email': 'E-Mail*',
       'contact.subj':  'Betreff*',
       'contact.msg':   'Nachricht*',
@@ -190,6 +122,9 @@
       'port.xrnexus.p':  'Ein reaktives, professionelles 3D- und 2D-Planungstool mit KI-Integration für XR-Essential. Basierend auf SparkJS, ThreeJS und Vite. Gehostet mit Traefik, Docker-Compose und Supabase.',
       'port.clseminare.h3': 'CL Seminare',
       'port.clseminare.p':  'Eine Plattform für Online-Seminare in der Verkehrstechnik. Teilnehmende können RSA 21- und MVAS-Inhalte flexibel und ortsunabhängig absolvieren – inklusive Anfrageprozess, Login und übersichtlicher Kursdarstellung.',
+      'port.trackable.pshort': 'Eine selbst-gehostete Zeiterfassungs-PWA auf Basis von Django.',
+      'port.xrnexus.pshort': 'Ein professionelles 3D- und 2D-Planungstool mit KI-Integration.',
+      'port.clseminare.pshort': 'Eine Plattform für Online-Seminare in der Verkehrstechnik.',
 
       /* ── Seminars page ───────────────────────────── */
       'sem.hero.h1':     'KI-Seminare für die Lehre',
@@ -272,10 +207,7 @@
       'sem.cta.p':       'Fragen Sie ein Erstgespräch an und lassen Sie uns gemeinsam das passende Seminarformat für Ihre Bedürfnisse entwickeln.',
       'sem.cta.form':    'Kontaktformular',
 
-      /* ── Shared meta labels ──────────────────────── */
-      'meta.duration':   'Dauer',
-      'meta.format':     'Format',
-      'meta.groupsize':  'Gruppengröße',
+
     },
 
     en: {
@@ -283,7 +215,7 @@
       'lang.toggle': 'DE',
 
       /* ── Navigation ──────────────────────────────── */
-      'nav.about':      'About us',
+      'nav.about':      'About me',
       'nav.seminars':   'AI Seminars',
       'nav.portfolio':  'Portfolio',
       'nav.directions': 'Directions',
@@ -302,46 +234,19 @@
 
       /* ── Index – Hero ────────────────────────────── */
       'index.hero.h1':  'Handcoded Websites',
-      'index.hero.h3':  'without the high costs',
-      'index.hero.btn': 'Get in touch',
 
-      /* ── Index – Section two ─────────────────────── */
-      'index.s2.h2':  'Help for everyone',
-      'index.s2.h3':  'No page-builders.',
-      'index.s2.p':   'I rely on speed, precision and security through hand-written code — built on years of experience as a web developer. Instead of bloated page-builders I write lean, maintainable and reusable code, tailored exactly to your requirements. The result: faster load times and a clear, purposeful user experience. Learn more about how I work:',
-      'index.s2.btn': 'About us',
 
-      /* ── Index – Seminar teaser ──────────────────── */
-      'index.sem.label':   'New service',
-      'index.sem.h2':      'AI Seminars for educators',
-      'index.sem.intro':   'Discover the possibilities of AI in education — practice-oriented, research-based and individually tailored, from beginners to advanced users.',
-      'index.sem.f1.h4':   'Beginner seminars',
-      'index.sem.f1.p':    'Understand the fundamentals and discover practical applications',
-      'index.sem.f2.h4':   'Advanced workshops',
-      'index.sem.f2.p':    'Deeper insights and advanced techniques',
-      'index.sem.f3.h4':   'Flexible formats',
-      'index.sem.f3.p':    'Online, in-person or hybrid — tailored to your needs',
-      'index.sem.f4.h4':   'Online webinar platform',
-      'index.sem.f4.p':    'Coming soon: flexible training in our online platform',
-      'index.sem.btn':     'Learn more about AI seminars',
+
+
+
 
       /* ── Index – Portfolio teaser ────────────────── */
       'index.port.h1':    'Portfolio',
       'index.port.p':     'The following websites represent a selection of my previous projects. Click a preview to take a closer look.',
-      'index.port.p1.h3': 'Rückenwind Reise',
-      'index.port.p1.p':  'An overview page with a Linktree replacement for our favourite YouTubers — includes login, admin panel, interactive UI and animations.',
-      'index.port.p2.h3': "Chef's Portfolio",
-      'index.port.p2.p':  'A modern, unique and intuitive portfolio website representing the owner of webCommits.',
-      'index.port.trackable.h3': 'trackable.',
-      'index.port.trackable.p':  'Self-hosted time tracking as an installable PWA — with multi-profile support, PDF/CSV export and automated monthly reports.',
-      'index.port.p3.h3': 'Ben-Bachmair',
-      'index.port.p3.p':  'An overview website for a globally recognised professor, author and mentor.',
+
       'index.port.btn':   'Read more',
 
-      /* ── Index – Directions ──────────────────────── */
-      'index.dir.h1':  'Directions',
-      'index.dir.p':   'You can find me on the outskirts of Aachen. Click the map for more details.',
-      'index.dir.osm': 'Open larger map in OpenStreetMap',
+
 
       /* ── Index – Contact ─────────────────────────── */
       'index.con.h1':  'Contact',
@@ -351,59 +256,18 @@
       /* ── About page ──────────────────────────────── */
       'about.hero.h1': 'Your contact',
       'about.hero.h3': 'for high-quality websites',
-      'about.bio.h2':  'webCommits web Designs',
-      'about.bio.h3':  'About me',
-      'about.bio.p':   'What started as a student side-project evolved into my true passion. A simple idea grew into a clear vision. After completing my technical teaching degree at RWTH Aachen University — one of the most prestigious technical universities in Europe — and several years of experience as a web developer at the same institution, I decided to put my expertise to work independently. As a freelance web developer I offer individual, accessible and cost-efficient alternatives to large agencies — personal, direct and at eye level.',
-      'about.phil.h3': 'Our philosophy',
-      'about.phil.p':  'Quality is at the heart of everything I do. I build individually developed, code-based websites that are stable, high-performing and precisely aligned with my clients\' requirements. Small businesses and the self-employed are especially important to me — they are the backbone of our economy. My goal: making professional web solutions accessible without requiring a large investment.',
-      'about.prin.h3':    'Principles',
-      'about.prin.intro': 'My philosophy is built on the following principles:',
-      'about.prin.1':  '<strong>Hand-written code:</strong> no unnecessary boilerplate — for fast load times and peak performance',
-      'about.prin.2':  '<strong>Transparency and fairness:</strong> pricing is clear and straightforward, with no hidden costs',
-      'about.prin.3':  '<strong>Optimisation:</strong> optimised copy and images for usability and search engine visibility',
-      'about.prin.4':  '<strong>Reliability:</strong> I am not just your development team but your business partner — committed to our shared success',
-      'about.prin.5':  '<strong>Innovation:</strong> I use the latest technologies and trends to offer you future-proof solutions',
 
-      /* ── About – Pricing ─────────────────────────── */
-      'about.p1.span': 'Static Page',
-      'about.p1.f1':   'Landing page for your business',
-      'about.p1.f2':   'Your trade at a glance',
-      'about.p1.f3':   'Optimised for speed and search engines',
-      'about.p1.f4':   'Unlimited revisions*',
-      'about.p1.f5':   'Hosting included*',
-      'about.p1.f6':   '24/7 customer support',
-      'about.p1.f7':   'Domain registration available*',
-      'about.p2.span': 'Static Site',
-      'about.p2.f1':   'Up to 5 pages for your business',
-      'about.p2.f2':   'Detailed presentation of your offer',
-      'about.p2.f3':   'Optimised for speed and search engines',
-      'about.p2.f4':   'Unlimited revisions*',
-      'about.p2.f5':   'Hosting included*',
-      'about.p2.f6':   '24/7 customer support',
-      'about.p2.f7':   'Domain registration available*',
-      'about.p3.span': 'Additional services',
-      'about.p3.f1':   'Hosting',
-      'about.p3.f2':   'Domain registration',
-      'about.p3.f3':   'Google Maps integration',
-      'about.p3.f4':   'Google Business Profile',
-      'about.p3.f5':   'Business e-mail',
-      'about.p3.f6':   'E-commerce shop',
-      'about.p3.f7':   'E-learning systems',
-      'about.p3.f8':   'Media design incl. logo, flyers, business cards',
-      'about.p3.f9':   'PC builds and custom workstations',
-      'about.p3.f10':  'Server environments setup and maintenance – remote or on site',
-      'about.p3.h3':   'On request',
-      'about.price.h2':   'Monthly',
-      'about.price.h3':   'or one-time',
-      'about.price.btn':  'Enquire',
-      'about.disclaimer': '*Contract term between 6 and 12 months, as specified in the agreement.',
+
+
+
+
 
       /* ── Contact page ────────────────────────────── */
       'contact.h1':    'Contact form',
       'contact.p1':    'The simplest way to get in touch:',
       'contact.p2':    'Describe your enquiry and send it directly via this contact form. Your message will be delivered securely and reliably by e-mail. I will get back to you as soon as possible.',
       'contact.name':  'Name*',
-      'contact.phone': 'Phone number*',
+      'contact.phone': 'Phone number',
       'contact.email': 'E-Mail*',
       'contact.subj':  'Subject*',
       'contact.msg':   'Message*',
@@ -459,6 +323,9 @@
       'port.xrnexus.p':  'A responsive, professional 3D and 2D planning tool with AI integration for XR-Essential. Built with SparkJS, ThreeJS and Vite; hosted with Traefik, Docker Compose and Supabase.',
       'port.clseminare.h3': 'CL Seminars',
       'port.clseminare.p':  'A platform for online traffic engineering seminars. Participants can complete RSA 21 and MVAS content flexibly and independently of location — including enquiry flow, login and clear course presentation.',
+      'port.trackable.pshort': 'A self-hosted time-tracking PWA based on Django.',
+      'port.xrnexus.pshort': 'A professional 3D and 2D planning tool with AI integration.',
+      'port.clseminare.pshort': 'A platform for online seminars in traffic engineering.',
 
       /* ── Seminars page ───────────────────────────── */
       'sem.hero.h1':     'AI Seminars for educators',
@@ -541,10 +408,7 @@
       'sem.cta.p':       'Request an initial call and together we will develop the right seminar format for your needs.',
       'sem.cta.form':    'Contact form',
 
-      /* ── Shared meta labels ──────────────────────── */
-      'meta.duration':  'Duration',
-      'meta.format':    'Format',
-      'meta.groupsize': 'Group size',
+
     }
   };
 
@@ -552,8 +416,6 @@
   Object.assign(translations.de, {
     'nav.services': 'Leistungen',
     'nav.ai': 'KI-Beratung',
-    'nav.about': 'Über mich',
-
     'index.hero.label': 'webCommits web Designs aus Aachen',
     'index.hero.h1': 'Websites, IT & KI-Lösungen für kleine Unternehmen',
     'index.hero.sub': 'Ich entwickle bezahlbare Websites, sichere KI-Workflows und zuverlässige IT-Setups – persönlich, schlank und verständlich.',
@@ -571,25 +433,22 @@
     'index.services.web.li1': 'Landingpages & Unternehmensseiten',
     'index.services.web.li2': 'Hosting, SEO-Basis & Support',
     'index.services.web.li3': 'Individuelle Funktionen bei Bedarf',
-    'index.services.web.cta': 'Website-Projekt anfragen',
     'index.services.seminars.h3': 'KI-Seminare & Schulungen',
     'index.services.seminars.p': 'Praxisnahe Workshops für Teams, Lehrende und Einrichtungen – verständlich, anpassbar und ohne unnötige Hürden.',
     'index.services.seminars.li1': 'Grundlagen generativer KI',
     'index.services.seminars.li2': 'Sichere Nutzung im Arbeitsalltag',
     'index.services.seminars.li3': 'Online, Präsenz oder Hybrid',
-    'index.services.seminars.cta': 'Seminar anfragen',
     'index.services.ai.h3': 'KI-Beratung & KI-Umgebungen',
     'index.services.ai.p': 'Von der Potenzialanalyse bis zu internen Assistenten: Ich unterstütze beim sinnvollen, sicheren KI-Einsatz.',
     'index.services.ai.li1': 'Use Cases & Roadmap',
     'index.services.ai.li2': 'Workflows und Automatisierung',
     'index.services.ai.li3': 'Private oder interne KI-Nutzung',
-    'index.services.ai.cta': 'KI-Beratung anfragen',
     'index.services.it.h3': 'PCs, Server & IT-Betrieb',
     'index.services.it.p': 'Maßgeschneiderte PCs, Serverumgebungen und technischer Support – online oder nach Absprache vor Ort.',
     'index.services.it.li1': 'PC-Bau & Workstations',
     'index.services.it.li2': 'Server-Setup mit Linux/Docker',
     'index.services.it.li3': 'Backups, Updates & Support',
-    'index.services.it.cta': 'IT-Anfrage stellen',
+    'index.services.cta': 'Beratung anfragen',
 
     'index.ai.label': 'KI für Unternehmen',
     'index.ai.h2': 'KI sinnvoll im Unternehmen einsetzen',
@@ -610,12 +469,12 @@
     'index.port.cta': 'Projekt anfragen',
     'index.about.label': 'Über mich',
     'index.about.h2': 'Technische Umsetzung verständlich erklärt',
-    'index.about.p': 'Ich bin Lukas Schaffrath, freiberuflicher Webentwickler aus dem Raum Aachen. Durch Webentwicklung, IT-Administration an der RWTH Aachen und Erfahrung in Lehre und Schulung verbinde ich technische Umsetzung mit verständlicher Beratung.',
+    'index.about.p': 'Ich bin Lukas Schaffrath, freiberuflicher Webentwickler aus dem Raum Aachen – Webentwicklung, IT-Administration und KI-Beratung aus einer Hand, persönlich und praxisnah.',
     'index.about.cta': 'Mehr über mich',
     'index.con.label': 'Kontakt',
     'index.con.h1': 'Lassen Sie uns über Ihr Projekt sprechen',
     'index.con.p': 'Ob Website, KI-Beratung, Seminar oder IT-Anfrage: Schreiben Sie mir kurz, wobei ich unterstützen kann.',
-    'index.con.btn': 'Zum Kontaktformular',
+    'index.con.btn': 'Kontakt aufnehmen',
 
     'contact.label': 'Kontakt',
     'contact.h1': 'Projekt oder Erstgespräch anfragen',
@@ -699,12 +558,6 @@
     'ai.process.step3.p': 'Je nach Bedarf folgt technische Umsetzung, Workshop oder eine Kombination aus beidem.',
     'ai.process.step4': 'Übergabe & Betreuung',
     'ai.process.step4.p': 'Sie erhalten eine verständliche Übergabe und können weitere Betreuung nach Bedarf anfragen.',
-    'ai.trust.title': 'Warum webCommits?',
-    'ai.trust.point1': 'Full-Stack-Webentwicklung',
-    'ai.trust.point2': 'IT-Administration / RWTH Aachen',
-    'ai.trust.point3': 'Server- & Infrastrukturaufbau',
-    'ai.trust.point4': 'KI-Integration',
-    'ai.trust.point5': 'Pädagogischer Hintergrund',
     'ai.faq.title': 'Häufig gestellte Fragen',
     'ai.faq.q1': 'Brauchen wir direkt ein eigenes Modell?',
     'ai.faq.a1': 'Nicht zwingend. Häufig reichen gute Workflows, eine Wissensbasis oder klare Regeln. Ob eine eigene Modellanpassung sinnvoll ist, wird erst nach Analyse entschieden.',
@@ -726,8 +579,6 @@
   Object.assign(translations.en, {
     'nav.services': 'Services',
     'nav.ai': 'AI Consulting',
-    'nav.about': 'About me',
-
     'index.hero.label': 'webCommits web Designs from Aachen',
     'index.hero.h1': 'Websites, IT & AI solutions for small businesses',
     'index.hero.sub': 'I build affordable websites, secure AI workflows and reliable IT setups – personal, lean and easy to understand.',
@@ -745,25 +596,22 @@
     'index.services.web.li1': 'Landing pages & business websites',
     'index.services.web.li2': 'Hosting, SEO basics & support',
     'index.services.web.li3': 'Custom features when needed',
-    'index.services.web.cta': 'Request a website project',
     'index.services.seminars.h3': 'AI seminars & training',
     'index.services.seminars.p': 'Practical workshops for teams, educators and organisations – understandable, adaptable and without unnecessary barriers.',
     'index.services.seminars.li1': 'Foundations of generative AI',
     'index.services.seminars.li2': 'Safe use in everyday work',
     'index.services.seminars.li3': 'Online, in-person or hybrid',
-    'index.services.seminars.cta': 'Request a seminar',
     'index.services.ai.h3': 'AI consulting & AI environments',
     'index.services.ai.p': 'From potential analysis to internal assistants: I support useful and secure AI adoption.',
     'index.services.ai.li1': 'Use cases & roadmap',
     'index.services.ai.li2': 'Workflows and automation',
     'index.services.ai.li3': 'Private or internal AI use',
-    'index.services.ai.cta': 'Request AI consulting',
     'index.services.it.h3': 'PCs, servers & IT operations',
     'index.services.it.p': 'Custom PCs, server environments and technical support – remote or on site by agreement.',
     'index.services.it.li1': 'PC builds & workstations',
     'index.services.it.li2': 'Server setup with Linux/Docker',
     'index.services.it.li3': 'Backups, updates & support',
-    'index.services.it.cta': 'Send an IT enquiry',
+    'index.services.cta': 'Request consulting',
 
     'index.ai.label': 'AI for businesses',
     'index.ai.h2': 'Use AI sensibly in your business',
@@ -784,12 +632,12 @@
     'index.port.cta': 'Request a project',
     'index.about.label': 'About me',
     'index.about.h2': 'Technical implementation, clearly explained',
-    'index.about.p': 'I am Lukas Schaffrath, a freelance web developer from the Aachen area. Through web development, IT administration at RWTH Aachen and experience in teaching and training, I combine technical implementation with understandable consulting.',
+    'index.about.p': 'I\'m Lukas Schaffrath, freelance web developer from the Aachen area – web development, IT administration and AI consulting from a single source, personal and practical.',
     'index.about.cta': 'More about me',
     'index.con.label': 'Contact',
     'index.con.h1': 'Let’s talk about your project',
     'index.con.p': 'Whether it is a website, AI consulting, a seminar or an IT enquiry: briefly describe where I can help.',
-    'index.con.btn': 'To the contact form',
+    'index.con.btn': 'Get in touch',
 
     'contact.label': 'Contact',
     'contact.h1': 'Request a project or initial call',
@@ -873,12 +721,6 @@
     'ai.process.step3.p': 'Depending on your needs, technical implementation, a workshop or a combination follows.',
     'ai.process.step4': 'Handover & support',
     'ai.process.step4.p': 'You receive a clear handover and can request further support as needed.',
-    'ai.trust.title': 'Why webCommits?',
-    'ai.trust.point1': 'Full-stack web development',
-    'ai.trust.point2': 'IT administration / RWTH Aachen',
-    'ai.trust.point3': 'Server & infrastructure setup',
-    'ai.trust.point4': 'AI integration',
-    'ai.trust.point5': 'Educational background',
     'ai.faq.title': 'Frequently asked questions',
     'ai.faq.q1': 'Do we need our own model right away?',
     'ai.faq.a1': 'Not necessarily. Good workflows, a knowledge base or clear rules are often enough. Whether a custom model adaptation makes sense is decided after analysis.',
@@ -901,7 +743,7 @@
   Object.assign(translations.de, {
     'about.hero.label': 'Über mich',
     'about.hero.h1': 'Technik verständlich machen – von Website bis KI',
-    'about.hero.p': 'Ich bin Lukas Schaffrath, freiberuflicher Webentwickler aus dem Raum Aachen. Ich verbinde Webentwicklung, IT-Administration und KI-Beratung mit einer Arbeitsweise, die persönlich, klar und praxisnah bleibt.',
+    'about.hero.p': 'Ich bin Lukas Schaffrath, freiberuflicher Webentwickler aus dem Raum Aachen. Durch Webentwicklung, IT-Administration an der RWTH Aachen, KI-Beratung und Erfahrung in Lehre und Schulung verbinde ich technische Umsetzung mit verständlicher Beratung.',
     'about.hero.cta.primary': 'Projekt anfragen',
     'about.hero.cta.secondary': 'Leistungen ansehen',
     'about.hero.proof1': 'Webentwicklung',
@@ -910,7 +752,7 @@
     'about.profile.label': 'Profil',
     'about.profile.h2': 'Freelancer statt Agenturapparat',
     'about.profile.p1': 'Ich arbeite direkt mit kleinen Unternehmen, Selbstständigen und Bildungseinrichtungen zusammen. Sie sprechen nicht mit wechselnden Projektteams, sondern direkt mit der Person, die Konzept, Umsetzung und technische Entscheidungen verantwortet.',
-    'about.profile.p2': 'Mein Hintergrund liegt in Webentwicklung, Technik-Lehramt und IT-Administration an der RWTH Aachen. Dadurch kann ich technische Themen nicht nur umsetzen, sondern auch so erklären, dass Entscheidungen nachvollziehbar werden.',
+    'about.profile.p2': 'Durch meine Erfahrung in Webentwicklung, IT-Administration und Lehre kann ich technische Themen nicht nur umsetzen, sondern auch so erklären, dass Entscheidungen nachvollziehbar werden.',
     'about.profile.card1.h': 'Persönlich',
     'about.profile.card1.p': 'Direkter Kontakt, kurze Wege und ehrliche Einschätzungen.',
     'about.profile.card2.h': 'Technisch fundiert',
@@ -935,19 +777,13 @@
     'about.trust.item2': 'Preisbewusste Webentwicklung ohne unnötigen Ballast',
     'about.trust.item3': 'Technische Umsetzung inklusive Hosting-, Server- und IT-Fragen',
     'about.trust.item4': 'KI-Beratung und Schulung einfach erklärt und provider-neutral gedacht',
-    'about.cta.label': 'Kontakt',
-    'about.cta.h2': 'Lassen Sie uns über Ihr Projekt sprechen',
-    'about.cta.p': 'Ob Website, KI-Beratung, Schulung oder IT-Anfrage: Beschreiben Sie kurz Ihr Anliegen und ich melde mich mit einer passenden Einschätzung zurück.',
-    'about.cta.button': 'Erstgespräch anfragen',
-    'about.phil.h3': 'Meine Arbeitsweise',
-    'about.prin.4': '<strong>Zuverlässigkeit:</strong> Ich bin nicht nur technischer Dienstleister, sondern denke als Projektpartner mit und arbeite mit Ihnen am gemeinsamen Erfolg',
-    'index.s2.btn': 'Über mich'
+
   });
 
   Object.assign(translations.en, {
     'about.hero.label': 'About me',
     'about.hero.h1': 'Making technology understandable – from websites to AI',
-    'about.hero.p': 'I am Lukas Schaffrath, a freelance web developer from the Aachen area. I combine web development, IT administration and AI consulting with a way of working that stays personal, clear and practical.',
+    'about.hero.p': 'I\'m Lukas Schaffrath, freelance web developer from the Aachen area. Through web development, IT administration at RWTH Aachen University, AI consulting and experience in teaching and training, I combine technical implementation with clear, accessible advice.',
     'about.hero.cta.primary': 'Request a project',
     'about.hero.cta.secondary': 'View services',
     'about.hero.proof1': 'Web development',
@@ -956,7 +792,7 @@
     'about.profile.label': 'Profile',
     'about.profile.h2': 'Freelancer instead of agency machinery',
     'about.profile.p1': 'I work directly with small businesses, self-employed professionals and educational institutions. You do not talk to changing project teams, but directly to the person responsible for concept, implementation and technical decisions.',
-    'about.profile.p2': 'My background is in web development, technical education and IT administration at RWTH Aachen. That means I can not only implement technical topics, but also explain them so decisions become understandable.',
+    'about.profile.p2': 'Through my experience in web development, IT administration and teaching, I can not only implement technical topics but also explain them in a way that makes decisions easy to follow.',
     'about.profile.card1.h': 'Personal',
     'about.profile.card1.p': 'Direct contact, short paths and honest assessments.',
     'about.profile.card2.h': 'Technically grounded',
@@ -981,13 +817,7 @@
     'about.trust.item2': 'Budget-conscious web development without unnecessary ballast',
     'about.trust.item3': 'Technical implementation including hosting, server and IT questions',
     'about.trust.item4': 'AI consulting and training explained simply and considered provider-neutrally',
-    'about.cta.label': 'Contact',
-    'about.cta.h2': 'Let’s talk about your project',
-    'about.cta.p': 'Whether it is a website, AI consulting, seminar or IT enquiry: briefly describe your situation and I will get back to you with a suitable assessment.',
-    'about.cta.button': 'Request an initial call',
-    'about.phil.h3': 'How I work',
-    'about.prin.4': '<strong>Reliability:</strong> I am not just a technical service provider; I think along as a project partner and work with you toward shared success',
-    'index.s2.btn': 'About me'
+
   });
 
   /* ─────────────────────────────────────────────────
