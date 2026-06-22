@@ -1,198 +1,122 @@
+let lastFocusedElement = null;
+
+function getSidebarElements() {
+  return {
+    sidebar: document.querySelector('.sidebar'),
+    openButton: document.querySelector('.menu-open'),
+    closeButton: document.querySelector('.menu-close')
+  };
+}
+
 function showSidebar() {
-    const sidebar = document.querySelector('.sidebar')
-    // sidebar.style.display = 'flex'
-    sidebar.classList.add("open");
+  const { sidebar, openButton, closeButton } = getSidebarElements();
+  if (!sidebar) return;
+
+  lastFocusedElement = document.activeElement;
+  sidebar.classList.add('open');
+  sidebar.setAttribute('aria-hidden', 'false');
+  if (openButton) openButton.setAttribute('aria-expanded', 'true');
+  if (closeButton) closeButton.focus();
 }
 
 function closeSidebar() {
-    const sidebar = document.querySelector('.sidebar')
-    // sidebar.style.display = 'none'
-    sidebar.classList.remove("open");
+  const { sidebar, openButton } = getSidebarElements();
+  if (!sidebar) return;
+
+  sidebar.classList.remove('open');
+  sidebar.setAttribute('aria-hidden', 'true');
+  if (openButton) openButton.setAttribute('aria-expanded', 'false');
+
+  if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+    lastFocusedElement.focus();
+  } else if (openButton) {
+    openButton.focus();
+  }
 }
 
-function showTopButton() {
-    console.log("Loaded");
+function initHeaderAndFloatingButtons() {
+  const header = document.querySelector('.header');
+  const toTop = document.querySelector('.totop');
+  const telbutton = document.querySelector('.telbutton');
+  const mailbutton = document.querySelector('.mailbutton');
 
-    const toTop = document.querySelector('.totop');
-    if (!toTop) return;
+  const onScroll = () => {
+    const scrolled = window.pageYOffset > 100;
+    const headerScrolled = window.pageYOffset > 8;
 
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-            toTop.classList.add('active')
-        } else {
-            toTop.classList.remove('active')
-        }
-    })
-}
-
-function showContactButtons() {
-    console.log("Loaded");
-
-    const telbutton = document.querySelector('.telbutton');
-    const mailbutton = document.querySelector('.mailbutton');
-    if (!telbutton || !mailbutton) return;
-
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-            telbutton.classList.add('active')
-            mailbutton.classList.add('active')
-        } else {
-            telbutton.classList.remove('active')
-            mailbutton.classList.remove('active')
-        }
-    })
-}
-
-function animateHeader() {
-    console.log("Loaded");
-
-    const header = document.querySelector('.header');
-    if (!header) return;
-
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 8) {
-            header.classList.add('full')
-            addActive();
-        } else {
-            header.classList.remove('full')
-        }
-    })
-
-    function addActive() {
-        const fullHeader = document.querySelector('.full');
-
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 10) {
-            fullHeader.classList.add('active')
-        } else {
-            fullHeader.classList.remove('active')
-        }
-    })
+    if (header) {
+      header.classList.toggle('full', headerScrolled);
+      header.classList.toggle('active', headerScrolled);
     }
+
+    if (toTop) toTop.classList.toggle('active', scrolled);
+    if (telbutton) telbutton.classList.toggle('active', scrolled);
+    if (mailbutton) mailbutton.classList.toggle('active', scrolled);
+  };
+
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    showTopButton();
-    animateHeader();
-    smoothScrollWithOffset('#scroll-arrow');
-    showContactButtons();
-})
+function initSmoothScrollWithOffset(selector, offset = 120) {
+  const link = document.querySelector(selector);
+  if (!link) return;
 
-const observer = new IntersectionObserver((entries => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        } else {
-            entry.target.classList.remove("show");
-        }
+  link.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+    window.scrollTo({
+      top: target.offsetTop - offset,
+      behavior: 'smooth'
     });
-}));
+  });
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    const hiddenElements = document.querySelectorAll(".animate");
-    hiddenElements.forEach((el) => observer.observe(el));
+function initAnimations() {
+  const animatedElements = document.querySelectorAll('.animate');
+  if (!animatedElements.length) return;
 
-    const containers = document.querySelectorAll(".website-container");
-    const containersportfolio = document.querySelectorAll(".website-containerpo");
-
-    containers.forEach(container => {
-        const img = container.querySelector("img");
-
-        if (img) {
-            const imgSrc = img.getAttribute("src");
-
-            // Setze das Hintergrundbild
-            container.style.setProperty("--background-image", `url(${imgSrc})`);
-        }
-    });
-
-    containersportfolio.forEach(container => {
-        const img = container.querySelector("img");
-        const anchor = container.querySelector("a");
-        const isMobileView = window.matchMedia("(max-width: 690px)").matches;
-
-        if (img && anchor) {
-            const imgSrc = img.getAttribute("src");
-            const anchorHref = anchor.getAttribute("href");
-
-            // Setze das Hintergrundbild
-            container.style.setProperty("--background-image", `url(${imgSrc})`);
-
-            if (isMobileView){
-                // Erstelle einen neuen Anker, der das gesamte Container überlagert
-                const newAnchor = document.createElement('a');
-                newAnchor.href = anchorHref;
-                newAnchor.style.position = 'absolute';
-                newAnchor.style.top = '0';
-                newAnchor.style.left = '0';
-                newAnchor.style.width = '100%';
-                newAnchor.style.height = '80%';
-                newAnchor.style.zIndex = '0';  // Damit es unter dem Text, aber über dem Hintergrund ist
-
-                // Füge den neuen Anker zum Container hinzu
-                container.appendChild(newAnchor);
-            }
-        }
-    });
-});
-
-function smoothScrollWithOffset(selector, offset = 200) {
-    const link = document.querySelector(selector);
-    if (!link) return;
-    
-    link.onclick = function(e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (!target) return;
-      
-      window.scrollTo({
-        top: target.offsetTop - offset,
-        behavior: 'smooth'
-      });
-    };
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    animatedElements.forEach((el) => el.classList.add('show'));
+    return;
   }
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.12 });
 
-function sendMail(event) {
-    event.preventDefault(); // Verhindert das normale Absenden des Formulars
-
-    // Werte aus dem Formular auslesen
-    const name = document.getElementById("name").value;
-    const number = document.getElementById("number").value;
-    const email = document.getElementById("mail").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
-
-    // `mailto`-Link erstellen
-    const mailtoLink = `mailto:webcommitswebdesigns@gmail.com?subject=${encodeURIComponent("Anfrage: " + subject)}&body=${encodeURIComponent(
-        `Name: ${name}\nTelefonnummer: ${number}\nE-Mail: ${email}\n\nNachricht:\n${message}`
-    )}`;
-
-    // E-Mail-Programm öffnen
-    window.location.href = mailtoLink;
+  animatedElements.forEach((el) => observer.observe(el));
 }
 
-// Leaflet Map Initialisierung
-function initMap() {
-  // Prüfen ob map-Element existiert
-  const mapElement = document.getElementById('map');
-  if (!mapElement) return;
+function initLegacyPortfolioBackgrounds() {
+  document.querySelectorAll('.website-container, .website-containerpo').forEach((container) => {
+    const img = container.querySelector('img');
+    if (img) container.style.setProperty('--background-image', `url(${img.getAttribute('src')})`);
+  });
+}
 
-  // Koordinaten für Baesweiler
+function initMap() {
+  const mapElement = document.getElementById('map');
+  if (!mapElement || typeof L === 'undefined') return;
+
   const lat = 50.90988867168349;
   const lng = 6.177249476621881;
-
-  // Karte initialisieren
   const map = L.map('map').setView([lat, lng], 15);
 
-  // OpenStreetMap Tiles hinzufügen
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19
   }).addTo(map);
 
-  // Custom Icon erstellen
   const customIcon = L.divIcon({
     className: 'custom-marker',
     html: '<div style="background: var(--mauve); width: 30px; height: 30px; border-radius: 50%; border: 3px solid var(--crust); box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></div>',
@@ -200,16 +124,40 @@ function initMap() {
     iconAnchor: [15, 15]
   });
 
-  // Marker hinzufügen
   L.marker([lat, lng], { icon: customIcon })
     .addTo(map)
     .bindPopup('<strong>webCommits web Designs</strong><br>Hofgracht 7<br>52499 Baesweiler')
     .openPopup();
 }
 
-// Map nach DOM-Load initialisieren
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initMap);
-} else {
-  initMap();
+function initKeyboardNavigation() {
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeSidebar();
+  });
 }
+
+function initContactTopicFromQuery() {
+  const serviceSelect = document.getElementById('service');
+  if (!serviceSelect) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const topic = params.get('topic');
+  const topicMap = {
+    web: 'Website/Webentwicklung',
+    ai: 'KI-Beratung',
+    seminar: 'KI-Seminar/Schulung',
+    it: 'PC/Server/IT-Betrieb'
+  };
+
+  if (topicMap[topic]) serviceSelect.value = topicMap[topic];
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initHeaderAndFloatingButtons();
+  initSmoothScrollWithOffset('#scroll-arrow');
+  initAnimations();
+  initLegacyPortfolioBackgrounds();
+  initKeyboardNavigation();
+  initContactTopicFromQuery();
+  initMap();
+});

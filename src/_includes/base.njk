@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="{{ meta }}">
-  <meta name="keywords" content="Webdesign Aachen, Web-Entwicklung Baesweiler, Website erstellen, KI-Seminare, Handwerker Website, Portfolio Website, Responsive Webdesign, SEO-optimiert">
+  <meta name="keywords" content="Webdesign Aachen, Website erstellen, KI-Beratung Unternehmen, KI-Seminare, IT-Infrastruktur, Server einrichten, Webentwicklung KMU, Selbstständige Website, Responsive Webdesign, SEO-optimiert">
   <meta name="author" content="webCommits web Designs">
   <meta name="copyright" content="webCommits web Designs">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -47,18 +47,22 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
   <link rel="manifest" href="/static/images/site.webmanifest">
 
-    <!-- Leaflet CSS -->
+  {% if leaflet %}
+  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
         crossorigin=""/>
+  {% endif %}
 
   <script src="/static/script.js" defer></script>
   <script src="/static/i18n.js" defer></script>
   <script defer src="https://analytics.webcommits.info/script.js" data-website-id="2391770d-d34d-4005-94c9-4d9b1b422711"></script>
-    <!-- Leaflet JS -->
+  {% if leaflet %}
+  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
           crossorigin=""></script>
+  {% endif %}
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -95,7 +99,7 @@
     {"@type": "City", "name": "Baesweiler"},
     {"@type": "State", "name": "Nordrhein-Westfalen"}
   ],
-  "serviceType": ["Web-Entwicklung", "Webdesign", "IT-Consulting", "KI-Seminare"],
+  "serviceType": ["Web-Entwicklung", "Webdesign", "KI-Beratung", "KI-Seminare", "IT-Infrastruktur", "Server-Setup"],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Web-Services",
@@ -112,8 +116,16 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "KI-Seminare für die Lehre",
-          "description": "Praxisnahe KI-Seminare für Lehrkräfte und Bildungseinrichtungen"
+          "name": "KI-Beratung und KI-Workflows",
+          "description": "Praxisnahe KI-Beratung, Automatisierung und sichere KI-Nutzung für kleine Unternehmen"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "IT-Infrastruktur",
+          "description": "PC-Bau, Serverumgebungen, Wartung und technischer Support"
         }
       }
     ]
@@ -128,13 +140,9 @@
 
     gtag('config', 'G-WLX9WP2X46');
   </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
