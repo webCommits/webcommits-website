@@ -903,8 +903,7 @@
     var stored = null;
     try { stored = localStorage.getItem('wc-lang'); } catch (e) {}
     if (stored === 'de' || stored === 'en') return stored;
-    var browser = (navigator.language || navigator.userLanguage || 'de').toLowerCase();
-    return browser.startsWith('en') ? 'en' : 'de';
+    return 'de';
   }
 
   function applyTranslations(lang) {
