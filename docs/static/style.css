@@ -2362,6 +2362,22 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.card-grid--balanced-five {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.card-grid--balanced-five > * {
+    grid-column: span 2;
+}
+
+.card-grid--balanced-five > :nth-last-child(2) {
+    grid-column: 2 / span 2;
+}
+
+.card-grid--balanced-five > :last-child {
+    grid-column: 4 / span 2;
+}
+
 .feature-card,
 .portfolio-card,
 .step-card,
@@ -2651,6 +2667,12 @@ h1, h2, h3, h4, h5, h6 {
     .portfolio-grid--teaser,
     .steps-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-grid--balanced-five > *,
+    .card-grid--balanced-five > :nth-last-child(2),
+    .card-grid--balanced-five > :last-child {
+        grid-column: auto;
     }
 
     .trust-grid {
