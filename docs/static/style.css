@@ -1666,35 +1666,85 @@ form button:hover {
     transform: translateX(5px);
 }
 
-.footer {
-    background: var(--crust);
-    padding: 2rem;
+.site-footer {
+    background:
+        radial-gradient(circle at 18% 0%, rgba(203, 166, 247, 0.12), transparent 28rem),
+        var(--crust);
+    padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 6vw, 6rem) 1.5rem;
     border-top: 1px solid var(--surface1);
 }
 
-.footer ul {
-    display: flex;
-    justify-content: center;
+.site-footer__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(260px, 1.4fr) minmax(180px, 0.8fr) minmax(160px, 0.6fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+}
+
+.site-footer__brand img {
+    width: min(100%, 220px);
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.site-footer__brand p {
+    max-width: 440px;
+    color: var(--subtext1);
+    line-height: 1.6;
+}
+
+.site-footer__contact,
+.site-footer__nav a {
+    color: var(--lavender);
+    text-decoration: none;
+}
+
+.site-footer__contact {
+    display: inline-flex;
     align-items: center;
-    gap: 1.5rem;
-    list-style: none;
+    min-height: 44px;
+    margin-top: 0.75rem;
+    font-weight: 800;
+}
+
+.site-footer__nav h2 {
+    margin: 0 0 1rem;
+    color: var(--text);
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.site-footer__nav ul {
+    display: grid;
+    gap: 0.55rem;
     margin: 0;
     padding: 0;
 }
 
-.footer ul li {
+.site-footer__nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    color: var(--subtext1);
+    transition: color 0.2s, transform 0.2s;
+}
+
+.site-footer__nav a:hover,
+.site-footer__contact:hover {
+    color: var(--mauve);
+    transform: translateX(3px);
+}
+
+.site-footer__copy {
+    max-width: 1180px;
+    margin: 2.5rem auto 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(69, 71, 90, 0.65);
     color: var(--subtext0);
     font-size: 0.9rem;
-}
-
-.footer ul li a {
-    color: var(--subtext0);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.footer ul li a:hover {
-    color: var(--lavender);
 }
 
 .button-row {
@@ -1846,6 +1896,14 @@ form button:hover {
 }
 
 @media (max-width: 890px) {
+    .site-footer__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer__nav a {
+        min-height: 44px;
+    }
+
     .menubtn {
         display: block;
     }

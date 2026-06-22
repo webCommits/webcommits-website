@@ -23,6 +23,9 @@
 
       /* ── Footer ──────────────────────────────────── */
       'footer.copy': 'Copyright © webCommits web Designs 2026',
+      'footer.tagline': 'Websites, IT & KI-Lösungen für kleine Unternehmen – persönlich aus Aachen, deutschlandweit umsetzbar.',
+      'footer.nav.title': 'Navigation',
+      'footer.legal.title': 'Rechtliches',
       'footer.imprint': 'Impressum',
       'footer.privacy': 'Datenschutz',
       'footer.home': 'Homepage',
@@ -289,6 +292,9 @@
 
       /* ── Footer ──────────────────────────────────── */
       'footer.copy': 'Copyright © webCommits web Designs 2026',
+      'footer.tagline': 'Websites, IT and AI solutions for small businesses – personal from Aachen, available throughout Germany.',
+      'footer.nav.title': 'Navigation',
+      'footer.legal.title': 'Legal',
       'footer.imprint': 'Imprint',
       'footer.privacy': 'Privacy policy',
       'footer.home': 'Homepage',
