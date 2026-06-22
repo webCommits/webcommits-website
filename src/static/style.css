@@ -2105,7 +2105,10 @@ html {
     overflow-x: hidden;
 }
 
-body {
+body,
+main,
+.wc-section,
+.service-page {
     overflow-x: hidden;
 }
 
