@@ -1676,6 +1676,7 @@ form button:hover {
     flex-direction: column;
     gap: 1rem;
     z-index: 1001;
+    pointer-events: none;
 }
 
 .totop,
@@ -2680,6 +2681,11 @@ h1, h2, h3, h4, h5, h6 {
     .orbit-card--one { left: 8%; }
     .orbit-card--two { right: 8%; }
     .orbit-card--three { left: 28%; }
+
+    .telbutton,
+    .mailbutton {
+        display: none;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
