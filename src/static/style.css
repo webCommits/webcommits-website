@@ -2581,10 +2581,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .portrait-card {
     width: min(100%, 420px);
+    height: auto;
     justify-self: center;
     border-radius: 28px;
     border: 1px solid var(--surface1);
     box-shadow: var(--shadow);
+    display: block;
 }
 
 .portfolio-card {
@@ -2595,9 +2597,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .portfolio-card img {
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-bottom: 1px solid rgba(69, 71, 90, 0.72);
+    display: block;
+    flex-shrink: 0;
+    background: var(--mantle);
 }
 
 .portfolio-card__body {
