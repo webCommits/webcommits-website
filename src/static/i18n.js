@@ -780,6 +780,20 @@
 
   });
 
+  Object.assign(translations.de, {
+    'consent.text':  'Diese Website nutzt Analyse-Dienste (Umami & Google Analytics) zur Verbesserung des Angebots. Nur mit Ihrer Zustimmung aktiviert.',
+    'consent.accept':'Akzeptieren',
+    'consent.decline':'Ablehnen',
+    'consent.reset': 'Zustimmung zurücksetzen'
+  });
+
+  Object.assign(translations.en, {
+    'consent.text':  'This website uses analytics (Umami & Google Analytics) to improve our service. Only activated with your consent.',
+    'consent.accept':'Accept',
+    'consent.decline':'Decline',
+    'consent.reset': 'Reset consent'
+  });
+
   Object.assign(translations.en, {
     'about.hero.label': 'About me',
     'about.hero.h1': 'Making technology understandable – from websites to AI',

@@ -52,7 +52,6 @@
 
   <script src="/static/script.js" defer></script>
   <script src="/static/i18n.js" defer></script>
-  <script defer src="https://analytics.webcommits.info/script.js" data-website-id="2391770d-d34d-4005-94c9-4d9b1b422711"></script>
   
   <script type="application/ld+json">
 {
@@ -123,14 +122,6 @@
   }
 }
 </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLX9WP2X46"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-WLX9WP2X46');
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -324,6 +315,16 @@
   <a href="mailto:info@webcommits.info" class="mailbutton" aria-label="E-Mail schreiben"><img src="/static/images/mail-ico.webp" alt="" aria-hidden="true"></a>
 </div>
 
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie Consent" aria-describedby="consent-text" style="display:none;">
+    <p id="consent-text" data-i18n="consent.text">
+      Diese Website nutzt Analyse-Dienste (Umami &amp; Google Analytics) zur Verbesserung des Angebots. Nur mit Ihrer Zustimmung aktiviert.
+    </p>
+    <div class="consent-banner__actions">
+      <button id="consent-accept" class="btn btn--primary" data-i18n="consent.accept">Akzeptieren</button>
+      <button id="consent-decline" class="btn btn--ghost" data-i18n="consent.decline">Ablehnen</button>
+    </div>
+  </div>
 </body>
 
 </html>

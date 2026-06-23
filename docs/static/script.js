@@ -184,6 +184,77 @@ function initPortfolioReveal() {
   });
 }
 
+/* ── Consent banner ──────────────────────────────── */
+function getConsent() {
+  try { return localStorage.getItem('wc-analytics-consent'); } catch (e) { return null; }
+}
+
+function setConsent(value) {
+  try { localStorage.setItem('wc-analytics-consent', value); } catch (e) {}
+}
+
+function loadAnalytics() {
+  if (document.querySelector('[data-analytics-loaded]')) return;
+  document.documentElement.setAttribute('data-analytics-loaded', '');
+
+  var umami = document.createElement('script');
+  umami.src = 'https://analytics.webcommits.info/script.js';
+  umami.setAttribute('data-website-id', '2391770d-d34d-4005-94c9-4d9b1b422711');
+  umami.defer = true;
+  document.head.appendChild(umami);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  window.gtag('js', new Date());
+  window.gtag('config', 'G-WLX9WP2X46');
+
+  var ga = document.createElement('script');
+  ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-WLX9WP2X46';
+  ga.async = true;
+  document.head.appendChild(ga);
+}
+
+function showConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.style.display = '';
+}
+
+function hideConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.style.display = 'none';
+}
+
+function initConsentBanner() {
+  var consent = getConsent();
+
+  if (consent === 'accepted') {
+    loadAnalytics();
+    return;
+  }
+
+  if (consent === 'declined') {
+    return;
+  }
+
+  showConsentBanner();
+
+  document.getElementById('consent-accept')?.addEventListener('click', function () {
+    setConsent('accepted');
+    loadAnalytics();
+    hideConsentBanner();
+  });
+
+  document.getElementById('consent-decline')?.addEventListener('click', function () {
+    setConsent('declined');
+    hideConsentBanner();
+  });
+}
+
+window.wcResetConsent = function () {
+  setConsent(null);
+  location.reload();
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderAndFloatingButtons();
   initSmoothScrollWithOffset();
@@ -193,4 +264,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactTopicFromQuery();
   initPortfolioReveal();
   initMap();
+  initConsentBanner();
 });
