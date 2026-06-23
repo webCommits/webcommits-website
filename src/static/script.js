@@ -113,13 +113,6 @@ function initAnimations() {
   animatedElements.forEach((el) => observer.observe(el));
 }
 
-function initLegacyPortfolioBackgrounds() {
-  document.querySelectorAll('.website-container, .website-containerpo').forEach((container) => {
-    const img = container.querySelector('img');
-    if (img) container.style.setProperty('--background-image', `url(${img.getAttribute('src')})`);
-  });
-}
-
 function initMap() {
   const mapElement = document.getElementById('map');
   if (!mapElement || typeof L === 'undefined') return;
@@ -259,7 +252,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderAndFloatingButtons();
   initSmoothScrollWithOffset();
   initAnimations();
-  initLegacyPortfolioBackgrounds();
   initKeyboardNavigation();
   initContactTopicFromQuery();
   initPortfolioReveal();

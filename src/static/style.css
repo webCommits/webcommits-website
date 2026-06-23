@@ -90,8 +90,6 @@ a {
 
 ul {
     list-style-type: none;
-    display: flex;
-    gap: 2em;
     margin: 0;
     padding: 0;
 }
@@ -799,6 +797,24 @@ nav img {
     max-width: 100%;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#map {
+    height: 450px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.map-link-wrap {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.map-link {
+    color: var(--lavender);
+    text-decoration: underline;
 }
 
 /* ========================================

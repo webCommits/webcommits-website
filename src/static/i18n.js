@@ -83,7 +83,7 @@
 
       /* ── Directions page ─────────────────────────── */
       'dir.h1':  'Anfahrt',
-      'dir.p1':  'Ich arbeite von meinem Standort in Baesweeler aus – direkt an der Grenze zu Aachen. Als freiberuflicher Webentwickler bin ich deutschlandweit und international tätig. Sie erreichen mich über verschiedene Wege, unter anderem bequem über mein Kontaktformular.',
+      'dir.p1':  'Ich arbeite von meinem Standort in Baesweiler aus – direkt an der Grenze zu Aachen. Als freiberuflicher Webentwickler bin ich deutschlandweit und international tätig. Sie erreichen mich über verschiedene Wege, unter anderem bequem über mein Kontaktformular.',
       'dir.p2':  'Klicken Sie auf die Karte für genauere Informationen.',
       'dir.osm': 'Größere Karte in OpenStreetMap anzeigen',
 
