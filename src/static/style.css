@@ -2958,8 +2958,57 @@ nav a {
     .orbit-card--two { right: 8%; }
     .orbit-card--three { left: 28%; }
 
-    .js-enabled .portfolio-grid.is-collapsed .portfolio-card:nth-child(n+7) {
+    .js-enabled .portfolio-grid.is-collapsed .portfolio-card:nth-child(n+4) {
         display: none;
+    }
+
+    .service-card-grid .feature-card:first-child {
+        border-color: rgba(137, 180, 250, 0.68);
+        box-shadow: 0 18px 48px rgba(137, 180, 250, 0.14);
+    }
+
+    .service-card-grid .feature-card:nth-child(n+3) .check-list {
+        display: none;
+    }
+
+    .portfolio-card__body {
+        gap: 0.7rem;
+        padding: 1rem;
+    }
+
+    .portfolio-card .tag-row {
+        display: none;
+    }
+
+    .portfolio-more-wrap .btn,
+    .portfolio-card__body .btn,
+    .seminar-contact .contact-method,
+    .content-list li,
+    .info-box li {
+        min-height: 44px;
+    }
+
+    .seminar-expertise,
+    .seminar-offerings,
+    .seminar-formats,
+    .seminar-targets,
+    .seminar-contact {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .seminar-hero {
+        min-height: auto;
+        padding: 6rem 1rem 4rem;
+    }
+
+    .seminar-hero .hero-badges {
+        justify-content: stretch;
+    }
+
+    .seminar-hero .badge {
+        flex: 1 1 100%;
+        text-align: center;
     }
 
     .telbutton,
@@ -3082,6 +3131,14 @@ nav a {
     .targets-grid,
     .offerings-grid {
         grid-template-columns: 1fr;
+    }
+
+    .formats-container {
+        gap: 2rem;
+    }
+
+    .format-features {
+        gap: 0.9rem;
     }
 
     .seminar-hero .hero-logo {
