@@ -781,14 +781,14 @@
   });
 
   Object.assign(translations.de, {
-    'consent.text':  'Diese Website nutzt Analyse-Dienste (Umami & Google Analytics) zur Verbesserung des Angebots. Nur mit Ihrer Zustimmung aktiviert.',
+    'consent.text':  'Diese Website nutzt selbst gehostete, cookielose Analyse mit Umami. Sie wird nur mit Ihrer Zustimmung aktiviert.',
     'consent.accept':'Akzeptieren',
     'consent.decline':'Ablehnen',
     'consent.reset': 'Zustimmung zurücksetzen'
   });
 
   Object.assign(translations.en, {
-    'consent.text':  'This website uses analytics (Umami & Google Analytics) to improve our service. Only activated with your consent.',
+    'consent.text':  'This website uses self-hosted, cookieless analytics with Umami. It is only activated with your consent.',
     'consent.accept':'Accept',
     'consent.decline':'Decline',
     'consent.reset': 'Reset consent'

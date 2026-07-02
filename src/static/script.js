@@ -230,16 +230,6 @@ function loadAnalytics() {
   umami.setAttribute('data-website-id', '2391770d-d34d-4005-94c9-4d9b1b422711');
   umami.defer = true;
   document.head.appendChild(umami);
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { dataLayer.push(arguments); };
-  window.gtag('js', new Date());
-  window.gtag('config', 'G-WLX9WP2X46');
-
-  var ga = document.createElement('script');
-  ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-WLX9WP2X46';
-  ga.async = true;
-  document.head.appendChild(ga);
 }
 
 function showConsentBanner() {
