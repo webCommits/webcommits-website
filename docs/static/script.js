@@ -41,6 +41,41 @@ function closeSidebar() {
   }
 }
 
+function getFocusableElements(container) {
+  return Array.from(container.querySelectorAll('a[href], button:not([disabled])'));
+}
+
+function initMobileNavigation() {
+  const { sidebar, openButton } = getSidebarElements();
+  if (!sidebar || !openButton) return;
+
+  document.querySelectorAll('[data-menu-open]').forEach((button) => {
+    button.addEventListener('click', showSidebar);
+  });
+
+  document.querySelectorAll('[data-menu-close], [data-menu-link]').forEach((element) => {
+    element.addEventListener('click', closeSidebar);
+  });
+
+  sidebar.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab' || !sidebar.classList.contains('open')) return;
+
+    const focusable = getFocusableElements(sidebar);
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
+
 function initHeaderAndFloatingButtons() {
   const header = document.querySelector('.header');
   const toTop = document.querySelector('.totop');
@@ -152,10 +187,10 @@ function initContactTopicFromQuery() {
   const params = new URLSearchParams(window.location.search);
   const topic = params.get('topic');
   const topicMap = {
-    web: 'Website/Webentwicklung',
+    web: 'Website',
     ai: 'KI-Beratung',
-    seminar: 'KI-Seminar/Schulung',
-    it: 'PC/Server/IT-Betrieb'
+    seminar: 'Seminar',
+    it: 'IT-Anfrage'
   };
 
   if (topicMap[topic]) serviceSelect.value = topicMap[topic];
@@ -250,6 +285,7 @@ window.wcResetConsent = function () {
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderAndFloatingButtons();
+  initMobileNavigation();
   initSmoothScrollWithOffset();
   initAnimations();
   initKeyboardNavigation();

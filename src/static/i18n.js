@@ -872,6 +872,7 @@
     document.querySelectorAll('[data-lang-toggle]').forEach(function (btn) {
       if (t['lang.toggle'] !== undefined) btn.textContent = t['lang.toggle'];
       btn.setAttribute('aria-label', lang === 'de' ? 'Switch to English' : 'Auf Deutsch wechseln');
+      btn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
     });
 
     /* persist */
