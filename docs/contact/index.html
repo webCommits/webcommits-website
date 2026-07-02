@@ -175,8 +175,8 @@
     <div class="section-heading section-heading--wide">
         <span class="section-label" data-i18n="contact.label">Kontakt</span>
         <h1 data-i18n="contact.h1">Projekt oder Erstgespräch anfragen</h1>
-        <p data-i18n="contact.p1">Beschreiben Sie kurz, wobei ich unterstützen kann.</p>
-        <p data-i18n="contact.p2">Ob Website, KI-Beratung, Seminar oder IT-Anfrage: Ihre Nachricht landet direkt bei mir. Ich melde mich schnellstmöglich zurück.</p>
+        <p data-i18n="contact.p1">Schreiben Sie mir kurz, wobei ich unterstützen kann.</p>
+        <p data-i18n="contact.p2">Hilfreich sind Ziel, Zeitrahmen und der gewünschte Leistungsbereich. Ihre Anfrage landet direkt bei mir, und ich antworte persönlich.</p>
     </div>
 
     <div class="contact-layout">
@@ -194,18 +194,18 @@
             <label for="service" data-i18n="contact.service">Leistungsbereich*</label>
             <select id="service" name="Leistungsbereich" required aria-label="Leistungsbereich auswählen">
                 <option value="" data-i18n="contact.service.placeholder">Bitte auswählen</option>
-                <option value="Website/Webentwicklung" data-i18n="contact.service.web">Website/Webentwicklung</option>
+                <option value="Website" data-i18n="contact.service.web">Website</option>
                 <option value="KI-Beratung" data-i18n="contact.service.ai">KI-Beratung</option>
-                <option value="KI-Seminar/Schulung" data-i18n="contact.service.sem">KI-Seminar/Schulung</option>
-                <option value="PC/Server/IT-Betrieb" data-i18n="contact.service.it">PC/Server/IT-Betrieb</option>
+                <option value="Seminar" data-i18n="contact.service.sem">Seminar</option>
+                <option value="IT-Anfrage" data-i18n="contact.service.it">IT-Anfrage</option>
                 <option value="Sonstiges" data-i18n="contact.service.other">Sonstiges</option>
             </select>
-
+ 
             <label for="name" data-i18n="contact.name">Name*</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="number" data-i18n="contact.phone">Telefonnummer</label>
-            <input type="text" id="number" name="Telefonnummer">
+            <label for="number" data-i18n="contact.phone">Telefonnummer (optional)</label>
+            <input type="tel" id="number" name="Telefonnummer" autocomplete="tel">
 
             <label for="mail" data-i18n="contact.email">E-Mail*</label>
             <input type="email" id="mail" name="email" required>
@@ -228,7 +228,7 @@
             <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich zurück." data-i18n-value="contact.autoresponse">
             <input type="hidden" name="_next" value="https://www.webcommits.info/danke/">
 
-            <button class="btn btn--primary btn--full" type="submit" data-i18n="contact.btn">Anfrage senden</button>
+            <button class="btn btn--primary btn--full" type="submit" data-i18n="contact.btn">Anfrage unverbindlich senden</button>
             <p class="small-note" data-i18n="contact.req">* Pflichtfelder</p>
         </form>
     </div>
