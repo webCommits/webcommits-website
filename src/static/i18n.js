@@ -885,15 +885,23 @@
     applyTranslations(current === 'de' ? 'en' : 'de');
   }
 
-  /* expose for the toggle button's onclick */
+  /* expose optional helper for external language switching */
   window.wcToggleLang = toggleLanguage;
 
   /* run as soon as the DOM is ready */
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () {
-      applyTranslations(detectLanguage());
+  function init() {
+    var lang = detectLanguage();
+    applyTranslations(lang);
+
+    /* attach event listeners to toggle buttons */
+    document.querySelectorAll('[data-lang-toggle]').forEach(function (btn) {
+      btn.addEventListener('click', toggleLanguage);
     });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    applyTranslations(detectLanguage());
+    init();
   }
 })();
