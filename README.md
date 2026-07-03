@@ -1,60 +1,50 @@
-# webCommits web Designs - Official Website
+# webCommits web Designs - Offizielle Website
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-webcommits.info-blue?style=for-the-badge)](https://www.webcommits.info)
 [![Built with Eleventy](https://img.shields.io/badge/Built%20with-Eleventy-green?style=for-the-badge)](https://www.11ty.dev/)
-[![License](https://img.shields.io/badge/License-ISC-yellow?style=for-the-badge)](LICENSE)
 
-> Maßgeschneiderte Websites für Handwerker, Kleingewerbe und Selbstständige – handgeschrieben, performant und individuell.
+> Maßgeschneiderte digitale Lösungen – professionell, performant und individuell.
 
 ## 🌟 Über das Projekt
 
-Dies ist die offizielle Website von **webCommits web Designs**, einem Web-Entwicklungs-Service aus Baesweiler, Aachen. Die Website präsentiert unsere Dienstleistungen, Portfolio-Projekte und ein neues Angebot für KI-Seminare in der Bildung.
+Dies ist die offizielle Website von **webCommits web Designs**. Ich unterstütze kleine Unternehmen, Selbstständige und Bildungseinrichtungen mit moderner Webentwicklung, praxisnaher KI-Beratung und verlässlicher IT-Infrastruktur.
 
 ### Live Demo
 🔗 [www.webcommits.info](https://www.webcommits.info)
 
-## ✨ Features
+## ✨ Leistungen
 
-### 🎨 **Modernes Design**
-- **Catppuccin Mocha Theme** mit konsistenten Farben und dunklem Design
-- **Responsive Design** für perfekte Darstellung auf allen Geräten
-- **Smooth Animations** mit IntersectionObserver API
-- **Custom CSS** - vollständig handgeschrieben, keine Frameworks
+- **Websites & Webentwicklung**: Individuelle, performante und SEO-optimierte Webauftritte.
+- **KI-Beratung**: Strategische Unterstützung bei der Integration von Künstlicher Intelligenz in Geschäftsprozesse.
+- **KI-Seminare**: Praxisnahe Schulungen für Lehrkräfte und Bildungseinrichtungen.
+- **IT- & Infrastruktur**: Support für Server, PC-Infrastruktur und Netzwerke.
 
-### 📱 **Seitenstruktur**
-- **Landing Page** - Hero-Section mit Service-Übersicht
-- **Über uns** - Unternehmensphilosophie und Prinzipien
-- **KI-Seminare** - Neues Angebot für Lehrkräfte und Bildungseinrichtungen
-- **Portfolio** - Showcase abgeschlossener Projekte mit Live-Links
-- **Kontakt** - Formular und direkte Kontaktmöglichkeiten
-- **Anfahrt** - Interaktive Leaflet-Karte
+## 📱 Seitenstruktur
 
-### 🚀 **Technische Highlights**
-- **Static Site Generator:** Eleventy (11ty)
-- **Template Engine:** Nunjucks (.njk)
-- **SEO-optimiert** mit Meta-Tags, Canonical URLs und Sitemap
-- **Google Analytics** Integration
-- **Structured Data** (Schema.org) für bessere Suchmaschinen-Sichtbarkeit
-- **Progressive Enhancement** mit JavaScript-Features
-- **Mobile-First Approach** mit Touch-optimierten Interaktionen
-
+- **Home** (`/`) – Überblick über die Leistungen.
+- **KI-Beratung** (`/ki-beratung/`) – Informationen zur KI-Beratung.
+- **Seminare** (`/seminare/`) – Details zu KI-Schulungen.
+- **Portfolio** (`/portfolio/`) – Einblick in bisherige Projekte.
+- **Über mich** (`/aboutus/`) – persönliche Positionierung und Arbeitsweise.
+- **Kontakt** (`/contact/`) – Kontaktformular für Anfragen.
+- **Anfahrt** (`/anfahrt/`) – Standort und Wegbeschreibung.
+- **Rechtliches** – Impressum und Datenschutz.
 
 ## 🛠️ Tech Stack
 
 | Technologie | Verwendung |
 |------------|------------|
-| **Eleventy** | Static Site Generator |
+| **Eleventy 3.x** | Static Site Generator |
 | **Nunjucks** | Templating Engine |
-| **CSS3** | Custom Styling (Catppuccin Theme) |
 | **JavaScript (Vanilla)** | Client-seitige Interaktionen |
-| **Leaflet.js** | Interaktive Karte |
-| **Google Fonts** | Clash Display & Epilogue |
-
+| **Custom CSS** | Styling (Catppuccin Mocha Theme) |
+| **Leaflet.js** | Interaktive Karten |
+| **Umami Analytics** | Datenschutzkonformes Analytics (nach Consent) |
 
 ## 🚀 Installation & Entwicklung
 
 ### Voraussetzungen
-- Node.js (v14 oder höher)
+- **Node.js 20+ empfohlen**
 - npm
 
 ### Setup
@@ -67,10 +57,8 @@ cd webcommits-website
 # Dependencies installieren
 npm install
 
-# Development Server starten (mit Hot Reload)
+# Development Server starten
 npm start
-
-# Website wird verfügbar unter: http://localhost:8080
 ```
 
 ### Build & Deployment
@@ -83,10 +71,7 @@ npm run build
 npm run deploy
 ```
 
-Der `deploy`-Befehl führt automatisch aus:
-1. Eleventy Build (`docs/` Ordner wird generiert)
-2. Git Add + Commit
-3. Push zu GitHub (GitHub Pages hostet aus `docs/`)
+**Hinweis:** Der Build-Output wird im Verzeichnis `docs/` generiert.
 
 ## 🎨 Design-System
 
@@ -107,15 +92,13 @@ Der `deploy`-Befehl führt automatisch aus:
 
 ## 📄 Lizenz
 
-ISC License - Siehe [LICENSE](LICENSE) für Details
+ISC laut `package.json`.
 
 ## 🤝 Kontakt
 
 **webCommits web Designs**
 - 🌐 Website: [www.webcommits.info](https://www.webcommits.info)
-- 📧 E-Mail: Siehe Kontaktformular auf der Website
-- 📱 Telefon: Siehe Website
-- 🐙 GitHub: [@webCommits](https://github.com/webCommits)
+- 📧 Kontakt: Über das Formular auf der Website
 
 ---
 
