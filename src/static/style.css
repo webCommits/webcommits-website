@@ -2221,6 +2221,36 @@ nav a {
     text-align: center;
 }
 
+.hero-logo {
+    width: clamp(64px, 10vw, 120px);
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 891px) {
+    .home-hero.hero--left {
+        justify-items: start;
+        text-align: left;
+    }
+
+    .home-hero.hero--left .home-hero__content {
+        align-items: flex-start;
+        max-width: 720px;
+    }
+
+    .home-hero.hero--left .home-hero__content h1,
+    .home-hero.hero--left .home-hero__content p,
+    .home-hero.hero--left .hero-actions,
+    .home-hero.hero--left .hero-proof {
+        margin-inline: 0;
+    }
+
+    .home-hero.hero--left .hero-actions,
+    .home-hero.hero--left .hero-proof {
+        justify-content: flex-start;
+    }
+}
+
 .service-hero {
     grid-template-columns: 1fr;
     min-height: 62vh;
