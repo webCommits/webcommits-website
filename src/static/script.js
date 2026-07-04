@@ -26,7 +26,10 @@ function showSidebar() {
 
 function closeSidebar() {
   const { sidebar, backdrop, openButton } = getSidebarElements();
-  if (!sidebar) return;
+  if (!sidebar) {
+    document.body.classList.remove('sidebar-lock');
+    return;
+  }
 
   document.body.classList.remove('sidebar-lock');
   sidebar.classList.remove('open');
@@ -48,6 +51,10 @@ function getFocusableElements(container) {
 function initMobileNavigation() {
   const { sidebar, openButton } = getSidebarElements();
   if (!sidebar || !openButton) return;
+
+  document.body.classList.remove('sidebar-lock');
+  sidebar.classList.remove('open');
+  sidebar.setAttribute('aria-hidden', 'true');
 
   document.querySelectorAll('[data-menu-open]').forEach((button) => {
     button.addEventListener('click', showSidebar);
@@ -132,6 +139,10 @@ function initAnimations() {
   const animatedElements = document.querySelectorAll('.animate');
   if (!animatedElements.length) return;
 
+  animatedElements.forEach((el, index) => {
+    el.style.setProperty('--reveal-delay', `${Math.min(index * 45, 180)}ms`);
+  });
+
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
     animatedElements.forEach((el) => el.classList.add('show'));
     return;
@@ -143,9 +154,40 @@ function initAnimations() {
         entry.target.classList.add('show');
       }
     });
-  }, { threshold: 0.12 });
+  }, { rootMargin: '0px 0px -14% 0px', threshold: 0.18 });
 
   animatedElements.forEach((el) => observer.observe(el));
+}
+
+function initPointerGlow() {
+  const supportsFineHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!supportsFineHover || reduceMotion) return;
+
+  const glowTargets = document.querySelectorAll([
+    '.feature-card',
+    '.portfolio-card',
+    '.step-card',
+    '.faq-card',
+    '.mini-feature',
+    '.expertise-card',
+    '.offering-card',
+    '.target-card',
+    '.trust-item',
+    '.contact-card',
+    '.contactformular',
+    '.contact-method',
+    '.contact-methods a',
+    '.cta-band'
+  ].join(','));
+
+  glowTargets.forEach((target) => {
+    target.addEventListener('pointermove', (event) => {
+      const rect = target.getBoundingClientRect();
+      target.style.setProperty('--spotlight-x', `${event.clientX - rect.left}px`);
+      target.style.setProperty('--spotlight-y', `${event.clientY - rect.top}px`);
+    });
+  });
 }
 
 function initMap() {
@@ -278,6 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNavigation();
   initSmoothScrollWithOffset();
   initAnimations();
+  initPointerGlow();
   initKeyboardNavigation();
   initContactTopicFromQuery();
   initPortfolioReveal();

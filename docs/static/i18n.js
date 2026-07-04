@@ -23,7 +23,7 @@
 
       /* ── Footer ──────────────────────────────────── */
       'footer.copy': 'Copyright © webCommits web Designs 2026',
-      'footer.tagline': 'Websites, IT & KI-Lösungen für kleine Unternehmen, persönlich aus Aachen und deutschlandweit umsetzbar.',
+      'footer.tagline': 'Websites, IT & KI-Lösungen für Unternehmen, persönlich aus Aachen und deutschlandweit umsetzbar.',
       'footer.nav.title': 'Navigation',
       'footer.legal.title': 'Rechtliches',
       'footer.imprint': 'Impressum',
@@ -224,7 +224,7 @@
 
       /* ── Footer ──────────────────────────────────── */
       'footer.copy': 'Copyright © webCommits web Designs 2026',
-      'footer.tagline': 'Websites, IT and AI solutions for small businesses, personal from Aachen and available throughout Germany.',
+      'footer.tagline': 'Websites, IT and AI solutions for companies, personal from Aachen and available throughout Germany.',
       'footer.nav.title': 'Navigation',
       'footer.legal.title': 'Legal',
       'footer.imprint': 'Imprint',
@@ -452,7 +452,7 @@
 
     'index.ai.label': 'KI für Unternehmen',
     'index.ai.h2': 'KI sinnvoll im Unternehmen einsetzen',
-    'index.ai.p': 'Ich helfe kleinen Unternehmen und Teams dabei, KI praktisch, sicher und verständlich einzuführen, von ersten Einsatzideen bis zu eigenen Workflows und internen Assistenten.',
+    'index.ai.p': 'Ich helfe Unternehmen dabei, KI praktisch, sicher und verständlich einzuführen, von ersten Einsatzideen bis zu eigenen Workflows und internen Assistenten.',
     'index.ai.cta_primary': 'KI-Beratung anfragen',
     'index.ai.cta_secondary': 'KI-Angebot ansehen',
     'index.ai.f1.h': 'Potenziale finden',
@@ -528,7 +528,7 @@
     'port.p8.role': 'Rolle: Website-Entwicklung, lokale Ausrichtung und Kontaktführung.',
     'port.p9.role': 'Rolle: Konzept, Design-System, Eleventy-Umsetzung und kontinuierliche Optimierung.',
 
-    'ai.hero.title': 'KI-Beratung & technische Umsetzung für kleine Unternehmen',
+    'ai.hero.title': 'KI-Beratung & technische Umsetzung für Unternehmen',
     'ai.hero.subtitle': 'Verständlich, praxisnah und datenschutzbewusst, von der ersten Idee bis zum nutzbaren Workflow.',
     'ai.hero.cta_primary': 'KI-Beratung anfragen',
     'ai.hero.cta_secondary': 'Angebote ansehen',
@@ -615,7 +615,7 @@
 
     'index.ai.label': 'AI for businesses',
     'index.ai.h2': 'Use AI sensibly in your business',
-    'index.ai.p': 'I help small businesses and teams introduce AI in a practical, secure and understandable way, from first ideas to workflows and internal assistants.',
+    'index.ai.p': 'I help companies introduce AI in a practical, secure and understandable way, from first ideas to workflows and internal assistants.',
     'index.ai.cta_primary': 'Request AI consulting',
     'index.ai.cta_secondary': 'View AI services',
     'index.ai.f1.h': 'Find potential',
@@ -691,7 +691,7 @@
     'port.p8.role': 'Role: website development, local positioning and contact guidance.',
     'port.p9.role': 'Role: concept, design system, Eleventy implementation and continuous optimisation.',
 
-    'ai.hero.title': 'AI consulting & technical implementation for small businesses',
+    'ai.hero.title': 'AI consulting & technical implementation for companies',
     'ai.hero.subtitle': 'Understandable, practical and privacy-conscious, from the first idea to a usable workflow.',
     'ai.hero.cta_primary': 'Request AI consulting',
     'ai.hero.cta_secondary': 'View services',
@@ -751,7 +751,7 @@
     'about.hero.proof3': 'KI-Beratung & Schulungen',
     'about.profile.label': 'Profil',
     'about.profile.h2': 'Freelancer statt Agenturapparat',
-    'about.profile.p1': 'Ich arbeite direkt mit kleinen Unternehmen, Selbstständigen und Bildungseinrichtungen zusammen. Sie sprechen nicht mit wechselnden Projektteams, sondern direkt mit der Person, die Konzept, Umsetzung und technische Entscheidungen verantwortet.',
+    'about.profile.p1': 'Ich arbeite direkt mit Unternehmen, Selbstständigen und Bildungseinrichtungen zusammen. Sie sprechen nicht mit wechselnden Projektteams, sondern direkt mit der Person, die Konzept, Umsetzung und technische Entscheidungen verantwortet.',
     'about.profile.p2': 'Durch meine Erfahrung in Webentwicklung, IT-Administration und Lehre kann ich technische Themen nicht nur umsetzen, sondern auch so erklären, dass Entscheidungen nachvollziehbar werden.',
     'about.profile.card1.h': 'Persönlich',
     'about.profile.card1.p': 'Direkter Kontakt, kurze Wege und ehrliche Einschätzungen.',
@@ -805,7 +805,7 @@
     'about.hero.proof3': 'AI consulting & seminars',
     'about.profile.label': 'Profile',
     'about.profile.h2': 'Freelancer instead of agency machinery',
-    'about.profile.p1': 'I work directly with small businesses, self-employed professionals and educational institutions. You do not talk to changing project teams, but directly to the person responsible for concept, implementation and technical decisions.',
+    'about.profile.p1': 'I work directly with companies, self-employed professionals and educational institutions. You do not talk to changing project teams, but directly to the person responsible for concept, implementation and technical decisions.',
     'about.profile.p2': 'Through my experience in web development, IT administration and teaching, I can not only implement technical topics but also explain them in a way that makes decisions easy to follow.',
     'about.profile.card1.h': 'Personal',
     'about.profile.card1.p': 'Direct contact, short paths and honest assessments.',
