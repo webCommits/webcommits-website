@@ -1,5 +1,5 @@
 /**
- * webCommits i18n – client-side language switching
+ * webCommits i18n: client-side language switching
  * Supports: de (default) | en
  * Usage: add data-i18n="key" to any element whose textContent should be swapped.
  *        add data-i18n-html="key" to elements that need innerHTML replacement.
@@ -23,7 +23,7 @@
 
       /* ── Footer ──────────────────────────────────── */
       'footer.copy': 'Copyright © webCommits web Designs 2026',
-      'footer.tagline': 'Websites, IT & KI-Lösungen für kleine Unternehmen – persönlich aus Aachen, deutschlandweit umsetzbar.',
+      'footer.tagline': 'Websites, IT & KI-Lösungen für kleine Unternehmen, persönlich aus Aachen und deutschlandweit umsetzbar.',
       'footer.nav.title': 'Navigation',
       'footer.legal.title': 'Rechtliches',
       'footer.imprint': 'Impressum',
@@ -31,7 +31,7 @@
       'footer.home': 'Homepage',
       'footer.repo': 'Repo dieser Website',
 
-      /* ── Index – Hero ────────────────────────────── */
+      /* Index: Hero */
       'index.hero.h1':  'Handcoded Websites',
 
 
@@ -39,7 +39,7 @@
 
 
 
-      /* ── Index – Portfolio teaser ────────────────── */
+      /* Index: Portfolio teaser */
       'index.port.h1':       'Portfolio',
       'index.port.p':        'Die folgenden Websites repräsentieren eine Auswahl meiner vorherigen Projekte. Überzeugen Sie sich über einen Klick auf die Vorschau!',
 
@@ -47,7 +47,7 @@
 
 
 
-      /* ── Index – Contact ─────────────────────────── */
+      /* Index: Contact */
       'index.con.h1':  'Kontakt',
       'index.con.p':   'Überzeugt? Dann melden Sie sich über die untenstehenden Möglichkeiten oder über das Kontaktformular.',
       'index.con.btn': 'Zum Formular',
@@ -83,7 +83,7 @@
 
       /* ── Directions page ─────────────────────────── */
       'dir.h1':  'Anfahrt',
-      'dir.p1':  'Ich arbeite von meinem Standort in Baesweiler aus – direkt an der Grenze zu Aachen. Als freiberuflicher Webentwickler bin ich deutschlandweit und international tätig. Sie erreichen mich über verschiedene Wege, unter anderem bequem über mein Kontaktformular.',
+      'dir.p1':  'Ich arbeite von meinem Standort in Baesweiler aus, direkt an der Grenze zu Aachen. Als freiberuflicher Webentwickler bin ich deutschlandweit und international tätig. Sie erreichen mich über verschiedene Wege, unter anderem bequem über mein Kontaktformular.',
       'dir.p2':  'Klicken Sie auf die Karte für genauere Informationen.',
       'dir.osm': 'Größere Karte in OpenStreetMap anzeigen',
 
@@ -172,7 +172,7 @@
       'sem.l2.meta.groupsize': '<strong>Gruppengröße:</strong> 5-20 Teilnehmer*innen',
       'sem.fmt.label':   'Flexibilität',
       'sem.fmt.h2':      'Format & Konditionen',
-      'sem.fmt.p':       'Ich passe die Seminare an Ihre Bedürfnisse an – ob online via Zoom, bei Ihnen vor Ort oder als Mix aus beidem.',
+      'sem.fmt.p':       'Ich passe die Seminare an Ihre Bedürfnisse an, ob online via Zoom, bei Ihnen vor Ort oder als Mix aus beidem.',
       'sem.fmt.f1.h4':   'Online-Seminare',
       'sem.fmt.f1.p':    'Via Zoom oder MS Teams mit Live-Demos und praktischen Übungen',
       'sem.fmt.f2.h4':   'Präsenz-Workshops',
@@ -196,7 +196,7 @@
       'sem.tgt.label':   'Für wen?',
       'sem.tgt.h2':      'Zielgruppen',
       'sem.tgt.c1.h3':   'Lehrkräfte',
-      'sem.tgt.c1.p':    'An Grundschulen, weiterführenden Schulen und Berufskollegs – unabhängig vom Fach',
+      'sem.tgt.c1.p':    'An Grundschulen, weiterführenden Schulen und Berufskollegs, unabhängig vom Fach',
       'sem.tgt.c2.h3':   'Hochschullehrende',
       'sem.tgt.c2.p':    'Professor*innen, Dozent*innen und wissenschaftliche Mitarbeiter*innen',
       'sem.tgt.c3.h3':   'Bildungseinrichtungen',
@@ -224,7 +224,7 @@
 
       /* ── Footer ──────────────────────────────────── */
       'footer.copy': 'Copyright © webCommits web Designs 2026',
-      'footer.tagline': 'Websites, IT and AI solutions for small businesses – personal from Aachen, available throughout Germany.',
+      'footer.tagline': 'Websites, IT and AI solutions for small businesses, personal from Aachen and available throughout Germany.',
       'footer.nav.title': 'Navigation',
       'footer.legal.title': 'Legal',
       'footer.imprint': 'Imprint',
@@ -232,7 +232,7 @@
       'footer.home': 'Homepage',
       'footer.repo': 'This site\'s repository',
 
-      /* ── Index – Hero ────────────────────────────── */
+      /* Index: Hero */
       'index.hero.h1':  'Handcoded Websites',
 
 
@@ -240,7 +240,7 @@
 
 
 
-      /* ── Index – Portfolio teaser ────────────────── */
+      /* Index: Portfolio teaser */
       'index.port.h1':    'Portfolio',
       'index.port.p':     'The following websites represent a selection of my previous projects. Click a preview to take a closer look.',
 
@@ -248,7 +248,7 @@
 
 
 
-      /* ── Index – Contact ─────────────────────────── */
+      /* Index: Contact */
       'index.con.h1':  'Contact',
       'index.con.p':   'Convinced? Reach me via the options below or through the contact form.',
       'index.con.btn': 'To the form',
@@ -284,7 +284,7 @@
 
       /* ── Directions page ─────────────────────────── */
       'dir.h1':  'Directions',
-      'dir.p1':  'I work from my base in Baesweiler, directly on the border with Aachen. As a freelance web developer I am available throughout Germany and internationally. You can reach me in several ways — including via my contact form.',
+      'dir.p1':  'I work from my base in Baesweiler, directly on the border with Aachen. As a freelance web developer I am available throughout Germany and internationally. You can reach me in several ways, including via my contact form.',
       'dir.p2':  'Click on the map for more precise information.',
       'dir.osm': 'Open larger map in OpenStreetMap',
 
@@ -356,9 +356,9 @@
       'sem.l1.li3':      'Practical exercises for the classroom',
       'sem.l1.li4':      'Plagiarism detection and academic integrity',
       'sem.l1.li5':      'Data protection and legal basics',
-      'sem.l1.meta.duration': '<strong>Duration:</strong> 2–4 hours (individually adjustable)',
+      'sem.l1.meta.duration': '<strong>Duration:</strong> 2 to 4 hours (individually adjustable)',
       'sem.l1.meta.format': '<strong>Format:</strong> online or in person',
-      'sem.l1.meta.groupsize': '<strong>Group size:</strong> 5–25 participants',
+      'sem.l1.meta.groupsize': '<strong>Group size:</strong> 5 to 25 participants',
       'sem.l2.badge':    'Level 2',
       'sem.l2.h3':       'AI for advanced users',
       'sem.l2.desc':     'For teams with first experience: we deepen prompting, output assessment, workflows and reflective use in school or university settings.',
@@ -368,18 +368,18 @@
       'sem.l2.li3':      'Creating custom GPTs and assistants',
       'sem.l2.li4':      'Critical evaluation of AI outputs',
       'sem.l2.li5':      'Future trends and new developments',
-      'sem.l2.meta.duration': '<strong>Duration:</strong> 3–6 hours (individually adjustable)',
+      'sem.l2.meta.duration': '<strong>Duration:</strong> 3 to 6 hours (individually adjustable)',
       'sem.l2.meta.format': '<strong>Format:</strong> online or in person',
-      'sem.l2.meta.groupsize': '<strong>Group size:</strong> 5–20 participants',
+      'sem.l2.meta.groupsize': '<strong>Group size:</strong> 5 to 20 participants',
       'sem.fmt.label':   'Flexibility',
       'sem.fmt.h2':      'Format & conditions',
-      'sem.fmt.p':       'I adapt each seminar to your needs — whether online via Zoom, at your premises, or a mix of both.',
+      'sem.fmt.p':       'I adapt each seminar to your needs, whether online via Zoom, at your premises, or a mix of both.',
       'sem.fmt.f1.h4':   'Online seminars',
       'sem.fmt.f1.p':    'Via Zoom or MS Teams with live demos and practical exercises',
       'sem.fmt.f2.h4':   'In-person workshops',
       'sem.fmt.f2.p':    'At your location with hands-on exercises and immediate feedback',
       'sem.fmt.f3.h4':   'Hybrid format',
-      'sem.fmt.f3.p':    'A blend of online and in-person sessions — whatever works best',
+      'sem.fmt.f3.p':    'A blend of online and in-person sessions, whatever works best',
       'sem.fmt.f4.h4':   'In-house training',
       'sem.fmt.f4.p':    'Tailored specifically to your institution with individual focus areas',
       'sem.price.h3':    'Pricing & booking',
@@ -397,7 +397,7 @@
       'sem.tgt.label':   'Who is it for?',
       'sem.tgt.h2':      'Target groups',
       'sem.tgt.c1.h3':   'Teachers',
-      'sem.tgt.c1.p':    'At primary schools, secondary schools and vocational colleges — regardless of subject',
+      'sem.tgt.c1.p':    'At primary schools, secondary schools and vocational colleges, regardless of subject',
       'sem.tgt.c2.h3':   'University lecturers',
       'sem.tgt.c2.p':    'Professors, lecturers and research associates',
       'sem.tgt.c3.h3':   'Educational institutions',
@@ -427,14 +427,14 @@
 
     'index.services.label': 'Leistungen',
     'index.services.h2': 'Pragmatische digitale Lösungen',
-    'index.services.p': 'Ich unterstütze Sie bei Websites, KI-Einstieg oder technischem Setup. Meine Lösungen sind individuell, bezahlbar und auf Langlebigkeit ausgelegt – ohne unnötigen Ballast.',
+    'index.services.p': 'Ich unterstütze Sie bei Websites, KI-Einstieg oder technischem Setup. Meine Lösungen sind individuell, bezahlbar und auf Langlebigkeit ausgelegt, ohne unnötigen Ballast.',
     'index.services.web.h3': 'Websites & Webentwicklung',
-    'index.services.web.p': 'Preisbewusste Websites und Webapps ohne aufgeblähte Baukästen – schnell, wartbar und individuell.',
+    'index.services.web.p': 'Preisbewusste Websites und Webapps ohne aufgeblähte Baukästen: schnell, wartbar und individuell.',
     'index.services.web.li1': 'Landingpages & Unternehmensseiten',
     'index.services.web.li2': 'Hosting, SEO-Basis & Support',
     'index.services.web.li3': 'Spezielle Funktionen nach Maß',
     'index.services.seminars.h3': 'KI-Seminare & Schulungen',
-    'index.services.seminars.p': 'Praxisnahe Workshops für Teams, Lehrende und Einrichtungen – verständlich, anpassbar und ohne unnötige Hürden.',
+    'index.services.seminars.p': 'Praxisnahe Workshops für Teams, Lehrende und Einrichtungen, verständlich, anpassbar und ohne unnötige Hürden.',
     'index.services.seminars.li1': 'Grundlagen generativer KI',
     'index.services.seminars.li2': 'Sichere Nutzung im Arbeitsalltag',
     'index.services.seminars.li3': 'Online, Präsenz oder Hybrid',
@@ -444,7 +444,7 @@
     'index.services.ai.li2': 'Workflows und Automatisierung',
     'index.services.ai.li3': 'Private oder interne KI-Nutzung',
     'index.services.it.h3': 'PCs, Server & IT-Betrieb',
-    'index.services.it.p': 'Maßgeschneiderte PCs, Serverumgebungen und technischer Support – online oder nach Absprache vor Ort.',
+    'index.services.it.p': 'Maßgeschneiderte PCs, Serverumgebungen und technischer Support, online oder nach Absprache vor Ort.',
     'index.services.it.li1': 'PC-Bau & Workstations',
     'index.services.it.li2': 'Server-Setup mit Linux/Docker',
     'index.services.it.li3': 'Backups, Updates & Support',
@@ -452,11 +452,11 @@
 
     'index.ai.label': 'KI für Unternehmen',
     'index.ai.h2': 'KI sinnvoll im Unternehmen einsetzen',
-    'index.ai.p': 'Ich helfe kleinen Unternehmen und Teams dabei, KI praktisch, sicher und verständlich einzuführen – von ersten Einsatzideen bis zu eigenen Workflows und internen Assistenten.',
+    'index.ai.p': 'Ich helfe kleinen Unternehmen und Teams dabei, KI praktisch, sicher und verständlich einzuführen, von ersten Einsatzideen bis zu eigenen Workflows und internen Assistenten.',
     'index.ai.cta_primary': 'KI-Beratung anfragen',
     'index.ai.cta_secondary': 'KI-Angebot ansehen',
     'index.ai.f1.h': 'Potenziale finden',
-    'index.ai.f1.p': 'Wo KI wirklich hilft – und wo nicht.',
+    'index.ai.f1.p': 'Wo KI wirklich hilft und wo nicht.',
     'index.ai.f2.h': 'Ihre Abläufe automatisieren',
     'index.ai.f2.p': 'Wiederkehrende Aufgaben schlanker erledigen.',
     'index.ai.f3.h': 'Sichere Nutzung ermöglichen',
@@ -506,7 +506,7 @@
     'port.status.internal': 'Intern/privat',
     'port.btn.request': 'Ähnliches Projekt anfragen',
     'port.cta.h2': 'Sie planen ein ähnliches Projekt?',
-    'port.outro': 'Weitere öffentliche Projekte finden Sie auf GitHub – oder ich stelle passende Beispiele im Erstgespräch vor.',
+    'port.outro': 'Weitere öffentliche Projekte finden Sie auf GitHub. Passende Beispiele stelle ich auch im Erstgespräch vor.',
     'port.more': 'Weitere Projekte anzeigen',
     'port.p3.h3': 'Persönliches Entwickler-Portfolio',
     'port.p3.p': 'Aufgabe: Profil und Projekte kompakt darstellen. Umsetzung: Portfolio-Website mit klarer Inhaltsstruktur und responsivem Frontend.',
@@ -529,13 +529,13 @@
     'port.p9.role': 'Rolle: Konzept, Design-System, Eleventy-Umsetzung und kontinuierliche Optimierung.',
 
     'ai.hero.title': 'KI-Beratung & technische Umsetzung für kleine Unternehmen',
-    'ai.hero.subtitle': 'Verständlich, praxisnah und datenschutzbewusst – von der ersten Idee bis zum nutzbaren Workflow.',
+    'ai.hero.subtitle': 'Verständlich, praxisnah und datenschutzbewusst, von der ersten Idee bis zum nutzbaren Workflow.',
     'ai.hero.cta_primary': 'KI-Beratung anfragen',
     'ai.hero.cta_secondary': 'Angebote ansehen',
     'ai.hero.pill1': 'Beraten',
     'ai.hero.pill2': 'Einrichten',
     'ai.hero.pill3': 'Betreuen',
-    'ai.problem.headline': 'KI ist mächtig – aber ohne Plan schnell unübersichtlich',
+    'ai.problem.headline': 'KI ist mächtig, wird ohne Plan aber schnell unübersichtlich',
     'ai.problem.text': 'Künstliche Intelligenz bietet enorme Chancen, kann aber ohne eine klare Strategie schnell unübersichtlich und ineffizient werden. Mein Ziel ist es, sinnvolle Use Cases zu identifizieren, potenzielle Risiken verständlich zu machen und die Einführung in kleinen, machbaren Schritten umzusetzen.',
     'ai.services.title': 'Leistungsbereiche',
     'ai.services.card1': 'KI-Potenzialanalyse',
@@ -570,7 +570,7 @@
     'ai.faq.q5': 'Wie starten wir?',
     'ai.faq.a5': 'Am einfachsten starten wir mit einer kurzen Anfrage über das Kontaktformular und einem Erstgespräch.',
     'ai.cta.title': 'Bereit für den nächsten Schritt?',
-    'ai.cta.text': 'Beschreiben Sie kurz Ihre Situation – ich melde mich mit einem passenden nächsten Schritt.',
+    'ai.cta.text': 'Beschreiben Sie kurz Ihre Situation. Ich melde mich mit einem passenden nächsten Schritt.',
     'ai.cta.button': 'KI-Beratung anfragen',
 
     'sem.cta.p': 'Fragen Sie ein Erstgespräch an und lassen Sie uns gemeinsam das passende Seminarformat für Ihre Bedürfnisse entwickeln.'
@@ -590,14 +590,14 @@
 
     'index.services.label': 'Services',
     'index.services.h2': 'Pragmatic digital solutions',
-    'index.services.p': 'I help with websites, AI integration, training, or technical setups. My solutions are individual, affordable, and built to last – without any unnecessary complexity.',
+    'index.services.p': 'I help with websites, AI integration, training, or technical setups. My solutions are individual, affordable, and built to last without any unnecessary complexity.',
     'index.services.web.h3': 'Websites & web development',
-    'index.services.web.p': 'Budget-conscious websites and web apps without bloated builders – fast, maintainable and individual.',
+    'index.services.web.p': 'Budget-conscious websites and web apps without bloated builders: fast, maintainable and individual.',
     'index.services.web.li1': 'Landing pages & business websites',
     'index.services.web.li2': 'Hosting, SEO basics & support',
     'index.services.web.li3': 'Tailored features when needed',
     'index.services.seminars.h3': 'AI seminars & training',
-    'index.services.seminars.p': 'Practical workshops for teams, educators and organisations – understandable, adaptable and without unnecessary barriers.',
+    'index.services.seminars.p': 'Practical workshops for teams, educators and organisations that are understandable, adaptable and free from unnecessary barriers.',
     'index.services.seminars.li1': 'Foundations of generative AI',
     'index.services.seminars.li2': 'Safe use in everyday work',
     'index.services.seminars.li3': 'Online, in-person or hybrid',
@@ -607,7 +607,7 @@
     'index.services.ai.li2': 'Workflows and automation',
     'index.services.ai.li3': 'Private or internal AI use',
     'index.services.it.h3': 'PCs, servers & IT operations',
-    'index.services.it.p': 'Custom PCs, server environments and technical support – remote or on site by agreement.',
+    'index.services.it.p': 'Custom PCs, server environments and technical support, remote or on site by agreement.',
     'index.services.it.li1': 'PC builds & workstations',
     'index.services.it.li2': 'Server setup with Linux/Docker',
     'index.services.it.li3': 'Backups, updates & support',
@@ -615,11 +615,11 @@
 
     'index.ai.label': 'AI for businesses',
     'index.ai.h2': 'Use AI sensibly in your business',
-    'index.ai.p': 'I help small businesses and teams introduce AI in a practical, secure and understandable way – from first ideas to workflows and internal assistants.',
+    'index.ai.p': 'I help small businesses and teams introduce AI in a practical, secure and understandable way, from first ideas to workflows and internal assistants.',
     'index.ai.cta_primary': 'Request AI consulting',
     'index.ai.cta_secondary': 'View AI services',
     'index.ai.f1.h': 'Find potential',
-    'index.ai.f1.p': 'Where AI really helps – and where it does not.',
+    'index.ai.f1.p': 'Where AI really helps and where it does not.',
     'index.ai.f2.h': 'Automate your workflows',
     'index.ai.f2.p': 'Handle recurring tasks more efficiently.',
     'index.ai.f3.h': 'Enable safe use',
@@ -669,7 +669,7 @@
     'port.status.internal': 'Internal/private',
     'port.btn.request': 'Request a similar project',
     'port.cta.h2': 'Planning a similar project?',
-    'port.outro': 'More public projects can be found on GitHub – or I can present relevant examples in an initial call.',
+    'port.outro': 'More public projects can be found on GitHub. I can also present relevant examples in an initial call.',
     'port.more': 'Show more projects',
     'port.p3.h3': 'Personal developer portfolio',
     'port.p3.p': 'Task: present profile and projects compactly. Implementation: portfolio website with clear content structure and responsive frontend.',
@@ -692,13 +692,13 @@
     'port.p9.role': 'Role: concept, design system, Eleventy implementation and continuous optimisation.',
 
     'ai.hero.title': 'AI consulting & technical implementation for small businesses',
-    'ai.hero.subtitle': 'Understandable, practical and privacy-conscious – from the first idea to a usable workflow.',
+    'ai.hero.subtitle': 'Understandable, practical and privacy-conscious, from the first idea to a usable workflow.',
     'ai.hero.cta_primary': 'Request AI consulting',
     'ai.hero.cta_secondary': 'View services',
     'ai.hero.pill1': 'Advise',
     'ai.hero.pill2': 'Set up',
     'ai.hero.pill3': 'Support',
-    'ai.problem.headline': 'AI is powerful – but without a plan it quickly becomes confusing',
+    'ai.problem.headline': 'AI is powerful, but without a plan it quickly becomes confusing',
     'ai.problem.text': 'Artificial intelligence offers major opportunities, but without a clear strategy it can quickly become confusing and inefficient. My goal is to identify useful use cases, make potential risks understandable and introduce AI in small, manageable steps.',
     'ai.services.title': 'Service areas',
     'ai.services.card1': 'AI potential analysis',
@@ -733,7 +733,7 @@
     'ai.faq.q5': 'How do we start?',
     'ai.faq.a5': 'The easiest way is to send a short enquiry through the contact form and start with an initial call.',
     'ai.cta.title': 'Ready for the next step?',
-    'ai.cta.text': 'Briefly describe your situation – I will get back to you with a suitable next step.',
+    'ai.cta.text': 'Briefly describe your situation. I will get back to you with a suitable next step.',
     'ai.cta.button': 'Request AI consulting',
 
     'sem.cta.p': 'Request an initial call and let us develop the right seminar format for your needs together.'
@@ -742,7 +742,7 @@
 
   Object.assign(translations.de, {
     'about.hero.label': 'Über mich',
-    'about.hero.h1': 'Technik verständlich machen – von Website bis KI',
+    'about.hero.h1': 'Technik verständlich machen, von Website bis KI',
     'about.hero.p': 'Ich bin Lukas Schaffrath, freiberuflicher Webentwickler aus dem Raum Aachen. Durch Webentwicklung, IT-Administration an der RWTH Aachen, KI-Beratung und Erfahrung in Lehre und Schulung verbinde ich technische Umsetzung mit verständlicher Beratung.',
     'about.hero.cta.primary': 'Projekt anfragen',
     'about.hero.cta.secondary': 'Leistungen ansehen',
@@ -761,7 +761,7 @@
     'about.profile.card3.p': 'Vor Ort im Raum Aachen verwurzelt, Projekte aber deutschlandweit möglich.',
     'about.work.label': 'Arbeitsweise',
     'about.work.h2': 'Klar, pragmatisch und langfristig nutzbar',
-    'about.work.p': 'Ich entwickle Lösungen, die zu Ihrem Alltag passen – nicht zu einem Trend oder zu einem unnötig komplexen Tool-Stack.',
+    'about.work.p': 'Ich entwickle Lösungen, die zu Ihrem Alltag passen, nicht zu einem Trend oder zu einem unnötig komplexen Tool-Stack.',
     'about.work.card1.h': 'Verständliche Beratung',
     'about.work.card1.p': 'Ich erkläre Optionen, Grenzen und Aufwand so, dass Sie gute Entscheidungen treffen können.',
     'about.work.card2.h': 'Saubere Umsetzung',
@@ -769,7 +769,7 @@
     'about.work.card3.h': 'IT-Praxis',
     'about.work.card3.p': 'PCs, Server, Hosting, Domains und E-Mail werden bei Bedarf direkt mitgedacht.',
     'about.work.card4.h': 'KI mit Augenmaß',
-    'about.work.card4.p': 'KI-Workflows, Schulungen und technische Integration werden realistisch geplant – passend zu Datenschutz, Team und Nutzen.',
+    'about.work.card4.p': 'KI-Workflows, Schulungen und technische Integration werden realistisch geplant und passend zu Datenschutz, Team und Nutzen umgesetzt.',
     'about.trust.label': 'Warum webCommits?',
     'about.trust.h2': 'Digitale Lösungen aus einer Hand',
     'about.trust.p': 'Viele Projekte scheitern nicht an einzelnen Tools, sondern an fehlender Verbindung zwischen Website, Technik, Betrieb und verständlicher Kommunikation. Genau dort setze ich an.',
@@ -796,7 +796,7 @@
 
   Object.assign(translations.en, {
     'about.hero.label': 'About me',
-    'about.hero.h1': 'Making technology understandable – from websites to AI',
+    'about.hero.h1': 'Making technology understandable, from websites to AI',
     'about.hero.p': 'I\'m Lukas Schaffrath, freelance web developer from the Aachen area. Through web development, IT administration at RWTH Aachen University, AI consulting and experience in teaching and training, I combine technical implementation with clear, accessible advice.',
     'about.hero.cta.primary': 'Request a project',
     'about.hero.cta.secondary': 'View services',
@@ -815,7 +815,7 @@
     'about.profile.card3.p': 'Rooted locally in the Aachen area, with projects possible throughout Germany.',
     'about.work.label': 'How I work',
     'about.work.h2': 'Clear, pragmatic and useful long-term',
-    'about.work.p': 'I develop solutions that fit your day-to-day work – not a trend or an unnecessarily complex tool stack.',
+    'about.work.p': 'I develop solutions that fit your day-to-day work, not a trend or an unnecessarily complex tool stack.',
     'about.work.card1.h': 'Understandable consulting',
     'about.work.card1.p': 'I explain options, limits and effort so you can make good decisions.',
     'about.work.card2.h': 'Clean implementation',
@@ -823,7 +823,7 @@
     'about.work.card3.h': 'IT practice',
     'about.work.card3.p': 'PCs, servers, hosting, domains and email can be considered directly when needed.',
     'about.work.card4.h': 'AI with perspective',
-    'about.work.card4.p': 'AI workflows, seminars and technical integration are planned realistically – aligned with data protection, team and benefit.',
+    'about.work.card4.p': 'AI workflows, seminars and technical integration are planned realistically and aligned with data protection, team and benefit.',
     'about.trust.label': 'Why webCommits?',
     'about.trust.h2': 'Digital solutions from one source',
     'about.trust.p': 'Many projects do not fail because of individual tools, but because website, technology, operations and understandable communication are not connected. That is exactly where I help.',

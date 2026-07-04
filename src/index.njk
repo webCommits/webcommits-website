@@ -1,14 +1,12 @@
 ---
 title: webCommits | Handgeschriebene Websites, IT & KI aus Aachen
-meta: "Individuelle Websites, KI-Beratung und IT-Support für kleine Unternehmen und Selbstständige. Persönlich, pragmatisch und bezahlbar – von Lukas Schaffrath aus dem Raum Aachen."
+meta: "Individuelle Websites, KI-Beratung und IT-Support für kleine Unternehmen und Selbstständige. Persönlich, pragmatisch und bezahlbar von Lukas Schaffrath aus dem Raum Aachen."
 ---
 {% extends "base.njk" %}
 {% block content %}
 <section class="home-hero hero--left" id="top">
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="home-hero__content">
-    <img src="/static/images/Icon-White.png" alt="" class="hero-logo" aria-hidden="true">
-    <span class="section-label" data-i18n="index.hero.label">webCommits aus Aachen</span>
     <h1 data-i18n="index.hero.h1">Handgeschriebene Websites, faire IT und KI-Hilfe aus Aachen</h1>
     <p class="hero-subtitle" data-i18n="index.hero.sub">Ich entwickle Websites ohne aufgeblähte Baukästen: schnell, wartbar und passend zu Ihrem Alltag. Wenn KI oder IT sinnvoll helfen, erkläre und baue ich das verständlich mit ein.</p>
     <div class="hero-actions">
@@ -21,19 +19,26 @@ meta: "Individuelle Websites, KI-Beratung und IT-Support für kleine Unternehmen
       <span data-i18n="index.hero.proof3">Aachen · deutschlandweit</span>
     </div>
   </div>
+  <div class="home-hero__showcase" aria-hidden="true">
+    <div class="showcase-orbit showcase-orbit--one"></div>
+    <div class="showcase-orbit showcase-orbit--two"></div>
+    <div class="hero-brandmark">
+      <img src="/static/images/Icon-White.png" alt="" loading="eager">
+    </div>
+  </div>
 </section>
 
 <section class="wc-section services-overview animate hidden" id="leistungen">
   <div class="section-heading">
     <span class="section-label" data-i18n="index.services.label">Leistungen</span>
     <h2 data-i18n="index.services.h2">Pragmatische digitale Lösungen</h2>
-    <p data-i18n="index.services.p">Ich unterstütze Sie bei Websites, KI-Einstieg oder technischem Setup. Meine Lösungen sind individuell, bezahlbar und auf Langlebigkeit ausgelegt – ohne unnötigen Ballast.</p>
+    <p data-i18n="index.services.p">Ich unterstütze Sie bei Websites, KI-Einstieg oder technischem Setup. Meine Lösungen sind individuell, bezahlbar und auf Langlebigkeit ausgelegt, ohne unnötigen Ballast.</p>
   </div>
   <div class="card-grid service-card-grid">
     <article class="feature-card feature-card--accent-blue">
       <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM8 20h8M10 16v4M14 16v4"/></svg>
       <h3 data-i18n="index.services.web.h3">Websites & Webentwicklung</h3>
-      <p data-i18n="index.services.web.p">Preisbewusste Websites und Webapps ohne aufgeblähte Baukästen – schnell, wartbar und individuell.</p>
+      <p data-i18n="index.services.web.p">Preisbewusste Websites und Webapps ohne aufgeblähte Baukästen: schnell, wartbar und individuell.</p>
       <ul class="check-list">
         <li data-i18n="index.services.web.li1">Landingpages & Unternehmensseiten</li>
         <li data-i18n="index.services.web.li2">Hosting, SEO-Basis & Support</li>
@@ -44,7 +49,7 @@ meta: "Individuelle Websites, KI-Beratung und IT-Support für kleine Unternehmen
     <article class="feature-card feature-card--accent-mauve">
       <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 4-8 4-8-4 8-4zM6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
       <h3 data-i18n="index.services.seminars.h3">KI-Seminare & Schulungen</h3>
-      <p data-i18n="index.services.seminars.p">Praxisnahe Workshops für Teams, Lehrende und Einrichtungen – verständlich, anpassbar und ohne unnötige Hürden.</p>
+      <p data-i18n="index.services.seminars.p">Praxisnahe Workshops für Teams, Lehrende und Einrichtungen, verständlich, anpassbar und ohne unnötige Hürden.</p>
       <ul class="check-list">
         <li data-i18n="index.services.seminars.li1">Grundlagen generativer KI</li>
         <li data-i18n="index.services.seminars.li2">Sichere Nutzung im Arbeitsalltag</li>
@@ -66,7 +71,7 @@ meta: "Individuelle Websites, KI-Beratung und IT-Support für kleine Unternehmen
     <article class="feature-card feature-card--accent-peach">
       <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v7H6zM8 15h8M9 20h6M12 15v5M5 11h14v4H5z"/></svg>
       <h3 data-i18n="index.services.it.h3">PCs, Server & IT-Betrieb</h3>
-      <p data-i18n="index.services.it.p">Maßgeschneiderte PCs, Serverumgebungen und technischer Support – online oder nach Absprache vor Ort.</p>
+      <p data-i18n="index.services.it.p">Maßgeschneiderte PCs, Serverumgebungen und technischer Support, online oder nach Absprache vor Ort.</p>
       <ul class="check-list">
         <li data-i18n="index.services.it.li1">PC-Bau & Workstations</li>
         <li data-i18n="index.services.it.li2">Server-Setup mit Linux/Docker</li>
@@ -84,14 +89,14 @@ meta: "Individuelle Websites, KI-Beratung und IT-Support für kleine Unternehmen
     <div>
       <span class="section-label" data-i18n="index.ai.label">KI für Unternehmen</span>
       <h2 data-i18n="index.ai.h2">KI sinnvoll im Unternehmen einsetzen</h2>
-      <p data-i18n="index.ai.p">Ich helfe kleinen Unternehmen und Teams dabei, KI praktisch, sicher und verständlich einzuführen – von ersten Einsatzideen bis zu eigenen Workflows und internen Assistenten.</p>
+      <p data-i18n="index.ai.p">Ich helfe kleinen Unternehmen und Teams dabei, KI praktisch, sicher und verständlich einzuführen, von ersten Einsatzideen bis zu eigenen Workflows und internen Assistenten.</p>
       <div class="hero-actions">
         <a class="btn btn--primary" href="/contact/?topic=ai" data-i18n="index.ai.cta_primary">KI-Beratung anfragen</a>
         <a class="btn btn--secondary" href="/ki-beratung/" data-i18n="index.ai.cta_secondary">KI-Angebot ansehen</a>
       </div>
     </div>
     <div class="mini-feature-grid">
-      <article class="mini-feature"><span data-i18n="index.ai.f1.h">Potenziale finden</span><p data-i18n="index.ai.f1.p">Wo KI wirklich hilft – und wo nicht.</p></article>
+      <article class="mini-feature"><span data-i18n="index.ai.f1.h">Potenziale finden</span><p data-i18n="index.ai.f1.p">Wo KI wirklich hilft und wo nicht.</p></article>
       <article class="mini-feature"><span data-i18n="index.ai.f2.h">Ihre Abläufe automatisieren</span><p data-i18n="index.ai.f2.p">Wiederkehrende Aufgaben schlanker erledigen.</p></article>
       <article class="mini-feature"><span data-i18n="index.ai.f3.h">Sichere Nutzung ermöglichen</span><p data-i18n="index.ai.f3.p">Klare Regeln, passende Umgebung, verständliche Übergabe.</p></article>
     </div>
