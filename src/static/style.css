@@ -1942,6 +1942,13 @@ form button:hover {
         gap: 0.7rem;
     }
 
+    .site-footer__nav li,
+    .site-footer__nav li:first-child {
+        height: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .site-footer__nav a {
         justify-content: center;
         text-align: center;
