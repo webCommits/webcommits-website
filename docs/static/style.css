@@ -3387,7 +3387,12 @@ nav a {
     }
 
     .portfolio-card .tag-row {
-        display: none;
+        gap: 0.3rem;
+    }
+
+    .portfolio-card .tag-row span {
+        font-size: 0.72rem;
+        padding: 0.18rem 0.5rem;
     }
 
     .portfolio-more-wrap .btn,
