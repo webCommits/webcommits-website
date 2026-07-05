@@ -5,6 +5,7 @@
   "scripts": {
     "test": "npm run build && node scripts/smoke-test.js",
     "smoke": "node scripts/smoke-test.js",
+    "audit:mobile": "node scripts/mobile-audit.mjs",
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
     "deploy": "npm run build && git add docs && git commit -m 'Deploy' && git push origin HEAD"
@@ -15,5 +16,8 @@
   "description": "",
   "dependencies": {
     "@11ty/eleventy": "^3.1.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
   }
 }

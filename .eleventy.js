@@ -1,5 +1,9 @@
 module.exports = function(eleventyConfig){
 
+    eleventyConfig.setServerOptions({
+        showAllHosts: true
+    })
+
     eleventyConfig.addPassthroughCopy("src/static/style.css")
     eleventyConfig.addPassthroughCopy("src/static/script.js")
     eleventyConfig.addPassthroughCopy("src/static/i18n.js")
