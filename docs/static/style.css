@@ -2332,6 +2332,10 @@ nav a {
         padding-left: 0;
     }
 
+    .site-footer__nav li:first-child a {
+        padding-left: 12px;
+    }
+
     .logo {
         height: 30px;
         max-width: calc(100vw - 125px);
