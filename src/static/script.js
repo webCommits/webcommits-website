@@ -138,6 +138,7 @@ function initSmoothScrollWithOffset(selector = 'a[href*="#"]', offset = 96) {
 function initAnimations() {
   const animatedElements = document.querySelectorAll('.animate');
   if (!animatedElements.length) return;
+  const isMobile = window.matchMedia('(max-width: 890px)').matches;
 
   animatedElements.forEach((el, index) => {
     el.style.setProperty('--reveal-delay', `${Math.min(index * 45, 180)}ms`);
@@ -148,15 +149,41 @@ function initAnimations() {
     return;
   }
 
+  const revealElement = (el) => {
+    el.classList.add('show');
+    observer?.unobserve(el);
+  };
+
+  const revealNearViewport = () => {
+    const buffer = isMobile ? Math.max(180, window.innerHeight * 0.28) : 0;
+    animatedElements.forEach((el) => {
+      if (el.classList.contains('show')) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= window.innerHeight + buffer && rect.bottom >= -buffer) revealElement(el);
+    });
+  };
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('show');
+        revealElement(entry.target);
       }
     });
-  }, { rootMargin: '0px 0px -14% 0px', threshold: 0.18 });
+  }, isMobile
+    ? { rootMargin: '0px 0px 22% 0px', threshold: 0 }
+    : { rootMargin: '0px 0px -14% 0px', threshold: 0.18 });
 
   animatedElements.forEach((el) => observer.observe(el));
+  revealNearViewport();
+  window.addEventListener('scroll', revealNearViewport, { passive: true });
+  window.addEventListener('resize', revealNearViewport);
+  if (isMobile) {
+    window.setTimeout(() => {
+      animatedElements.forEach((el) => {
+        if (!el.classList.contains('show')) revealElement(el);
+      });
+    }, 1200);
+  }
 }
 
 function initPointerGlow() {
