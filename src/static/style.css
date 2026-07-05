@@ -114,15 +114,17 @@ button {
     margin: 8px;
     border-radius: 12px;
     padding: 1rem;
+    box-sizing: border-box;
 }
 
 .header.full {
     border-radius: 0;
-    width: 100%;
+    width: auto;
     margin: 0;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     background-color: rgba(24, 24, 37, 0.9);
     opacity: 0;
     transform: translateY(-10%);
@@ -2255,13 +2257,6 @@ form button:hover {
     transform: translateY(1px) scale(.98);
 }
 
-@media (max-width: 480px) {
-    .telbutton,
-    .mailbutton {
-        display: none;
-    }
-}
-
 /* Remove global image effects that could expand icons */
 .button-row img {
     width: 24px !important;
@@ -4173,8 +4168,8 @@ form button::before,
     }
 
     .button-row {
-        bottom: 1rem;
-        right: 1rem;
+        right: max(1rem, env(safe-area-inset-right));
+        bottom: calc(1rem + env(safe-area-inset-bottom));
     }
 }
 
