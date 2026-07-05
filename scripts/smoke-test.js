@@ -156,6 +156,42 @@ function loadTranslations() {
   return context.window.__translations;
 }
 
+function checkSeo(errors) {
+  const htmlFiles = walkFiles(DOCS_DIR, (file) => file.endsWith('.html'))
+    .filter((file) => !toPosix(file).includes('/static/'));
+
+  for (const htmlFile of htmlFiles) {
+    const html = fs.readFileSync(htmlFile, 'utf8');
+    const rel = toPosix(path.relative(DOCS_DIR, htmlFile));
+    const isDanke = rel === 'danke/index.html';
+
+    const canonicalCount = (html.match(/<link rel="canonical"[^>]*>/gi) || []).length;
+    if (canonicalCount !== 1) {
+      errors.push(`[SEO] ${rel}: erwartet genau 1 canonical, gefunden ${canonicalCount}`);
+    }
+
+    if (!/name="description"\s+content="[^"]+"/i.test(html)) {
+      errors.push(`[SEO] ${rel}: Meta Description fehlt oder leer`);
+    }
+
+    const robotsMatch = html.match(/<meta name="robots"\s+content="([^"]*)"/i);
+    const robotsValue = robotsMatch ? robotsMatch[1] : 'index, follow';
+    const hasNoindex = /noindex/i.test(robotsValue);
+
+    if (isDanke && !hasNoindex) {
+      errors.push(`[SEO] ${rel}: sollte noindex enthalten`);
+    }
+    if (!isDanke && hasNoindex) {
+      errors.push(`[SEO] ${rel}: unerwartetes noindex`);
+    }
+  }
+
+  const sitemap = fs.readFileSync(path.join(DOCS_DIR, 'sitemap.xml'), 'utf8');
+  if (/\/danke\//.test(sitemap)) {
+    errors.push('[SEO] sitemap.xml sollte /danke/ nicht enthalten');
+  }
+}
+
 function checkI18n(errors) {
   const templateKeys = collectTemplateI18nKeys();
   const translations = loadTranslations();
@@ -186,6 +222,9 @@ function main() {
 
   console.log('Smoke test: i18n template keys');
   checkI18n(errors);
+
+  console.log('Smoke test: SEO basics');
+  checkSeo(errors);
 
   if (errors.length) {
     console.error('\n❌ Smoke test failed');
