@@ -2441,6 +2441,24 @@ nav a {
     display: none;
 }
 
+.home-hero.hero--left::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(30, 30, 46, 0.94) 0%, rgba(30, 30, 46, 0.78) 46%, rgba(30, 30, 46, 0.9) 100%),
+        radial-gradient(circle at 72% 42%, rgba(203, 166, 247, 0.2), transparent 34%),
+        url('/static/images/portrait.webp');
+    background-repeat: no-repeat;
+    background-size: cover, cover, min(42vw, 520px) auto;
+    background-position: center, center, right 8% center;
+    opacity: 0.42;
+    mix-blend-mode: screen;
+    filter: grayscale(0.15) contrast(1.05);
+}
+
 @media (min-width: 891px) {
     .home-hero.hero--left {
         justify-items: start;
@@ -3420,10 +3438,6 @@ nav a {
         text-align: center;
     }
 
-    .telbutton,
-    .mailbutton {
-        display: none;
-    }
 }
 
 /* Seminar page alignment with 2026 design system */
@@ -4077,7 +4091,11 @@ form button::before,
     }
 
     .sidebar a {
+        width: 100%;
         min-height: 48px;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
         border-radius: 12px;
         transition: transform 0.22s var(--ease-out-quart), background 0.22s ease, color 0.22s ease;
     }
@@ -4092,7 +4110,7 @@ form button::before,
     .sidebar a:hover,
     .sidebar a:focus-visible {
         background: rgba(203, 166, 247, 0.1);
-        transform: translateX(8px);
+        transform: none;
     }
 
     .sidebar.open li {
@@ -4151,6 +4169,17 @@ form button::before,
     .animate.show .faq-card:nth-child(4),
     .animate.show .expertise-card:nth-child(4),
     .animate.show .target-card:nth-child(4) { animation-delay: 160ms; }
+
+    .home-hero.hero--left::after {
+        background:
+            linear-gradient(180deg, rgba(30, 30, 46, 0.9) 0%, rgba(30, 30, 46, 0.72) 42%, rgba(30, 30, 46, 0.96) 100%),
+            radial-gradient(circle at 62% 24%, rgba(203, 166, 247, 0.18), transparent 38%),
+            url('/static/images/portrait.webp');
+        background-repeat: no-repeat;
+        background-size: cover, cover, cover;
+        background-position: center, center, center;
+        opacity: 0.3;
+    }
 
     .feature-card,
     .portfolio-card,
