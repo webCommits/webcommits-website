@@ -16,6 +16,8 @@ const EXPECTED_FILES = [
   'contact/index.html',
   'aboutus/index.html',
   'anfahrt/index.html',
+  'danke/index.html',
+  'kontakt-fehler/index.html',
   'static/style.css',
   'static/script.js',
   'static/i18n.js'
@@ -163,7 +165,7 @@ function checkSeo(errors) {
   for (const htmlFile of htmlFiles) {
     const html = fs.readFileSync(htmlFile, 'utf8');
     const rel = toPosix(path.relative(DOCS_DIR, htmlFile));
-    const isDanke = rel === 'danke/index.html';
+    const isDanke = rel === 'danke/index.html' || rel === 'kontakt-fehler/index.html';
 
     const canonicalCount = (html.match(/<link rel="canonical"[^>]*>/gi) || []).length;
     if (canonicalCount !== 1) {
@@ -189,6 +191,28 @@ function checkSeo(errors) {
   const sitemap = fs.readFileSync(path.join(DOCS_DIR, 'sitemap.xml'), 'utf8');
   if (/\/danke\//.test(sitemap)) {
     errors.push('[SEO] sitemap.xml sollte /danke/ nicht enthalten');
+  }
+  if (/\/kontakt-fehler\//.test(sitemap)) {
+    errors.push('[SEO] sitemap.xml sollte /kontakt-fehler/ nicht enthalten');
+  }
+}
+
+function checkContactForm(errors) {
+  const contactFile = path.join(DOCS_DIR, 'contact/index.html');
+  if (!fs.existsSync(contactFile)) return;
+  const html = fs.readFileSync(contactFile, 'utf8');
+
+  if (!/action="\/api\/contact"/.test(html)) {
+    errors.push('[CONTACT] contact/index.html: Form action sollte "/api/contact" sein');
+  }
+  if (!/name="security_answer"/.test(html)) {
+    errors.push('[CONTACT] contact/index.html: security_answer-Feld fehlt');
+  }
+  if (!/data-security-question/.test(html)) {
+    errors.push('[CONTACT] contact/index.html: Sicherheitsfrage-Platzhalter fehlt');
+  }
+  if (/formsubmit\.co/.test(html)) {
+    errors.push('[CONTACT] contact/index.html: FormSubmit-Referenz gefunden (sollte entfernt sein)');
   }
 }
 
@@ -225,6 +249,9 @@ function main() {
 
   console.log('Smoke test: SEO basics');
   checkSeo(errors);
+
+  console.log('Smoke test: contact form');
+  checkContactForm(errors);
 
   if (errors.length) {
     console.error('\n❌ Smoke test failed');

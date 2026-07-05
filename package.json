@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npm run build && node scripts/smoke-test.js",
+    "test": "npm run build && node scripts/smoke-test.js && npm --prefix mailer test",
     "smoke": "node scripts/smoke-test.js",
     "audit:mobile": "node scripts/mobile-audit.mjs",
     "build": "npx @11ty/eleventy",
