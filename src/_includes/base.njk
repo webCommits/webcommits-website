@@ -66,12 +66,13 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "name": "webCommits web Designs",
   "image": "https://www.webcommits.info/static/images/webcommits.webp",
   "@id": "https://www.webcommits.info/#business",
   "url": "https://www.webcommits.info/",
   "telephone": "+4915207282881",
+  "email": "info@webcommits.info",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Hofgracht 7",
@@ -95,9 +96,35 @@
   "areaServed": [
     {"@type": "City", "name": "Aachen"},
     {"@type": "City", "name": "Baesweiler"},
-    {"@type": "State", "name": "Nordrhein-Westfalen"}
+    {"@type": "State", "name": "Nordrhein-Westfalen"},
+    {"@type": "Country", "name": "Deutschland"}
   ],
-  "serviceType": ["Web-Entwicklung", "Webdesign", "KI-Beratung", "KI-Seminare", "IT-Infrastruktur", "Server-Setup"],
+  "knowsAbout": [
+    "Webentwicklung",
+    "Webdesign",
+    "KI-Beratung",
+    "KI-Workflows",
+    "KI-Automatisierung",
+    "IT-Infrastruktur",
+    "Server-Setup",
+    "KI-Seminare"
+  ],
+  "sameAs": [
+    "https://github.com/webCommits"
+  ],
+  "founder": {
+    "@type": "Person",
+    "@id": "https://www.webcommits.info/#person",
+    "name": "Lukas Schaffrath",
+    "jobTitle": "Freiberuflicher Webentwickler",
+    "worksFor": {"@id": "https://www.webcommits.info/#business"},
+    "knowsAbout": [
+      "Webentwicklung",
+      "IT-Administration",
+      "KI-Beratung",
+      "KI-Seminare"
+    ]
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Web-Services",
@@ -128,6 +155,17 @@
       }
     ]
   }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.webcommits.info/#website",
+  "url": "https://www.webcommits.info/",
+  "name": "webCommits",
+  "inLanguage": "de-DE",
+  "publisher": {"@id": "https://www.webcommits.info/#business"}
 }
 </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
