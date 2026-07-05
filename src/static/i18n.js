@@ -74,6 +74,8 @@
       'contact.req':   '* Pflichtfelder',
       'contact.honeypot': 'Bitte dieses Feld nicht ausfüllen',
       'contact.autoresponse': 'Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich zurück.',
+      'contact.security.label': 'Sicherheitsfrage*',
+      'contact.security.note': 'Hilft gegen automatisierten Spam.',
 
       /* ── Thank you page ──────────────────────────── */
       'thanks.h1': 'Vielen Dank für Ihre Nachricht!',
@@ -275,6 +277,8 @@
       'contact.req':   '* Required fields',
       'contact.honeypot': 'Please leave this field empty',
       'contact.autoresponse': 'Thank you for your message! I will get back to you as soon as possible.',
+      'contact.security.label': 'Security check*',
+      'contact.security.note': 'Helps against automated spam.',
 
       /* ── Thank you page ──────────────────────────── */
       'thanks.h1': 'Thank you for your message!',

@@ -3236,6 +3236,19 @@ nav a {
     display: none;
 }
 
+.form-security-check label {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: baseline;
+}
+
+.security-question {
+    color: var(--mauve);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
 .js-enabled .animate.hidden {
     transition: opacity 0.7s ease, filter 0.7s ease, transform 0.7s ease;
 }

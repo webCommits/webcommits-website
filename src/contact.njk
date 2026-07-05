@@ -23,7 +23,7 @@ meta: "Kontaktieren Sie Lukas Schaffrath für Websites, KI-Beratung, KI-Seminare
             <p class="small-note" data-i18n="contact.direct.note">Standort im Raum Aachen, Projekte deutschlandweit möglich.</p>
         </div>
 
-        <form class="contactformular" action="https://formsubmit.co/info@webcommits.info" method="POST" autocomplete="on">
+        <form class="contactformular" action="/api/contact" method="POST" autocomplete="on">
             <label for="service" data-i18n="contact.service">Leistungsbereich*</label>
             <select id="service" name="Leistungsbereich" required aria-label="Leistungsbereich auswählen">
                 <option value="" data-i18n="contact.service.placeholder">Bitte auswählen</option>
@@ -49,17 +49,21 @@ meta: "Kontaktieren Sie Lukas Schaffrath für Websites, KI-Beratung, KI-Seminare
             <label for="message" data-i18n="contact.msg">Nachricht*</label>
             <textarea id="message" name="message" rows="6" required></textarea>
 
+            <div class="form-security-check">
+                <label for="security_answer">
+                    <span data-i18n="contact.security.label">Sicherheitsfrage*</span>
+                    <span class="security-question" data-security-question></span>
+                </label>
+                <input id="security_answer" name="security_answer" type="number" required inputmode="numeric" min="0" max="20">
+                <input type="hidden" name="security_a" data-security-a>
+                <input type="hidden" name="security_b" data-security-b>
+                <p class="small-note" data-i18n="contact.security.note">Hilft gegen automatisierten Spam.</p>
+            </div>
+
             <div class="honeypot" aria-hidden="true">
                 <label for="website" data-i18n="contact.honeypot">Bitte dieses Feld nicht ausfüllen</label>
                 <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
             </div>
-
-            <input type="hidden" name="_subject" value="Neue Anfrage über webCommits.info">
-            <input type="hidden" name="_replyto" value="email">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="true">
-            <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Nachricht! Ich melde mich schnellstmöglich zurück." data-i18n-value="contact.autoresponse">
-            <input type="hidden" name="_next" value="https://www.webcommits.info/danke/">
 
             <button class="btn btn--primary btn--full" type="submit" data-i18n="contact.btn">Anfrage unverbindlich senden</button>
             <p class="small-note" data-i18n="contact.req">* Pflichtfelder</p>
