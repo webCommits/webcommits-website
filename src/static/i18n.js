@@ -83,6 +83,14 @@
       'thanks.contact': 'Zurück zum Kontaktformular',
       'thanks.home': 'Zur Startseite',
 
+      /* ── Contact error page ──────────────────────── */
+      'contactError.h1': 'Die Anfrage konnte nicht gesendet werden',
+      'contactError.p': 'Leider ist beim Senden Ihrer Nachricht ein Problem aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt per E-Mail oder Telefon.',
+      'contactError.security': 'Bitte prüfen Sie auch die Sicherheitsfrage im Formular.',
+      'contactError.retry': 'Zurück zum Kontaktformular',
+      'contactError.direct': 'Direkt per E-Mail schreiben',
+      'contactError.home': 'Zur Startseite',
+
       /* ── Directions page ─────────────────────────── */
       'dir.h1':  'Anfahrt',
       'dir.p1':  'Ich arbeite von meinem Standort in Baesweiler aus, direkt an der Grenze zu Aachen. Als freiberuflicher Webentwickler bin ich deutschlandweit und international tätig. Sie erreichen mich über verschiedene Wege, unter anderem bequem über mein Kontaktformular.',
@@ -285,6 +293,14 @@
       'thanks.p': 'Your enquiry has been received successfully. I will get back to you as soon as possible.',
       'thanks.contact': 'Back to the contact form',
       'thanks.home': 'Back to homepage',
+
+      /* ── Contact error page ──────────────────────── */
+      'contactError.h1': 'Your request could not be sent',
+      'contactError.p': 'Unfortunately, there was a problem sending your message. Please try again or contact me directly by email or phone.',
+      'contactError.security': 'Please also check the security question in the form.',
+      'contactError.retry': 'Back to contact form',
+      'contactError.direct': 'Send an email directly',
+      'contactError.home': 'Back to homepage',
 
       /* ── Directions page ─────────────────────────── */
       'dir.h1':  'Directions',
