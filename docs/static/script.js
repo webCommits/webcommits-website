@@ -265,6 +265,23 @@ function initContactTopicFromQuery() {
   if (topicMap[topic]) serviceSelect.value = topicMap[topic];
 }
 
+function initContactSecurityCheck() {
+  const form = document.querySelector('.contactformular');
+  if (!form) return;
+
+  const a = Math.floor(Math.random() * 11);
+  const b = Math.floor(Math.random() * 11);
+  const questionEl = form.querySelector('[data-security-question]');
+  const aEl = form.querySelector('[data-security-a]');
+  const bEl = form.querySelector('[data-security-b]');
+
+  if (!questionEl || !aEl || !bEl) return;
+
+  questionEl.textContent = `${a} + ${b} = ?`;
+  aEl.value = a;
+  bEl.value = b;
+}
+
 function initPortfolioReveal() {
   const grid = document.querySelector('.portfolio-page .portfolio-grid');
   const button = document.querySelector('.portfolio-more');
@@ -350,6 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPointerGlow();
   initKeyboardNavigation();
   initContactTopicFromQuery();
+  initContactSecurityCheck();
   initPortfolioReveal();
   initMap();
   initConsentBanner();
