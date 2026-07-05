@@ -1975,13 +1975,6 @@ form button:hover {
         block-size: 48px;
     }
 
-    .telbutton,
-    .mailbutton {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-
     .nav-main {
         margin-right: 0;
         justify-content: space-between;
@@ -4055,6 +4048,10 @@ form button::before,
         display: flex;
         width: 100vw;
         height: 100dvh;
+        max-height: 100dvh;
+        box-sizing: border-box;
+        padding: max(0.75rem, env(safe-area-inset-top)) 1rem max(0.75rem, env(safe-area-inset-bottom));
+        overflow: hidden;
         z-index: 9101;
         background: linear-gradient(180deg, rgba(24, 24, 37, 0.99), rgba(17, 17, 27, 0.985));
         backdrop-filter: none;
@@ -4092,7 +4089,7 @@ form button::before,
 
     .sidebar a {
         width: 100%;
-        min-height: 48px;
+        min-height: 44px;
         justify-content: center;
         text-align: center;
         box-sizing: border-box;
@@ -4102,7 +4099,8 @@ form button::before,
 
     .sidebar li {
         width: 100%;
-        padding: 1.5rem 0;
+        height: auto;
+        padding: clamp(0.35rem, 1.4vh, 0.75rem) 0;
         display: flex;
         justify-content: center;
     }
@@ -4203,6 +4201,30 @@ form button::before,
 }
 
 @media (hover: none), (pointer: coarse) {
+    .feature-card,
+    .portfolio-card,
+    .step-card,
+    .faq-card,
+    .mini-feature,
+    .expertise-card,
+    .offering-card,
+    .target-card,
+    .trust-item,
+    .contact-card,
+    .contactformular,
+    .contact-method,
+    .contact-methods a,
+    .cta-band,
+    .btn,
+    .portfolio-more,
+    .card-link,
+    .text-link,
+    .totop,
+    .telbutton,
+    .mailbutton {
+        -webkit-tap-highlight-color: rgba(203, 166, 247, 0.18);
+    }
+
     .feature-card:hover,
     .feature-card:focus-within,
     .portfolio-card:hover,
@@ -4271,6 +4293,61 @@ form button::before,
     .mini-feature:hover span:first-child,
     .step-card:hover .step-number {
         transform: none;
+    }
+
+    .feature-card:active,
+    .portfolio-card:active,
+    .step-card:active,
+    .faq-card:active,
+    .mini-feature:active,
+    .expertise-card:active,
+    .offering-card:active,
+    .target-card:active,
+    .trust-item:active,
+    .contact-card:active,
+    .contact-method:active,
+    .contact-methods a:active,
+    .cta-band:active {
+        transform: translateY(-2px) scale(0.99);
+        border-color: rgba(203, 166, 247, 0.72);
+        box-shadow: 0 22px 52px rgba(17, 17, 27, 0.32), 0 0 0 1px rgba(203, 166, 247, 0.18);
+        background-color: rgba(49, 50, 68, 0.94);
+    }
+
+    .feature-card:active::before,
+    .portfolio-card:active::before,
+    .step-card:active::before,
+    .faq-card:active::before,
+    .mini-feature:active::before,
+    .expertise-card:active::before,
+    .offering-card:active::before,
+    .target-card:active::before,
+    .trust-item:active::before,
+    .contact-card:active::before,
+    .contact-method:active::before,
+    .contact-methods a:active::before,
+    .cta-band:active::before {
+        opacity: 1;
+    }
+
+    .portfolio-card:active img,
+    .feature-card:active .line-icon,
+    .expertise-card:active .line-icon,
+    .target-card:active .line-icon,
+    .mini-feature:active span:first-child,
+    .step-card:active .step-number {
+        transform: scale(1.04);
+    }
+
+    .btn:active,
+    .portfolio-more:active,
+    .card-link:active,
+    .text-link:active,
+    .totop:active,
+    .telbutton:active,
+    .mailbutton:active {
+        transform: translateY(-1px) scale(0.98);
+        filter: brightness(1.08);
     }
 }
 
