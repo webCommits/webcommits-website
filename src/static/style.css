@@ -247,7 +247,7 @@ body.sidebar-lock {
     overflow: hidden;
 }
 
-@media (min-width: 891px) {
+@media (min-width: 1301px) {
     body.sidebar-lock {
         overflow: auto;
     }
@@ -853,7 +853,7 @@ nav img {
     text-decoration: underline;
 }
 
-@media (max-width: 890px) {
+@media (max-width: 1024px) {
     #map .leaflet-control-zoom a,
     #map .leaflet-popup-close-button {
         min-width: 44px;
@@ -1864,7 +1864,7 @@ form button:hover {
    ======================================== */
 
 /* Header overflow fix for mid-range screens */
-@media (min-width: 891px) and (max-width: 1360px) {
+@media (min-width: 1301px) and (max-width: 1360px) {
     .logo {
         height: 40px;
     }
@@ -1906,6 +1906,56 @@ form button:hover {
     .formats-container {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+}
+
+/* Tablet navigation: use the touch-friendly menu until desktop nav has room. */
+@media (max-width: 1300px) {
+    .header {
+        margin: 6px;
+        padding: 0.65rem 0.75rem;
+    }
+
+    .nav-main {
+        margin-right: 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav li:first-child {
+        min-width: 0;
+    }
+
+    nav li:first-child a {
+        min-width: 0;
+        padding-left: 0;
+    }
+
+    .logo {
+        height: 30px;
+        max-width: calc(100vw - 125px);
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .menubtn {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .menu-open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        flex-shrink: 0;
+    }
+
+    .hideOnMobile {
+        display: none !important;
     }
 }
 
@@ -3608,7 +3658,7 @@ nav a {
 .consent-banner .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
-    min-height: 40px;
+    min-height: 44px;
     white-space: nowrap;
 }
 
@@ -4051,7 +4101,7 @@ form button::before,
 .sidebar.open li:nth-child(7) { animation-delay: 220ms; }
 .sidebar.open li:nth-child(8) { animation-delay: 255ms; }
 
-@media (max-width: 890px) {
+@media (max-width: 1300px) {
     .sidebar {
         display: flex;
         width: 100vw;
