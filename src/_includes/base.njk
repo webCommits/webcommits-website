@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="{{ meta }}">
-  <meta name="keywords" content="Webdesign Aachen, Web-Entwicklung Baesweiler, Website erstellen, KI-Seminare, Handwerker Website, Portfolio Website, Responsive Webdesign, SEO-optimiert">
+  <meta name="description" content="{{ meta or 'webCommits web Designs: Websites, KI-Beratung, KI-Seminare und IT-Infrastruktur für Unternehmen, persönlich aus dem Raum Aachen und deutschlandweit umsetzbar.' }}">
+  <meta name="keywords" content="Webdesign Aachen, Website erstellen, KI-Beratung Unternehmen, KI-Seminare, IT-Infrastruktur, Server einrichten, Webentwicklung KMU, Selbstständige Website, Responsive Webdesign, SEO-optimiert">
   <meta name="author" content="webCommits web Designs">
   <meta name="copyright" content="webCommits web Designs">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="robots" content="{{ robots or 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }}">
   <meta name="theme-color" content="#9076a5" />
   {% set canonical = "https://www.webcommits.info" + page.url %}
   <link rel="canonical" href="{{ canonical }}" />
@@ -17,8 +17,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ canonical }}">
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:description" content="{{ meta }}">
-  <meta property="og:image" content="https://www.webcommits.info/static/images/logo.png">
+  <meta property="og:description" content="{{ meta or 'webCommits web Designs: Websites, KI-Beratung, KI-Seminare und IT-Infrastruktur für Unternehmen, persönlich aus dem Raum Aachen und deutschlandweit umsetzbar.' }}">
+  <meta property="og:image" content="https://www.webcommits.info/static/images/webcommits.webp">
   <meta property="og:locale" content="de_DE">
   <meta property="og:site_name" content="webCommits web Designs">
   
@@ -26,8 +26,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="{{ canonical }}">
   <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ meta }}">
-  <meta name="twitter:image" content="https://www.webcommits.info/static/images/logo.png">
+  <meta name="twitter:description" content="{{ meta or 'webCommits web Designs: Websites, KI-Beratung, KI-Seminare und IT-Infrastruktur für Unternehmen, persönlich aus dem Raum Aachen und deutschlandweit umsetzbar.' }}">
+  <meta name="twitter:image" content="https://www.webcommits.info/static/images/webcommits.webp">
 
   <title>{{ title }}</title>
   
@@ -40,6 +40,7 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link rel="dns-prefetch" href="https://unpkg.com">
   <link rel="dns-prefetch" href="https://analytics.webcommits.info">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   
   <link rel="stylesheet" href="/static/style.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
@@ -47,27 +48,31 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
   <link rel="manifest" href="/static/images/site.webmanifest">
 
-    <!-- Leaflet CSS -->
+  {% if leaflet %}
+  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
         crossorigin=""/>
+  {% endif %}
 
   <script src="/static/script.js" defer></script>
   <script src="/static/i18n.js" defer></script>
-  <script defer src="https://analytics.webcommits.info/script.js" data-website-id="2391770d-d34d-4005-94c9-4d9b1b422711"></script>
-    <!-- Leaflet JS -->
+  {% if leaflet %}
+  <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
           crossorigin=""></script>
+  {% endif %}
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "name": "webCommits web Designs",
-  "image": "https://www.webcommits.info/static/images/logo.png",
-  "@id": "",
+  "image": "https://www.webcommits.info/static/images/webcommits.webp",
+  "@id": "https://www.webcommits.info/#business",
   "url": "https://www.webcommits.info/",
-  "telephone": "+015510917998",
+  "telephone": "+4915510917998",
+  "email": "info@webcommits.info",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Hofgracht 7",
@@ -82,20 +87,44 @@
       "Tuesday",
       "Wednesday",
       "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
+      "Friday"
     ],
-    "opens": "00:00",
-    "closes": "23:59"
+    "opens": "09:00",
+    "closes": "18:00"
   },
   "priceRange": "€€",
   "areaServed": [
     {"@type": "City", "name": "Aachen"},
     {"@type": "City", "name": "Baesweiler"},
-    {"@type": "State", "name": "Nordrhein-Westfalen"}
+    {"@type": "State", "name": "Nordrhein-Westfalen"},
+    {"@type": "Country", "name": "Deutschland"}
   ],
-  "serviceType": ["Web-Entwicklung", "Webdesign", "IT-Consulting", "KI-Seminare"],
+  "knowsAbout": [
+    "Webentwicklung",
+    "Webdesign",
+    "KI-Beratung",
+    "KI-Workflows",
+    "KI-Automatisierung",
+    "IT-Infrastruktur",
+    "Server-Setup",
+    "KI-Seminare"
+  ],
+  "sameAs": [
+    "https://github.com/webCommits"
+  ],
+  "founder": {
+    "@type": "Person",
+    "@id": "https://www.webcommits.info/#person",
+    "name": "Lukas Schaffrath",
+    "jobTitle": "Freiberuflicher Webentwickler",
+    "worksFor": {"@id": "https://www.webcommits.info/#business"},
+    "knowsAbout": [
+      "Webentwicklung",
+      "IT-Administration",
+      "KI-Beratung",
+      "KI-Seminare"
+    ]
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Web-Services",
@@ -112,29 +141,37 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "KI-Seminare für die Lehre",
-          "description": "Praxisnahe KI-Seminare für Lehrkräfte und Bildungseinrichtungen"
+          "name": "KI-Beratung und KI-Workflows",
+          "description": "Praxisnahe KI-Beratung, Automatisierung und sichere KI-Nutzung für Unternehmen"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "IT-Infrastruktur",
+          "description": "PC-Bau, Serverumgebungen, Wartung und technischer Support"
         }
       }
     ]
   }
 }
 </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLX9WP2X46"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-WLX9WP2X46');
-  </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.webcommits.info/#website",
+  "url": "https://www.webcommits.info/",
+  "name": "webCommits",
+  "inLanguage": "de-DE",
+  "publisher": {"@id": "https://www.webcommits.info/#business"}
+}
+</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -144,8 +181,17 @@
     {% block content %} {% endblock %}
   </main>
 
-  {% include "imprsec.njk" %}
   {% include "footer.njk" %}
+
+  <div id="consent-banner" class="consent-banner" role="dialog" aria-label="Cookie Consent" aria-describedby="consent-text" style="display:none;">
+    <p id="consent-text" data-i18n="consent.text">
+      Diese Website nutzt selbst gehostete, cookielose Analyse mit Umami. Sie wird nur mit Ihrer Zustimmung aktiviert.
+    </p>
+    <div class="consent-banner__actions">
+      <button id="consent-accept" class="btn btn--primary" data-i18n="consent.accept">Akzeptieren</button>
+      <button id="consent-decline" class="btn btn--ghost" data-i18n="consent.decline">Ablehnen</button>
+    </div>
+  </div>
 </body>
 
 </html>

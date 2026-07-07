@@ -1,178 +1,162 @@
 ---
-title: webCommits web Designs | Portfolio
-meta: "Entdecken Sie mein Portfolio mit maßgeschneiderten Websites für Handwerksbetriebe, Selbstständige und
-Institutionen. Jedes Projekt spiegelt meine Expertise in handgeschriebenem Code, Performance und Benutzerfreundlichkeit
-wider."
+title: Portfolio für Web, KI & IT-Projekte | webCommits
+meta: "Referenzen von webCommits: Websites, Webapps, KI-Integrationen und technische Projekte für Unternehmen aus Aachen und deutschlandweit."
 ---
 {% extends "base.njk" %}
 {% block content %}
-<div class="spacer"></div>
-<div class="portfolio animate hidden" id="portfolio">
-  <h1 data-i18n="port.h1">Portfolio</h1>
-  <p data-i18n="port.p1">Meine Designs verbinden höchste Funktionalität mit ansprechender Ästhetik, um die Erwartungen Ihrer Kunden
-    bestmöglich zu erfüllen. Jede Website, die ich entwickle, ist nicht nur schnell und benutzerfreundlich, sondern auch
-    individuell auf Ihre Anforderungen abgestimmt. Ihre Zufriedenheit steht für mich an erster Stelle – ich setze alles
-    daran, Ihre Visionen effizient und zeitnah umzusetzen.</p>
-  <p data-i18n="port.p2">Die folgenden Websites zeigen eine Auswahl meiner bisherigen Projekte. Sie spiegeln unterschiedliche Anforderungen,
-    Stile und Zielgruppen wider. Jedes Design wurde in enger Abstimmung mit meinen Auftraggebern entwickelt und exakt
-    auf deren Wünsche zugeschnitten – für Ergebnisse, auf die man stolz sein kann.</p>
-  <p data-i18n="port.p3">Überzeugen Sie sich selbst – ein Klick auf die Vorschau genügt!</p>
-
-  <div class="website-containerpo">
-    <div class="left">
-      <h3 data-i18n="port.trackable.h3">trackable.</h3>
-      <p data-i18n="port.trackable.p">Eine selbst-gehostete Zeiterfassungs-PWA auf Basis von Django. Arbeitszeiten, Profile, Urlaub und Exporte – alles in einer schlanken App mit Catppuccin-Design, vollständig installierbar.</p>
-    </div>
-    <div class="images">
-      <a href="https://github.com/webCommits/trackable" target="_blank">
-        <img loading="lazy" src="/static/images/trackable.webp" alt="trackable. Screenshot">
-      </a>
-      <a href="https://github.com/webCommits/trackable" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn.github">Zu GitHub</button>
-      </a>
-    </div>
+<section class="portfolio-page wc-section animate hidden">
+  <div class="section-heading section-heading--wide">
+    <span class="section-label" data-i18n="port.label">Portfolio</span>
+    <h1 data-i18n="port.h1">Projekte & Referenzen</h1>
+    <p data-i18n="port.p1">Eine kurze Auswahl von Websites, Webapps und technischen Projekten mit Aufgabe, Umsetzung und Kontext.</p>
+    <p data-i18n="port.p2">So sehen Sie, welche Art von Projekten ich strukturiere, entwickle und betreue.</p>
   </div>
 
-  <div class="website-containerpo">
-    <div class="images">
-      <a href="https://www.rueckenwind-reise.de/" target="_blank">
-        <img loading="lazy" src="/static/images/rueckenwind.webp" alt="Rückenwind Website">
-      </a>
-      <a href="https://www.rueckenwind-reise.de/" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn">Zur Website</button>
-      </a>
-    </div>
-    <div class="right">
-      <h3 data-i18n="port.p1.h3">Rückenwind Reise</h3>
-      <p data-i18n="port.p1.p">Eine Übersichtsseite mit Linktree-Ersatz für unsere Lieblings-Youtuber! Inklusive Login, Admin-Panel, interaktiver UI und Animationen!</p>
-    </div>
+  <div class="portfolio-grid">
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/trackable.webp" alt="trackable Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--source" data-i18n="port.status.opensource">Open Source</span><span class="status-badge status-badge--internal" data-i18n="port.status.selfhosted">Self-hosted</span></div>
+        <h2 data-i18n="port.trackable.h3">trackable.</h2>
+        <p data-i18n="port.trackable.p">Aufgabe: Arbeitszeiten und Abwesenheiten einfach erfassen. Umsetzung: selbst-gehostete Django-PWA mit Profilen, Urlaub, Exporten und installierbarer Oberfläche.</p>
+        <div class="tag-row"><span>Django</span><span>Python</span><span>PWA</span><span>SQLite</span><span>Docker</span></div>
+        <a class="btn btn--ghost btn--full" href="https://github.com/webCommits/trackable" target="_blank" rel="noopener noreferrer" data-i18n="port.btn.github">Zu GitHub</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/xrnexus.webp" alt="XR Nexus Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span><span class="status-badge" data-i18n="port.status.webapp">Webapp</span></div>
+        <h2 data-i18n="port.xrnexus.h3">XR Nexus</h2>
+        <p data-i18n="port.xrnexus.p">Aufgabe: 3D- und 2D-Planung im Browser ermöglichen. Umsetzung: Webapp mit KI-Integration, Vite/ThreeJS-Frontend und Docker-basiertem Hosting.</p>
+        <div class="tag-row"><span>ThreeJS</span><span>Vite</span><span>SparkJS</span><span>Docker-Compose</span><span>Supabase</span></div>
+        <a class="btn btn--ghost btn--full" href="https://xr-essential.com/de/products/xr-nexus" target="_blank" rel="noopener noreferrer" data-i18n="port.btn">Zur Website</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/rueckenwind.webp" alt="Rückenwind Reise Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--maintenance" data-i18n="port.status.maintenance">Derzeit wegen Wartung offline</span></div>
+        <h2 data-i18n="port.p1.h3">Rückenwind Reise</h2>
+        <p data-i18n="port.p1.p">Aufgabe: mehrere Inhalte und Links zentral bündeln. Umsetzung: Linktree-Ersatz mit Login, Admin-Bereich, interaktiver Oberfläche und Animationen.</p>
+        <div class="tag-row"><span>Django</span><span>Python</span><span>Docker-Compose</span><span>Tailwind</span></div>
+        <a class="btn btn--ghost btn--full" href="/contact/" data-i18n="port.btn.request">Ähnliches Projekt anfragen</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/gpupgrade.webp" alt="GPUpgrade Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span></div>
+        <h2 data-i18n="port.p2.h3">GPUpgrade</h2>
+        <p data-i18n="port.p2.p">Aufgabe: Grafikkarten vergleichbar machen. Umsetzung: statisches Web-Tool mit klarer Datenstruktur und übersichtlicher Hardware-Auswertung.</p>
+        <div class="tag-row"><span>Eleventy</span><span>AlpineJS</span><span>JavaScript</span><span>JSON</span></div>
+        <a class="btn btn--ghost btn--full" href="https://webcommits.github.io/gpupgrade/" target="_blank" rel="noopener noreferrer" data-i18n="port.btn">Zur Website</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/portfolio.webp" alt="Lukas Schaffrath Portfolio Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span></div>
+        <h2 data-i18n="port.p3.h3">Persönliches Entwickler-Portfolio</h2>
+        <p data-i18n="port.p3.p">Aufgabe: Profil und Projekte kompakt darstellen. Umsetzung: Portfolio-Website mit klarer Inhaltsstruktur und responsivem Frontend.</p>
+        <div class="tag-row"><span>React</span><span>GSAP</span><span>CSS</span><span>HTML</span></div>
+        <a class="btn btn--ghost btn--full" href="https://www.lukasschaffrath.online/" target="_blank" rel="noopener noreferrer" data-i18n="port.btn">Zur Website</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/anglistikweb.webp" alt="Anglistik Web Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--internal" data-i18n="port.status.internal">Intern/privat</span></div>
+        <h2 data-i18n="port.p4.h3">Anglistik Web</h2>
+        <p data-i18n="port.p4.p">Aufgabe: interne Abläufe digital unterstützen. Umsetzung: Plattform mit Login, Profilen, Account-Service und Buchungs-/Planungsfunktionen.</p>
+        <div class="tag-row"><span>Django</span><span>Python</span><span>HTMX</span><span>HTML/CSS</span></div>
+        <a class="btn btn--ghost btn--full" href="/contact/" data-i18n="port.btn.request">Ähnliches Projekt anfragen</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/clweb.webp" alt="CL-Verkehrstechnik Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span></div>
+        <h2 data-i18n="port.p5.h3">CL-Verkehrstechnik</h2>
+        <p data-i18n="port.p5.p">Aufgabe: Leistungen in der Verkehrstechnik klar erklären. Umsetzung: Unternehmenswebsite mit Angebotsstruktur, responsiver Oberfläche und Kontaktführung.</p>
+        <div class="tag-row"><span>EleventyJS</span><span>HTML/CSS/JS</span><span>EmailJS</span></div>
+        <a class="btn btn--ghost btn--full" href="https://www.cl-verkehrstechnik.de/" target="_blank" rel="noopener noreferrer" data-i18n="port.btn">Zur Website</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/clseminar.webp" alt="CL Seminare Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span><span class="status-badge" data-i18n="port.status.platform">Plattform</span></div>
+        <h2 data-i18n="port.clseminare.h3">CL Seminare</h2>
+        <p data-i18n="port.clseminare.p">Aufgabe: Online-Seminare in der Verkehrstechnik anbieten. Umsetzung: Plattform mit Anfrageprozess, Login und übersichtlicher Kursdarstellung.</p>
+        <div class="tag-row"><span>Django</span><span>Python</span><span>PostgreSQL</span><span>Docker</span></div>
+        <a class="btn btn--ghost btn--full" href="https://seminare.cl-verkehrstechnik.de/" target="_blank" rel="noopener noreferrer" data-i18n="port.btn">Zur Website</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/lashesbydim.webp" alt="Lashes by Dim Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span></div>
+        <h2 data-i18n="port.p6.h3">Lashes by Dim</h2>
+        <p data-i18n="port.p6.p">Aufgabe: Leistungen und Stil sichtbar machen. Umsetzung: interaktive Website mit Bildsprache, mobiler Optimierung und klarer Kontaktführung.</p>
+        <div class="tag-row"><span>HTML</span><span>Vanilla CSS</span><span>Vanilla JavaScript</span></div>
+        <a class="btn btn--ghost btn--full" href="https://lashesbydim.de/" target="_blank" rel="noopener noreferrer" data-i18n="port.btn">Zur Website</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/benbachmair.webp" alt="Ben Bachmair Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span></div>
+        <h2 data-i18n="port.p7.h3">Ben-Bachmair</h2>
+        <p data-i18n="port.p7.p">Aufgabe: Inhalte und Veröffentlichungen übersichtlich zugänglich machen. Umsetzung: schlanke Website für Profil, Texte und Kontaktinformationen.</p>
+        <div class="tag-row"><span>Vue.js</span><span>JavaScript</span></div>
+        <a class="btn btn--ghost btn--full" href="http://ben-bachmair.de/" target="_blank" rel="noopener noreferrer" data-i18n="port.btn">Zur Website</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/kernbohrungen-guenther.webp" alt="Kernbohrungen K. Günther Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span></div>
+        <h2 data-i18n="port.p8.h3">Kernbohrungen K. Günther</h2>
+        <p data-i18n="port.p8.p">Aufgabe: regionale Handwerksleistungen auffindbar machen. Umsetzung: Website mit Leistungsüberblick, lokaler Ausrichtung und Kontaktmöglichkeit.</p>
+        <div class="tag-row"><span>EleventyJS</span><span>HTML/CSS/JS</span><span>EmailJS</span></div>
+        <a class="btn btn--ghost btn--full" href="https://kernbohrungen-guenther.de/" target="_blank" rel="noopener noreferrer" data-i18n="port.btn">Zur Website</a>
+      </div>
+    </article>
+
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/webcommits.webp" alt="webCommits Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--source" data-i18n="port.status.opensource">Open Source</span></div>
+        <h2 data-i18n="port.p9.h3">webCommits</h2>
+        <p data-i18n="port.p9.p">Aufgabe: eigenes Angebot und Referenzen bündig präsentieren. Umsetzung: Eleventy-Website mit Design-System, i18n und statischem Deployment.</p>
+        <div class="tag-row"><span>Eleventy</span><span>Nunjucks</span><span>CSS</span><span>i18n</span></div>
+        <a class="btn btn--ghost btn--full" href="https://github.com/webCommits/webcommits-website" target="_blank" rel="noopener noreferrer" data-i18n="port.btn.github">Zu GitHub</a>
+      </div>
+    </article>
   </div>
 
-  <div class="website-containerpo">
-    <div class="left">
-      <h3 data-i18n="port.p2.h3">GPUpgrade</h3>
-      <p data-i18n="port.p2.p">Ein spezialisiertes Web-Tool zur Analyse und zum Vergleich aktueller und älterer Grafikkarten.
-        Mit klarer Übersicht über Leistungswerte, ermöglicht fundierte Entscheidungen bei Hardware-Upgrades.</p>
-    </div>
-    <div class="images">
-      <a href="https://webcommits.github.io/gpupgrade/" target="_blank">
-        <img loading="lazy" src="/static/images/gpupgrade.webp" alt="GPUpgrade Screenshot">
-      </a>
-      <a href="https://webcommits.github.io/gpupgrade/" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn">Zur Website</button>
-      </a>
-    </div>
+  <div class="portfolio-more-wrap">
+    <button class="btn btn--secondary portfolio-more" type="button" data-i18n="port.more">Weitere Projekte anzeigen</button>
   </div>
 
-  <div class="website-containerpo">
-    <div class="images">
-      <a href="https://www.lukasschaffrath.online/" target="_blank">
-        <img loading="lazy" src="/static/images/portfolio.webp" alt="Portfolio Website">
-      </a>
-      <a href="https://www.lukasschaffrath.online/" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn">Zur Website</button>
-      </a>
+  <div class="cta-band portfolio-cta animate hidden">
+    <h2 data-i18n="port.cta.h2">Sie planen ein ähnliches Projekt?</h2>
+    <p data-i18n="port.outro">Weitere öffentliche Projekte finden Sie auf GitHub. Passende Beispiele stelle ich auch im Erstgespräch vor.</p>
+    <div class="hero-actions hero-actions--center">
+      <a class="btn btn--primary" href="/contact/" data-i18n="port.btn.request">Projekt anfragen</a>
     </div>
-    <div class="right">
-      <h3 data-i18n="port.p3.h3">Chefs Portfolio</h3>
-      <p data-i18n="port.p3.p">Eine moderne, einzigartige und intuitive Portfolio website, die den Inhaber von webCommits darstellt.</p>
-    </div>
+    <a class="text-link text-link--muted" href="https://github.com/webCommits/" target="_blank" rel="noopener noreferrer" data-i18n="port.github.btn">Zu GitHub</a>
   </div>
-  <div class="website-containerpo">
-    <div class="left">
-      <h3 data-i18n="port.p4.h3">Anglistik Web</h3>
-      <p data-i18n="port.p4.p">Die offizielle Online-Plattform des Instituts für Anglistik der
-        RWTH Aachen University, inklusive Login-System, Profilen und automatischem Account-Service. Es fungiert als
-        zentrale Anlaufstelle für Studierende, Lehrende und Verwaltende. Sprechstunden und Lernräume buchen, Colloquien
-        planen, und vieles mehr; jetzt im neuen Design!</p>
-    </div>
-    <div class="images">
-      <a href="https://web.anglistik.rwth-aachen.de" target="_blank">
-        <img loading="lazy" src="/static/images/anglistikweb.webp" alt="Anglistik Web Screenshot">
-      </a>
-      <a href="https://web.anglistik.rwth-aachen.de" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn">Zur Website</button>
-      </a>
-    </div>
-  </div>
-  <div class="website-containerpo">
-    <div class="images">
-      <a href="https://www.cl-verkehrstechnik.de/" target="_blank"> <img loading="lazy" src="/static/images/clweb.webp"
-          alt="CL-Verkehrstechnik Screenshot">
-      </a>
-      <a href="https://www.cl-verkehrstechnik.de/" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn">Zur Website</button>
-      </a>
-    </div>
-    <div class="right">
-      <h3 data-i18n="port.p5.h3">CL-Verkehrstechnik</h3>
-      <p data-i18n="port.p5.p">Verkehrszeichenpläne nach langjähriger Erfahrung, gezeichnet mit Präzision. Essentiell für die Verkehrslenkung-
-        und -sicherheit. Bundesweit und Empfehlenswert.</p>
-    </div>
-  </div>
-  <div class="website-containerpo">
-    <div class="left">
-      <h3 data-i18n="port.p6.h3">Lashes by Dim</h3>
-      <p data-i18n="port.p6.p">Eine interaktive Website für die Wimpernstylistin unseres Vertrauens.</p>
-    </div>
-    <div class="images">
-      <a href="https://lashesbydim.de/" target="_blank">
-        <img loading="lazy" src="/static/images/lashesbydim.webp" alt="Lashes by Dim Screenshot">
-      </a>
-      <a href="https://lashesbydim.de/" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn">Zur Website</button>
-      </a>
-    </div>
-  </div>
-  <div class="website-containerpo">
-    <div class="images">
-      <a href="http://ben-bachmair.de/" target="_blank">
-        <img loading="lazy" src="/static/images/benbachmair.webp" alt="Ben Bachmair Screenshot">
-      </a>
-      <a href="http://ben-bachmair.de/" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn">Zur Website</button>
-      </a>
-    </div>
-    <div class="right">
-      <h3 data-i18n="port.p7.h3">Ben-Bachmair</h3>
-      <p data-i18n="port.p7.p">Eine Übersichtswebsite für einen Weltweit bekannten Professor, Author und Mentor.</p>
-    </div>
-  </div>
-  <div class="website-containerpo">
-    <div class="left">
-      <h3 data-i18n="port.p8.h3">Kernbohrungen K. Günther</h3>
-      <p data-i18n="port.p8.p">Der kompetente Meisterbetrieb im Mauerwerks- und Betonbau. Für alle handwerklichen Angelegenheiten.</p>
-    </div>
-    <div class="images">
-      <a href="https://kernbohrungen-guenther.de/" target="_blank">
-        <img loading="lazy" src="/static/images/kernbohrungen-guenther.webp" alt="Kernbohrungen-Guenther Screenshot">
-      </a>
-      <a href="https://kernbohrungen-guenther.de/" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn">Zur Website</button>
-      </a>
-    </div>
-  </div>
-  <div class="website-containerpo">
-    <div class="images">
-      <a href="https://github.com/webCommits/webcommits-website" target="_blank">
-        <img loading="lazy" src="/static/images/webcommits.webp" alt="webCommits Screenshot">
-      </a>
-      <a href="https://github.com/webCommits/webcommits-website" target="_blank" class="mobile-portfolio-btn">
-        <button class="portfoliobutton" data-i18n="port.btn.github">Zu GitHub</button>
-      </a>
-    </div>
-    <div class="right">
-      <h3 data-i18n="port.p9.h3">webCommits</h3>
-      <p data-i18n="port.p9.p">Die besten Web-Entwickler präsentieren Ihre eigene Website. Untersuchen Sie die Seite per Rechtsklick und
-        überzeugen Sie sich von unserer Arbeit.</p>
-    </div>
-  </div>
-  <div class="spacer"></div>
-  <p data-i18n="port.outro">Alle anderen öffentlichen Projekte sind auf GitHub auffindbar oder können auf Anfrage vorgestellt werden.
-  </p>
-  <a href="https://github.com/webCommits/" target="_blank">
-    <button class="portfoliobutton" data-i18n="port.github.btn">Zu Github</button>
-  </a>
-</div>
-<div class="spacer"></div>
+</section>
 {% endblock %}

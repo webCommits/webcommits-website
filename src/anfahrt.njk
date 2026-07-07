@@ -1,7 +1,8 @@
 ---
-title: webCommits web Designs | Anfahrt
+title: Anfahrt & Standort Baesweiler bei Aachen | webCommits
 meta: "Finden Sie mich in Baesweiler, direkt an der Grenze zu Aachen. Als freiberuflicher Webentwickler bin ich
 deutschlandweit und international tätig. Kontaktieren Sie mich bequem über das Kontaktformular."
+leaflet: true
 ---
 {% extends "base.njk" %}
 {% block content %}
@@ -9,18 +10,18 @@ deutschlandweit und international tätig. Kontaktieren Sie mich bequem über das
   <div class="preisliste">
     <h1 data-i18n="dir.h1">Anfahrt</h1>
   </div>
-  <p data-i18n="dir.p1">Ich arbeite von meinem Standort in Baesweiler aus – direkt an der Grenze zu Aachen. Als freiberuflicher
+  <p data-i18n="dir.p1">Ich arbeite von meinem Standort in Baesweiler aus, direkt an der Grenze zu Aachen. Als freiberuflicher
     Webentwickler bin ich deutschlandweit und international tätig. Sie erreichen mich über verschiedene Wege, unter
     anderem bequem über mein Kontaktformular.</p>
   <p data-i18n="dir.p2">Klicken Sie auf die Karte für genauere Informationen.</p>
   <div class="secthreecontent">
-    <div id="map" style="height: 450px; width: 100%; max-width: 800px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"></div>
-    <p style="margin-top: 1rem; font-size: 0.9rem;">
+    <div id="map"></div>
+    <p class="map-link-wrap">
       <a href="https://www.openstreetmap.org/?mlat=50.9099&mlon=6.1772#map=15/50.9099/6.1772" 
          target="_blank" 
          rel="noopener noreferrer"
          data-i18n="dir.osm"
-         style="color: var(--lavender); text-decoration: underline;">
+         class="map-link">
         Größere Karte in OpenStreetMap anzeigen
       </a>
     </p>

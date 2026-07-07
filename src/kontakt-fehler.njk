@@ -1,0 +1,21 @@
+---
+title: Anfrage konnte nicht gesendet werden | webCommits
+robots: "noindex, follow"
+meta: "Ihre Anfrage konnte leider nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie webCommits direkt per E-Mail oder Telefon."
+---
+{% extends "base.njk" %}
+{% block content %}
+<section class="secone wc-section animate hidden" id="kontakt-fehler">
+  <h1 data-i18n="contactError.h1">Die Anfrage konnte nicht gesendet werden</h1>
+  <p data-i18n="contactError.p">Leider ist beim Senden Ihrer Nachricht ein Problem aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt per E-Mail oder Telefon.</p>
+  <p class="small-note" data-i18n="contactError.security">Bitte prüfen Sie auch die Sicherheitsfrage im Formular.</p>
+
+  <div class="contact-methods">
+    <a href="mailto:info@webcommits.info" data-i18n="contactError.direct">Direkt per E-Mail schreiben</a>
+    <a href="tel:+4915510917998">+49 1551 0917998</a>
+  </div>
+
+  <a class="btn btn--primary" href="/contact/" data-i18n="contactError.retry">Zurück zum Kontaktformular</a>
+  <a class="btn btn--secondary" href="/" data-i18n="contactError.home">Zur Startseite</a>
+</section>
+{% endblock %}

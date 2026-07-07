@@ -1,26 +1,23 @@
 ---
-title: KI-Seminare für die Lehre | webCommits
-meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und individuell angepasst. Online oder in Präsenz. Vom Einsteiger bis zum Fortgeschrittenen."
+title: KI-Seminare für Lehrkräfte & Bildung | webCommits
+meta: "KI-Seminare für Lehrkräfte und Bildungseinrichtungen: praxisnah, datenschutzbewusst und individuell als Online-, Präsenz- oder Inhouse-Format."
 ---
 {% extends "base.njk" %}
 {% block content %}
 
 <!-- Hero Section -->
-<div class="seminar-hero" id="hero">
+<div class="seminar-hero animate hidden" id="hero">
   <div class="hero-content">
-    <img src="/static/images/Icon-White.png" alt="webCommits Logo" class="hero-logo">
     <h1 data-i18n="sem.hero.h1">KI-Seminare für die Lehre</h1>
-    <p class="hero-subtitle" data-i18n="sem.hero.sub">Forschung trifft Praxis</p>
+    <p class="hero-subtitle" data-i18n="sem.hero.sub">Was darf KI im Unterricht? Wie bewerten wir fair? Welche Tools sind datenschutzbewusst nutzbar?</p>
     <div class="hero-badges">
       <span class="badge" data-i18n="sem.hero.b1">Online &amp; Präsenz</span>
       <span class="badge" data-i18n="sem.hero.b2">Einsteiger &amp; Fortgeschrittene</span>
     </div>
-    <a href="/contact/">
-      <button class="hero-cta" data-i18n="sem.hero.btn">Unverbindlich anfragen</button>
-    </a>
+    <a class="btn btn--primary" href="/contact/?topic=seminar" data-i18n="sem.hero.btn">Unverbindlich anfragen</a>
   </div>
-  <a href="#expertise" class="scroll-indicator">
-    <img loading="lazy" src="/static/images/arrow-down.webp" alt="Scroll Down">
+  <a href="#expertise" class="scroll-indicator" aria-label="Scroll down">
+    <img loading="lazy" src="/static/images/arrow-down.webp" alt="" aria-hidden="true">
   </a>
 </div>
 
@@ -28,32 +25,32 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
 <div class="seminar-expertise animate hidden" id="expertise">
   <div class="expertise-container">
     <div class="expertise-header">
-      <span class="section-label" data-i18n="sem.exp.label">Meine Expertise</span>
-      <h2 data-i18n="sem.exp.h2">Forschung trifft Praxis</h2>
-      <p class="section-intro" data-i18n="sem.exp.intro">Als Webentwickler und ehemaliger Lehramtsstudent studiere ich aktuell im Master "Cognitive, Digital and Empirical English Studies" an der RWTH Aachen. Dabei verbinde ich technische Kompetenz mit aktueller KI-Forschung und praktischer Erfahrung aus Schule und Hochschule.</p>
+      <span class="section-label" data-i18n="sem.exp.label">Nutzen für Lehrende</span>
+      <h2 data-i18n="sem.exp.h2">Orientierung für Unterricht, Bewertung und Datenschutz</h2>
+      <p class="section-intro" data-i18n="sem.exp.intro">Die Seminare helfen Lehrkräften und Bildungseinrichtungen, KI realistisch einzuordnen, sinnvolle Regeln zu formulieren und konkrete Unterrichtssituationen sicherer zu gestalten.</p>
     </div>
     
     <div class="expertise-grid">
       <div class="expertise-card">
-        <div class="card-icon">🎓</div>
+        <div class="card-icon"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
         <h3 data-i18n="sem.exp.c1.h3">Akademischer Hintergrund</h3>
         <p data-i18n="sem.exp.c1.p">Aktuell im Master "Cognitive, Digital and Empirical English Studies" mit Schwerpunkt KI in der Bildung. Davor Lehramtsstudium Englisch/Technik für Gymnasien und Gesamtschulen.</p>
       </div>
       
       <div class="expertise-card">
-        <div class="card-icon">🔬</div>
-        <h3>Forschung & Entwicklung</h3>
-        <p>Ich forsche zu KI-gestützter Lehre und entwicklte einen Online-Kurs für Bachelorstudierende mit digitalen Lehrkonzepten.</p>
+        <div class="card-icon"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-4 8a2 2 0 0 0 2 3h8a2 2 0 0 0 2-3l-4-8V3M9 14h6"/></svg></div>
+        <h3 data-i18n="sem.exp.c2.h3">Forschung &amp; Entwicklung</h3>
+        <p data-i18n="sem.exp.c2.p">Ich forsche zu KI-gestützter Lehre und entwickelte einen Online-Kurs für Bachelorstudierende mit digitalen Lehrkonzepten.</p>
       </div>
       
       <div class="expertise-card">
-        <div class="card-icon">💻</div>
+        <div class="card-icon"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM8 20h8M10 16v4M14 16v4"/></svg></div>
         <h3 data-i18n="sem.exp.c3.h3">Technische Kompetenz</h3>
         <p data-i18n="sem.exp.c3.p">Fullstack-Webentwicklung, IT-Administration und Support. Seit 2022 am Institut für Anglistik der RWTH Aachen tätig.</p>
       </div>
       
       <div class="expertise-card">
-        <div class="card-icon">🏫</div>
+        <div class="card-icon"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11M3 21h18M9 21v-5h6v5"/></svg></div>
         <h3 data-i18n="sem.exp.c4.h3">Praxiserfahrung</h3>
         <p data-i18n="sem.exp.c4.p">Über 5 Jahre Erfahrung im Schulalltag und Kleingruppen-Unterricht. Ich sehe täglich, wie Schüler*innen und Studierende KI tatsächlich nutzen.</p>
       </div>
@@ -66,7 +63,7 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
   <div class="offerings-header">
     <span class="section-label" data-i18n="sem.off.label">Das Angebot</span>
     <h2 data-i18n="sem.off.h2">Seminare nach Ihren Bedürfnissen</h2>
-    <p class="section-intro" data-i18n="sem.off.intro">Ich biete zwei Stufen an, je nachdem, wo Sie stehen.</p>
+    <p class="section-intro" data-i18n="sem.off.intro">Zwei kompakte Formate decken Einstieg, sichere Nutzung und vertiefende Praxis ab.</p>
   </div>
   
   <div class="offerings-grid">
@@ -76,7 +73,7 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
         <span class="level-badge" data-i18n="sem.l1.badge">Level 1</span>
         <h3 data-i18n="sem.l1.h3">KI-Grundlagen für Lehrende</h3>
       </div>
-      <p class="card-description" data-i18n="sem.l1.desc">Für den Einstieg ohne technische Vorkenntnisse. Sie lernen die Grundlagen und bekommen praktische Beispiele für Ihren Unterricht.</p>
+      <p class="card-description" data-i18n="sem.l1.desc">Für Teams ohne Vorkenntnisse: Sie verstehen Chancen, Grenzen und Risiken generativer KI und nehmen direkt nutzbare Unterrichtsbeispiele mit.</p>
       
       <div class="card-content">
         <h4 data-i18n="sem.l1.content">Inhalte</h4>
@@ -89,14 +86,14 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
         </ul>
         
         <div class="card-meta">
-          <div class="meta-item">
-            <strong data-i18n="meta.duration">Dauer:</strong> 2-4 Stunden (individuell anpassbar)
+          <div class="meta-item" data-i18n-html="sem.l1.meta.duration">
+            <strong>Dauer:</strong> 2-4 Stunden (individuell anpassbar)
           </div>
-          <div class="meta-item">
-            <strong data-i18n="meta.format">Format:</strong> Online oder Präsenz
+          <div class="meta-item" data-i18n-html="sem.l1.meta.format">
+            <strong>Format:</strong> Online oder Präsenz
           </div>
-          <div class="meta-item">
-            <strong data-i18n="meta.groupsize">Gruppengröße:</strong> 5-25 Teilnehmer*innen
+          <div class="meta-item" data-i18n-html="sem.l1.meta.groupsize">
+            <strong>Gruppengröße:</strong> 5-25 Teilnehmer*innen
           </div>
         </div>
       </div>
@@ -108,7 +105,7 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
         <span class="level-badge" data-i18n="sem.l2.badge">Level 2</span>
         <h3 data-i18n="sem.l2.h3">KI für Fortgeschrittene</h3>
       </div>
-      <p class="card-description" data-i18n="sem.l2.desc">Für alle, die schon ein bisschen was können und tiefer einsteigen wollen. Hier geht's um fortgeschrittene Techniken und Automatisierung.</p>
+      <p class="card-description" data-i18n="sem.l2.desc">Für Teams mit ersten Erfahrungen: Wir vertiefen Prompting, Bewertung von Ergebnissen, Workflows und den reflektierten Einsatz im Schul- oder Hochschulalltag.</p>
       
       <div class="card-content">
         <h4 data-i18n="sem.l2.content">Inhalte</h4>
@@ -121,14 +118,14 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
         </ul>
         
         <div class="card-meta">
-          <div class="meta-item">
-            <strong data-i18n="meta.duration">Dauer:</strong> 3-6 Stunden (individuell anpassbar)
+          <div class="meta-item" data-i18n-html="sem.l2.meta.duration">
+            <strong>Dauer:</strong> 3-6 Stunden (individuell anpassbar)
           </div>
-          <div class="meta-item">
-            <strong data-i18n="meta.format">Format:</strong> Online oder Präsenz
+          <div class="meta-item" data-i18n-html="sem.l2.meta.format">
+            <strong>Format:</strong> Online oder Präsenz
           </div>
-          <div class="meta-item">
-            <strong data-i18n="meta.groupsize">Gruppengröße:</strong> 5-20 Teilnehmer*innen
+          <div class="meta-item" data-i18n-html="sem.l2.meta.groupsize">
+            <strong>Gruppengröße:</strong> 5-20 Teilnehmer*innen
           </div>
         </div>
       </div>
@@ -140,13 +137,13 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
 <div class="seminar-formats animate hidden" id="formate">
   <div class="formats-container">
     <div class="formats-left">
-      <span class="section-label">Flexibilität</span>
-      <h2>Format & Konditionen</h2>
-      <p>Ich passe die Seminare an Ihre Bedürfnisse an – ob online via Zoom, bei Ihnen vor Ort oder als Mix aus beidem.</p>
+      <span class="section-label" data-i18n="sem.fmt.label">Flexibilität</span>
+      <h2 data-i18n="sem.fmt.h2">Format &amp; Konditionen</h2>
+      <p data-i18n="sem.fmt.p">Ich passe die Seminare an Ihre Bedürfnisse an, ob online via Zoom, bei Ihnen vor Ort oder als Mix aus beidem.</p>
       
       <div class="format-features">
         <div class="feature-item">
-          <div class="feature-icon">💻</div>
+          <div class="feature-icon"><svg class="line-icon line-icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM8 20h8M10 16v4M14 16v4"/></svg></div>
           <div>
             <h4 data-i18n="sem.fmt.f1.h4">Online-Seminare</h4>
             <p data-i18n="sem.fmt.f1.p">Via Zoom oder MS Teams mit Live-Demos und praktischen Übungen</p>
@@ -154,7 +151,7 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
         </div>
         
         <div class="feature-item">
-          <div class="feature-icon">🏢</div>
+          <div class="feature-icon"><svg class="line-icon line-icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V7l9-4 9 4v14M3 21h18M9 21v-4h6v4"/></svg></div>
           <div>
             <h4 data-i18n="sem.fmt.f2.h4">Präsenz-Workshops</h4>
             <p data-i18n="sem.fmt.f2.p">Bei Ihnen vor Ort mit Hands-on-Übungen und direktem Feedback</p>
@@ -162,7 +159,7 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
         </div>
         
         <div class="feature-item">
-          <div class="feature-icon">🔄</div>
+          <div class="feature-icon"><svg class="line-icon line-icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9a8 8 0 0 1 14-3M19 4v3h-3M20 15a8 8 0 0 1-14 3M5 20v-3h3"/></svg></div>
           <div>
             <h4 data-i18n="sem.fmt.f3.h4">Hybrid-Format</h4>
             <p data-i18n="sem.fmt.f3.p">Mix aus Online- und Präsenzphasen. So, wie es am besten passt</p>
@@ -170,7 +167,7 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
         </div>
         
         <div class="feature-item">
-          <div class="feature-icon">🎯</div>
+          <div class="feature-icon"><svg class="line-icon line-icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg></div>
           <div>
             <h4 data-i18n="sem.fmt.f4.h4">Inhouse-Schulungen</h4>
             <p data-i18n="sem.fmt.f4.p">Speziell für Ihre Einrichtung mit individuellen Schwerpunkten</p>
@@ -189,17 +186,16 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
           <li data-i18n="sem.price.li3">Format (Online/Präsenz)</li>
           <li data-i18n="sem.price.li4">Vorbereitungsaufwand</li>
         </ul>
-        <p><strong>Fragen Sie einfach unverbindlich an!</strong></p>
-        <a href="/contact/">
-          <button class="info-cta" data-i18n="sem.price.cta">Angebot anfordern</button>
-        </a>
+        <p><strong data-i18n="sem.price.ask">Fragen Sie einfach unverbindlich an!</strong></p>
+        <a class="btn btn--primary" href="/contact/?topic=seminar" data-i18n="sem.price.cta">Angebot anfordern</a>
       </div>
       
       <div class="info-box accent">
-        <h3>🚀 In Planung</h3>
-        <p><strong>Interaktives Online-Webinar-Tool</strong></p>
-        <p>Ich arbeite gerade an einer Plattform, auf der Sie in Ihrem eigenen Tempo lernen können (mit On-Demand-Modulen, Übungen und Zertifikaten)</p>
-        <p><em>Interesse? Sagen Sie Bescheid!</em></p>
+        <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true" style="margin-bottom:0.5rem"><path d="M12 3c3 1 5 4 5 8 0 3-2 6-5 8-3-2-5-5-5-8 0-4 2-7 5-8zM12 3v18M9 14l-2 3M15 14l2 3"/></svg>
+        <h3 data-i18n="sem.plan.h3">Optional später</h3>
+        <p><strong data-i18n="sem.plan.title">Interaktives Online-Webinar-Tool</strong></p>
+        <p data-i18n="sem.plan.p">Ein ergänzendes Selbstlernangebot ist in Planung. Für konkrete Anfragen stehen derzeit Workshops und Inhouse-Formate im Vordergrund.</p>
+        <p><em data-i18n="sem.plan.note">Bei Interesse kann ich Sie vormerken.</em></p>
       </div>
     </div>
   </div>
@@ -212,19 +208,23 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
     <h2 data-i18n="sem.tgt.h2">Zielgruppen</h2>
     <div class="targets-grid">
       <div class="target-card">
-        <h3 data-i18n="sem.tgt.c1.h3">🎓 Lehrkräfte</h3>
-        <p data-i18n="sem.tgt.c1.p">An Grundschulen, weiterführenden Schulen und Berufskollegs – unabhängig vom Fach</p>
+        <div class="card-icon"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
+        <h3 data-i18n="sem.tgt.c1.h3">Lehrkräfte</h3>
+        <p data-i18n="sem.tgt.c1.p">An Grundschulen, weiterführenden Schulen und Berufskollegs, unabhängig vom Fach</p>
       </div>
       <div class="target-card">
-        <h3 data-i18n="sem.tgt.c2.h3">👨‍🏫 Hochschullehrende</h3>
+        <div class="card-icon"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21v-1c0-2 3-4 8-4s8 2 8 4v1"/></svg></div>
+        <h3 data-i18n="sem.tgt.c2.h3">Hochschullehrende</h3>
         <p data-i18n="sem.tgt.c2.p">Professor*innen, Dozent*innen und wissenschaftliche Mitarbeiter*innen</p>
       </div>
       <div class="target-card">
-        <h3 data-i18n="sem.tgt.c3.h3">🏫 Bildungseinrichtungen</h3>
+        <div class="card-icon"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11M3 21h18M9 21v-5h6v5"/></svg></div>
+        <h3 data-i18n="sem.tgt.c3.h3">Bildungseinrichtungen</h3>
         <p data-i18n="sem.tgt.c3.p">Schulen, Universitäten, Volkshochschulen und Weiterbildungsinstitute</p>
       </div>
       <div class="target-card">
-        <h3 data-i18n="sem.tgt.c4.h3">💼 Bildungsträger</h3>
+        <div class="card-icon"><svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18v11H3zM8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div>
+        <h3 data-i18n="sem.tgt.c4.h3">Bildungsträger</h3>
         <p data-i18n="sem.tgt.c4.p">Organisationen, die ihre Mitarbeitenden im Bereich KI schulen möchten</p>
       </div>
     </div>
@@ -235,19 +235,11 @@ meta: "KI-Seminare für Lehrende - Praxisnah, wissenschaftlich fundiert und indi
 <div class="seminar-contact animate hidden" id="kontakt">
   <div class="contact-content">
     <h2 data-i18n="sem.cta.h2">Interesse?</h2>
-    <p data-i18n="sem.cta.p">Vereinbaren Sie ein kostenloses Beratungsgespräch und lassen Sie uns gemeinsam das passende Seminarformat für Ihre Bedürfnisse entwickeln.</p>
+    <p data-i18n="sem.cta.p">Beschreiben Sie kurz Ihre Einrichtung, Zielgruppe und offenen KI-Fragen. Ich melde mich mit einem passenden Seminarformat zurück.</p>
     
     <div class="contact-methods">
-      <a href="mailto:info@webcommits.info" class="contact-method">
-        <img src="/static/images/mail-ico.webp" alt="E-Mail">
-        <span>info@webcommits.info</span>
-      </a>
-      <a href="tel:+015510917998" class="contact-method">
-        <img src="/static/images/call-ico.webp" alt="Telefon">
-        <span>+015510917998</span>
-      </a>
-      <a href="/contact/" class="contact-method">
-        <img src="/static/images/form-ico.webp" alt="Kontaktformular" class="form-img">
+      <a href="/contact/?topic=seminar" class="contact-method">
+        <img src="/static/images/form-ico.webp" alt="" aria-hidden="true" class="form-img">
         <span data-i18n="sem.cta.form">Kontaktformular</span>
       </a>
     </div>

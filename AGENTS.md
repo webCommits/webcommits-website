@@ -44,8 +44,7 @@ npm run deploy
 │   ├── _includes/        # Nunjucks partials
 │   │   ├── base.njk      # Base template (layout)
 │   │   ├── header.njk    # Navigation header
-│   │   ├── footer.njk    # Footer partial
-│   │   └── imprsec.njk   # Impressum section
+│   │   └── footer.njk    # Footer partial
 │   ├── static/
 │   │   ├── style.css     # Main stylesheet (Catppuccin theme)
 │   │   ├── script.js     # Main JavaScript

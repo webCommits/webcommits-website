@@ -1,169 +1,166 @@
 ---
-title: webCommits web Designs | Web-Entwicklung, Design und IT
-meta: "webCommits web Designs - Web-Entwicklung, Design und IT | Ihr Ansprechpartner für hochwertige, zuverlässige und
-günstige Websites! Maßgeschneiderte Websites für Handwerker, Kleingewerbe und Selbstständige, aus Aachen und Umgebung.
-Schnell, zuverlässig und günstig – inklusive Hosting und Support"
-
+title: Websites, IT & KI-Hilfe aus Aachen | webCommits
+meta: "Individuelle Websites, KI-Beratung und IT-Support für kleine Unternehmen. Persönlich, pragmatisch und bezahlbar aus dem Raum Aachen, deutschlandweit umsetzbar."
 ---
 {% extends "base.njk" %}
 {% block content %}
-<div class="secone" id="about">
-  <img src="/static/images/Icon-White.png" alt="" srcset="">
-  <h1 data-i18n="index.hero.h1">Handcoded Websites</h1>
-  <h3 data-i18n="index.hero.h3">ohne hohe Kosten</h3>
-  <a href="/contact/">
-    <button class="seconebutton" data-i18n="index.hero.btn">Kontaktieren</button>
-  </a>
-  <a href="#sectwo" id="scroll-arrow">
-    <img loading="lazy" src="/static/images/arrow-down.webp" alt="Down Arrow">
-  </a>
-</div>
-
-<div class="sectwo animate hidden" id="sectwo">
-  <div class="left">
-    <h2 data-i18n="index.s2.h2">Hilfe für Alle</h2>
-    <h3 data-i18n="index.s2.h3">ohne Page-Builder!</h3>
-    <p data-i18n="index.s2.p">Ich setze auf Schnelligkeit, Präzision und Sicherheit durch handgeschriebenen Code.
-      Dabei profitiere ich von meiner langjährigen Erfahrung als Webentwickler.
-      Statt auf aufgeblähte Page-Builder zu setzen, entwickle ich schlanken, wartungsfreundlichen und wiederverwendbaren
-      Code – individuell auf Ihre Anforderungen zugeschnitten.
-      Das sorgt für schnellere Ladezeiten und eine zielgerichtete Nutzerführung.
-
-      Mehr über meine Arbeitsweise und Philosophie erfahren Sie hier:</p>
-    <a href="/aboutus/">
-      <button class="sectwobutton" data-i18n="index.s2.btn">Über uns</button>
-    </a>
+<section class="home-hero hero--left" id="top">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="home-hero__content">
+    <h1 data-i18n="index.hero.h1">Handgeschriebene Websites, faire IT und KI-Hilfe aus Aachen</h1>
+    <p class="hero-subtitle" data-i18n="index.hero.sub">Ich entwickle Websites ohne aufgeblähte Baukästen: schnell, wartbar und passend zu Ihrem Alltag. Wenn KI oder IT sinnvoll helfen, erkläre und baue ich das verständlich mit ein.</p>
+    <div class="hero-actions">
+      <a class="btn btn--primary" href="/contact/" data-i18n="index.hero.cta_primary">Projekt anfragen</a>
+      <a class="btn btn--secondary" href="#leistungen" data-i18n="index.hero.cta_secondary">Leistungen ansehen</a>
+    </div>
+    <div class="hero-proof" aria-label="Kurzprofil">
+      <span data-i18n="index.hero.proof1">Für KMU & Selbstständige</span>
+      <span data-i18n="index.hero.proof2">Web, KI & IT aus einer Hand</span>
+      <span data-i18n="index.hero.proof3">Aachen · deutschlandweit</span>
+    </div>
   </div>
-  <div class="right">
-    <img loading="lazy" src="/static/images/markusspiske-code.webp" alt="Code Picture by Markus Spiske">
+  <div class="home-hero__showcase" aria-hidden="true">
+    <div class="showcase-orbit showcase-orbit--one"></div>
+    <div class="showcase-orbit showcase-orbit--two"></div>
+    <div class="hero-brandmark">
+      <img src="/static/images/Icon-White.png" alt="" loading="eager">
+    </div>
   </div>
-</div>
+</section>
 
-<!-- KI-Seminare Teaser Section -->
-<div class="seminar-teaser animate hidden" id="seminar-teaser">
-  <div class="seminar-teaser-container">
-    <span class="section-label" data-i18n="index.sem.label">Neu im Angebot</span>
-    <h2 data-i18n="index.sem.h2">KI-Seminare für Lehrende</h2>
-    <p class="teaser-intro" data-i18n="index.sem.intro">Entdecken Sie die Möglichkeiten von KI in der Bildung. Praxisnah, wissenschaftlich fundiert und individuell angepasst – vom Einsteiger bis zum Fortgeschrittenen.</p>
-    
-    <div class="teaser-features">
-      <div class="teaser-feature">
-        <div class="teaser-icon">🎓</div>
-        <h4 data-i18n="index.sem.f1.h4">Einsteiger-Seminare</h4>
-        <p data-i18n="index.sem.f1.p">Grundlagen verstehen und praktische Anwendungen kennenlernen</p>
+<section class="wc-section services-overview animate hidden" id="leistungen">
+  <div class="section-heading">
+    <span class="section-label" data-i18n="index.services.label">Leistungen</span>
+    <h2 data-i18n="index.services.h2">Pragmatische digitale Lösungen</h2>
+    <p data-i18n="index.services.p">Ich unterstütze Sie bei Websites, KI-Einstieg oder technischem Setup. Meine Lösungen sind individuell, bezahlbar und auf Langlebigkeit ausgelegt, ohne unnötigen Ballast.</p>
+  </div>
+  <div class="card-grid service-card-grid">
+    <article class="feature-card feature-card--accent-blue">
+      <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM8 20h8M10 16v4M14 16v4"/></svg>
+      <h3 data-i18n="index.services.web.h3">Websites & Webentwicklung</h3>
+      <p data-i18n="index.services.web.p">Preisbewusste Websites und Webapps ohne aufgeblähte Baukästen: schnell, wartbar und individuell.</p>
+      <ul class="check-list">
+        <li data-i18n="index.services.web.li1">Landingpages & Unternehmensseiten</li>
+        <li data-i18n="index.services.web.li2">Hosting, SEO-Basis & Support</li>
+        <li data-i18n="index.services.web.li3">Spezielle Funktionen nach Maß</li>
+      </ul>
+    </article>
+
+    <article class="feature-card feature-card--accent-mauve">
+      <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l8 4-8 4-8-4 8-4zM6 10v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>
+      <h3 data-i18n="index.services.seminars.h3">KI-Seminare & Schulungen</h3>
+      <p data-i18n="index.services.seminars.p">Praxisnahe Workshops für Teams, Lehrende und Einrichtungen, verständlich, anpassbar und ohne unnötige Hürden.</p>
+      <ul class="check-list">
+        <li data-i18n="index.services.seminars.li1">Grundlagen generativer KI</li>
+        <li data-i18n="index.services.seminars.li2">Sichere Nutzung im Arbeitsalltag</li>
+        <li data-i18n="index.services.seminars.li3">Online, Präsenz oder Hybrid</li>
+      </ul>
+    </article>
+
+    <article class="feature-card feature-card--accent-teal">
+      <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M4.9 4.9L7 7M17 17l2.1 2.1M3 12h3M18 12h3M4.9 19.1L7 17M17 7l2.1-2.1M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0z"/></svg>
+      <h3 data-i18n="index.services.ai.h3">KI-Beratung & KI-Umgebungen</h3>
+      <p data-i18n="index.services.ai.p">Von der Potenzialanalyse bis zu internen Assistenten: Ich unterstütze beim sinnvollen, sicheren KI-Einsatz.</p>
+      <ul class="check-list">
+        <li data-i18n="index.services.ai.li1">Use Cases & Roadmap</li>
+        <li data-i18n="index.services.ai.li2">Workflows und Automatisierung</li>
+        <li data-i18n="index.services.ai.li3">Private oder interne KI-Nutzung</li>
+      </ul>
+    </article>
+
+    <article class="feature-card feature-card--accent-peach">
+      <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v7H6zM8 15h8M9 20h6M12 15v5M5 11h14v4H5z"/></svg>
+      <h3 data-i18n="index.services.it.h3">PCs, Server & IT-Betrieb</h3>
+      <p data-i18n="index.services.it.p">Maßgeschneiderte PCs, Serverumgebungen und technischer Support, online oder nach Absprache vor Ort.</p>
+      <ul class="check-list">
+        <li data-i18n="index.services.it.li1">PC-Bau & Workstations</li>
+        <li data-i18n="index.services.it.li2">Server-Setup mit Linux/Docker</li>
+        <li data-i18n="index.services.it.li3">Backups, Updates & Support</li>
+      </ul>
+    </article>
+  </div>
+  <div class="section-actions">
+    <a class="btn btn--primary" href="/contact/" data-i18n="index.services.cta">Beratung anfragen</a>
+  </div>
+</section>
+
+<section class="wc-section wc-section--muted ai-teaser animate hidden">
+  <div class="split-layout">
+    <div>
+      <span class="section-label" data-i18n="index.ai.label">KI für Unternehmen</span>
+      <h2 data-i18n="index.ai.h2">KI sinnvoll im Unternehmen einsetzen</h2>
+      <p data-i18n="index.ai.p">Ich helfe Unternehmen dabei, KI praktisch, sicher und verständlich einzuführen, von ersten Einsatzideen bis zu eigenen Workflows und internen Assistenten.</p>
+      <div class="hero-actions">
+        <a class="btn btn--secondary" href="/ki-beratung/" data-i18n="index.ai.cta_secondary">KI-Angebot ansehen</a>
       </div>
-      
-      <div class="teaser-feature">
-        <div class="teaser-icon">🔬</div>
-        <h4 data-i18n="index.sem.f2.h4">Fortgeschrittene Workshops</h4>
-        <p data-i18n="index.sem.f2.p">Tiefere Einblicke und fortgeschrittene Techniken</p>
+    </div>
+    <div class="mini-feature-grid">
+      <article class="mini-feature"><span data-i18n="index.ai.f1.h">Potenziale finden</span><p data-i18n="index.ai.f1.p">Wo KI wirklich hilft und wo nicht.</p></article>
+      <article class="mini-feature"><span data-i18n="index.ai.f2.h">Ihre Abläufe automatisieren</span><p data-i18n="index.ai.f2.p">Wiederkehrende Aufgaben schlanker erledigen.</p></article>
+      <article class="mini-feature"><span data-i18n="index.ai.f3.h">Sichere Nutzung ermöglichen</span><p data-i18n="index.ai.f3.p">Klare Regeln, passende Umgebung, verständliche Übergabe.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="wc-section wc-section--muted about-teaser animate hidden">
+  <div class="split-layout split-layout--center">
+    <div>
+      <span class="section-label" data-i18n="index.about.label">Arbeitsweise</span>
+      <h2 data-i18n="index.about.h2">Technische Umsetzung, die nachvollziehbar bleibt</h2>
+      <p data-i18n="index.about.p">Ich bin Lukas Schaffrath, freiberuflicher Webentwickler aus dem Raum Aachen. Sie sprechen direkt mit mir, bekommen klare Empfehlungen und erhalten Lösungen, die Sie im Alltag wirklich nutzen können.</p>
+      <a class="btn btn--secondary" href="/aboutus/" data-i18n="index.about.cta">Mehr über die Zusammenarbeit</a>
+    </div>
+    <img class="portrait-card" loading="lazy" src="/static/images/portrait.webp" alt="Lukas Schaffrath Portrait" width="420" height="431">
+  </div>
+</section>
+
+<section class="wc-section portfolio-teaser animate hidden">
+  <div class="section-heading">
+    <span class="section-label" data-i18n="index.port.label">Referenzen</span>
+    <h2 data-i18n="index.port.h1">Ausgewählte Projekte</h2>
+    <p data-i18n="index.port.p">Ein Einblick in Websites, Webapps und technische Projekte, die zeigen, wie ich Konzept, Entwicklung und Betrieb verbinde.</p>
+  </div>
+  <div class="portfolio-grid portfolio-grid--teaser">
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/trackable.webp" alt="trackable Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--source" data-i18n="port.status.opensource">Open Source</span></div>
+        <h3 data-i18n="port.trackable.h3">trackable.</h3>
+        <p data-i18n="port.trackable.pshort">Eine selbst-gehostete Zeiterfassungs-PWA auf Basis von Django.</p>
+        <div class="tag-row"><span>Django</span><span>Python</span><span>PWA</span></div>
       </div>
-      
-      <div class="teaser-feature">
-        <div class="teaser-icon">💻</div>
-        <h4 data-i18n="index.sem.f3.h4">Flexibles Format</h4>
-        <p data-i18n="index.sem.f3.p">Online, Präsenz oder Hybrid. Ganz nach Ihren Bedürfnissen</p>
+    </article>
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/xrnexus.webp" alt="XR Nexus Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span></div>
+        <h3 data-i18n="port.xrnexus.h3">XR Nexus</h3>
+        <p data-i18n="port.xrnexus.pshort">Ein professionelles 3D- und 2D-Planungstool mit KI-Integration.</p>
+        <div class="tag-row"><span>ThreeJS</span><span>Vite</span><span>Supabase</span></div>
       </div>
-
-      <div class="teaser-feature">
-        <div class="teaser-icon">🌐</div>
-        <h4 data-i18n="index.sem.f4.h4">Online-Webinar-Tool</h4>
-        <p data-i18n="index.sem.f4.p">Coming Soon: Weiterbildungen flexibel in unserem Online-Tool</p>
+    </article>
+    <article class="portfolio-card">
+      <img loading="lazy" src="/static/images/clseminar.webp" alt="CL Seminare Screenshot" width="640" height="360">
+      <div class="portfolio-card__body">
+        <div class="badge-row"><span class="status-badge status-badge--live" data-i18n="port.status.live">Live</span></div>
+        <h3 data-i18n="port.clseminare.h3">CL Seminare</h3>
+        <p data-i18n="port.clseminare.pshort">Eine Plattform für Online-Seminare in der Verkehrstechnik.</p>
+        <div class="tag-row"><span>Django</span><span>Python</span><span>Docker</span></div>
       </div>
-    </div>
-    
-    <div class="teaser-cta">
-      <a href="/seminare/">
-        <button class="seminar-teaser-button" data-i18n="index.sem.btn">Mehr über KI-Seminare erfahren</button>
-      </a>
-    </div>
+    </article>
   </div>
-</div>
+  <div class="section-actions">
+    <a class="btn btn--primary" href="/portfolio/" data-i18n="index.port.btn">Portfolio ansehen</a>
+  </div>
+</section>
 
-<div class="portfolio animate hidden">
-  <h1 data-i18n="index.port.h1">Portfolio</h1>
-  <p data-i18n="index.port.p">Die folgenden Websites repräsentieren eine Auswahl meiner vorherigen Projekte. Überzeugen Sie sich über einen
-    Klick auf die Vorschau!</p>
-  <div class="website-container">
-    <div class="images">
-      <a href="https://github.com/webCommits/trackable">
-        <img loading="lazy" src="/static/images/trackable.webp" alt="trackable. Screenshot">
-      </a>
-    </div>
-    <div class="right">
-      <h3 data-i18n="index.port.trackable.h3">trackable.</h3>
-      <p data-i18n="index.port.trackable.p">Self-hosted Zeiterfassung als installierbare PWA – mit Multi-Profilen, PDF/CSV-Export und automatischen Monatsberichten.</p>
-    </div>
+<section class="cta-band animate hidden" id="kontakt">
+  <span class="section-label" data-i18n="index.con.label">Kontakt</span>
+  <h2 data-i18n="index.con.h1">Lassen Sie uns über Ihr Projekt sprechen</h2>
+  <p data-i18n="index.con.p">Ob Website, KI-Beratung, Seminar oder IT-Anfrage: Schreiben Sie mir kurz, wobei ich unterstützen kann.</p>
+  <div class="hero-actions hero-actions--center">
+    <a class="btn btn--primary" href="/contact/" data-i18n="index.con.btn">Kontakt aufnehmen</a>
   </div>
-  <div class="website-container">
-    <div class="left">
-      <h3 data-i18n="index.port.p1.h3">Rückenwind Reise</h3>
-      <p data-i18n="index.port.p1.p">Eine Übersichtsseite mit Linktree-Ersatz für unsere Lieblings-YouTuber! Inklusive Login, Admin-Panel, interaktiver UI und Animationen!</p>
-    </div>
-    <div class="images">
-      <a href="https://www.rueckenwind-reise.de/">
-        <img loading="lazy" src="/static/images/rueckenwind.webp" alt="Rückenwind Screenshot">
-      </a>
-    </div>
-  </div>
-  <div class="website-container">
-    <div class="images">
-      <a href="https://www.lukasschaffrath.online/">
-        <img loading="lazy" src="/static/images/portfolio.webp" alt="Portfolio Website">
-      </a>
-    </div>
-    <div class="right">
-      <h3 data-i18n="index.port.p2.h3">Chefs Portfolio</h3>
-      <p data-i18n="index.port.p2.p">Eine moderne, einzigartige und intuitive Portfolio website, die den Inhaber von webCommits darstellt.</p>
-    </div>
-  </div>
-  <div class="website-container">
-    <div class="left">
-      <h3 data-i18n="index.port.p3.h3">Ben-Bachmair</h3>
-      <p data-i18n="index.port.p3.p">Eine Übersichtswebsite für einen Weltweit bekannten Professor, Author und Mentor.</p>
-    </div>
-    <div class="images">
-      <a href="http://ben-bachmair.de/">
-        <img loading="lazy" src="/static/images/benbachmair.webp" alt="Ben Bachmair Screenshot">
-      </a>
-    </div>
-  </div>
-  <a href="/portfolio/">
-    <button class="portfoliobutton" data-i18n="index.port.btn">Mehr lesen</button>
-  </a>
-</div>
-
-<div class="secthree animate hidden" id="anfahrt">
-  <div class="preisliste">
-    <h1 data-i18n="index.dir.h1">Anfahrt</h1>
-  </div>
-  <p data-i18n="index.dir.p">Sie finden mich an der Grenze von Aachen. Klicken Sie auf die Karte für genauere Infos.</p>
-  <div class="secthreecontent">
-    <div id="map" style="height: 450px; width: 100%; max-width: 800px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"></div>
-    <p style="margin-top: 1rem; font-size: 0.9rem;">
-      <a href="https://www.openstreetmap.org/?mlat=50.9099&mlon=6.1772#map=15/50.9099/6.1772" 
-         target="_blank" 
-         rel="noopener noreferrer"
-         data-i18n="index.dir.osm"
-         style="color: var(--lavender); text-decoration: underline;">
-        Größere Karte in OpenStreetMap anzeigen
-      </a>
-    </p>
-  </div>
-</div>
-
-<div class="contact-sec" id="contact-sec">
-  <h1 data-i18n="index.con.h1">Kontakt</h1>
-  <p data-i18n="index.con.p">Überzeugt? Dann melden Sie sich über die untenstehenden Möglichkeiten oder über das
-    Kontaktformular.</p>
-  <div class="contact-container">
-    <a href="mailto:webcommitswebdesigns@gmail.com"><img src="/static/images/mail-ico.webp" alt="Mail Icon"></a>
-    <a href="tel:+015510917998"><img src="/static/images/call-ico.webp" alt="Call Icon"></a>
-    <a href="/contact/"><img src="/static/images/form-ico.webp" alt="Form Icon" class="form-img"></a>
-  </div>
-  <a href="/contact/">
-    <button class="seconebutton" data-i18n="index.con.btn">Zum Formular</button>
-  </a>
-</div>
-
+  <p class="small-note"><span data-i18n="index.con.email_prefix">Direkt per E-Mail:</span> <a href="mailto:info@webcommits.info">info@webcommits.info</a></p>
+</section>
 {% endblock %}

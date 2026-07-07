@@ -9,3 +9,17 @@ services:
     #   - "traefik.http.routers.webcommits.rule=Host(`www.webcommits.info`)"
     #   - "traefik.http.routers.webcommits.entrypoints=websecure"
     #   - "traefik.http.routers.webcommits.tls.certresolver=letsencrypt"
+    depends_on:
+      - mailer
+
+  mailer:
+    build: ./mailer
+    restart: unless-stopped
+    environment:
+      CONTACT_RECIPIENT: ${CONTACT_RECIPIENT}
+      SMTP_HOST: ${SMTP_HOST}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USER: ${SMTP_USER}
+      SMTP_PASS: ${SMTP_PASS}
+      SMTP_FROM: ${SMTP_FROM}
+      SMTP_SECURE: ${SMTP_SECURE:-true}
