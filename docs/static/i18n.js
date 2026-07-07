@@ -1030,6 +1030,7 @@
     /* persist */
     try { localStorage.setItem('wc-lang', lang); } catch (e) {}
     window.__wcLang = lang;
+    window.dispatchEvent(new CustomEvent('wc:i18n-applied', { detail: { lang: lang } }));
   }
 
   function toggleLanguage() {

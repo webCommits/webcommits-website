@@ -280,6 +280,84 @@ function initContactSecurityCheck() {
   questionEl.textContent = `${a} + ${b} = ?`;
   aEl.value = a;
   bEl.value = b;
+
+  form.addEventListener('submit', (event) => {
+    const answerEl = form.querySelector('#security_answer');
+    if (questionEl.textContent && aEl.value !== '' && bEl.value !== '') return;
+
+    event.preventDefault();
+    if (answerEl) {
+      answerEl.setCustomValidity('Die Sicherheitsfrage konnte nicht geladen werden. Bitte laden Sie die Seite neu.');
+      answerEl.reportValidity();
+      window.setTimeout(() => answerEl.setCustomValidity(''), 0);
+    }
+  });
+}
+
+function initContactErrorReason() {
+  const titleEl = document.querySelector('[data-contact-error-title]');
+  const messageEl = document.querySelector('[data-contact-error-message]');
+  const noteEl = document.querySelector('[data-contact-error-note]');
+  if (!titleEl || !messageEl || !noteEl) return;
+
+  const copy = {
+    de: {
+      validation: {
+        title: 'Bitte prüfen Sie Ihre Angaben',
+        message: 'Mindestens ein Pflichtfeld fehlt oder die E-Mail-Adresse ist nicht gültig. Bitte füllen Sie das Formular vollständig aus.',
+        note: 'Falls die Sicherheitsfrage leer bleibt, laden Sie die Seite bitte neu.'
+      },
+      check: {
+        title: 'Die Sicherheitsfrage war nicht korrekt',
+        message: 'Ihre Nachricht wurde nicht gesendet, weil die Antwort auf die Sicherheitsfrage nicht zur Aufgabe passt.',
+        note: 'Gehen Sie zurück zum Formular und lösen Sie die neu angezeigte Aufgabe.'
+      },
+      send: {
+        title: 'Die Nachricht konnte technisch nicht gesendet werden',
+        message: 'Ihre Angaben waren plausibel, aber der Mailversand ist fehlgeschlagen. Bitte kontaktieren Sie mich direkt per E-Mail oder Telefon.',
+        note: 'Das ist wahrscheinlich ein SMTP- oder Serverproblem, nicht Ihre Sicherheitsantwort.'
+      },
+      default: {
+        title: 'Die Anfrage konnte nicht gesendet werden',
+        message: 'Leider ist beim Senden Ihrer Nachricht ein Problem aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt per E-Mail oder Telefon.',
+        note: 'Bitte prüfen Sie auch die Sicherheitsfrage im Formular.'
+      }
+    },
+    en: {
+      validation: {
+        title: 'Please check your details',
+        message: 'At least one required field is missing or the email address is invalid. Please complete the form.',
+        note: 'If the security question stays empty, please reload the page.'
+      },
+      check: {
+        title: 'The security answer was not correct',
+        message: 'Your message was not sent because the security answer did not match the question.',
+        note: 'Go back to the form and solve the newly shown question.'
+      },
+      send: {
+        title: 'The message could not be sent technically',
+        message: 'Your details looked valid, but mail delivery failed. Please contact me directly by email or phone.',
+        note: 'This is likely an SMTP or server issue, not your security answer.'
+      },
+      default: {
+        title: 'Your request could not be sent',
+        message: 'Unfortunately, there was a problem sending your message. Please try again or contact me directly by email or phone.',
+        note: 'Please also check the security question in the form.'
+      }
+    }
+  };
+
+  const applyReason = () => {
+    const reason = new URLSearchParams(window.location.search).get('reason') || 'default';
+    const lang = window.__wcLang === 'en' ? 'en' : 'de';
+    const text = copy[lang][reason] || copy[lang].default;
+    titleEl.textContent = text.title;
+    messageEl.textContent = text.message;
+    noteEl.textContent = text.note;
+  };
+
+  applyReason();
+  window.addEventListener('wc:i18n-applied', applyReason);
 }
 
 function initPortfolioReveal() {
@@ -368,6 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initKeyboardNavigation();
   initContactTopicFromQuery();
   initContactSecurityCheck();
+  initContactErrorReason();
   initPortfolioReveal();
   initMap();
   initConsentBanner();

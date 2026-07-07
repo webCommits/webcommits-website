@@ -6,9 +6,9 @@ meta: "Ihre Anfrage konnte leider nicht gesendet werden. Bitte versuchen Sie es 
 {% extends "base.njk" %}
 {% block content %}
 <section class="secone wc-section animate hidden" id="kontakt-fehler">
-  <h1 data-i18n="contactError.h1">Die Anfrage konnte nicht gesendet werden</h1>
-  <p data-i18n="contactError.p">Leider ist beim Senden Ihrer Nachricht ein Problem aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt per E-Mail oder Telefon.</p>
-  <p class="small-note" data-i18n="contactError.security">Bitte prüfen Sie auch die Sicherheitsfrage im Formular.</p>
+  <h1 data-contact-error-title data-i18n="contactError.h1">Die Anfrage konnte nicht gesendet werden</h1>
+  <p data-contact-error-message data-i18n="contactError.p">Leider ist beim Senden Ihrer Nachricht ein Problem aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt per E-Mail oder Telefon.</p>
+  <p class="small-note" data-contact-error-note data-i18n="contactError.security">Bitte prüfen Sie auch die Sicherheitsfrage im Formular.</p>
 
   <div class="contact-methods">
     <a href="mailto:info@webcommits.info" data-i18n="contactError.direct">Direkt per E-Mail schreiben</a>
