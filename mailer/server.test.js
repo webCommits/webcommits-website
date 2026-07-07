@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import http from 'node:http';
-import { parseForm, validateForm, buildMail, createHandler, createServer } from './server.js';
+import { parseForm, validateForm, buildMail, getSmtpOptions, createServer } from './server.js';
 
 function makeForm(overrides = {}) {
   return {
@@ -98,6 +98,26 @@ test('buildMail enthaelt alle relevanten Felder', () => {
   assert.match(text, /Testnachricht/);
   assert.match(text, /Website/);
   assert.match(text, /123/);
+});
+
+test('getSmtpOptions nutzt implicit TLS nur fuer Port 465 als Default', () => {
+  const options465 = getSmtpOptions({ SMTP_HOST: 'smtp.example.com', SMTP_PORT: '465', SMTP_USER: 'user', SMTP_PASS: 'pass' });
+  const options587 = getSmtpOptions({ SMTP_HOST: 'smtp.example.com', SMTP_PORT: '587', SMTP_USER: 'user', SMTP_PASS: 'pass' });
+
+  assert.equal(options465.secure, true);
+  assert.equal(options587.secure, false);
+});
+
+test('getSmtpOptions erlaubt SMTP_SECURE Override', () => {
+  const secure = getSmtpOptions({ SMTP_HOST: 'smtp.example.com', SMTP_PORT: '587', SMTP_USER: 'user', SMTP_PASS: 'pass', SMTP_SECURE: 'true' });
+  const insecure = getSmtpOptions({ SMTP_HOST: 'smtp.example.com', SMTP_PORT: '465', SMTP_USER: 'user', SMTP_PASS: 'pass', SMTP_SECURE: 'false' });
+
+  assert.equal(secure.secure, true);
+  assert.equal(insecure.secure, false);
+});
+
+test('getSmtpOptions lehnt unvollstaendige SMTP-Konfiguration ab', () => {
+  assert.throws(() => getSmtpOptions({ SMTP_HOST: 'smtp.example.com', SMTP_USER: 'user' }), /SMTP_HOST, SMTP_USER and SMTP_PASS/);
 });
 
 test('POST /contact mit gueltigem Formular sendet Mail und redirectet auf /danke/', async () => {

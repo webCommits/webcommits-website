@@ -22,4 +22,4 @@ services:
       SMTP_USER: ${SMTP_USER}
       SMTP_PASS: ${SMTP_PASS}
       SMTP_FROM: ${SMTP_FROM}
-      SMTP_SECURE: ${SMTP_SECURE:-true}
+      SMTP_SECURE: ${SMTP_SECURE}

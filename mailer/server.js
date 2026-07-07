@@ -7,6 +7,28 @@ const BODY_LIMIT = 32 * 1024;
 const required = ['Leistungsbereich', 'name', 'email', 'subject', 'message', 'security_a', 'security_b', 'security_answer'];
 const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function parseBooleanEnv(value) {
+  if (value === undefined || value === null || value === '') return undefined;
+  return ['1', 'true', 'yes', 'on'].includes(String(value).trim().toLowerCase());
+}
+
+function maskValue(value) {
+  if (!value) return '<unset>';
+  if (value.length <= 4) return '****';
+  return `${value.slice(0, 2)}***${value.slice(-2)}`;
+}
+
+function formatError(err) {
+  return {
+    name: err?.name,
+    message: err?.message,
+    code: err?.code,
+    command: err?.command,
+    responseCode: err?.responseCode,
+    response: err?.response
+  };
+}
+
 export function parseForm(buf) {
   const params = new URLSearchParams(buf.toString('utf8'));
   const out = {};
@@ -64,20 +86,29 @@ export function readBody(req) {
   });
 }
 
-export function createTransport() {
-  const host = process.env.SMTP_HOST;
-  const port = process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : 465;
-  const user = process.env.SMTP_USER;
-  const pass = process.env.SMTP_PASS;
+export function getSmtpOptions(env = process.env) {
+  const host = env.SMTP_HOST;
+  const port = env.SMTP_PORT ? Number(env.SMTP_PORT) : 465;
+  const user = env.SMTP_USER;
+  const pass = env.SMTP_PASS;
   if (!host || !user || !pass) {
     throw new Error('SMTP_HOST, SMTP_USER and SMTP_PASS must be set');
   }
-  return nodemailer.createTransport({
+  if (!Number.isInteger(port) || port <= 0) {
+    throw new Error('SMTP_PORT must be a valid port number');
+  }
+
+  const secureEnv = parseBooleanEnv(env.SMTP_SECURE);
+  return {
     host,
     port,
-    secure: process.env.SMTP_SECURE === undefined ? port === 465 : process.env.SMTP_SECURE === 'true',
+    secure: secureEnv === undefined ? port === 465 : secureEnv,
     auth: { user, pass }
-  });
+  };
+}
+
+export function createTransport() {
+  return nodemailer.createTransport(getSmtpOptions());
 }
 
 export function createHandler(transportFactory) {
@@ -129,6 +160,7 @@ export function createHandler(transportFactory) {
       res.setHeader('Location', '/danke/');
       res.end();
     } catch (err) {
+      console.error('[mailer] send failed', JSON.stringify(formatError(err)));
       res.statusCode = 303;
       res.setHeader('Location', '/kontakt-fehler/?reason=send');
       res.end();
@@ -156,6 +188,12 @@ export function createServer(transportFactory) {
 
 if (process.env.NODE_ENV !== 'test') {
   createServer().listen(PORT, () => {
+    try {
+      const options = getSmtpOptions();
+      console.log(`[mailer] smtp host=${options.host} port=${options.port} secure=${options.secure} user=${maskValue(options.auth.user)} from=${maskValue(process.env.SMTP_FROM || process.env.SMTP_USER)} recipient=${maskValue(process.env.CONTACT_RECIPIENT || process.env.SMTP_USER)}`);
+    } catch (err) {
+      console.error('[mailer] smtp config invalid', JSON.stringify(formatError(err)));
+    }
     console.log(`mailer listening on :${PORT}`);
   });
 }
