@@ -120,6 +120,13 @@ test('getSmtpOptions lehnt unvollstaendige SMTP-Konfiguration ab', () => {
   assert.throws(() => getSmtpOptions({ SMTP_HOST: 'smtp.example.com', SMTP_USER: 'user' }), /SMTP_HOST, SMTP_USER and SMTP_PASS/);
 });
 
+test('getSmtpOptions lehnt E-Mail-Adresse als SMTP_HOST ab', () => {
+  assert.throws(
+    () => getSmtpOptions({ SMTP_HOST: 'info@example.com', SMTP_USER: 'user', SMTP_PASS: 'pass' }),
+    /SMTP_HOST must be a hostname/
+  );
+});
+
 test('POST /contact mit gueltigem Formular sendet Mail und redirectet auf /danke/', async () => {
   const { transport, calls } = makeCaptureTransport();
   const server = createServer(() => transport);

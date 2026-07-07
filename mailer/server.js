@@ -94,6 +94,9 @@ export function getSmtpOptions(env = process.env) {
   if (!host || !user || !pass) {
     throw new Error('SMTP_HOST, SMTP_USER and SMTP_PASS must be set');
   }
+  if (host.includes('@') || /^https?:\/\//i.test(host)) {
+    throw new Error('SMTP_HOST must be a hostname like smtp.example.com, not an email address or URL');
+  }
   if (!Number.isInteger(port) || port <= 0) {
     throw new Error('SMTP_PORT must be a valid port number');
   }
@@ -156,6 +159,7 @@ export function createHandler(transportFactory) {
         subject: `Neue Anfrage über webCommits.info: ${form.subject}`,
         text: buildMail(form)
       });
+      console.log('[mailer] send ok');
       res.statusCode = 303;
       res.setHeader('Location', '/danke/');
       res.end();
@@ -191,6 +195,13 @@ if (process.env.NODE_ENV !== 'test') {
     try {
       const options = getSmtpOptions();
       console.log(`[mailer] smtp host=${options.host} port=${options.port} secure=${options.secure} user=${maskValue(options.auth.user)} from=${maskValue(process.env.SMTP_FROM || process.env.SMTP_USER)} recipient=${maskValue(process.env.CONTACT_RECIPIENT || process.env.SMTP_USER)}`);
+      createTransport().verify((err) => {
+        if (err) {
+          console.error('[mailer] smtp verify failed', JSON.stringify(formatError(err)));
+          return;
+        }
+        console.log('[mailer] smtp verify ok');
+      });
     } catch (err) {
       console.error('[mailer] smtp config invalid', JSON.stringify(formatError(err)));
     }
